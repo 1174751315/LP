@@ -33,12 +33,12 @@ public class SuperDAO {
     private static Map<String, SuperDAO> instances = new HashMap<String, SuperDAO>();
 
     public static SuperDAO getInstanceOf(eDbType db) {
-        if (db == eDbType.ORACLE) {
-            SuperDAO dao = instances.get("oracle");
+        if (db == eDbType.ACTUAL_LOAD) {
+            SuperDAO dao = instances.get("actual-load");
             if (dao == null) {
-                dao = instances.put("oracle", new SuperDAO(new Configuration().configure("hibernate.cfg.oracle.xml").buildSessionFactory()));
+                dao = instances.put("actual-load", new SuperDAO(new Configuration().configure("hibernate.cfg.actual-load.xml").buildSessionFactory()));
             }
-            dao = instances.get("oracle");
+            dao = instances.get("actual-load");
             return dao;
         }
         if (db == eDbType.ACCESS) {
