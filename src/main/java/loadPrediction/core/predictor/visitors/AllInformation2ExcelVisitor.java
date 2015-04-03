@@ -40,7 +40,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
         String fileName = FileContentUtils.autoFileName("WORKDAY" + predictor.getDateString().replaceAll("-", ""), ".xls");
         String path = dir + fileName;
         try {
-            Workbook template = Workbook.getWorkbook(new File(IOPaths.WORKDAY_TEMPLATE_EXCEL_FILE_NAME));
+            Workbook template = Workbook.getWorkbook(new File(IOPaths.WEB_CONTENT_WORKDAY_OUTPUT_TEMPLATE_XL_PATH));
             WritableWorkbook wwb = Workbook.createWorkbook(new File(path), template);
             Integer count;
 
@@ -200,7 +200,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
         String fileName = FileContentUtils.autoFileName("WEEKEND" + predictor.getDateString().replaceAll("-", ""), ".xls");
         String path = dir + fileName;
         try {
-            Workbook template = Workbook.getWorkbook(new File(IOPaths.WEEKEND_TEMPLATE_EXCEL_FILE_NAME));
+            Workbook template = Workbook.getWorkbook(new File(IOPaths.WEB_CONTENT_WEEKEND_OUTPUT_TEMPLATE_XL_PATH));
             WritableWorkbook wwb = Workbook.createWorkbook(new File(path), template);
 
 

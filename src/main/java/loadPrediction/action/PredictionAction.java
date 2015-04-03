@@ -102,7 +102,6 @@ public class PredictionAction extends ActionSupport {
 //
 //
 //        sender.send(mailMessage);
-        useCaches=false;
         /*若允许缓存，且缓存有对应项，则直接对用户返回缓存。*/
         if (useCaches && CachesManager.instance().hasPredictionCache(dateString)) {
             try {
@@ -119,7 +118,7 @@ public class PredictionAction extends ActionSupport {
             }
 
         } else {/*否则执行计算，返回计算结果并添加至缓存。*/
-           // try {
+           try {
                 if (dateString == null)
                     dateString = "2014-02-07";
 
@@ -136,23 +135,23 @@ public class PredictionAction extends ActionSupport {
                 xlFileName=FileContentUtils.getFileNameFromPath(temp);
                 root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
-//                String t = predictor.getPredictionDays().get(0).getDateType().getName();
-//                PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
+                String t = predictor.getPredictionDays().get(0).getDateType().getName();
+                PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
                 /*添加至缓存管理器。*/
-//                CachesManager.instance().addPredictionEntity(entity);
+                CachesManager.instance().addPredictionEntity(entity);
                 ;
 
                 log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
 
                 return SUCCESS;
-//            } catch (LPE e) {
-//                warning= failed(log,dateString,e.getMessage());
-//            } catch (IllegalArgumentException e) {
-//
-//                warning =  failed(log,dateString,e.getMessage());
-//            }catch (Exception e){
-//                warning=failed(log,dateString,e.getMessage());
-//            }
+            } catch (LPE e) {
+                warning= failed(log,dateString,e.getMessage());
+            } catch (IllegalArgumentException e) {
+
+                warning =  failed(log,dateString,e.getMessage());
+            } catch (Exception e){
+                warning=failed(log,dateString,e.getMessage());
+            }
 //            正在更新的版本
         }
 
