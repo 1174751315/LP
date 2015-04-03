@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="loadPrediction.domain.SimpleWeatherData" table="历史气象数据">
+        <id name="id" column="ID">
+            <generator class="assigned"/>
+        </id>
+        <many-to-one name="simpleDate" class="loadPrediction.domain.SimpleDate" column="日期"/>
+        <many-to-one name="city" class="loadPrediction.domain.City" column="城市号"/>
+        <property name="maxTemperature" column="最大温度"/>
+        <property name="minTemperature" column="最小温度"/>
+        <property name="aveTemperature" column="平均温度"/>
+        <property name="maxHumid" column="最大湿度"/>
+        <property name="minHumid" column="最小湿度"/>
+        <property name="aveHumid" column="平均湿度"/>
+        <property name="maxWindSpeed" column="最大风速"/>
+        <property name="aveWindSpeed" column="平均风速"/>
+        <property name="rainFall" column="降雨量"/>
+    </class>
+</hibernate-mapping>
