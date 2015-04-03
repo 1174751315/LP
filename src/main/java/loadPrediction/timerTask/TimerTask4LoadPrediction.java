@@ -20,7 +20,7 @@ public class TimerTask4LoadPrediction extends TimerTask {
      */
     @Override
     public void run() {
-        DataMoveManager.instance().add(new DataMoveCommand(new ActualLoadDataFetcher()));
+        DataMoveManager.instance().add(new DataMoveCommand(new LoadDataCopy()));
         DataMoveManager.instance().execute();
     }
 }
