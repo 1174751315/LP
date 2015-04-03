@@ -6,17 +6,19 @@
 
 package loadPrediction.core.predictor.excelling;
 
-import  common.ConvertUtils;
-import  common.ElementPrintableLinkedList;
-import  common.MaxAveMinTuple;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
-import  loadPrediction.core.predictor.util.CommonUtils;
-import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.LPE;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
+import common.ConvertUtils;
+import common.ElementPrintableLinkedList;
+import common.MaxAveMinTuple;
+import loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.core.predictor.util.CommonUtils;
+import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.DAE;
+import loadPrediction.exception.LPE;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -38,12 +40,12 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected CellPosition doGetPredictionLoadsExcelPosition() {
-        return new CellPosition("B115", "WORKDAY_LOAD_PREDICTION");
+        return new CellPosition("B115", "工作日96节点负荷预测");
     }
 
     @Override
     protected CellPosition doGetAccuraciesExcelPosition() {
-        return new CellPosition("B7", "ACTUAL_LOADS");
+        return new CellPosition("B7", "待预测日实际负荷数据");
     }
 
     @Override
@@ -106,24 +108,24 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     @Override
     protected List<CellPosition> doGetHistoryDaysExcelPositions() {
         List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("B2", "WORKDAY_WEATHER_DATA"));
+        list.add(new CellPosition("B2", "工作日气象数据"));
         return list;
     }
 
     @Override
     protected CellPosition doGetPredictionDaysExcelPosition() {
-        return new CellPosition("B16", "WORKDAY_WEATHER_DATA");
+        return new CellPosition("B16", "工作日气象数据");
     }
 
     @Override
     protected CellPosition doGetPredictionWeatherExcelPosition() {
-        return new CellPosition("N16", "WORKDAY_WEATHER_DATA");
+        return new CellPosition("N16", "工作日气象数据");
     }
 
     @Override
     protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
         List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("N2", "WORKDAY_WEATHER_DATA"));
+        list.add(new CellPosition("N2", "工作日气象数据"));
         return list;
     }
 
@@ -135,25 +137,25 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     @Override
     protected List<CellPosition> doGetSimilarDaysExcelPositions() {
         List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("D28", "SIMILAR_DAYS"));
+        list.add(new CellPosition("D28", "相似日查找-工作日"));
         return list;
     }
 
     @Override
     protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
         List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("B17", "WORKDAY_LOAD_PREDICTION"));
+        list.add(new CellPosition("B17", "工作日96节点负荷预测"));
         return list;
     }
 
     @Override
     protected CellPosition doGetActualLoadsExcelPosition() {
-        return new CellPosition("B9", "ACTUAL_LOADS");
+        return new CellPosition("B9", "待预测日实际负荷数据");
     }
 
     private List<CellPosition> getHistoryLoadTuplesExcelPosition() {
         List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("K2", "WORKDAY_WEATHER_DATA"));
+        list.add(new CellPosition("K2", "工作日气象数据"));
         return list;
     }
 
@@ -175,7 +177,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
             for (int i = 0; i < ofHistoryLoadTuples.size(); i++) {
                 CellPosition pos = ofHistoryLoadTuples.get(i);
                 Sheet ws1 = activeWorkbook.getSheet(pos.getSheetName());
-               for (int j = 0; j < historyLoads.get(i).size(); j++) {
+                for (int j = 0; j < historyLoads.get(i).size(); j++) {
                     MaxAveMinTuple<Double> t = historyLoads.get(i).get(j).toMaxAveMin();
                     Row row = ws1.getRow(pos.getRow() + j);
                     row.getCell(pos.getCol()).setCellValue(t.getMax());

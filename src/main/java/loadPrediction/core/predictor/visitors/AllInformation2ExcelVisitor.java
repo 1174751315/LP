@@ -6,20 +6,23 @@
 
 package loadPrediction.core.predictor.visitors;
 
+import common.MaxAveMinTuple;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.*;
 import jxl.write.Number;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.resouce.TimeLabels;
-import  loadPrediction.utils.Date2StringAdapter;
-import  loadPrediction.utils.FileContentUtils;
+import loadPrediction.core.predictor.IQingmingPredictor;
+import loadPrediction.core.predictor.IWeekendPredictor;
+import loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.core.predictor.hardCoding.HardCodingFestivalPredictor;
+import loadPrediction.core.predictor.hardCoding.HardCodingSpringFestivalPredictor;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.resouce.TimeLabels;
+import loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.utils.FileContentUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -44,20 +47,20 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             WritableWorkbook wwb = Workbook.createWorkbook(new File(path), template);
             Integer count;
 
-            WritableSheet ws0 = wwb.getSheet("SIMILAR_DAYS");
+            WritableSheet ws0 = wwb.getSheet("相似日");
 
-            ws0.addCell(new Label(0, 0, "PREDICTION_DAYS"));
+            ws0.addCell(new Label(0, 0, "待预测日"));
             List<SimpleDate> predictionDays = predictor.getPredictionDays();
             for (int i = 0; i < predictionDays.size(); i++) {
                 ws0.addCell(new Label(0, 1 + i, predictionDays.get(i).getDateString()));
             }
-            ws0.addCell(new Label(1, 0, "SIMILAR_DAYS"));
+            ws0.addCell(new Label(1, 0, "相似日"));
             List<SimpleDate> similarDays = predictor.getSimilarDays().get(0);
             for (int i = 0; i < similarDays.size(); i++) {
                 ws0.addCell(new Label(1, 1 + i, Date2StringAdapter.toString(similarDays.get(i).getDate())));
             }
 
-            WritableSheet ws1 = wwb.getSheet("PREDICTION_LOADS");
+            WritableSheet ws1 = wwb.getSheet("预测负荷");
             for (int i = 0; i < predictionDays.size(); i++) {
                 ws1.addCell(new Label(1 + i, 0, predictionDays.get(i).getDateString()));
             }
@@ -72,7 +75,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
                 }
             }
 
-            WritableSheet ws2 = wwb.getSheet("SIMILAR_LOADS");
+            WritableSheet ws2 = wwb.getSheet("相似日负荷");
             List<LoadData> similarLoad = predictor.getSimilarLoad().get(0);
             for (int i = 0; i < similarLoad.size(); i++) {
                 ws2.addCell(new Label(1 + i, 0, similarLoad.get(i).getDateString()));
@@ -88,7 +91,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 
             }
 
-            WritableSheet ws3 = wwb.getSheet("ACCURACIES");
+            WritableSheet ws3 = wwb.getSheet("准确度");
             List<Accuracy> accuracies = predictor.getAccuracy();
             for (int i = 0; i < accuracies.size(); i++) {
                 ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
@@ -96,13 +99,13 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             }
 
 
-//            WritableSheet ws4 = wwb.getSheet("MAX_AVE_MIN");
-//            ws4.addCell(new Label(0, 1, "PREDICTION_LOADS最大值"));
-//            ws4.addCell(new Label(0, 2, "PREDICTION_LOADS平均值"));
-//            ws4.addCell(new Label(0, 3, "PREDICTION_LOADS最小值"));
-//            ws4.addCell(new Label(0, 4, "ACTUAL_LOADS最大值"));
-//            ws4.addCell(new Label(0, 5, "ACTUAL_LOADS平均值"));
-//            ws4.addCell(new Label(0, 6, "ACTUAL_LOADS最小值"));
+//            WritableSheet ws4 = wwb.getSheet("最值和均值");
+//            ws4.addCell(new Label(0, 1, "预测负荷最大值"));
+//            ws4.addCell(new Label(0, 2, "预测负荷平均值"));
+//            ws4.addCell(new Label(0, 3, "预测负荷最小值"));
+//            ws4.addCell(new Label(0, 4, "实际负荷最大值"));
+//            ws4.addCell(new Label(0, 5, "实际负荷平均值"));
+//            ws4.addCell(new Label(0, 6, "实际负荷最小值"));
 //            ws4.addCell(new Label(0, 7, "最值预测-最大负荷"));
 //            ws4.addCell(new Label(0, 8, "最值预测-平均负荷"));
 //            ws4.addCell(new Label(0, 9, "最值预测-最小负荷"));
@@ -125,7 +128,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //                ws4.addCell(new Number(1 + i, 9, tuple.getMin()));
 //            }
 
-            WritableSheet ws5 = wwb.getSheet("ACTUAL_LOADS");
+            WritableSheet ws5 = wwb.getSheet("实际负荷");
             List<LoadData> actualLoads = predictor.getActual96PointLoads();
             for (int i = 0; i < predictionDays.size(); i++) {
                 ws5.addCell(new Label(1 + i, 0, predictionDays.get(i).getDateString()));
@@ -141,7 +144,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 
             }
 
-//            WritableSheet ws6 = wwb.getSheet("COES");
+//            WritableSheet ws6 = wwb.getSheet("相似系数");
 //            for (int i = 0; i < predictor.getPredictionDaysNumber(); i++) {
 //                ws6.addCell(new Label(0, 1 + i, predictor.getPredictionDays().get(i).getDateString()));
 //            }
@@ -152,7 +155,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //                    ws6.addCell(new Number(1 + j, 1 + i, coes.get(j)));
 //                }
 //            }
-            WritableSheet ws7 = wwb.getSheet("ALL_DAYS");
+            WritableSheet ws7 = wwb.getSheet("所有日期");
             int index = 1;
             ws7.addCell(new Label(0, 0, "日期"));
             ws7.addCell(new Label(1, 0, "类别"));
@@ -204,17 +207,17 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             WritableWorkbook wwb = Workbook.createWorkbook(new File(path), template);
 
 
-            WritableSheet ws0 = wwb.getSheet("SIMILAR_DAYS");
-            ws0.addCell(new Label(0, 0, "PREDICTION_DAYS"));
-            ws0.addCell(new Label(1, 0, "SIMILAR_DAYS-工作日"));
-            ws0.addCell(new Label(2, 0, "SIMILAR_DAYS-周末"));
+            WritableSheet ws0 = wwb.getSheet("相似日");
+            ws0.addCell(new Label(0, 0, "待预测日"));
+            ws0.addCell(new Label(1, 0, "相似日-工作日"));
+            ws0.addCell(new Label(2, 0, "相似日-周末"));
             for (int i = 0; i < predictor.getPredictionDaysNumber(); i++) {
                 ws0.addCell(new Label(0, 1 + i, predictor.getPredictionDays().get(i).getDateString()));
                 ws0.addCell(new Label(1, 1 + i, Date2StringAdapter.toString(predictor.getSimilarDays().get(0).get(i).getDate())));
                 ws0.addCell(new Label(1, 1 + i, Date2StringAdapter.toString(predictor.getSimilarDays().get(1).get(i).getDate())));
             }
 
-            WritableSheet ws1 = wwb.getSheet("PREDICTION_LOADS");
+            WritableSheet ws1 = wwb.getSheet("预测负荷");
             for (int i = 0; i < predictor.getPredictionDaysNumber(); i++) {
                 ws1.addCell(new Label(1 + i, 0, predictor.getPredictionDays().get(i).getDateString()));
             }
@@ -228,7 +231,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
                 }
             }
 
-            WritableSheet ws2 = wwb.getSheet("SIMILAR_LOADS");
+            WritableSheet ws2 = wwb.getSheet("相似日负荷");
             for (int i = 0; i < predictor.getPredictionDaysNumber(); i++) {
                 ws2.addCell(new Label(1 + i, 0, predictor.getSimilarDays().get(0).get(i).getDate().toLocalDate().toString()));
             }
@@ -250,7 +253,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //
 //            }
 
-            WritableSheet ws3 = wwb.getSheet("ACCURACIES");
+            WritableSheet ws3 = wwb.getSheet("准确度");
             List<Accuracy> accuracies = predictor.getAccuracy();
             for (int i = 0; i < accuracies.size(); i++) {
                 ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
@@ -260,13 +263,13 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             }
 
 //
-//            WritableSheet ws4 = wwb.getSheet("MAX_AVE_MIN");
-//            ws4.addCell(new Label(0, 1, "PREDICTION_LOADS最大值"));
-//            ws4.addCell(new Label(0, 2, "PREDICTION_LOADS平均值"));
-//            ws4.addCell(new Label(0, 3, "PREDICTION_LOADS最小值"));
-//            ws4.addCell(new Label(0, 4, "ACTUAL_LOADS最大值"));
-//            ws4.addCell(new Label(0, 5, "ACTUAL_LOADS平均值"));
-//            ws4.addCell(new Label(0, 6, "ACTUAL_LOADS最小值"));
+//            WritableSheet ws4 = wwb.getSheet("最值和均值");
+//            ws4.addCell(new Label(0, 1, "预测负荷最大值"));
+//            ws4.addCell(new Label(0, 2, "预测负荷平均值"));
+//            ws4.addCell(new Label(0, 3, "预测负荷最小值"));
+//            ws4.addCell(new Label(0, 4, "实际负荷最大值"));
+//            ws4.addCell(new Label(0, 5, "实际负荷平均值"));
+//            ws4.addCell(new Label(0, 6, "实际负荷最小值"));
 //            ws4.addCell(new Label(0, 7, "最值预测-最大负荷"));
 //            ws4.addCell(new Label(0, 8, "最值预测-平均负荷"));
 //            ws4.addCell(new Label(0, 9, "最值预测-最小负荷"));
@@ -289,7 +292,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //                ws4.addCell(new Number(1 + i, 9, tuple.getMin()));
 //            }
 
-            WritableSheet ws5 = wwb.getSheet("ACTUAL_LOADS");
+            WritableSheet ws5 = wwb.getSheet("实际负荷");
             List<LoadData> actualLoads = predictor.getActual96PointLoads();
             for (int i = 0; i < actualLoads.size(); i++) {
                 ws5.addCell(new Label(1 + i, 0, actualLoads.get(i).getDateString()));
@@ -305,7 +308,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 
             }
 
-//            WritableSheet ws6 = wwb.getSheet("COES");
+//            WritableSheet ws6 = wwb.getSheet("相似系数");
 //            for (int i = 0; i < predictor.getPredictionDaysNumber(); i++) {
 //                ws6.addCell(new Label(0, 1 + i, predictor.getPredictionDays().get(i).getDateString()));
 //            }
@@ -316,7 +319,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //                    ws6.addCell(new Number(1 + j, 1 + i, coes.get(j)));
 //                }
 //            }
-//            WritableSheet ws7 = wwb.getSheet("ALL_DAYS");
+//            WritableSheet ws7 = wwb.getSheet("所有日期");
 //            int index = 1;
 //            ws7.addCell(new Label(0, 0, "日期"));
 //            ws7.addCell(new Label(1, 0, "类别"));
