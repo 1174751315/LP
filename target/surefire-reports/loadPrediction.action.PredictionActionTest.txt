@@ -1,20 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: loadPrediction.action.PredictionActionTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.321 sec
-=======
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.532 sec
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.955 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.321 sec
->>>>>>> origin/feature/mail
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.321 sec
->>>>>>> origin/develop
->>>>>>> origin/develop
->>>>>>> origin/develop
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec
