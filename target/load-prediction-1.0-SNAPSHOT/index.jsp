@@ -7,7 +7,7 @@
 <%@ page contentType="text/html; ISO-8859-1;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>正在更新的版本</title>
+    <title>MAVEN-MAILLING</title>
     <script type="text/javascript">
         window.onload = function () {
 //            window.location.href=window.location+"?now="+new Date().getTime();

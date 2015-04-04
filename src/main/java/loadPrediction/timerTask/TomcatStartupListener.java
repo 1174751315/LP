@@ -15,10 +15,14 @@ public class TomcatStartupListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         timer=new Timer();
-        Logging.instance().createLogger().info("定时任务开始。\n每隔24小时同步负荷和气象数据");
-        int h=1000*60*60;
-        int time=6*h;
-        timer.schedule(new TimerTask4FetchingAndCalcingWeatherData(),new Date(),time);
+
+
+        Logging.instance().createLogger().info("定时任务开始。\n每隔24小时同步负荷和气象数据\n每隔12小时发送日志自动邮件\n");
+        int second=1000;
+        int min=second*60;
+        int hour=min*60;
+        timer.schedule(new TimerTask4FetchingAndCalcingWeatherData(),new Date(),24*hour);
+        timer.schedule(new TimerTask4LogMailing(),new Date(),10*min);
     }
 
     @Override
