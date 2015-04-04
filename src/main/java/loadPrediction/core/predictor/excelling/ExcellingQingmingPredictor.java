@@ -43,7 +43,7 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
 
     @Override
     protected String doGetOutputWorkbookPath() {
-        return IOPaths.WEB_CONTENT_ROOT+dateString+"QM.xls";
+        return IOPaths.WEB_CONTENT_TEMP+dateString+"QM.xls";
     }
 
     @Override

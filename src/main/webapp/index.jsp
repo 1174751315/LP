@@ -7,6 +7,7 @@
 <%@ page contentType="text/html; ISO-8859-1;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link href="CONFIG/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <title>MAVEN-MAILLING</title>
     <script type="text/javascript">
         window.onload = function () {
@@ -237,7 +238,7 @@
         <br>
 
         <div id='output'>
-            <h4><a href='' resource="" id='outputExcel'>点击</a>获取EXCEL输出。</h4>
+            <h4><a href="CONFIG/temp.xlsx" resource="" id='outputExcel'>点击</a>获取EXCEL输出。</h4>
             <img id='outputImg' >
         </div>
     </div>
