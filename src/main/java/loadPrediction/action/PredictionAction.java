@@ -43,6 +43,7 @@ public class PredictionAction extends ActionSupport {
     }
 
     public String getRoot() {
+        root="TEMP/";
         return root;
     }
 
@@ -155,7 +156,7 @@ private String failed(Logger log,String dateString,String msg){
             SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
             dateString=simpleDateFormat.format(date);
         }
-        String path = IOPaths.WEB_CONTENT_ROOT;
+        String path = IOPaths.WEB_CONTENT_TEMP;
         IPredictor predictor = PredictorFactory.getInstance().getProperPredictor(Date.valueOf(dateString));
         warning = "OK";
         String temp=(String) predictor.predict();

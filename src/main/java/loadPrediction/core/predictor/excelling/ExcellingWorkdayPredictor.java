@@ -90,7 +90,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetOutputWorkbookPath() {
-        return IOPaths.WEB_CONTENT_ROOT + dateString + "WD.xls";
+        return IOPaths.WEB_CONTENT_TEMP + dateString + "WD.xls";
     }
 
     @Override
