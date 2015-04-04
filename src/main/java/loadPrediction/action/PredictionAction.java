@@ -126,7 +126,7 @@ public class PredictionAction extends ActionSupport {
                 }
             } catch (Exception e) {
                 warning = "未处理的异常\n" + e.getMessage();
-                log.error(e.getMessage());
+                log.error(" 预测失败 "+e.getMessage());
                 log.info(dateString + " 预测失败 ");
             }
 
