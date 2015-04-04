@@ -15,7 +15,7 @@ import  loadPrediction.domain.WeatherData;
 import  loadPrediction.exception.DAE;
 import  loadPrediction.exception.LPE;
 import  loadPrediction.log.Logging;
-import  loadPrediction.timerTask.ActualLoadDataFetcher;
+import loadPrediction.timerTask.LoadDataCopy;
 
 import java.sql.Date;
 import java.util.LinkedList;
@@ -76,7 +76,7 @@ public class CommonUtils {
                 Logging.instance().createLogger().info("负荷数据缺失  "+dateStrings.get(i)+"。尝试重新同步负荷");
                 /*处理数据缺失异常：同步负荷*/
                 try {
-                    loadDatas.add((LoadData) new ActualLoadDataFetcher(DAOFactory.getAlter(), DAOFactory.getDefault()).copy(dateString));
+                    loadDatas.add((LoadData) new LoadDataCopy(DAOFactory.getAlter(), DAOFactory.getDefault()).copy(dateString));
                     /*若在同步负荷的过程中又出现异常，则处理失败，抛出业务异常。*/
                 } catch (DAE dae) {
                     Logging.instance().createLogger().info("同步失败");
