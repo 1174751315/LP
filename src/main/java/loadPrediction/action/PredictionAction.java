@@ -20,6 +20,7 @@ import  loadPrediction.utils.FileContentUtils;
 import org.apache.log4j.Logger;
 import org.jfree.chart.JFreeChart;
 
+import java.io.File;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
@@ -110,13 +111,19 @@ public class PredictionAction extends ActionSupport {
                 warning = "OK";
                 String imgPath=cache.getOutputImagePath();
                 String xlPath=cache.getOutputExcelPath();
-
-
-                imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
-                xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
-
-                root = "";
-                log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
+                File fxl=new File(xlPath);
+                File fimg=new File(imgPath);
+                if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                    imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
+                    xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
+                    root = "";
+                    log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
+                    return SUCCESS;
+                }
+                else {//否则进行一次无缓存常规预测
+                    log.info("【"+dateString+"】  在进行【使用缓存】的预测时发现文件丢失，转而进行无缓存常规预测。"  );
+                    return predict(dateString,log);
+                }
             } catch (Exception e) {
                 warning = "未处理的异常\n" + e.getMessage();
                 log.error(e.getMessage());
@@ -124,21 +131,7 @@ public class PredictionAction extends ActionSupport {
             }
 
         } else {/*否则执行计算，返回计算结果并添加至缓存。*/
-           try {
-                doPredict(dateString,log);
-                return SUCCESS;
-            } catch (LPE e) {
-                warning= failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            } catch (IllegalArgumentException e) {
-
-                warning =  failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            } catch (Exception e){
-                warning=failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            }
-//            正在更新的版本
+            return predict(dateString,log);
         }
 
         return SUCCESS;
@@ -182,5 +175,21 @@ private String failed(Logger log,String dateString,String msg){
         ;
         log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
     }
+    private String predict(String dateString,Logger log){
+        try {
+            doPredict(dateString,log);
+            return SUCCESS;
+        } catch (LPE e) {
+            warning= failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
 
+            warning =  failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e){
+            warning=failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        }
+        return SUCCESS;
+    }
 }
