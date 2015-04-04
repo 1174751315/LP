@@ -146,11 +146,14 @@ public class PredictionAction extends ActionSupport {
                 return SUCCESS;
             } catch (LPE e) {
                 warning= failed(log,dateString,e.getMessage());
+               e.printStackTrace();
             } catch (IllegalArgumentException e) {
 
                 warning =  failed(log,dateString,e.getMessage());
+               e.printStackTrace();
             } catch (Exception e){
                 warning=failed(log,dateString,e.getMessage());
+               e.printStackTrace();
             }
 //            正在更新的版本
         }
