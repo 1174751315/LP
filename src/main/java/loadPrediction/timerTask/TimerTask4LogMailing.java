@@ -27,13 +27,21 @@ public class TimerTask4LogMailing extends TimerTask{
     public void run() {
         JavaMailSenderImpl sender=LogMailingUtils.getDefaultSender();
         try {
+            Logging.instance().createLogger("自动邮件").info("开始发送自动邮件");
             MimeMessage message= LogMailingUtils.createMimeMessage(sender,"每日日志自动邮件");
             sender.send(message);
             Logging.instance().createLogger("自动邮件").info("成功发送了日志自动邮件");
         } catch (LPE e) {
             e.printStackTrace();
-            Logging.instance().createLogger("自动邮件").info("日志自动邮件发送失败");
-            Logging.instance().createLogger("自动邮件").error("日志自动邮件发送失败\n"+e.getMessage());
+            failed(e.getMessage());
+
+        } catch (Exception e){
+            failed(e.getMessage());
         }
+    }
+
+    private void failed(String msg){
+        Logging.instance().createLogger("自动邮件").info("日志自动邮件发送失败");
+        Logging.instance().createLogger("自动邮件").error("日志自动邮件发送失败\n"+msg);
     }
 }
