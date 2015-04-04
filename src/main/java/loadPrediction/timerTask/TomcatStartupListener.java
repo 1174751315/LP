@@ -16,7 +16,8 @@ public class TomcatStartupListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         timer=new Timer();
         Logging.instance().createLogger().info("定时任务开始。\n每隔24小时同步负荷和气象数据");
-        int time=1000*60;
+        int h=1000*60*60;
+        int time=6*h;
         timer.schedule(new TimerTask4FetchingAndCalcingWeatherData(),new Date(),time);
     }
 
