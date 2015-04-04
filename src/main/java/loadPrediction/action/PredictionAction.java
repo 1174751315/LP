@@ -20,7 +20,9 @@ import  loadPrediction.utils.FileContentUtils;
 import org.apache.log4j.Logger;
 import org.jfree.chart.JFreeChart;
 
+import java.io.File;
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 
 /**
@@ -41,6 +43,7 @@ public class PredictionAction extends ActionSupport {
     }
 
     public String getRoot() {
+        root="TEMP/";
         return root;
     }
 
@@ -107,55 +110,29 @@ public class PredictionAction extends ActionSupport {
             try {
                 PredictionCacheEntity cache = CachesManager.instance().getPredictionEntity(dateString);
                 warning = "OK";
-                imgFileName = FileContentUtils.getFileNameFromPath(cache.getOutputImagePath());
-                xlFileName = FileContentUtils.getFileNameFromPath(cache.getOutputExcelPath());
-                root = "";
-                log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
+                String imgPath=cache.getOutputImagePath();
+                String xlPath=cache.getOutputExcelPath();
+                File fxl=new File(xlPath);
+                File fimg=new File(imgPath);
+                if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                    imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
+                    xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
+                    root = "";
+                    log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
+                    return SUCCESS;
+                }
+                else {//否则进行一次无缓存常规预测
+                    log.info("【"+dateString+"】  在进行【使用缓存】的预测时发现文件丢失，转而进行无缓存常规预测。"  );
+                    return predict(dateString,log);
+                }
             } catch (Exception e) {
                 warning = "未处理的异常\n" + e.getMessage();
-                log.error(e.getMessage());
+                log.error(" 预测失败 "+e.getMessage());
                 log.info(dateString + " 预测失败 ");
             }
 
         } else {/*否则执行计算，返回计算结果并添加至缓存。*/
-           try {
-                if (dateString == null)
-                    dateString = "2014-02-07";
-
-                String path = IOPaths.WEB_CONTENT_ROOT;
-                IPredictor predictor = PredictorFactory.getInstance().getProperPredictor(Date.valueOf(dateString));
-                warning = "OK";
-                String temp=(String) predictor.predict();
-                predictor.accept(new FirstPredictionLoadData2DBVisitor());
-                imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
-                imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
-                imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
-
-                xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
-                xlFileName=FileContentUtils.getFileNameFromPath(temp);
-                root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
-                /*构造缓存数据结构。*/
-                String t = predictor.getPredictionDays().get(0).getDateType().getName();
-                PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
-                /*添加至缓存管理器。*/
-                CachesManager.instance().addPredictionEntity(entity);
-                ;
-
-                log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
-
-                return SUCCESS;
-            } catch (LPE e) {
-                warning= failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            } catch (IllegalArgumentException e) {
-
-                warning =  failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            } catch (Exception e){
-                warning=failed(log,dateString,e.getMessage());
-               e.printStackTrace();
-            }
-//            正在更新的版本
+            return predict(dateString,log);
         }
 
         return SUCCESS;
@@ -172,4 +149,48 @@ private String failed(Logger log,String dateString,String msg){
         this.useCaches = useCaches;
     }
 
+
+    private void doPredict(String dateString,Logger log)throws LPE,IllegalArgumentException,Exception{
+        if (dateString == null){
+            java.util.Date date=new java.util.Date();
+            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+            dateString=simpleDateFormat.format(date);
+        }
+        String path = IOPaths.WEB_CONTENT_TEMP;
+        IPredictor predictor = PredictorFactory.getInstance().getProperPredictor(Date.valueOf(dateString));
+        warning = "OK";
+        String temp=(String) predictor.predict();
+        predictor.accept(new FirstPredictionLoadData2DBVisitor());
+        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
+        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
+        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
+
+        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
+        xlFileName=FileContentUtils.getFileNameFromPath(temp);
+        root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
+                /*构造缓存数据结构。*/
+        String t = predictor.getPredictionDays().get(0).getDateType().getName();
+        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
+                /*添加至缓存管理器。*/
+        CachesManager.instance().addPredictionEntity(entity);
+        ;
+        log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
+    }
+    private String predict(String dateString,Logger log){
+        try {
+            doPredict(dateString,log);
+            return SUCCESS;
+        } catch (LPE e) {
+            warning= failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+
+            warning =  failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e){
+            warning=failed(log,dateString,e.getMessage());
+            e.printStackTrace();
+        }
+        return SUCCESS;
+    }
 }

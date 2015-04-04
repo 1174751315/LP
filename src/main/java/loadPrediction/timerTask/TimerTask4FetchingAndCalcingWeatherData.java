@@ -8,7 +8,7 @@ package loadPrediction.timerTask;
 
 import loadPrediction.log.Logging;
 import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.weather.WeatherUtil;
+import  loadPrediction.utils.weather.WeatherUtil;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;

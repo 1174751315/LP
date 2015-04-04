@@ -34,7 +34,7 @@ public class Logging {
     }
 
     public Logger createLogger() {
-        return createLogger("默认");
+        return createLogger("默认记录仪");
     }
 
 }
