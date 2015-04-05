@@ -11,7 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7532"/>
+    <property name="idea.launcher.port" value="7533"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -30,7 +30,7 @@
     <property name="os.name" value="Windows 8.1"/>
     <property name="classworlds.conf" value="D:\Maven\apache-maven-3.1.1\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="D:\Java\jdk1.8.0_11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Oracle\product\11.2.0\dbhome_1\bin;D:\Python27\;D:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;D:\Java\jdk1.8.0_11\bin;D:\Java\jdk1.8.0_11\jre\bin;D:\Java\jdk1.8.0_11\lib\dt.jar;D:\Java\jdk1.8.0_11\lib\tools.jar;D:\Apache Software Foundation\Tomcat 6.0\lib;D:\Apache Software Foundation\Tomcat 6.0\bin;D:\Java\jdk1.8.0_11\jre\bin\client;D:\MATLAB\R2014a\runtime\win64;D:\MATLAB\R2014a\bin;D:\Maven\apache-maven-3.1.1\bin;."/>
+    <property name="java.library.path" value="D:\Java\jdk1.8.0_11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\Oracle\product\11.2.0\dbhome_1\bin;D:\Python27\;D:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;D:\Java\jdk1.8.0_11\bin;D:\Java\jdk1.8.0_11\jre\bin;D:\Java\jdk1.8.0_11\lib\dt.jar;D:\Java\jdk1.8.0_11\lib\tools.jar;D:\Apache Software Foundation\Tomcat 6.0\lib;D:\Apache Software Foundation\Tomcat 6.0\bin;D:\Java\jdk1.8.0_11\jre\bin\client;D:\MATLAB\R2014a\runtime\win64;D:\MATLAB\R2014a\bin;D:\Maven\apache-maven-3.1.1\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
@@ -62,7 +62,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.desktop" value="windows"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
   <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="0"/>
 </testsuite>
