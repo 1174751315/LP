@@ -9,11 +9,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>成功</title>
 </head>
 <body>
-  Welcome!
-  Click <a href="index.jsp">me</a> to return back.<br/>
-
+<h4>问题报告成功地发送到开发者电邮。</h4>
+<h4><a href="/index.jsp">返回</a> </h4>
 </body>
 </html>

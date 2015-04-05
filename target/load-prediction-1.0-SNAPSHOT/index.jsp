@@ -8,7 +8,7 @@
 <html>
 <head>
     <link href="CONFIG/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <title>MAVEN-MAILLING</title>
+    <title>BETA 1.0</title>
     <script type="text/javascript">
         window.onload = function () {
 //            window.location.href=window.location+"?now="+new Date().getTime();
@@ -221,6 +221,14 @@
             </div>
         </div>
     </div>
+    <div class="navigation navigation1" data-targetID="pullDownNavigation3">
+        <div class="nav">问题报告</div>
+        <div class="pullDownNavigationc" id="pullDownNavigation3">
+            <div class="nav" align="center">
+                <input type="button" onmouseover="highLight(this);" onmouseout="unLight(this);" onclick="setClient('sendEMailToDeveloper');" value="发送反馈电邮"/>
+            </div>
+        </div>
+    </div>
 </div>
 
 <br>
@@ -292,6 +300,17 @@
             <%--<h4>其中有</h4><h4 id='sas_outputUnSatiesfiedNumber'></h4><h4>天的准确度统计。</h4>--%>
             <img src=""  id='sas_outputImg' alt="">
             <%--<figure  content="/TEMP/AS97912132.jpg?KEY=VALUE">TEMP/AS97912132.jpg</figure>--%>
+        </div>
+    </div>
+
+    <div class="div-d" id='sendEMailToDeveloper' style="visibility: hidden">
+        <div class='nav'>
+            <s:form class='nav' action="sendEMailToDeveloper" namespace="/general">
+                <h4>向开发者发送一份电子邮件。服务器的日志将作为附件一并发送。</h4>
+                <h4>请在此填写您对该问题的描述。</h4>
+                <s:textarea name="details" value=""/>
+                <s:submit value="提交问题报告"/>
+            </s:form>
         </div>
     </div>
 </div>
