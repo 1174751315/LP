@@ -8,10 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>出错</title>
 </head>
 <body>
-  We are sorry that the database is not available.
-  Please try again later.
+<h4>未能发送问题报告。请联系开发者。</h4>
+<h4><a href="/index.jsp">返回</a> </h4>
 </body>
 </html>

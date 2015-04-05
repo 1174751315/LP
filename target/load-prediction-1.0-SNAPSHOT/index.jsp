@@ -8,7 +8,7 @@
 <html>
 <head>
     <link href="CONFIG/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <title>MAVEN-MAILLING</title>
+    <title>BETA 1.0</title>
     <script type="text/javascript">
         window.onload = function () {
 //            window.location.href=window.location+"?now="+new Date().getTime();
