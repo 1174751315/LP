@@ -14,8 +14,8 @@ public class TomcatStartupListener implements ServletContextListener {
     Timer timer1=null,timer2=null;
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        timer1=new Timer();
-        timer2=new Timer();
+        timer1=new Timer(true);
+        timer2=new Timer(true);
 
 
         Logging.instance().createLogger().info("定时任务开始。\n每隔24小时同步负荷和气象数据\n每隔12小时发送日志自动邮件\n");
