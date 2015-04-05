@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="9.527" errors="0" skipped="0">
 =======
 <<<<<<< HEAD
@@ -16,6 +17,9 @@
 =======
 <testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="9.24" errors="0" skipped="0">
 >>>>>>> release/1.0
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="0.001" errors="0" skipped="0">
+>>>>>>> origin/develop
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -27,6 +31,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <property name="idea.launcher.port" value="7532"/>
@@ -44,6 +49,9 @@
 =======
     <property name="idea.launcher.port" value="7537"/>
 >>>>>>> release/1.0
+=======
+    <property name="idea.launcher.port" value="7532"/>
+>>>>>>> origin/develop
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -98,6 +106,7 @@
   </properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="9.527"/>
 =======
 <<<<<<< HEAD
@@ -113,4 +122,7 @@
 =======
   <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="9.24"/>
 >>>>>>> release/1.0
+=======
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="0.001"/>
+>>>>>>> origin/develop
 </testsuite>

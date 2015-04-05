@@ -3,6 +3,7 @@ Test set: loadPrediction.action.PredictionActionTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.532 sec
 =======
 <<<<<<< HEAD
@@ -18,3 +19,6 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.321 sec
 =======
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.246 sec
 >>>>>>> release/1.0
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec
+>>>>>>> origin/develop

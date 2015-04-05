@@ -13,6 +13,7 @@
     <property name="file.encoding.pkg" value="sun.io"/>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="idea.launcher.port" value="7532"/>
 =======
 <<<<<<< HEAD
@@ -28,6 +29,9 @@
 =======
     <property name="idea.launcher.port" value="7537"/>
 >>>>>>> release/1.0
+=======
+    <property name="idea.launcher.port" value="7532"/>
+>>>>>>> origin/develop
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>

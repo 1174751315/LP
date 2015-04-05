@@ -15,10 +15,10 @@ public class PredictionActionTest extends TestCase {
 
     public void testIntelli() throws Exception {
 
-            PredictionAction action = new PredictionAction();
-            action.setUseCaches(false);
-            action.setDateString("2014-04-22");
-            action.intelli();
+//            PredictionAction action = new PredictionAction();
+//            action.setUseCaches(false);
+//            action.setDateString("2014-04-22");
+//            action.intelli();
 
 
 //        Logging.instance().createLogger("INFO").info("INFO");

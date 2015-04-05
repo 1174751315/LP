@@ -18,12 +18,12 @@ public class TomcatStartupListener implements ServletContextListener {
         timer2=new Timer(true);
 
 
-        Logging.instance().createLogger().info("定时任务开始。\n每隔24小时同步负荷和气象数据\n每隔12小时发送日志自动邮件\n");
+        Logging.instance().createLogger().info("定时任务开始。\n每隔12小时同步负荷和气象数据\n每隔12小时发送日志自动邮件\n");
         int second=1000;
         int min=second*60;
         int hour=min*60;
-        timer1.scheduleAtFixedRate(new TimerTask4FetchingAndCalcingWeatherData(),0,6*hour);
-        timer2.scheduleAtFixedRate(new TimerTask4LogMailing(),0,1*min);
+        timer1.scheduleAtFixedRate(new TimerTask4FetchingAndCalcingWeatherData(),0,12*hour);
+        timer2.scheduleAtFixedRate(new TimerTask4LogMailing(),0,10*min);
     }
 
     @Override

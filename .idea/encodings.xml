@@ -37,6 +37,9 @@
     <file url="file://$PROJECT_DIR$/src/main/webapp/CONFIG/template_weekend_backup.xls" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/CONFIG/template_workday.xls" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/CONFIG/template_workday_backup.xls" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/LOG/debug.log" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/LOG/error.log" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/LOG/info.log" charset="GB2312" />
     <file url="PROJECT" charset="GB2312" />
   </component>
 </project>
