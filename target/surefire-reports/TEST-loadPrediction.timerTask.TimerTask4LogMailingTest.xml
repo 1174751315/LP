@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="loadPrediction.timerTask.TimerTask4LogMailingTest" time="7.922" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
+<testsuite tests="1" failures="0" name="loadPrediction.timerTask.TimerTask4LogMailingTest" time="5.865" errors="0" skipped="0">
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.timerTask.TimerTask4LogMailingTest" time="1.845" errors="0" skipped="0">
+>>>>>>> origin/develop
+>>>>>>> origin/develop
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +19,15 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+<<<<<<< HEAD
     <property name="idea.launcher.port" value="7533"/>
+=======
+<<<<<<< HEAD
+    <property name="idea.launcher.port" value="7537"/>
+=======
+    <property name="idea.launcher.port" value="7532"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -64,5 +80,13 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="loadPrediction.timerTask.TimerTask4LogMailingTest" name="testRun" time="7.922"/>
+=======
+<<<<<<< HEAD
+  <testcase classname="loadPrediction.timerTask.TimerTask4LogMailingTest" name="testRun" time="5.865"/>
+=======
+  <testcase classname="loadPrediction.timerTask.TimerTask4LogMailingTest" name="testRun" time="1.845"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
 </testsuite>

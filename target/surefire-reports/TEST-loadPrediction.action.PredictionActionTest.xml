@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<<<<<<< HEAD
 <testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="0" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="9.527" errors="0" skipped="0">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="10.944" errors="0" skipped="0">
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="15.303" errors="0" skipped="0">
+>>>>>>> origin/feature/mail
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="15.303" errors="0" skipped="0">
+>>>>>>> origin/develop
+>>>>>>> origin/develop
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="9.24" errors="0" skipped="0">
+>>>>>>> release/1.0
+=======
+<testsuite tests="1" failures="0" name="loadPrediction.action.PredictionActionTest" time="0.001" errors="0" skipped="0">
+>>>>>>> origin/develop
+>>>>>>> origin/develop
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -11,7 +35,31 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+<<<<<<< HEAD
     <property name="idea.launcher.port" value="7533"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <property name="idea.launcher.port" value="7532"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <property name="idea.launcher.port" value="7532"/>
+=======
+    <property name="idea.launcher.port" value="7534"/>
+>>>>>>> origin/feature/mail
+=======
+    <property name="idea.launcher.port" value="7534"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
+=======
+    <property name="idea.launcher.port" value="7537"/>
+>>>>>>> release/1.0
+=======
+    <property name="idea.launcher.port" value="7532"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -64,5 +112,29 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
+<<<<<<< HEAD
   <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="0"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="9.527"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="10.944"/>
+=======
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="15.303"/>
+>>>>>>> origin/feature/mail
+=======
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="15.303"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
+=======
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="9.24"/>
+>>>>>>> release/1.0
+=======
+  <testcase classname="loadPrediction.action.PredictionActionTest" name="testIntelli" time="0.001"/>
+>>>>>>> origin/develop
+>>>>>>> origin/develop
 </testsuite>
