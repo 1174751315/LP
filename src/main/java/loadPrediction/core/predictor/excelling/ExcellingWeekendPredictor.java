@@ -48,7 +48,7 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetOutputWorkbookPath() {
-        return IOPaths.WEB_CONTENT_ROOT + dateString + "WK.xls";
+        return IOPaths.WEB_CONTENT_TEMP + dateString + "WK.xls";
     }
 
     @Override
