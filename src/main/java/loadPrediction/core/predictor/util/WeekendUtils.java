@@ -54,5 +54,4 @@ public class WeekendUtils {
             throw new LPE(e.getMessage(), LPE.eScope.USER);
         }
     }
-
 }

@@ -47,10 +47,10 @@ public class LogMailingUtils {
         return message;
     }
     public static MimeMessage createMimeMessage(JavaMailSenderImpl sender)throws LPE{
-        return createMimeMessage(sender,"1174751315@qq.com","1174751315@qq.com","负荷预测日志");
+        return createMimeMessage(sender,"2229184705@qq.com","2229184705@qq.com","负荷预测日志");
     }
     public static MimeMessage createMimeMessage(JavaMailSenderImpl sender,String subjectPrefix)throws LPE{
-        return createMimeMessage(sender,"1174751315@qq.com","1174751315@qq.com",subjectPrefix);
+        return createMimeMessage(sender,"2229184705@qq.com","2229184705@qq.com",subjectPrefix);
     }
 
     public static JavaMailSenderImpl getDefaultSender(){
