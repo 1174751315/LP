@@ -5,11 +5,13 @@ import loadPrediction.exception.LPE;
 import loadPrediction.log.Logging;
 import loadPrediction.utils.LogMailingUtils;
 import org.apache.log4j.Logger;
+import org.apache.struts2.ServletActionContext;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -35,6 +37,10 @@ public class ProblemReportingAction extends ActionSupport {
             MimeMessage message=LogMailingUtils.createMimeMessage(sender);
             String text="用户报告了一个问题。\n【描述】\n"+details+"\n";
             text+="【时间】"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\n";
+
+            HttpServletRequest request= ServletActionContext.getRequest();
+            text+="【用户信息】"+request.getRemoteAddr()+"\n";
+
             message.setText(text);
             sender.send(message);
         } catch (LPE lpe) {

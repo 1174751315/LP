@@ -31,6 +31,11 @@ public class PredictorFactory {
     private PredictorFactory() {
     }
 
+    /**
+     * @param date 预测基准日。
+     * @return 对应于date的合适的预测器。首选Excelling预测器。
+     * @throws Exception 当在获取预测器示例的过程中发生任何其它异常
+     */
     public IPredictor getProperPredictor(Date date) throws Exception {
         DAOSimpleDate dao=DAOFactory.getDefault().createDaoSimpleDate();
         String ds=date.toLocalDate().toString();
@@ -46,7 +51,11 @@ public class PredictorFactory {
 //        throw new Exception("未能获取合适的预测器，因此预测算法不能启动。\n" +
 //                "原因可能是提供了非法的参数或对应预测器尚未实现。");
     }
-
+    /**
+     * @param date 形如“1900-01-01”格式的预测基准日字符串。
+     * @return 对应于date的合适的预测器。首选Excelling预测器。
+     * @throws Exception 当在获取预测器示例的过程中发生任何其它异常
+     */
     public IPredictor getProperPredictor(String date) throws Exception {
         return getProperPredictor(Date2StringAdapter.toDate(date));
     }

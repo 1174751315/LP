@@ -20,29 +20,77 @@ import java.util.List;
  */
 public interface IPredictor {
 
+
+    /**
+     * @return 包含预测相关信息的对象；该对象包含何种信息未有定义，由实现者决定。
+     * @throws LPE 当预测过程发生数据库访问异常、文件访问异常或其它任何异常
+     */
     Object predict() throws LPE;
 
+
+    /**
+     * 执行该函数之前必须调用predict函数。
+     * @return 精度链表。
+     */
     ElementPrintableLinkedList<Accuracy> getAccuracy();
 
+
+    /**
+     * @return 形如“1900-01-01”格式的日期字符串。
+     */
     String getDateString();
 
+
+    /**
+     * @return 历史日个数链表。
+     */
     List<Integer> getHistoryDaysNumbers();
 
+
+    /**
+     * @return 预测日个数。
+     */
     Integer getPredictionDaysNumber();
 
+    /**
+     * @return 预测日1D链表。
+     */
     ElementPrintableLinkedList<SimpleDate> getPredictionDays();
 
+    /**
+     * @return 历史日2D链表。
+     */
     ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> getHistoryDays();
 
+    /**
+     * @return 相似日2D链表。
+     */
     ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> getSimilarDays();
 
+    /**
+     * @return 预测负荷数据链表。
+     */
     ElementPrintableLinkedList<LoadData> getPrediction96PointLoads();
 
+    /**
+     * @return 实际负荷数据链表。
+     */
     ElementPrintableLinkedList<LoadData> getActual96PointLoads();
 
+    /**
+     * @return 相似日负荷2D链表。
+     */
     ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> getSimilarLoad();
 
+    /**
+     * 访问者模式接口，用于接受一个访问者对象。
+     * @param visitor 访问者对象。
+     * @return 包含特定信息的对象；包含何种信息由 IPredictorVisitor 接口的实现者指定。
+     */
     Object accept(IPredictorVisitor visitor);
 
+    /**
+     * @return 表明预测器类型的说明字符串。
+     */
     String getPredictorType();
 }

@@ -12,6 +12,10 @@ import org.apache.poi.ss.util.CellReference;
  * 李倍存 创建于 2015-03-24 20:46。电邮 1174751315@qq.com。
  */
 public class CellPosition {
+    /**
+     * @param cellRef 符合MS EXCEL相关规范的形如“A1”的单元格坐标。
+     * @param sheetName EXCEL工作簿的工作表名字。
+     */
     public CellPosition(String cellRef, String sheetName) {
         cellReference = new CellReference(cellRef);
         this.sheetName = sheetName;
@@ -24,10 +28,17 @@ public class CellPosition {
         return this.sheetName;
     }
 
+
+    /**
+     * @return 单元格的行索引（特定于POI和JXL）。
+     */
     public Integer getRow() {
         return cellReference.getRow();
     }
 
+    /**
+     * @return 单元格的列索引（特定于POI和JXL）。
+     */
     public Short getCol() {
         return cellReference.getCol();
     }

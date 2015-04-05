@@ -14,6 +14,11 @@ import  loadPrediction.core.predictor.IWorkdayPredictor;
  * 李倍存 创建于 2015-03-05 15:42。电邮 1174751315@qq.com。
  */
 public interface IPredictorVisitor {
+    /**
+     * 访问者模式接口；用于为特定的IWorkdayPredictor扩展功能。
+     * @param predictor 预测器实例
+     * @return 包含特定信息的对象；包含何种信息由实现者决定。
+     */
     Object visitWorkdayPredictor(IWorkdayPredictor predictor);
 
     Object visitWeekendPredictor(IWeekendPredictor predictor);
