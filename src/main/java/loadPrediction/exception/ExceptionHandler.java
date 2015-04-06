@@ -10,7 +10,7 @@ import javax.mail.internet.MimeMessage;
 /**
  * 李倍存 创建于 2015-04-05 21:19。电邮 1174751315@qq.com。
  */
-public  class ExceptionHandler {
+public   class ExceptionHandler {
 
 //    public void handleWithoutMailing(Exception ex,Logger logger,String prefix){
 //        logger.info(prefix);
@@ -39,16 +39,5 @@ public  class ExceptionHandler {
 
 
 
-    public static void defaultHandling(Exception exception,Logger logger,String msgPrefix){
-        new ExceptionLogger(new ExceptionMailler(new ExceptionHandler()),logger,msgPrefix).handle(exception);
-    }
-    public static void defaultHandling(Exception exception,String msgPrefix){
-        defaultHandling(exception,Logging.instance().createLogger(),msgPrefix);
-    }
-    public static void defaultHandling(Exception exception,Logger logger){
-        defaultHandling(exception,logger,"【未指定异常提示】");
-    }
-    public static void defaultHandling(Exception e){
-        defaultHandling(e,Logging.instance().createLogger(),"【未指定异常提示】");
-    }
+
 }
