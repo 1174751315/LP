@@ -9,7 +9,7 @@ public class ExceptionHandlerTest extends TestCase {
         try {
             throw new Exception("测试异常处理器");
         }catch (Exception e){
-            ExceptionHandler.defaultHandling(e, Logging.instance().createLogger("TEST EXCEPTION HANDLING"),"TEST");
+//            ExceptionHandler.defaultHandling(e, Logging.instance().createLogger("TEST EXCEPTION HANDLING"),"TEST");
         }
 
     }
