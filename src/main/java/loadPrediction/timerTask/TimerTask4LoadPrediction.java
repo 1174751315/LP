@@ -6,6 +6,12 @@
 
 package loadPrediction.timerTask;
 
+import loadPrediction.action.PredictionAction;
+import loadPrediction.exception.ExceptionHandlerFactory;
+import loadPrediction.log.Logging;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.TimerTask;
 
 /**
@@ -20,7 +26,15 @@ public class TimerTask4LoadPrediction extends TimerTask {
      */
     @Override
     public void run() {
-        DataMoveManager.instance().add(new DataMoveCommand(new LoadDataCopy()));
-        DataMoveManager.instance().execute();
+        Logging.instance().createLogger("每日定时任务").info("开始执行自动负荷预测并缓存");
+        PredictionAction action=new PredictionAction();
+        action.setDateString(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        action.setUseCaches(true);
+        Logging.instance().createLogger("每日定时任务").info("成功");
+        try {
+            action.intelli();
+        } catch (Exception e) {
+            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(e,"在执行每日定时任务的自动负荷预测时出现问题");
+        }
     }
 }
