@@ -11,6 +11,7 @@ import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.PredictionLoadData;
+import loadPrediction.exception.LPE;
 
 /**
  * 李倍存 创建于 2015-03-05 15:47。电邮 1174751315@qq.com。
@@ -27,7 +28,7 @@ public class PredictionLoad2DBVisitor implements IPredictorVisitor {
     private static DAOFactory factory;
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         /*保存预测日1负荷数据*/
         try {
             PredictionLoadData d = predictor.getPrediction96PointLoads().get(0).convertLower();
@@ -35,18 +36,18 @@ public class PredictionLoad2DBVisitor implements IPredictorVisitor {
             d.setDateString(predictor.getPredictionDays().get(0).getDateString());
             factory.createDaoPredictionLoadData().insertOrUpdate(d);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new LPE("在将预测负荷数据存入数据库时发生异常。");
         }
         return predictor;
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
         return null;
     }
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
         return null;
     }
 

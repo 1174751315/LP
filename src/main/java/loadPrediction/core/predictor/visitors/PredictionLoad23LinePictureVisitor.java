@@ -10,6 +10,7 @@ import  jfreechart.JFreeChartFacade;
 import  loadPrediction.core.predictor.IQingmingPredictor;
 import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.exception.LPE;
 import  loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
 
@@ -20,7 +21,7 @@ public class PredictionLoad23LinePictureVisitor implements IPredictorVisitor {
     private String dir;
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
         return null;
     }
 
@@ -29,7 +30,7 @@ public class PredictionLoad23LinePictureVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
 //        JFreeChart chart;
 //        chart=(JFreeChart)predictor.accept(new PredictionLoad2ChartVisitor());
 //        this.saveAsFile(chart,predictor.getDate().toLocalDate().toString()+"-预测.png");
@@ -44,7 +45,7 @@ public class PredictionLoad23LinePictureVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
         JFreeChart chart = (JFreeChart) predictor.accept(new PredictionLoad2ChartVisitor());
         String fileName = FileContentUtils.autoFileName(("WEEKEND_3_LINE" + predictor.getDateString().replaceAll("-", "")), ".JPG");
         new JFreeChartFacade().saveAs(chart, dir + fileName);

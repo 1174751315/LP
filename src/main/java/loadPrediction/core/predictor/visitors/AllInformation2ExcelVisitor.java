@@ -6,7 +6,6 @@
 
 package loadPrediction.core.predictor.visitors;
 
-import common.MaxAveMinTuple;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.*;
@@ -14,11 +13,10 @@ import jxl.write.Number;
 import loadPrediction.core.predictor.IQingmingPredictor;
 import loadPrediction.core.predictor.IWeekendPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
-import loadPrediction.core.predictor.hardCoding.HardCodingFestivalPredictor;
-import loadPrediction.core.predictor.hardCoding.HardCodingSpringFestivalPredictor;
 import loadPrediction.domain.Accuracy;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.resouce.TimeLabels;
 import loadPrediction.utils.Date2StringAdapter;
@@ -39,7 +37,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         String fileName = FileContentUtils.autoFileName("WORKDAY" + predictor.getDateString().replaceAll("-", ""), ".xls");
         String path = dir + fileName;
         try {
@@ -184,22 +182,23 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             wwb.write();
             wwb.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            failed();
         } catch (WriteException e) {
-            e.printStackTrace();
+            failed();
         } catch (BiffException e) {
-            e.printStackTrace();
+            failed();
         }
         return path;
     }
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
+        failed("未实现清明节预测输出报表的功能");
         return null;
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
         String fileName = FileContentUtils.autoFileName("WEEKEND" + predictor.getDateString().replaceAll("-", ""), ".xls");
         String path = dir + fileName;
         try {
@@ -348,14 +347,20 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             wwb.write();
             wwb.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            failed();
         } catch (WriteException e) {
-            e.printStackTrace();
+           failed();
         } catch (BiffException e) {
-            e.printStackTrace();
+            failed();
         }
         return path;
     }
 
 
+    private void failed(String message)throws LPE{
+        throw new LPE(message);
+    }
+    private void failed()throws LPE{
+        failed("在输出报表时发生异常");
+    }
 }

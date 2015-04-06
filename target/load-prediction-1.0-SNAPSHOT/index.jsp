@@ -222,10 +222,10 @@
         </div>
     </div>
     <div class="navigation navigation1" data-targetID="pullDownNavigation3">
-        <div class="nav">问题报告</div>
+        <div class="nav">反馈</div>
         <div class="pullDownNavigationc" id="pullDownNavigation3">
             <div class="nav" align="center">
-                <input type="button" onmouseover="highLight(this);" onmouseout="unLight(this);" onclick="setClient('sendEMailToDeveloper');" value="发送反馈电邮"/>
+                <input type="button" onmouseover="highLight(this);" onmouseout="unLight(this);" onclick="setClient('sendEMailToDeveloper');" value="发送问题报告"/>
             </div>
         </div>
     </div>
@@ -240,7 +240,7 @@
                 <h4>选择一个日期。将自动根据您选择的日期执行适合的预测类型。</h4>
                 <input type='date' name='dateString' id='dateEdit'
                        style='font-size: larger;font-weight: bold;text-align: center;color: #3F74C1;background-color: #FAFAFA;border-color: #0f0f0f;'/>
-                <s:checkbox label="使用缓存" name="useCaches" value="true"/>
+                <s:checkbox label="使用缓存" name="useCaches"/>
             </s:form>
         </div>
         <br>

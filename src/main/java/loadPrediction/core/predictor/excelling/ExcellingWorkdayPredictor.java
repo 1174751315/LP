@@ -12,10 +12,8 @@ import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.core.predictor.util.CommonUtils;
 import loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
-import loadPrediction.exception.DAE;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
@@ -130,8 +128,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor) {
-        return visitor.visitWorkdayPredictor(this);
+    public Object accept(IPredictorVisitor visitor)throws LPE{
+            return visitor.visitWorkdayPredictor(this);
     }
 
     @Override
