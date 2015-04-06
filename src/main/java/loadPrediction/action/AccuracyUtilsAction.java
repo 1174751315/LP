@@ -13,6 +13,8 @@ import  loadPrediction.dataAccess.DAOAccuracy;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
+import loadPrediction.exception.DAE;
+import loadPrediction.exception.ExceptionHandlerFactory;
 import  loadPrediction.resouce.IOPaths;
 import  loadPrediction.utils.AccuracyUtils;
 import  loadPrediction.utils.LoadData2ChartUtils;
@@ -137,38 +139,44 @@ public class AccuracyUtilsAction extends ActionSupport {
     }
 
     public String getAccuracyStatics() throws Exception {
-        threshold = 0.95;
-        DAOAccuracy dao = DAOFactory.getDefault().createDAOAccuracy();
-        List<Accuracy> list = new LinkedList<Accuracy>();
-        List list1 = dao.query();
-        if (list1 == null) {
-            return SUCCESS;
-        }
-        for (int i = 0; i < list1.size(); i++) {
-            list.add((Accuracy) list1.get(i));
+        try {
+            threshold = 0.95;
+            DAOAccuracy dao = DAOFactory.getDefault().createDAOAccuracy();
+            List<Accuracy> list = new LinkedList<Accuracy>();
+            List list1 = dao.query();
+            if (list1 == null) {
+                return SUCCESS;
+            }
+            for (int i = 0; i < list1.size(); i++) {
+                list.add((Accuracy) list1.get(i));
+            }
+
+            DefaultCategoryDataset ds = new DefaultCategoryDataset();
+            Integer count = 0;
+            for (int i = 0; i < list.size(); i++) {
+                Double acc = list.get(i).getAccuracy();
+                if (acc < threshold)
+                    count++;
+                ds.addValue(acc, "准确度", list.get(i).getDateString());
+            }
+            number = (list.size());
+            unsatisfiedNumber = count;
+            unsatisfiedPercent = unsatisfiedNumber.doubleValue() / number.doubleValue();
+            JFreeChart chart = ChartFactory.createBarChart("准确度：共" + list.size() + "项,其中" + count + "项低于指定的阈值" + threshold + ",占" + Double.valueOf(unsatisfiedPercent * 100.).toString().substring(0, 1) + "%。", "日期", "值", ds, PlotOrientation.VERTICAL, true, true, true);
+
+            CategoryPlot plot = chart.getCategoryPlot();
+            BarRenderer renderer = new BarChartRendererWithThreshold(threshold);
+            plot.setRenderer(renderer);
+
+            filename = new JFreeChartFacade().saveAs(chart, IOPaths.WEB_CONTENT_TEMP, "AS");
+            Integer i = filename.indexOf("TEMP");
+            filename = filename.substring(i + 5);
+        } catch (DAE dae) {
+            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(dae,"执行准确度统计时发生异常。");
         }
 
-        DefaultCategoryDataset ds = new DefaultCategoryDataset();
-        Integer count = 0;
-        for (int i = 0; i < list.size(); i++) {
-            Double acc = list.get(i).getAccuracy();
-            if (acc < threshold)
-                count++;
-            ds.addValue(acc, "准确度", list.get(i).getDateString());
-        }
-        number = (list.size());
-        unsatisfiedNumber = count;
-        unsatisfiedPercent = unsatisfiedNumber.doubleValue() / number.doubleValue();
-        JFreeChart chart = ChartFactory.createBarChart("准确度：共" + list.size() + "项,其中" + count + "项低于指定的阈值" + threshold + ",占" + Double.valueOf(unsatisfiedPercent * 100.).toString().substring(0, 1) + "%。", "日期", "值", ds, PlotOrientation.VERTICAL, true, true, true);
-
-        CategoryPlot plot = chart.getCategoryPlot();
-        BarRenderer renderer = new BarChartRendererWithThreshold(threshold);
-        plot.setRenderer(renderer);
-
-        filename = new JFreeChartFacade().saveAs(chart, IOPaths.WEB_CONTENT_TEMP, "AS");
-        Integer i = filename.indexOf("TEMP");
-        filename = filename.substring(i + 5);
 
         return SUCCESS;
+
     }
 }

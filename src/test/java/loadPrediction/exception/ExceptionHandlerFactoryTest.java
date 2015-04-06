@@ -12,7 +12,7 @@ public class ExceptionHandlerFactoryTest extends TestCase {
         try {
             throw new LPE("测试异常处理器工厂");
         }catch (LPE e){
-            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(e);
+            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(e,"");
         }
     }
 }

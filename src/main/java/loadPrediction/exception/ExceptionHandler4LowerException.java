@@ -9,11 +9,9 @@ import org.apache.log4j.Logger;
 public class ExceptionHandler4LowerException implements IExceptionHandler {
 
     private String loggerName;
-    private String msgPrefix;
 
-    public ExceptionHandler4LowerException(String loggerName, String msgPrefix) {
+    public ExceptionHandler4LowerException(String loggerName) {
         this.loggerName = loggerName;
-        this.msgPrefix = msgPrefix;
     }
 
     public ExceptionHandler4LowerException() {
@@ -22,14 +20,12 @@ public class ExceptionHandler4LowerException implements IExceptionHandler {
     public void setLoggerName(String loggerName) {
         this.loggerName = loggerName;
     }
-    public void setMsgPrefix(String msgPrefix) {
-        this.msgPrefix = msgPrefix;
-    }
 
 
     @Override
-    public void handle(Exception e) {
-        defaultHandling(e,Logging.instance().createLogger(loggerName),msgPrefix);
+    public String handle(Exception e,String prefix) {
+        defaultHandling(e,Logging.instance().createLogger(loggerName),prefix);
+        return prefix+e.getMessage();
     }
 
 
