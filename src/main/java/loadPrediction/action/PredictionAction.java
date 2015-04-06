@@ -13,7 +13,7 @@ import  loadPrediction.core.cache.PredictionCacheEntity;
 import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.core.predictor.PredictorFactory;
 import  loadPrediction.core.predictor.visitors.*;
-import  loadPrediction.exception.LPE;
+import loadPrediction.exception.*;
 import  loadPrediction.log.Logging;
 import  loadPrediction.resouce.IOPaths;
 import  loadPrediction.utils.FileContentUtils;
@@ -137,10 +137,10 @@ public class PredictionAction extends ActionSupport {
 
         return SUCCESS;
     }
-private String failed(Logger log,String dateString,String msg){
-    log.error("【  "+dateString+"  】  预测失败\n"+msg);
-    log.info("【  "+dateString+"  】" +"预测失败。");
-    return "预测失败\n"+msg;
+    private String failed(Logger log,String dateString,Exception e){
+    IExceptionHandler handler=ExceptionHandlerFactory.INSTANCE.getUpperHandler();
+    return handler.handle(e,dateString+"预测失败");
+
 
 }
     private Boolean useCaches = false;
@@ -181,14 +181,14 @@ private String failed(Logger log,String dateString,String msg){
             doPredict(dateString,log);
             return SUCCESS;
         } catch (LPE e) {
-            warning= failed(log,dateString,e.getMessage());
+            warning= failed(log,dateString,e);
             e.printStackTrace();
         } catch (IllegalArgumentException e) {
 
-            warning =  failed(log,dateString,e.getMessage());
+            warning =  failed(log,dateString,e);
             e.printStackTrace();
         } catch (Exception e){
-            warning=failed(log,dateString,e.getMessage());
+            warning=failed(log,dateString,e);
             e.printStackTrace();
         }
         return SUCCESS;
