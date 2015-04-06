@@ -30,11 +30,12 @@ public class TimerTask4LoadPrediction extends TimerTask {
         PredictionAction action=new PredictionAction();
         action.setDateString(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         action.setUseCaches(true);
-        Logging.instance().createLogger("每日定时任务").info("成功");
+
         try {
             action.intelli();
         } catch (Exception e) {
             ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(e,"在执行每日定时任务的自动负荷预测时出现问题");
         }
+        Logging.instance().createLogger("每日定时任务").info("成功");
     }
 }

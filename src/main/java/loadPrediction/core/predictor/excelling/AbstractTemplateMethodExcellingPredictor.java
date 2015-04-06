@@ -268,9 +268,8 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         try {
             template.write(new FileOutputStream(outPath));
             template.close();
-
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new LPE("保存并关闭工作簿时发生异常");
         }
 
         log.debug("完成一次预测");

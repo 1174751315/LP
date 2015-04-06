@@ -23,9 +23,9 @@ public class TomcatStartupListener implements ServletContextListener {
         int second=1000;
         int min=second*60;
         int hour=min*60;
-        timer1.scheduleAtFixedRate(new TimerTask4FetchingAndCalcingWeatherData(),0,12*hour);
-        timer2.scheduleAtFixedRate(new TimerTask4LogMailing(),0,1*hour);
-        timer3.scheduleAtFixedRate(new TimerTask4LoadPrediction(),0,24*hour);
+        timer1.scheduleAtFixedRate(new TimerTask4FetchingAndCalcingWeatherData(),0,10*min);
+        timer2.scheduleAtFixedRate(new TimerTask4LogMailing(),0,10*min);
+        timer3.scheduleAtFixedRate(new TimerTask4LoadPrediction(),0,10*min);
     }
 
     @Override

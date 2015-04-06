@@ -13,6 +13,7 @@ import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
+import loadPrediction.exception.LPE;
 import  loadPrediction.utils.Date2StringAdapter;
 
 import java.util.List;
@@ -32,24 +33,24 @@ public class Accuracy2DBVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
                         /*若【日负荷曲线】表中已有【预测日1】对应的数据，直接求得准确度，并存入【预测准确度】表。*/
         return this.visit(predictor);
 
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
 
         return this.visit(predictor);
     }
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
-        return null;
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
+        return this.visit(predictor);
     }
 
-    private Object visit(IPredictor predictor) {
+    private Object visit(IPredictor predictor) throws LPE{
         try {
             LoadData ld = factory.createDaoLoadData().query(predictor.getPredictionDays().get(0).getDateString());
             if (ld != null) {
@@ -57,9 +58,10 @@ public class Accuracy2DBVisitor implements IPredictorVisitor {
                 accuracy.setAccuracy(this.calcOneAccuracy(ld, predictor.getPrediction96PointLoads().get(0)));
                 accuracy.setDateString(Date2StringAdapter.toString(predictor.getPredictionDays().get(0).getDate()));
                 factory.createDAOAccuracy().insertOrUpdate(accuracy);
+                return accuracy;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new LPE("将预测精度保存至数据库时发生异常。");
         }
         return null;
     }
