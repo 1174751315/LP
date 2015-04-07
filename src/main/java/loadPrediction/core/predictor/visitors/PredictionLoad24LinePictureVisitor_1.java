@@ -21,6 +21,8 @@ import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
 import loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.CategoryPlot;
@@ -33,7 +35,12 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.xy.CategoryTableXYDataset;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.renderable.RenderableImageProducer;
+import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -100,11 +107,11 @@ public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
 
         BasicStroke dotLine=new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[] {3.F, 3.F}, 1.0F);
         renderer.setSeriesStroke(0, new BasicStroke(2));
-        renderer.setSeriesPaint(0, Color.RED);
+        renderer.setSeriesPaint(0, Color.yellow);
         renderer.setSeriesStroke(1, dotLine);
-        renderer.setSeriesPaint(1, Color.pink);
+        renderer.setSeriesPaint(1, Color.white);
         renderer.setSeriesStroke(2, dotLine);
-        renderer.setSeriesPaint(2, Color.orange);
+        renderer.setSeriesPaint(2, Color.yellow);
         renderer.setBasePaint(Color.BLACK);
         renderer.setSeriesShape(1,new Rectangle());
         renderer.setSeriesShape(2,new Rectangle());
@@ -120,25 +127,67 @@ public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
 
         xyPlot.setRenderer(renderer);
 
+        Color c1=new Color(210,222,239);
+        Color c2=new Color(118,183,247);
+        Color c3=new Color(124,187,0);
+        Color c4=new Color(0,114,51);
+        Color c5=new Color(0,24,143);
+        Color c6=new Color(0,160,233);
+        Color c7=new Color(0,114,198);
+        Color c8=new Color(131,204,254);
+        Color c9=new Color(188,178,167);
+        Color c10=new Color(200,228,155);
         /*图形区域背景颜色*/
-        xyPlot.setBackgroundPaint(Color.BLACK);
+        xyPlot.setBackgroundPaint(c7);
+        chart.setBackgroundPaint(c7);
 
-        /*图片背景颜色*/
-        chart.setBackgroundPaint(Color.GRAY);
+
+
         chart.setBorderPaint(Color.BLACK);
 
         xyPlot.setRangeGridlineStroke(new BasicStroke(1));
         xyPlot.setDomainGridlinesVisible(true);
         xyPlot.setRangeGridlinesVisible(true);
-        xyPlot.setRangeGridlinePaint(Color.lightGray);
-        xyPlot.setDomainGridlinePaint(Color.lightGray);
+        xyPlot.setRangeGridlinePaint(c2);
+        xyPlot.setDomainGridlinePaint(Color.white);
 
-
-        MaxAveMinTuple<Double> t=unnamed(list);
 
         ValueAxis valueAxis=xyPlot.getRangeAxis();
+        valueAxis.setTickLabelPaint(Color.white);
+        valueAxis.setTickLabelFont(new Font("Arial", Font.BOLD, 16));
+        valueAxis.setLabelFont(new Font("微软雅黑", Font.BOLD, 20));
+        valueAxis.setLabelPaint(Color.white);
+        ValueAxis domainAxis=xyPlot.getDomainAxis();
+        domainAxis.setTickLabelFont(new Font("Arial",Font.BOLD,16));
+        domainAxis.setTickLabelPaint(Color.white);
+        domainAxis.setLabelFont(new Font("微软雅黑",Font.BOLD,20));
+        domainAxis.setLabelPaint(Color.white);
+
+
+        chart.getTitle().setFont(new Font("Arial",Font.BOLD,20));
+        chart.getTitle().setPaint(Color.white);
+        MaxAveMinTuple<Double> t=unnamed(list);
+
         valueAxis.setLowerBound(t.min*0.99);
-        valueAxis.setUpperBound(t.max*1.01);
+        valueAxis.setUpperBound(t.max * 1.01);
+
+
+        BufferedImage bufferedImage=chart.createBufferedImage(1600,1200);
+        Graphics graphics2D=bufferedImage.getGraphics();
+        graphics2D.drawString("TEST",600,600);
+        graphics2D.drawLine(10,10,1000,1000);
+        graphics2D.clipRect(100,100,100,100);
+        graphics2D.translate(5000,100);
+        graphics2D.clearRect(100,100,100,100);
+
+        BufferedImage bufferedImage1=new BufferedImage(1600,1200,BufferedImage.TYPE_3BYTE_BGR);
+        Graphics graphics= bufferedImage1.getGraphics();
+        graphics.drawString("TEST",100,100);
+        try {
+            ImageIO.write(bufferedImage,"jpg",new File("F:/test.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         new JFreeChartFacade().saveAs(chart, dir + fileName);

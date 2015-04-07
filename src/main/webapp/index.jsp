@@ -269,7 +269,7 @@
 
 <body>
 <div id="appDiv1" style="width: 100%;height: 100%;">
-    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;">
+    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;background-color: #FFBB00;">
         <div id="panels" style="width:100%;height:80%;top:0%;left:0%;border :solid 1px #101010;">
             <div id="CollapsiblePanel1" class="CollapsiblePanel" onclick="setClient(this.id);" style="width:100%;">
                 <div class="CollapsiblePanelTab" tabindex="0">智能预测</div>
@@ -330,11 +330,54 @@
             <h5>测试版本 BETA 1.0</h5>
         </div>
     </div>
-    <div id="apDiv3" style="width:80%;height:20%;left:20%;top:0%;border:2px;">
+    <div id="apDiv3" style="width:80%;height:20%;left:20%;top:0%;border:2px;background-color:#7CBB00;">
         <div id="apDiv5" style="width:20%;height:100%;left:0%;top:0%;border:solid 1px #101010;"></div>
-        <div id="apDiv6" style="width:80%;left:20%;height:100%;top:0%;border:solid 1px #101010;"></div>
+        <div id="apDiv6" style="width:80%;left:20%;height:100%;top:0%;border:solid 1px #101010;">
+            <table style="width: 100%;height: 100%;text-align: center;font-size: 100%;" border="1" cellspacing="0">
+                <tr>
+                    <th style="font-size: 100%" scope="col">日期</th>
+                    <th scope="col">最大负荷</th>
+                    <th scope="col">最大负荷时刻</th>
+                    <th scope="col">最小负荷</th>
+                    <th scope="col">最小负荷时刻</th>
+                    <th scope="col">平均负荷</th>
+                    <th scope="col">日电量</th>
+                    <th scope="col">峰谷差</th>
+                </tr>
+                <tr>
+                    <th scope="row">预测日1</th>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                </tr>
+                <tr>
+                    <th scope="row">相似日1</th>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                </tr>
+                <tr>
+                    <th scope="row">备用</th>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                    <td>0.0000</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div id="apDiv4" style="width:80%;height:80%;left:20%;top:20%;border:2px #000000">
+    <div id="apDiv4" style="width:80%;height:80%;left:20%;top:20%;border:2px #000000;background-color:#0072C6 ;">
         <img src="" id="outputImg" style="width:100%;height: 100%;border : 2px #101010;"/>
     </div>
 </div>
