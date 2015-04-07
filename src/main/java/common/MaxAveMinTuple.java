@@ -20,7 +20,11 @@ public class MaxAveMinTuple<T> implements IPrintable, IMapable<String, T> {
 
     public MaxAveMinTuple() {
     }
-
+    public MaxAveMinTuple(T max,T ave,T min) {
+        this.max=max;
+        this.min=min;
+        this.ave=ave;
+    }
     public MaxAveMinTuple(String name) {
         this.name = name;
     }
