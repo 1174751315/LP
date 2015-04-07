@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--
+  ~ 版权所有 (c) 2015 。 李倍存 （iPso）。
+  ~ 所有者对该文件所包含的代码的正确性、执行效率等任何方面不作任何保证。
+  ~ 所有个人和组织均可不受约束地将该文件所包含的代码用于非商业用途。若需要将其用于商业软件的开发，请首先联系所有者以取得许可。
+  -->
+
+        <!--
+        /*
+         * $Id$
+         *
+         * Licensed to the Apache Software Foundation (ASF) under one
+         * or more contributor license agreements.  See the NOTICE file
+         * distributed with this work for additional information
+         * regarding copyright ownership.  The ASF licenses this file
+         * to you under the Apache License, Version 2.0 (the
+         * "License"); you may not use this file except in compliance
+         * with the License.  You may obtain a copy of the License at
+         *
+         *  http://www.apache.org/licenses/LICENSE-2.0
+         *
+         * Unless required by applicable law or agreed to in writing,
+         * software distributed under the License is distributed on an
+         * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+         * KIND, either express or implied.  See the License for the
+         * specific language governing permissions and limitations
+         * under the License.
+         */
+        -->
+        <!-- START SNIPPET: strutsDtd -->
+
+        <!--
+           Struts allConfiguration DTD.
+           Use the following DOCTYPE
+
+           <!DOCTYPE struts PUBLIC
+            "-//Apache Software Foundation//DTD Struts AllConfiguration 2.0//EN"
+            "http://struts.apache.org/dtds/struts-2.0.dtd">
+        -->
+
+        <!--<!ELEMENT load-preidction-config ()*>-->
+        <!--<!ELEMENT load-predictor-factory (result-type|default-action-ref)>-->
+        <!--<!ATTLIST load-predictor-factory -->
+        <!--predictor CDATA #REQUIRED-->
+        <!-->-->
+
+        <!ELEMENT load-prediction-configuration (predictors,users,outputs,caches)>
+        <!ATTLIST load-prediction-configuration
+                usage (test|produce) "test" #REQUIRED>
+
+        <!ELEMENT users (user+)*>
+        <!ELEMENT user (username,password)>
+        <!ATTLIST user
+                access (administrator|general) "general" #IMPLIED
+                >
+        <!ELEMENT username (#PCDATA)>
+        <!ELEMENT password (#PCDATA)>
+
+
+        <!ELEMENT predictors (workday-predictor,weekend-predictor,festival-predictor) >
+        <!ELEMENT workday-predictor (
+                history-workday-number,
+                prediction-workday-number,
+                test
+                )>
+        <!ATTLIST workday-predictor
+                enabled (true|false) "true"
+                >
+        <!ELEMENT weekend-predictor (
+                history-workday-number,
+                history-weekend-number,
+                prediction-weekend-number,
+                test
+                )>
+        <!ATTLIST weekend-predictor
+                enabled (true|false) "true"
+                >
+        <!ELEMENT festival-predictor (
+                history-festival-number,
+                prediction-festival-number,
+                test
+                )>
+        <!ATTLIST festival-predictor
+                enabled (true|false) "true"
+                >
+        <!ELEMENT history-workday-number ()>
+        <!ELEMENT history-weekend-number ()>
+        <!ELEMENT history-festival-number ()>
+        <!ELEMENT prediction-workday-number ()>
+        <!ELEMENT prediction-weekend-number ()>
+        <!ELEMENT prediction-festival-number ()>
+
+
+        <!ELEMENT outputs (output+)>
+        <!ELEMENT output EMPTY>
+        <!ATTLIST output
+                destination (oracle_database|excel_workbook|web_browser|text_file|none) "none" #REQUIRED
+                >
+
+
+        <!ELEMENT test (accuracy-threshold,accuracy-counter)>
+        <!ELEMENT accuracy-threshold (#PCDATA)>
+        <!ELEMENT accuracy-counter (#PCDATA)>
+
+<!ELEMENT caches (prediction-caches,accuracy-checking-caches)>
+<!ELEMENT prediction-caches (data-dir,content-file-path) >
+<!ELEMENT accuracy-checking-caches (data-dir,content-file-path)>
+<!ELEMENT data-dir (#PCDATA)>
+<!ELEMENT content-file-path (#PCDATA)>
+        <!--<!ELEMENT package (result-types?, interceptors?, default-interceptor-ref?, default-action-ref?, default-class-ref?, global-results?, global-exception-mappings?, action*)>-->
+        <!--<!ATTLIST package-->
+        <!--name CDATA #REQUIRED-->
+        <!--extends CDATA #IMPLIED-->
+        <!--namespace CDATA #IMPLIED-->
+        <!--abstract CDATA #IMPLIED-->
+        <!--externalReferenceResolver NMTOKEN #IMPLIED-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT result-types (result-type+)>-->
+        <!---->
+        <!--<!ELEMENT result-type (param*)>-->
+        <!--<!ATTLIST result-type-->
+        <!--name CDATA #REQUIRED-->
+        <!--class CDATA #REQUIRED-->
+        <!--default (true|false) "false"-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT interceptors (interceptor|interceptor-stack)+>-->
+        <!---->
+        <!--<!ELEMENT interceptor (param*)>-->
+        <!--<!ATTLIST interceptor-->
+        <!--name CDATA #REQUIRED-->
+        <!--class CDATA #REQUIRED-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT interceptor-stack (interceptor-ref*)>-->
+        <!--<!ATTLIST interceptor-stack-->
+        <!--name CDATA #REQUIRED-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT interceptor-ref (param*)>-->
+        <!--<!ATTLIST interceptor-ref-->
+        <!--name CDATA #REQUIRED-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT default-interceptor-ref (#PCDATA)>-->
+        <!--<!ATTLIST default-interceptor-ref-->
+        <!--name CDATA #REQUIRED-->
+        <!-->-->
+        <!---->
+        <!--<!ELEMENT default-action-ref (#PCDATA)>-->
+        <!--<!ATTLIST default-action-ref-->
+        <!--name CDATA #REQUIRED-->
+        <!-->-->
+        <!---->
+        <!---->
+        <!---->
+        <!--END SNIPPET: strutsDtd -->
+
+        <!---->

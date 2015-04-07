@@ -13,6 +13,7 @@ import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.exception.LPE;
 import  loadPrediction.utils.AccuracyUtils;
 import  loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
@@ -33,18 +34,18 @@ public class PredictionLoad24LinePictureVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         return unnamed(predictor, "WORKDAY_4_LINE");
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
         return unnamed(predictor, "WEEKEND_4_LINE");
     }
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
-        return null;
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
+        throw new LPE("方法未实现");
     }
 
 

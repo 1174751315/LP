@@ -87,7 +87,7 @@ public interface IPredictor {
      * @param visitor 访问者对象。
      * @return 包含特定信息的对象；包含何种信息由 IPredictorVisitor 接口的实现者指定。
      */
-    Object accept(IPredictorVisitor visitor);
+    Object accept(IPredictorVisitor visitor)throws LPE;
 
     /**
      * @return 表明预测器类型的说明字符串。

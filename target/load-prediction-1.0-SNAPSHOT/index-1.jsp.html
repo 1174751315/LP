@@ -1,0 +1,176 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%--
+Created by IntelliJ IDEA.
+User: LBC
+Date: 2015/1/15
+Time: 13:34
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="load predict website">
+    <meta name="author" content="huihsu">
+    <link rel="icon" href="static/icon/favicon.ico">
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/datepicker3.css">
+    <link rel="stylesheet" href="static/css/user.css">
+    <link rel="stylesheet" href="static/css/home.css">
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap-datepicker.js"></script>
+
+    <title>多因素气象负荷预测项目</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default" role="navigation" style="background-color: #3F74C1">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">基本预测</a></li>
+                <li >              <a href="/">数据管理</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+<div class="container-fluid">
+    <div id= "div1" class="panel panel-default">
+        <div class="panel-heading" style="background-color: #3F74C1;">
+            <h3 class="panel-title">负荷预测模型下载</h3>
+        </div>
+        <table class="table" style="border: 0">
+            <tr>模型类型</tr>
+            <tr>描述</tr>
+            <tr>操作 </tr>
+            <tr>
+                <div id="workdaymodel">
+                    <td>工作日预测模型</td>
+                    <td>一般工作日预测模型，预测指定日的未来两天负荷预测。</td>
+                    <td> <form  action="get_model" method="get" >
+                        <div class="form-group">
+                            <label>选择日期：</label>
+                            <input type="text" class="datepicker" id="date1" placeholder="XXXX-XX-XX">
+                        </div>
+                        <button type="button" class="btn btn-default" id="download_model_workday">下载模型</button>
+                    </form>
+                    </td>
+                </div>
+            </tr>
+            <tr>
+                <div id="weekend">
+                    <td>节假日预测模型</td>
+                    <td>节假日预测模型，预测节假日的未来两天负荷预测。</td>
+                    <td>
+                        <div class="form-group">
+                            <label>选择日期：</label>
+                            <input type="text" class="datepicker" id="date2" placeholder="XXXX-XX-XX">
+                        </div>
+                        <button type="button" class="btn btn-default" id="download_model_weekend">下载模型</button>
+                        </form>
+                    </td>
+                </div>
+
+            </tr>
+            <tr>
+                <td>综合气象计算模型</td>
+                <td>计算综合气象</td>
+                <td>
+                    <div class="form-group">
+                        <label>选择日期：</label>
+                        <input type="text" class="datepicker" id="date3" placeholder="XXXX-XX-XX">
+                    </div>
+                    <button type="button" class="btn btn-default" id="download_model_weather">下载模型</button>
+                    </form>
+
+
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</div>
+<s:form action="testJfreeChart" namespace="/chart_output">
+    <s:textfield name="date"/>
+    <s:submit label="测试JFreechart" />
+</s:form>
+<s:form action="showAccuracies" namespace="/chart_output">
+    <s:textfield name="threshold"/>
+    <s:submit label="默认"/>
+</s:form>
+<s:form action="testHelper" namespace="/load_prediction">
+    <s:textfield name="date" label="开始日期"/>
+    <s:textfield name="nbr" label="日期个数"/>
+    <s:submit label="默认">提交</s:submit>
+</s:form>
+
+<script>
+    $('.datepicker').datepicker({
+        todayBtn: "linked",
+        calendarWeeks: true,
+        autoclose: true,
+        todayHighlight: true,
+        format:'yyyy-mm-dd',
+        OnSelect: function(dateText, inst) {
+            $('#workdaymodel').hide()
+            $('#weekendmodel').hide()
+        }
+    });
+
+
+
+
+    $('#download_model_workday').click(function(e){
+        d = $('input#date1')[0].value;
+        window.location.href = 'api/model/workday/'+ d;
+    });
+
+
+    $('#download_model_weather').click(function(e){
+        d = $('input#date3')[0].value;
+        window.location.href = 'api/model/weather/'+ d;
+    });
+
+
+
+    $('#download_model_weekend').click(function(e){
+        d = $('input#date2')[0].value;
+
+        var myDate = new Date(Date.parse(d.replace(/-/g,"/")))
+
+
+        var weekday = myDate.getDay()
+
+        if(weekday == 6){
+            window.location.href = "api/model/weekend/" + d;
+        }
+        else{
+            alert("应该选择周六以用来进行周末预测")
+        }
+
+
+    })
+
+
+
+</script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+</body>
+</html>
+

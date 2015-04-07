@@ -23,7 +23,13 @@ public class ExceptionLogger extends ExceptionHandlerDecorator {
 
     @Override
     public void handle(Exception exception) {
-        logger.error(msgPrefix+"\n"+exception.getMessage());
+        String info="";
+        info+=msgPrefix+"\n"+exception.getMessage()+"\n";
+        StackTraceElement[] traceElements=exception.getStackTrace();
+        for (int i = 0; i <traceElements.length; i++) {
+            info+=traceElements[i].toString()+"\n";
+        }
+        logger.error(info);
         logger.info(msgPrefix+"\n");
         super.handle(exception);
     }

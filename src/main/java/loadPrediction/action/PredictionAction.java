@@ -8,7 +8,7 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import  loadPrediction.core.cache.CachesManager;
+import loadPrediction.core.cache.CachesMgr;
 import  loadPrediction.core.cache.PredictionCacheEntity;
 import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.core.predictor.PredictorFactory;
@@ -95,47 +95,42 @@ public class PredictionAction extends ActionSupport {
 
     public String intelli() throws Exception {
         Logger log = Logging.instance().createLogger("智能预测");
-//        SimpleMailMessage mailMessage=new SimpleMailMessage();
-//        mailMessage.setFrom("1174715@qq.com");
-//        mailMessage.setTo("1174751315@qq.com");
-//        mailMessage.setSubject("None");
-//        mailMessage.setText("None");
-//
-//        JavaMailSenderImpl sender=new JavaMailSenderImpl();
-//
-//
-//        sender.send(mailMessage);
+        try {
+
         /*若允许缓存，且缓存有对应项，则直接对用户返回缓存。*/
-        if (useCaches && CachesManager.instance().hasPredictionCache(dateString)) {
-            try {
-                PredictionCacheEntity cache = CachesManager.instance().getPredictionEntity(dateString);
-                warning = "OK";
-                String imgPath=cache.getOutputImagePath();
-                String xlPath=cache.getOutputExcelPath();
-                File fxl=new File(xlPath);
-                File fimg=new File(imgPath);
-                if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
-                    imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
-                    xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
-                    root = "";
-                    log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
-                    return SUCCESS;
+            if (useCaches && CachesMgr.instance().hasPredictionCache(dateString)) {
+                try {
+                    PredictionCacheEntity cache = CachesMgr.instance().getPredictionEntity(dateString);
+                    warning = "OK";
+                    String imgPath=cache.getOutputImagePath();
+                    String xlPath=cache.getOutputExcelPath();
+                    File fxl=new File(xlPath);
+                    File fimg=new File(imgPath);
+                    if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                        imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
+                        xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
+                        root = "";
+                        log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
+                        return SUCCESS;
+                    }
+                    else {//否则进行一次无缓存常规预测
+                        log.info("【"+dateString+"】  在进行【使用缓存】的预测时发现文件丢失，转而进行无缓存常规预测。"  );
+                        return predict(dateString,log);
+                    }
+                } catch (Exception e) {
+                    warning =failed(log,dateString,e);
                 }
-                else {//否则进行一次无缓存常规预测
-                    log.info("【"+dateString+"】  在进行【使用缓存】的预测时发现文件丢失，转而进行无缓存常规预测。"  );
-                    return predict(dateString,log);
-                }
-            } catch (Exception e) {
-                warning = "未处理的异常\n" + e.getMessage();
-                log.error(" 预测失败 "+e.getMessage());
-                log.info(dateString + " 预测失败 ");
+
+            } else {/*否则执行计算，返回计算结果并添加至缓存。*/
+                return predict(dateString,log);
             }
 
-        } else {/*否则执行计算，返回计算结果并添加至缓存。*/
-            return predict(dateString,log);
+            return SUCCESS;
+        } catch (Throwable e) {
+            Exception ex=new Exception(e);
+            warning=failed(log,dateString,ex);
+            return SUCCESS;
         }
-
-        return SUCCESS;
     }
     private String failed(Logger log,String dateString,Exception e){
     IExceptionHandler handler=ExceptionHandlerFactory.INSTANCE.getUpperHandler();
@@ -172,7 +167,7 @@ public class PredictionAction extends ActionSupport {
         String t = predictor.getPredictionDays().get(0).getDateType().getName();
         PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
                 /*添加至缓存管理器。*/
-        CachesManager.instance().addPredictionEntity(entity);
+        CachesMgr.instance().addPredictionEntity(entity);
         ;
         log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
     }

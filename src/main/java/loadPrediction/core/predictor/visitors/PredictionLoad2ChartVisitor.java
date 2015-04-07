@@ -12,6 +12,7 @@ import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.exception.LPE;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -28,18 +29,18 @@ public class PredictionLoad2ChartVisitor implements IPredictorVisitor {
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) {
+    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         return this.visit(predictor, 1.06382978723404, 0.943396226415094);
     }
 
     @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) {
+    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
         return this.visit(predictor, 1., 1.);
     }
 
     @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) {
-        return null;
+    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
+        throw new LPE("尚未实现将清明节预测数据输出到CHART的功能。");
     }
 
 

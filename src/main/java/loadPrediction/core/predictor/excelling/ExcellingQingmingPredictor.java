@@ -9,6 +9,7 @@ package loadPrediction.core.predictor.excelling;
 import  common.ConvertUtils;
 import  common.ElementPrintableLinkedList;
 import  loadPrediction.core.predictor.IPredictor;
+import loadPrediction.core.predictor.IQingmingPredictor;
 import  loadPrediction.core.predictor.util.CommonUtils;
 import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import  loadPrediction.dataAccess.DAOFactory;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-26 21:42。电邮 1174751315@qq.com。
  */
-public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingPredictor implements IPredictor {
+public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingPredictor implements IQingmingPredictor {
 
     public ExcellingQingmingPredictor(Date date) {
         super(date);
@@ -136,8 +137,8 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor) {
-        return null;
+    public Object accept(IPredictorVisitor visitor)throws LPE{
+        return visitor.visitQingmingPredictor(this);
     }
 
     @Override

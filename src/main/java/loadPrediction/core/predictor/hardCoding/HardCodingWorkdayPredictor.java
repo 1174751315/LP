@@ -52,8 +52,9 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor) {
-        return visitor.visitWorkdayPredictor(this);
+    public Object accept(IPredictorVisitor visitor)throws LPE{
+            return visitor.visitWorkdayPredictor(this);
+
     }
 
     @Override

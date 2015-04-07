@@ -29,9 +29,14 @@ public class ExceptionMailler extends ExceptionHandlerDecorator {
     }
 
     private void handleWithMailing(Exception ex,String prefix){
+        StackTraceElement[] traceElements=ex.getStackTrace();
+
         String text="负荷预测过程发生异常。\n";
         text+=prefix+"\n";
         text+=ex.getMessage()+"\n";
+        for (int i = 0; i <traceElements.length ; i++) {
+            text+=traceElements[i].toString()+"\n";
+        }
         JavaMailSenderImpl sender= LogMailingUtils.getDefaultSender();
         try {
             MimeMessage message=LogMailingUtils.createMimeMessage(sender,"异常报告");
