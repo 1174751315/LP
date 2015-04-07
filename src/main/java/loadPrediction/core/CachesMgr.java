@@ -1,9 +1,7 @@
-/*
- * 版权所有 (c) 2015 。 李倍存 （iPso）。
- * 所有者对该文件所包含的代码的正确性、执行效率等任何方面不作任何保证。
- * 所有个人和组织均可不受约束地将该文件所包含的代码用于非商业用途。若需要将其用于商业软件的开发，请首先联系所有者以取得许可。
- */
-package loadPrediction.core.cache;
+package loadPrediction.core;
+
+import loadPrediction.core.cache.OnedayAccuracyCheckingCacheEntity;
+import loadPrediction.core.cache.PredictionCacheEntity;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.exception.LPE;
 
@@ -12,18 +10,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 李倍存 创建于 2015/3/18 23:58。电邮 1174751315@qq.com。
+ * 李倍存 创建于 2015-04-07 10:16。电邮 1174751315@qq.com。
  */
 public class CachesMgr {
-    private CachesMgr() {
-        this.loadCaches();
-    }
-
-    private static CachesMgr instance = new CachesMgr();
-
-    public static CachesMgr instance() {
-        return instance;
-    }
 
     private Map<String, PredictionCacheEntity> predictionCaches;
     private Map<String, OnedayAccuracyCheckingCacheEntity> accuracyCaches;
@@ -44,7 +33,9 @@ public class CachesMgr {
             accuracyCaches.put(entity.getDateString(), entity);
         }
     }
-
+    private CachesMgr() {
+        this.loadCaches();
+    }
     private void storeCaches(Map<String, PredictionCacheEntity> caches) {
 
     }
@@ -114,4 +105,14 @@ public class CachesMgr {
 
     }
 
+
+    public static CachesMgr INSTANCE=new CachesMgr();
+
 }
+
+
+
+
+
+
+

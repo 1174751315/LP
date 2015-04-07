@@ -48,7 +48,9 @@ public class JFreeChartFacade {
         return new DefaultCategoryDataset();
     }
 
-    public String saveAs(JFreeChart chart, String path) {
+
+
+    public String saveAs(JFreeChart chart,String path,Integer width,Integer height){
         FileOutputStream out = null;
         try {
 
@@ -63,7 +65,7 @@ public class JFreeChartFacade {
 
             // 保存为PNG
 
-            ChartUtilities.writeChartAsPNG(out, chart, 600, 450);
+            ChartUtilities.writeChartAsPNG(out, chart, 1200, 900);
 
             // 保存为JPEG
 
@@ -90,6 +92,9 @@ public class JFreeChartFacade {
             }
         }
         return path;
+    }
+    public String saveAs(JFreeChart chart, String path) {
+       return saveAs(chart,path,1600,1200);
     }
 
     public String saveAs(JFreeChart chart, String dir, String filenamePrefix) {

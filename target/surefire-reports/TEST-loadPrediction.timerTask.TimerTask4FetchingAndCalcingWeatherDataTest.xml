@@ -11,7 +11,11 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+<<<<<<< HEAD
     <property name="idea.launcher.port" value="7534"/>
+=======
+    <property name="idea.launcher.port" value="7533"/>
+>>>>>>> origin/develop
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -40,7 +44,7 @@
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="idea.launcher.bin.path" value="D:\JetBrains\IntelliJ IDEA 14.0.2\bin"/>
-    <property name="file.encoding" value="GB2312"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="LBC"/>
     <property name="java.class.path" value="D:\Maven\apache-maven-3.1.1\boot\plexus-classworlds-2.5.1.jar;D:\JetBrains\IntelliJ IDEA 14.0.2\lib\idea_rt.jar"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
