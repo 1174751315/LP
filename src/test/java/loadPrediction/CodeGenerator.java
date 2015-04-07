@@ -5,9 +5,9 @@
  */
 
 
-package test.java.etc;
+package loadPrediction;
 
-import main.java.loadPrediction.resouce.TimeLabels;
+import loadPrediction.resouce.TimeLabels;
 import org.junit.Test;
 
 import java.io.File;
@@ -24,7 +24,7 @@ public class CodeGenerator {
     public void generate() {
         try {
             PrintStream ps = new PrintStream(new File("code.txt"));
-            print7(ps);
+            print8(ps);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -70,6 +70,12 @@ public class CodeGenerator {
     private void print7(PrintStream ps) {
         for (int i = 0; i < 96; i++) {
             ps.println("loadData.setData" + i + "(values.get(" + i + "));");
+        }
+    }
+
+    private void print8(PrintStream ps){
+        for (int i = 0; i < 96; i++) {
+            ps.println("ds.add(" + (i*0.25) + ",loadData.getData" + i + "(),label);");
         }
     }
 }
