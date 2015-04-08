@@ -52,6 +52,12 @@ public class PredictionAction extends ActionSupport {
     }
 
     private String imgFileName;
+    private String rptImgName;
+
+    public String getRptImgName() {
+        return rptImgName;
+    }
+
     private String xlFileName;
     private String root = "";
 
@@ -161,6 +167,7 @@ public class PredictionAction extends ActionSupport {
         imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path)));
         xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
         xlFileName=FileContentUtils.getFileNameFromPath(temp);
+        rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
         String t = predictor.getPredictionDays().get(0).getDateType().getName();

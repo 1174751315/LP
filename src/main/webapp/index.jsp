@@ -162,6 +162,7 @@
                 document.getElementById("outputExcel").href = res["root"] + res["xlFileName"] + "?now=" + new Date().getTime();
 //                document.getElementById("outputImg").src = "javascript:void(0)";
                 document.getElementById("outputImg").src = res["root"] + res["imgFileName"] + "?now=" + new Date().getTime();
+                document.getElementById("outRptImg").src = res["root"] + res["rptImgName"] + "?now=" + new Date().getTime();
 //              var url='/general/downloadOutputExcel.action';
 //              var params=Form.serialize('input');
 //              var myAjax=new Ajax.Request(url,
@@ -333,48 +334,7 @@
     <div id="apDiv3" style="width:80%;height:20%;left:20%;top:0%;border:2px;background-color:#7CBB00;">
         <div id="apDiv5" style="width:20%;height:100%;left:0%;top:0%;border:solid 1px #101010;"></div>
         <div id="apDiv6" style="width:80%;left:20%;height:100%;top:0%;border:solid 1px #101010;">
-            <table style="width: 100%;height: 100%;text-align: center;font-size: 100%;" border="1" cellspacing="0">
-                <tr>
-                    <th style="font-size: 100%" scope="col">日期</th>
-                    <th scope="col">最大负荷</th>
-                    <th scope="col">最大负荷时刻</th>
-                    <th scope="col">最小负荷</th>
-                    <th scope="col">最小负荷时刻</th>
-                    <th scope="col">平均负荷</th>
-                    <th scope="col">日电量</th>
-                    <th scope="col">峰谷差</th>
-                </tr>
-                <tr>
-                    <th scope="row">预测日1</th>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                </tr>
-                <tr>
-                    <th scope="row">相似日1</th>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                </tr>
-                <tr>
-                    <th scope="row">备用</th>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                    <td>0.0000</td>
-                </tr>
-            </table>
+            <img src="" id="outRptImg" style="width: 100%;height: 100%;"/>
         </div>
     </div>
     <div id="apDiv4" style="width:80%;height:80%;left:20%;top:20%;border:2px #000000;background-color:#0072C6 ;">

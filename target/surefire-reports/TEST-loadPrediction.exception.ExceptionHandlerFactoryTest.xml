@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<<<<<<< HEAD
-<testsuite tests="2" failures="0" name="loadPrediction.exception.ExceptionHandlerFactoryTest" time="0.863" errors="0" skipped="0">
-=======
-<testsuite tests="2" failures="0" name="loadPrediction.exception.ExceptionHandlerFactoryTest" time="0.856" errors="0" skipped="0">
->>>>>>> origin/develop
+<testsuite tests="2" failures="0" name="loadPrediction.exception.ExceptionHandlerFactoryTest" time="0.451" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="14.0.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -15,11 +11,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-<<<<<<< HEAD
-    <property name="idea.launcher.port" value="7534"/>
-=======
-    <property name="idea.launcher.port" value="7533"/>
->>>>>>> origin/develop
+    <property name="idea.launcher.port" value="7538"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -73,9 +65,5 @@
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
   <testcase classname="loadPrediction.exception.ExceptionHandlerFactoryTest" name="testGetLowerHandler" time="0"/>
-<<<<<<< HEAD
-  <testcase classname="loadPrediction.exception.ExceptionHandlerFactoryTest" name="testGetUpperHandler" time="0.863"/>
-=======
-  <testcase classname="loadPrediction.exception.ExceptionHandlerFactoryTest" name="testGetUpperHandler" time="0.856"/>
->>>>>>> origin/develop
+  <testcase classname="loadPrediction.exception.ExceptionHandlerFactoryTest" name="testGetUpperHandler" time="0.451"/>
 </testsuite>
