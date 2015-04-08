@@ -109,11 +109,14 @@ public class PredictionAction extends ActionSupport {
                     warning = "OK";
                     String imgPath=cache.getOutputImagePath();
                     String xlPath=cache.getOutputExcelPath();
+                    String rptImgPath=cache.getOutputRptImagePath();
                     File fxl=new File(xlPath);
                     File fimg=new File(imgPath);
-                    if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                    File frptImg=new File(rptImgPath);
+                    if (fxl.exists()&&fimg.exists()&&frptImg.exists()) {//若缓存文件均未丢失，直接返回文件路径
                         imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
                         xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
+                        rptImgName=FileContentUtils.getFileNameFromPath(rptImgPath);
                         root = "";
                         log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
                         return SUCCESS;
@@ -171,7 +174,7 @@ public class PredictionAction extends ActionSupport {
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
         String t = predictor.getPredictionDays().get(0).getDateType().getName();
-        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
+        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, path+rptImgName,warning);
                 /*添加至缓存管理器。*/
         CachesMgr.INSTANCE.addPredictionEntity(entity);
         ;

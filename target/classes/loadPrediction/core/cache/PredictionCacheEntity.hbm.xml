@@ -10,6 +10,7 @@
         <property name="type" column="TYPE"/>
         <property name="outputImagePath" column="IMG_PATH"/>
         <property name="outputExcelPath" column="XL_PATH"/>
+        <property name="outputRptImagePath" column="RPT_IMG_PATH"/>
         <property name="warning" column="WARNING"/>
     </class>
 </hibernate-mapping>
