@@ -76,6 +76,7 @@ public class SuperDAO {
     protected void insert(Object o) {
         Session session = defaultSession;
         Transaction t = session.beginTransaction();
+        session.clear();
         session.save(o);
         t.commit();
     }
@@ -83,6 +84,7 @@ public class SuperDAO {
     protected void insertOrUpdate(Object o) {
         Session session = defaultSession;
         Transaction t = session.beginTransaction();
+        session.clear();
         session.saveOrUpdate(o);
         t.commit();
     }
