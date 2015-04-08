@@ -176,6 +176,9 @@ public class PredictionAction extends ActionSupport {
         imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path,dateString)));
 //        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
         xlFileName=FileContentUtils.getFileNameFromPath(temp);
+
+//        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl1())));
+//        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl2())));
         rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path,dateString)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
