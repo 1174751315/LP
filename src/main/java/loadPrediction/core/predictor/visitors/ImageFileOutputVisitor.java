@@ -12,7 +12,7 @@ import loadPrediction.utils.FileContentUtils;
  */
 public abstract class ImageFileOutputVisitor implements IPredictorVisitor {
 
-    abstract protected Object doVisitAndOutput(IPredictor predictor,String fileAbsPath);
+    abstract protected Object doVisitAndOutput(IPredictor predictor,String fileAbsPath) throws LPE;
     abstract protected String getFileNamePostfix();
     public ImageFileOutputVisitor(String dir,String dateString) {
         this.dir = dir;

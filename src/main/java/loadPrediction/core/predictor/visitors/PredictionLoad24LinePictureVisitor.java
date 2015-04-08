@@ -8,14 +8,10 @@ package loadPrediction.core.predictor.visitors;
 
 import  jfreechart.JFreeChartFacade;
 import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
 import loadPrediction.exception.LPE;
 import  loadPrediction.utils.AccuracyUtils;
-import  loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -27,7 +23,7 @@ import java.awt.*;
  */
 public class PredictionLoad24LinePictureVisitor extends ImageFileOutputVisitor {
     @Override
-    protected Object doVisitAndOutput(IPredictor predictor,String absPath) {
+    protected Object doVisitAndOutput(IPredictor predictor,String absPath) throws LPE {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
