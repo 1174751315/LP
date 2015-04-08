@@ -25,33 +25,9 @@ import java.awt.*;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor implements IPredictorVisitor {
-
-    private String dir;
-
-    public PredictionLoad24LinePictureVisitor(String dir) {
-        this.dir = dir;
-    }
-
+public class PredictionLoad24LinePictureVisitor extends ImageFileOutputVisitor {
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-        return unnamed(predictor, "WORKDAY_4_LINE");
-    }
-
-    @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-        return unnamed(predictor, "WEEKEND_4_LINE");
-    }
-
-    @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        throw new LPE("方法未实现");
-    }
-
-
-    public String unnamed(IPredictor predictor, String prefix) {
-        String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), ".JPG");
-
+    protected Object doVisitAndOutput(IPredictor predictor,String absPath) {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
@@ -79,9 +55,17 @@ public class PredictionLoad24LinePictureVisitor implements IPredictorVisitor {
         }
         chart.getCategoryPlot().setRenderer(renderer);
 
-        new JFreeChartFacade().saveAs(chart, dir + fileName);
+        new JFreeChartFacade().saveAs(chart,absPath);
+        return absPath;
+    }
 
-        return dir + fileName;
+    @Override
+    protected String getFileNamePostfix() {
+        return "-4LINE";
+    }
+
+    public PredictionLoad24LinePictureVisitor(String dir,String ds) {
+        super(dir,ds);
     }
 }
 

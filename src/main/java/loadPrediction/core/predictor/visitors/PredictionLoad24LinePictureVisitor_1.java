@@ -49,35 +49,10 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
-
-    private String dir;
-
-    public PredictionLoad24LinePictureVisitor_1(String dir) {
-        this.dir = dir;
-    }
-
+public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor{
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-        return unnamed(predictor, "WORKDAY_4_LINE");
-    }
-
-    @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-        return unnamed(predictor, "WEEKEND_4_LINE");
-    }
-
-    @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        throw new LPE("方法未实现");
-    }
-
-
-    public String unnamed(IPredictor predictor, String prefix) {
-        String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), ".JPG");
-
+    protected Object doVisitAndOutput(IPredictor predictor, String absPath) {
         CategoryTableXYDataset ds = new CategoryTableXYDataset();
-
 
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
@@ -180,12 +155,18 @@ public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-        new JFreeChartFacade().saveAs(chart, dir + fileName);
-        return dir + fileName;
+        new JFreeChartFacade().saveAs(chart,absPath);
+        return absPath;
     }
 
+    public PredictionLoad24LinePictureVisitor_1(String dir,String ds) {
+        super(dir,ds);
+    }
+
+    @Override
+    protected String getFileNamePostfix() {
+        return "-4LINE_EXT";
+    }
 
     MaxAveMinTuple<Double> unnamed(List<LoadData> list ){
         List<MaxAveMinTuple<Double>> list1=new LinkedList<MaxAveMinTuple<Double>>();
