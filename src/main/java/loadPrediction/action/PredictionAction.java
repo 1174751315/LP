@@ -164,10 +164,10 @@ public class PredictionAction extends ActionSupport {
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
-        imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path)));
+        imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path,dateString)));
 //        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
         xlFileName=FileContentUtils.getFileNameFromPath(temp);
-        rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path)));
+        rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path,dateString)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
         String t = predictor.getPredictionDays().get(0).getDateType().getName();

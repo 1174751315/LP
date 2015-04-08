@@ -41,32 +41,15 @@ import java.util.regex.Pattern;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
+public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor {
     private static final Integer WIDTH=1400,HEIGHT=280;
-    private String dir;
 
-    public PredictionLoad2ReportPictureVisitor(String dir) {
-        this.dir = dir;
-    }
 
-    @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-        return unnamed(predictor, "WORKDAY_4_LINE");
-    }
-
-    @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-        return unnamed(predictor, "WEEKEND_4_LINE");
-    }
-
-    @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        throw new LPE("方法未实现");
-    }
 
     private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差","最高温度","平均温度","最低温度","降雨量"};
-    public String unnamed(IPredictor predictor, String prefix) {
-        String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), "RP.JPG");
+
+    @Override
+    protected Object doVisitAndOutput(IPredictor predictor, String fileAbsPath) {
         List<List<String>>  outputs=new LinkedList<List<String>>();
         List<LoadData> predictions=predictor.getPrediction96PointLoads();
         List<WeatherData> weatherDatas=predictor.getPredictionWeathers();
@@ -118,13 +101,13 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
 //        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
 
         try {
-            ImageIO.write(bufferedImage, "jpg", new File(dir+fileName));
+            ImageIO.write(bufferedImage, "jpg", new File(fileAbsPath));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-        return dir + fileName;
+        return fileAbsPath;
     }
 
     Integer perRow;
@@ -178,6 +161,17 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         Pattern pattern = Pattern.compile("[0-9]*");
         Matcher isNum = pattern.matcher(s);
         return isNum.matches();
+    }
+
+
+
+    @Override
+    protected String getFileNamePostfix() {
+        return "RPT";
+    }
+
+    public PredictionLoad2ReportPictureVisitor(String dir,String ds){
+        super(dir,ds);
     }
 }
 
