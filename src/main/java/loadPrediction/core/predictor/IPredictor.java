@@ -11,6 +11,7 @@ import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
 import  loadPrediction.exception.LPE;
 
 import java.util.List;
@@ -81,6 +82,9 @@ public interface IPredictor {
      * @return 相似日负荷2D链表。
      */
     ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> getSimilarLoad();
+
+    ElementPrintableLinkedList<WeatherData> getPredictionWeathers();
+
 
     /**
      * 访问者模式接口，用于接受一个访问者对象。

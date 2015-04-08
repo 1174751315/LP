@@ -629,4 +629,5 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         }
         return false;
     }
+
 }

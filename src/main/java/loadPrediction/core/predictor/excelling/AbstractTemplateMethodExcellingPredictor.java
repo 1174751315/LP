@@ -477,4 +477,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             throw new LPE(e.getMessage(), LPE.eScope.USER);
         }
     }
+
+
+    public ElementPrintableLinkedList<WeatherData> getPredictionWeathers(){
+        return predictionWeathers;
+    }
 }

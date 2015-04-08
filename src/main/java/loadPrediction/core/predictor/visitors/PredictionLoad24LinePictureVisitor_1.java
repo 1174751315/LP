@@ -20,6 +20,7 @@ import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
 import loadPrediction.utils.FileContentUtils;
+import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
@@ -127,19 +128,10 @@ public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
 
         xyPlot.setRenderer(renderer);
 
-        Color c1=new Color(210,222,239);
-        Color c2=new Color(118,183,247);
-        Color c3=new Color(124,187,0);
-        Color c4=new Color(0,114,51);
-        Color c5=new Color(0,24,143);
-        Color c6=new Color(0,160,233);
-        Color c7=new Color(0,114,198);
-        Color c8=new Color(131,204,254);
-        Color c9=new Color(188,178,167);
-        Color c10=new Color(200,228,155);
+
         /*图形区域背景颜色*/
-        xyPlot.setBackgroundPaint(c7);
-        chart.setBackgroundPaint(c7);
+        xyPlot.setBackgroundPaint(MyColor.COMMON_BLUE_BACKGROUND);
+        chart.setBackgroundPaint(MyColor.COMMON_BLUE_BACKGROUND);
 
 
 
@@ -148,7 +140,7 @@ public class PredictionLoad24LinePictureVisitor_1 implements IPredictorVisitor {
         xyPlot.setRangeGridlineStroke(new BasicStroke(1));
         xyPlot.setDomainGridlinesVisible(true);
         xyPlot.setRangeGridlinesVisible(true);
-        xyPlot.setRangeGridlinePaint(c2);
+        xyPlot.setRangeGridlinePaint(MyColor.white);
         xyPlot.setDomainGridlinePaint(Color.white);
 
 

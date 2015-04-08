@@ -13,30 +13,36 @@ import loadPrediction.core.predictor.IQingmingPredictor;
 import loadPrediction.core.predictor.IWeekendPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.domain.LoadData;
+import loadPrediction.domain.WeatherData;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
 import loadPrediction.utils.FileContentUtils;
 
+import loadPrediction.utils.MyColor;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.Arc2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
 public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
-    private static final Integer WIDTH=1000,HEIGHT=200;
+    private static final Integer WIDTH=1400,HEIGHT=280;
     private String dir;
 
     public PredictionLoad2ReportPictureVisitor(String dir) {
@@ -58,55 +64,57 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         throw new LPE("方法未实现");
     }
 
-    private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差"};
+    private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差","最高温度","平均温度","最低温度","降雨量"};
     public String unnamed(IPredictor predictor, String prefix) {
         String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), "RP.JPG");
-        Map<String,Map<String,String>>  outputs=new HashMap<String, Map<String, String>>();
+        List<List<String>>  outputs=new LinkedList<List<String>>();
         List<LoadData> predictions=predictor.getPrediction96PointLoads();
+        List<WeatherData> weatherDatas=predictor.getPredictionWeathers();
         for (int i = 0; i < predictor.getPrediction96PointLoads().size(); i++) {
-            Map<String,String> map=new HashMap<String, String>();
+            List<String> list=new LinkedList<String>();
             MaxAveMinTuple<Double> tuple=predictions.get(i).toMaxAveMin();
-            map.put(TOP_LABELS[0],tuple.max.toString());
-            map.put(TOP_LABELS[1], "未知");
-            map.put(TOP_LABELS[2],tuple.min.toString());
-            map.put(TOP_LABELS[3], "未知");
-            map.put(TOP_LABELS[4],tuple.ave.toString());
+            list.add(tuple.max.toString());
+            list.add("未知");
+            list.add(tuple.min.toString());
+            list.add("未知");
+            list.add(tuple.ave.toString());
             Double diff=tuple.max - tuple.min;
-            map.put(TOP_LABELS[5], diff.toString());
-            outputs.put(predictions.get(i).getDateString(),map);
+            list.add(diff.toString());
+            MaxAveMinTuple<Double> weather=weatherDatas.get(i).toMaxAveMin();
+            list.add(weather.max.toString());
+            list.add(weather.ave.toString());
+            list.add(weather.min.toString());
+            list.add(weatherDatas.get(i).getRainFall().toString());
+
+            outputs.add(list);
         }
 
-        Color c1=new Color(210,222,239);
-        Color c2=new Color(118,183,247);
-        Color c3=new Color(124,187,0);
-        Color c4=new Color(0,114,51);
-        Color c5=new Color(0,24,143);
-        Color c6=new Color(0,160,233);
-        Color c7=new Color(0,114,198);
-        Color c8=new Color(131,204,254);
-        Color c9=new Color(188,178,167);
-        Color c10=new Color(200,228,155);
+
+        Integer AC_HEIGHT=HEIGHT+20;
 
 
-
-        BufferedImage bufferedImage=new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_3BYTE_BGR);
+        BufferedImage bufferedImage=new BufferedImage(WIDTH,AC_HEIGHT,BufferedImage.TYPE_3BYTE_BGR);
         Graphics2D graphics= bufferedImage.createGraphics();
-        graphics.setPaint(c3);
-        graphics.setBackground(c3);
+        graphics.setPaint(MyColor.COMMON_BLUE_BACKGROUND);
+        graphics.setBackground(MyColor.COMMON_BLUE_BACKGROUND);
 
-        graphics.fill3DRect(0, 0, WIDTH, HEIGHT, true);
-        graphics.setPaint(Color.BLACK);
+        graphics.fill3DRect(0, 0, WIDTH, AC_HEIGHT, true);
+        graphics.setPaint(Color.white);
 
 
         List<String> leftLabels=new LinkedList<String>();
         for (int i = 0; i <predictions.size() ; i++) {
             leftLabels.add(predictions.get(i).getDateString());
         }
+        Integer row=predictions.size()+1,col=TOP_LABELS.length+1;
+        beforeDrawing(row,col);
+//        drawTableGrid(graphics, MyColor.c3, predictions.size() + 1, TOP_LABELS.length + 1);
 
-        drawTableGrid(graphics,predictions.size()+1,TOP_LABELS.length+1);
-        graphics.setFont(new Font("Arial",Font.BOLD,12));
+        graphics.setFont(new Font("微软雅黑", Font.BOLD, 16));
+
         drawLeftLabels(graphics, leftLabels);
-        drawTopLabels(graphics,TOP_LABELS);
+        drawTopLabels(graphics, TOP_LABELS);
+        drawTableGridValue(graphics, Color.white, outputs);
 //        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
 
         try {
@@ -121,15 +129,35 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
 
     Integer perRow;
     Integer perCol;
-    private void drawTableGrid(Graphics2D g,Integer row,Integer col){
-         perRow=HEIGHT/row;
-         perCol=WIDTH/col;
-
+    private void drawTableGrid(Graphics2D g,Color color,Integer row,Integer col){
+        Paint old=g.getPaint();
+        g.setPaint(color);
         for (int i = 0; i <row ; i++) {
             g.drawLine(0,(i+1)*perRow,WIDTH,(i+1)*perRow);
         }
         for (int i=0;i<col;i++)
             g.drawLine((i+1)*perCol,0,(i+1)*perCol,HEIGHT);
+
+        g.setPaint(old);
+    }
+    private void drawTableGridValue(Graphics2D g,Color color,List<List<String>> values ){
+        Paint old=g.getPaint();
+        g.setPaint(color);
+        Integer row=values.size();
+
+        for (int i = 0; i <row ; i++) {
+            Integer col=values.get(i).size();
+            for (int j = 0; j <col ; j++) {
+                String s=values.get(i).get(j);
+                try {
+                    s=String.format("%5.2f",Double.valueOf(s));
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                }
+                g.drawString(s,(j+1)*perCol,(i+2)*perRow);
+            }
+        }
+        g.setPaint(old);
     }
 
     private void drawLeftLabels(Graphics2D g ,List<String> labels){
@@ -141,6 +169,15 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         for (int i = 0; i <labels.length ; i++) {
             g.drawString(labels[i],(1+i)*perCol,perRow);
         }
+    }
+    private void beforeDrawing(Integer row,Integer col){
+        perRow=HEIGHT/row;
+        perCol=WIDTH/col;
+    }
+    private Boolean isNumeric(String s){
+        Pattern pattern = Pattern.compile("[0-9]*");
+        Matcher isNum = pattern.matcher(s);
+        return isNum.matches();
     }
 }
 
