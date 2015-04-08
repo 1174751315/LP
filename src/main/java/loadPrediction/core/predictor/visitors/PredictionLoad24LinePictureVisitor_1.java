@@ -7,41 +7,22 @@
 package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.shape.TriangleMesh;
 import jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.IQingmingPredictor;
-import loadPrediction.core.predictor.IWeekendPredictor;
-import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.domain.LoadData;
-import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
-import loadPrediction.utils.FileContentUtils;
 import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartPanel;
-import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.ValueAxis;
-import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.chart.plot.ValueAxisPlot;
 import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.category.LineAndShapeRenderer;
-import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.xy.CategoryTableXYDataset;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.awt.image.renderable.RenderableImageProducer;
-import java.io.File;
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -51,7 +32,7 @@ import java.util.List;
  */
 public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor{
     @Override
-    protected Object doVisitAndOutput(IPredictor predictor, String absPath) {
+    protected Object doVisitAndOutput(IPredictor predictor, String absPath) throws LPE {
         CategoryTableXYDataset ds = new CategoryTableXYDataset();
 
         LoadData actual = predictor.getActual96PointLoads().get(0);
@@ -83,11 +64,11 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
 
         BasicStroke dotLine=new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[] {3.F, 3.F}, 1.0F);
         renderer.setSeriesStroke(0, new BasicStroke(2));
-        renderer.setSeriesPaint(0, Color.yellow);
+        renderer.setSeriesPaint(0, MyColor.COMMON_SERIES_1);
         renderer.setSeriesStroke(1, dotLine);
-        renderer.setSeriesPaint(1, Color.white);
+        renderer.setSeriesPaint(1, MyColor.COMMON_SERIES_3);
         renderer.setSeriesStroke(2, dotLine);
-        renderer.setSeriesPaint(2, Color.yellow);
+        renderer.setSeriesPaint(2, MyColor.COMMON_SERIES_2);
         renderer.setBasePaint(Color.BLACK);
         renderer.setSeriesShape(1,new Rectangle());
         renderer.setSeriesShape(2,new Rectangle());
@@ -96,7 +77,7 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
 
         if (actual != null) {
             renderer.setSeriesStroke(3, new BasicStroke(2));
-            renderer.setSeriesPaint(3, Color.GREEN);
+            renderer.setSeriesPaint(3, MyColor.COMMON_SERIES_4);
         }
 
 //        CategoryPlot plot=chart.getCategoryPlot();
@@ -105,8 +86,8 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
 
 
         /*图形区域背景颜色*/
-        xyPlot.setBackgroundPaint(MyColor.COMMON_BLUE_BACKGROUND);
-        chart.setBackgroundPaint(MyColor.COMMON_BLUE_BACKGROUND);
+        xyPlot.setBackgroundPaint(MyColor.COMMON_BACKGROUND);
+        chart.setBackgroundPaint(MyColor.COMMON_BACKGROUND);
 
 
 
@@ -115,48 +96,29 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
         xyPlot.setRangeGridlineStroke(new BasicStroke(1));
         xyPlot.setDomainGridlinesVisible(true);
         xyPlot.setRangeGridlinesVisible(true);
-        xyPlot.setRangeGridlinePaint(MyColor.white);
-        xyPlot.setDomainGridlinePaint(Color.white);
+        xyPlot.setRangeGridlinePaint(MyColor.COMMON_GRID_LINE);
+        xyPlot.setDomainGridlinePaint(MyColor.COMMON_GRID_LINE);
 
 
         ValueAxis valueAxis=xyPlot.getRangeAxis();
-        valueAxis.setTickLabelPaint(Color.white);
+        valueAxis.setTickLabelPaint(MyColor.COMMON_FOREGROUND);
         valueAxis.setTickLabelFont(new Font("Arial", Font.BOLD, 16));
         valueAxis.setLabelFont(new Font("微软雅黑", Font.BOLD, 20));
-        valueAxis.setLabelPaint(Color.white);
+        valueAxis.setLabelPaint(MyColor.COMMON_FOREGROUND);
         ValueAxis domainAxis=xyPlot.getDomainAxis();
         domainAxis.setTickLabelFont(new Font("Arial",Font.BOLD,16));
-        domainAxis.setTickLabelPaint(Color.white);
+        domainAxis.setTickLabelPaint(MyColor.COMMON_FOREGROUND);
         domainAxis.setLabelFont(new Font("微软雅黑",Font.BOLD,20));
-        domainAxis.setLabelPaint(Color.white);
+        domainAxis.setLabelPaint(MyColor.COMMON_FOREGROUND);
 
 
         chart.getTitle().setFont(new Font("Arial",Font.BOLD,20));
-        chart.getTitle().setPaint(Color.white);
+        chart.getTitle().setPaint(MyColor.COMMON_FOREGROUND);
         MaxAveMinTuple<Double> t=unnamed(list);
 
         valueAxis.setLowerBound(t.min*0.99);
         valueAxis.setUpperBound(t.max * 1.01);
-
-
-        BufferedImage bufferedImage=chart.createBufferedImage(1600,1200);
-        Graphics graphics2D=bufferedImage.getGraphics();
-        graphics2D.drawString("TEST",600,600);
-        graphics2D.drawLine(10,10,1000,1000);
-        graphics2D.clipRect(100,100,100,100);
-        graphics2D.translate(5000,100);
-        graphics2D.clearRect(100,100,100,100);
-
-        BufferedImage bufferedImage1=new BufferedImage(1600,1200,BufferedImage.TYPE_3BYTE_BGR);
-        Graphics graphics= bufferedImage1.getGraphics();
-        graphics.drawString("TEST",100,100);
-        try {
-            ImageIO.write(bufferedImage,"jpg",new File("F:/test.jpg"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        new JFreeChartFacade().saveAs(chart,absPath);
-        return absPath;
+        new JFreeChartFacade().saveAs(chart,absPath);        return absPath;
     }
 
     public PredictionLoad24LinePictureVisitor_1(String dir,String ds) {

@@ -78,6 +78,12 @@ public class PredictionAction extends ActionSupport {
     }
 
 
+    private String predictorType="未知预测器类型";
+
+    public String getPredictorType() {
+        return predictorType;
+    }
+
     private String dateString;
 
     public String getDateString() {
@@ -174,6 +180,7 @@ public class PredictionAction extends ActionSupport {
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
         String t = predictor.getPredictionDays().get(0).getDateType().getName();
+        predictorType=predictor.getPredictorType();
         PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, path+rptImgName,warning);
                 /*添加至缓存管理器。*/
         CachesManager.INSTANCE.addPredictionEntity(entity);

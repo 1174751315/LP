@@ -12,8 +12,12 @@ import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.core.predictor.util.CommonUtils;
 import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.DAE;
+import loadPrediction.exception.ExceptionHandlerFactory;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
@@ -32,9 +36,28 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private Integer predictionDaysNbr = 7;
     private Integer historyDaysNbr = 14;
 
+    private static final Integer WINTER=0,SUMMER=1;
+    private Integer season;
+    private String[] modelName={"冬季","夏季"};
+
     public ExcellingWorkdayPredictor(Date date) {
         super(date);
+        String dateString=date.toLocalDate().toString();
+        try {
+            WeatherData weatherData= DAOFactory.getDefault().createDaoWeatherData().query(dateString);
+            season=determineSeason(weatherData);
+        } catch (Exception dae) {
+            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(dae, "读取综合气象数据时出现异常");
+        }
     }
+
+    private Integer determineSeason(WeatherData weatherData){
+        if (weatherData.getAveTemperature()>30.)
+             return SUMMER;
+        else
+             return WINTER;
+    }
+
 
     @Override
     protected CellPosition doGetPredictionLoadsExcelPosition() {
@@ -48,7 +71,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     public String getPredictorType() {
-        return "EXCELLING 工作日";
+        return "EXCELLING 工作日 "+(modelName[season]+"模型");
     }
 
     @Override
@@ -83,6 +106,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetInputWorkbookPath() {
+        if (season.equals(SUMMER))
+            return IOPaths.WEB_CONTENT_WORKDAY_TEMPLATE_PATH;
         return IOPaths.WEB_CONTENT_WORKDAY_TEMPLATE_PATH;
     }
 

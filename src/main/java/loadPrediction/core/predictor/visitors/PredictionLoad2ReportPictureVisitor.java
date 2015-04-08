@@ -7,33 +7,19 @@
 package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
-import jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.IQingmingPredictor;
-import loadPrediction.core.predictor.IWeekendPredictor;
-import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.WeatherData;
-import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.AccuracyUtils;
-import loadPrediction.utils.FileContentUtils;
 
 import loadPrediction.utils.MyColor;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.renderer.category.LineAndShapeRenderer;
-import org.jfree.data.category.DefaultCategoryDataset;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.geom.Arc2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.NumberFormat;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,7 +35,7 @@ public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor 
     private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差","最高温度","平均温度","最低温度","降雨量"};
 
     @Override
-    protected Object doVisitAndOutput(IPredictor predictor, String fileAbsPath) {
+    protected Object doVisitAndOutput(IPredictor predictor, String fileAbsPath) throws LPE {
         List<List<String>>  outputs=new LinkedList<List<String>>();
         List<LoadData> predictions=predictor.getPrediction96PointLoads();
         List<WeatherData> weatherDatas=predictor.getPredictionWeathers();
@@ -78,11 +64,11 @@ public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor 
 
         BufferedImage bufferedImage=new BufferedImage(WIDTH,AC_HEIGHT,BufferedImage.TYPE_3BYTE_BGR);
         Graphics2D graphics= bufferedImage.createGraphics();
-        graphics.setPaint(MyColor.COMMON_BLUE_BACKGROUND);
-        graphics.setBackground(MyColor.COMMON_BLUE_BACKGROUND);
+        graphics.setPaint(MyColor.COMMON_BACKGROUND);
+        graphics.setBackground(MyColor.COMMON_BACKGROUND);
 
         graphics.fill3DRect(0, 0, WIDTH, AC_HEIGHT, true);
-        graphics.setPaint(Color.white);
+        graphics.setPaint(MyColor.COMMON_FOREGROUND);
 
 
         List<String> leftLabels=new LinkedList<String>();
@@ -97,7 +83,7 @@ public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor 
 
         drawLeftLabels(graphics, leftLabels);
         drawTopLabels(graphics, TOP_LABELS);
-        drawTableGridValue(graphics, Color.white, outputs);
+        drawTableGridValue(graphics, MyColor.COMMON_FOREGROUND, outputs);
 //        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
 
         try {

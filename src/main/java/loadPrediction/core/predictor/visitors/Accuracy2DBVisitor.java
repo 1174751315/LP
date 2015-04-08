@@ -21,52 +21,8 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-05 20:37。电邮 1174751315@qq.com。
  */
-public class Accuracy2DBVisitor implements IPredictorVisitor {
-    private DAOFactory factory;
-
-    public Accuracy2DBVisitor(DAOFactory factory) {
-        this.factory = factory;
-    }
-
-    public Accuracy2DBVisitor() {
-        this(DAOFactory.getDefault());
-    }
-
-    @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-                        /*若【日负荷曲线】表中已有【预测日1】对应的数据，直接求得准确度，并存入【预测准确度】表。*/
-        return this.visit(predictor);
-
-    }
-
-    @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-
-        return this.visit(predictor);
-    }
-
-    @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        return this.visit(predictor);
-    }
-
-    private Object visit(IPredictor predictor) throws LPE{
-        try {
-            LoadData ld = factory.createDaoLoadData().query(predictor.getPredictionDays().get(0).getDateString());
-            if (ld != null) {
-                Accuracy accuracy = new Accuracy();
-                accuracy.setAccuracy(this.calcOneAccuracy(ld, predictor.getPrediction96PointLoads().get(0)));
-                accuracy.setDateString(Date2StringAdapter.toString(predictor.getPredictionDays().get(0).getDate()));
-                factory.createDAOAccuracy().insertOrUpdate(accuracy);
-                return accuracy;
-            }
-        } catch (Exception e) {
-            throw new LPE("将预测精度保存至数据库时发生异常。");
-        }
-        return null;
-    }
-
-    private Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
+public class Accuracy2DBVisitor extends PredictionAccessDBVisitor {
+     private Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
         List<Double> actual = actualLoadData.toList();
         List<Double> prediction = predictionLoadData.toList();
         Double acc = 0.0;
@@ -77,5 +33,22 @@ public class Accuracy2DBVisitor implements IPredictorVisitor {
         acc = Math.sqrt(acc);
         acc = 1 - acc;
         return acc;
+    }
+
+    @Override
+    protected Object doAccessDB(IPredictor predictor) throws LPE {
+        try {
+            LoadData ld = DAOFactory.getDefault().createDaoLoadData().query(predictor.getPredictionDays().get(0).getDateString());
+            if (ld != null) {
+                Accuracy accuracy = new Accuracy();
+                accuracy.setAccuracy(this.calcOneAccuracy(ld, predictor.getPrediction96PointLoads().get(0)));
+                accuracy.setDateString(Date2StringAdapter.toString(predictor.getPredictionDays().get(0).getDate()));
+                DAOFactory.getDefault().createDAOAccuracy().insertOrUpdate(accuracy);
+                return accuracy;
+            }
+        } catch (Exception e) {
+            throw new LPE("将预测精度保存至数据库时发生异常。");
+        }
+        return null;
     }
 }

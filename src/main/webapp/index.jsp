@@ -158,7 +158,7 @@
             var res = JSON.parse(request.responseText);
 
             if (res["warning"] == "OK") {
-                alert("已完成预测。");
+                alert("已完成预测。\n"+"预测器类型："+res['predictorType']);
                 document.getElementById("outputExcel").href = res["root"] + res["xlFileName"] + "?now=" + new Date().getTime();
 //                document.getElementById("outputImg").src = "javascript:void(0)";
                 document.getElementById("outputImg").src = res["root"] + res["imgFileName"] + "?now=" + new Date().getTime();
@@ -270,7 +270,7 @@
 
 <body>
 <div id="appDiv1" style="width: 100%;height: 100%;">
-    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;background-color: #7cBB00;">
+    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;background-color: #CCCCCC;">
         <div id="panels" style="width:100%;height:80%;top:0%;left:0%;border :solid 1px #101010;">
             <div id="CollapsiblePanel1" class="CollapsiblePanel" onclick="setClient(this.id);" style="width:100%;">
                 <div class="CollapsiblePanelTab" tabindex="0">智能预测</div>
