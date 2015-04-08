@@ -161,11 +161,11 @@ public class PredictionAction extends ActionSupport {
         warning = "OK";
         String temp=(String) predictor.predict();
         predictor.accept(new FirstPredictionLoadData2DBVisitor());
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
         imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path)));
-        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
+//        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
         xlFileName=FileContentUtils.getFileNameFromPath(temp);
         rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);

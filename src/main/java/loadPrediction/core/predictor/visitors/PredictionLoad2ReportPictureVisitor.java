@@ -28,6 +28,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.List;
 
@@ -35,7 +36,7 @@ import java.util.List;
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
 public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
-
+    private static final Integer WIDTH=1000,HEIGHT=200;
     private String dir;
 
     public PredictionLoad2ReportPictureVisitor(String dir) {
@@ -57,7 +58,7 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         throw new LPE("方法未实现");
     }
 
-
+    private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差"};
     public String unnamed(IPredictor predictor, String prefix) {
         String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), "RP.JPG");
         Map<String,Map<String,String>>  outputs=new HashMap<String, Map<String, String>>();
@@ -65,11 +66,13 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         for (int i = 0; i < predictor.getPrediction96PointLoads().size(); i++) {
             Map<String,String> map=new HashMap<String, String>();
             MaxAveMinTuple<Double> tuple=predictions.get(i).toMaxAveMin();
-            map.put("max_load",tuple.max.toString());
-            map.put("min_load",tuple.min.toString());
-            map.put("ave_load",tuple.ave.toString());
+            map.put(TOP_LABELS[0],tuple.max.toString());
+            map.put(TOP_LABELS[1], "未知");
+            map.put(TOP_LABELS[2],tuple.min.toString());
+            map.put(TOP_LABELS[3], "未知");
+            map.put(TOP_LABELS[4],tuple.ave.toString());
             Double diff=tuple.max - tuple.min;
-            map.put("diff", diff.toString());
+            map.put(TOP_LABELS[5], diff.toString());
             outputs.put(predictions.get(i).getDateString(),map);
         }
 
@@ -83,19 +86,28 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
         Color c8=new Color(131,204,254);
         Color c9=new Color(188,178,167);
         Color c10=new Color(200,228,155);
-        BufferedImage bufferedImage=new BufferedImage(1000,200,BufferedImage.TYPE_3BYTE_BGR);
+
+
+
+        BufferedImage bufferedImage=new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_3BYTE_BGR);
         Graphics2D graphics= bufferedImage.createGraphics();
         graphics.setPaint(c3);
         graphics.setBackground(c3);
-        graphics.fill3DRect(0, 0, 1000, 200, true);
+
+        graphics.fill3DRect(0, 0, WIDTH, HEIGHT, true);
         graphics.setPaint(Color.BLACK);
-        graphics.drawString("最大负荷",0,50);
-        graphics.drawString("最大负荷时刻",100,50);
-        graphics.drawString("最小负荷",200,50);
-        graphics.drawRect(0,0,1000,200);
 
 
-        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
+        List<String> leftLabels=new LinkedList<String>();
+        for (int i = 0; i <predictions.size() ; i++) {
+            leftLabels.add(predictions.get(i).getDateString());
+        }
+
+        drawTableGrid(graphics,predictions.size()+1,TOP_LABELS.length+1);
+        graphics.setFont(new Font("Arial",Font.BOLD,12));
+        drawLeftLabels(graphics, leftLabels);
+        drawTopLabels(graphics,TOP_LABELS);
+//        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
 
         try {
             ImageIO.write(bufferedImage, "jpg", new File(dir+fileName));
@@ -105,6 +117,30 @@ public class PredictionLoad2ReportPictureVisitor implements IPredictorVisitor {
 
 
         return dir + fileName;
+    }
+
+    Integer perRow;
+    Integer perCol;
+    private void drawTableGrid(Graphics2D g,Integer row,Integer col){
+         perRow=HEIGHT/row;
+         perCol=WIDTH/col;
+
+        for (int i = 0; i <row ; i++) {
+            g.drawLine(0,(i+1)*perRow,WIDTH,(i+1)*perRow);
+        }
+        for (int i=0;i<col;i++)
+            g.drawLine((i+1)*perCol,0,(i+1)*perCol,HEIGHT);
+    }
+
+    private void drawLeftLabels(Graphics2D g ,List<String> labels){
+        for (int i = 0; i <labels.size() ; i++) {
+            g.drawString(labels.get(i),0,(2+i)*perRow);
+        }
+    }
+    private void drawTopLabels(Graphics2D g,String[] labels){
+        for (int i = 0; i <labels.length ; i++) {
+            g.drawString(labels[i],(1+i)*perCol,perRow);
+        }
     }
 }
 

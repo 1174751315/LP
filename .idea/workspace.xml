@@ -5,8 +5,92 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\lib\hibernate-core-5.0.0.Beta1.jar" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\loadPrediction\core\cache\CachesManager.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\test-classes\loadPrediction\timerTask\TimerTask4LoadPredictionTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/Accuracy2DBVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/Accuracy2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/Accuracy2DBVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/Accuracy2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/CachesMgr.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/CachesMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/CachesMgr.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/CachesMgr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/loadPrediction/CodeGenerator.class" afterPath="$PROJECT_DIR$/target/test-classes/loadPrediction/CodeGenerator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingQingmingPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingQingmingPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingQingmingPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingQingmingPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingWeekendPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingWeekendPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingWeekendPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingWeekendPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler4LowerException.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler4LowerException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler4LowerException.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler4LowerException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler4UpperException.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandler4UpperException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler4UpperException.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandler4UpperException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandlerFactory.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionHandlerFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandlerFactory.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionHandlerFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/loadPrediction/exception/ExceptionHandlerFactoryTest.class" afterPath="$PROJECT_DIR$/target/test-classes/loadPrediction/exception/ExceptionHandlerFactoryTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/loadPrediction/exception/ExceptionHandlerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/loadPrediction/exception/ExceptionHandlerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionLogger.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionLogger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionLogger.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionLogger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionMailler.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/ExceptionMailler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionMailler.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/ExceptionMailler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor$1.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor$1.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/exception/IExceptionHandler.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/exception/IExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/IExceptionHandler.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/exception/IExceptionHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/IPredictor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/IPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/IPredictor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/IPredictor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/IPredictorVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/IPredictorVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/IPredictorVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/IPredictorVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/action/PredictionAction.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/action/PredictionAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/action/PredictionAction.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/action/PredictionAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad21LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad21LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad21LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad21LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ChartVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ChartVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ChartVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ChartVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/timerTask/TimerTask4LoadPrediction.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/timerTask/TimerTask4LoadPrediction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/timerTask/TimerTask4LoadPrediction.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/timerTask/TimerTask4LoadPrediction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/timerTask/TomcatStartupListener.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/timerTask/TomcatStartupListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/timerTask/TomcatStartupListener.class" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/WEB-INF/classes/loadPrediction/timerTask/TomcatStartupListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.GetDateTypeActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.GetDateTypeActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.PredictionActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.PredictionActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.ProblemReportingActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.ProblemReportingActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerFactoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerFactoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherDataTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherDataTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LoadPredictionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LoadPredictionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LogMailingTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LogMailingTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.GetDateTypeActionTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.GetDateTypeActionTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.PredictionActionTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.PredictionActionTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerFactoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerFactoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LoadPredictionTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LoadPredictionTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LogMailingTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LogMailingTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,184 +117,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PredictionLoad24LinePictureVisitor_1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor_1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1307" max-vertical-offset="2686">
-              <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
-              <folding>
-                <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="true" />
-                <element signature="e#6692#6696#0" expanded="true" />
-                <element signature="e#6697#6701#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CachesMgr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/CachesMgr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5440" max-vertical-offset="5542">
-              <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
-              <folding>
-                <marker date="1428423663700" expanded="true" signature="77:1102" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="153:207" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="211:1102" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="428:548" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="566:686" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="704:824" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="842:962" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="994:1030" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="2637:2941" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="2744:2801" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="2807:2923" placeholder="{...}" />
-                <marker date="1428423663700" expanded="false" signature="4472:4579" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="6333:6946" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="6369:6737" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="6811:6926" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="7365:7384" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="7522:7657" placeholder="{...}" />
-                <marker date="1428423663700" expanded="true" signature="7705:7804" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8461537" vertical-offset="359" max-vertical-offset="1207">
-              <caret line="159" column="41" selection-start-line="159" selection-start-column="41" selection-end-line="159" selection-end-column="41" />
-              <folding>
-                <element signature="e#44#192#0#JSP" expanded="false" />
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#428#548#0#HTML" expanded="false" />
-                <element signature="e#566#686#0#HTML" expanded="false" />
-                <element signature="e#704#824#0#HTML" expanded="false" />
-                <element signature="e#842#962#0#HTML" expanded="false" />
-                <element signature="e#994#1030#0#HTML" expanded="false" />
-                <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#1433#1553#0#HTML" expanded="false" />
-                <element signature="e#1571#1691#0#HTML" expanded="false" />
-                <element signature="e#1709#1829#0#HTML" expanded="false" />
-                <element signature="e#1847#1967#0#HTML" expanded="false" />
-                <element signature="e#2420#2475#0#HTML" expanded="false" />
-                <element signature="e#2700#2941#0#HTML" expanded="false" />
-                <element signature="e#2778#2846#0#HTML" expanded="false" />
-                <element signature="e#2852#2923#0#HTML" expanded="false" />
-                <element signature="e#3231#3470#0#HTML" expanded="false" />
-                <element signature="e#3365#3444#0#HTML" expanded="false" />
-                <element signature="e#3711#4089#0#HTML" expanded="false" />
-                <element signature="e#4200#4254#0#HTML" expanded="false" />
-                <element signature="e#4260#4315#0#HTML" expanded="false" />
-                <element signature="e#5851#5913#0#HTML" expanded="false" />
-                <element signature="e#6375#6428#0#HTML" expanded="false" />
-                <element signature="e#7096#7298#0#HTML" expanded="false" />
-                <element signature="e#7316#7370#0#HTML" expanded="false" />
-                <element signature="e#7972#8642#0#HTML" expanded="false" />
-                <element signature="e#8315#8468#0#HTML" expanded="false" />
-                <element signature="e#8474#8628#0#HTML" expanded="false" />
-                <element signature="e#8660#8726#0#HTML" expanded="false" />
-                <element signature="e#9335#9503#0#HTML" expanded="false" />
-                <element signature="e#9521#9587#0#HTML" expanded="false" />
-                <element signature="e#9790#9860#0#HTML" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#s:form#0;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#s:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#input#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#s:form#2;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictionLoad2PictureVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="510">
-              <caret line="22" column="0" selection-start-line="21" selection-start-column="18" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileOutputVisitor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FileOutputVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73177844" vertical-offset="174" max-vertical-offset="595">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#visitWorkdayPredictor#0;class#FileOutputVisitor#0" expanded="true" />
-                <element signature="method#visitWeekendPredictor#0;class#FileOutputVisitor#0" expanded="true" />
-                <element signature="method#visitQingmingPredictor#0;class#FileOutputVisitor#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictionLoad21LinePictureVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad21LinePictureVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="510">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictionLoad2ReportPictureVisitor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PredictionLoad2ReportPictureVisitor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1836">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.7017544" vertical-offset="2140" max-vertical-offset="2482">
+              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
                 <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-                <element signature="e#1456#1472#0" expanded="true" />
+                <element signature="e#1540#1556#0" expanded="true" />
                 <element signature="method#visitWeekendPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-                <element signature="e#1612#1628#0" expanded="true" />
                 <element signature="method#visitQingmingPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
                 <element signature="method#unnamed#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-                <element signature="e#1933#1941#0" expanded="true" />
-                <element signature="e#2003#2032#0" expanded="true" />
-                <element signature="e#2237#2253#0" expanded="true" />
+                <element signature="e#2124#2132#0" expanded="true" />
+                <element signature="e#2194#2223#0" expanded="true" />
+                <element signature="e#2428#2444#0" expanded="true" />
+                <element signature="e#3727#3735#0" expanded="true" />
+                <element signature="method#drawTableGrid#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+                <element signature="method#drawLeftLabels#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+                <element signature="method#drawTopLabels#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PredictionLoad2DBVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.java">
+      <file leaf-file-name="PredictionActionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/loadPrediction/action/PredictionActionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="510">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="408">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -219,13 +156,94 @@
       <file leaf-file-name="PredictionAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1887">
-              <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2152" max-vertical-offset="2482">
+              <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
               <folding>
-                <element signature="e#1399#1400#0" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="method#predict#0;class#PredictionAction#0" expanded="true" />
+                <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
+                <element signature="method#doPredict#0;class#PredictionAction#0" expanded="true" />
+                <element signature="e#4867#5001#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SunGraphics2D.class" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/java2d/SunGraphics2D.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.6" vertical-offset="5548" max-vertical-offset="5865">
+              <caret line="2307" column="0" selection-start-line="2307" selection-start-column="0" selection-end-line="2307" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcellingWorkdayPredictor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="813" max-vertical-offset="1343">
+              <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictorFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="680">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#914#915#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="952">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#2697#2698#0" expanded="true" />
+                <element signature="e#2742#2743#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessDAOFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/access/AccessDAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="714">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#2289#2290#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8076925" vertical-offset="1651" max-vertical-offset="4284">
+              <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/SuperDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="1224">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -285,10 +303,10 @@
         <option value="$PROJECT_DIR$/src/main/java/jfreechart/JFreeChartFacade.java" />
         <option value="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor_1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FileOutputVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
       </list>
     </option>
   </component>
@@ -575,8 +593,24 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit-4.12" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="LP" />
@@ -594,6 +628,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="temp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="temp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="loadPrediction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,7 +705,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="load-prediction-1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="load-prediction-1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -701,7 +841,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -726,8 +866,18 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -741,102 +891,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="visitors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="activation-1.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -850,14 +914,14 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="options.lastSelected" value="File.Encoding" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="D:/系统文档/desktop/首页.jsp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/xwork-core-2.3.20.jar!/" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -874,11 +938,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\LP\lib" />
+      <recent name="E:\IdeaProjects\LP\src\test\java" />
       <recent name="E:\IdeaProjects\LP\src\main\webapp\static\image" />
       <recent name="E:\IdeaProjects\LP\src\main\webapp\static\js" />
       <recent name="E:\IdeaProjects\LP\src\main\webapp\static\css" />
-      <recent name="E:\IdeaProjects\LP\temp" />
-      <recent name="E:\IdeaProjects\LP\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IdeaProjects\LP\src\test\java\loadPrediction" />
@@ -905,7 +969,7 @@
       <recent name="loadPrediction.timerTask" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.build">
+  <component name="RunManager" selected="JUnit.one-method">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1351,11 +1415,12 @@
       <workItem from="1428282176042" duration="1883000" />
       <workItem from="1428300792789" duration="5493000" />
       <workItem from="1428420502004" duration="4274000" />
+      <workItem from="1428453555899" duration="3318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36908000" />
+    <option name="totallyTimeSpent" value="40226000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1384,6 +1449,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50080776" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1395,18 +1461,17 @@
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5815832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37821484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22239032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41965473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37802908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50199205" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33764136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1461,7 +1526,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="84" />
+      <option name="time" value="99" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1470,201 +1535,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1343">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6755#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#1210#1211#0" expanded="false" />
-            <element signature="e#1237#1238#0" expanded="false" />
-            <element signature="e#1317#1318#0" expanded="false" />
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#1454#1455#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
-            <element signature="e#1567#1568#0" expanded="false" />
-            <element signature="e#1605#1606#0" expanded="false" />
-            <element signature="method#doGetPredictionDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#3088#3089#0" expanded="false" />
-            <element signature="e#3152#3153#0" expanded="false" />
-            <element signature="e#3216#3217#0" expanded="false" />
-            <element signature="e#3287#3288#0" expanded="false" />
-            <element signature="e#3351#3352#0" expanded="false" />
-            <element signature="e#3375#3376#0" expanded="false" />
-            <element signature="method#doGetHistoryDaysNbrs#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetHistoryDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#3856#3857#0" expanded="false" />
-            <element signature="e#3913#3914#0" expanded="false" />
-            <element signature="e#3995#3996#0" expanded="false" />
-            <element signature="e#4052#4053#0" expanded="false" />
-            <element signature="method#doGetHistoryWeatherExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetSimilarDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetSimilarLoadsExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#4966#4967#0" expanded="false" />
-            <element signature="e#5025#5026#0" expanded="false" />
-            <element signature="method#getHistoryLoadTuplesExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#5302#5303#0" expanded="false" />
-            <element signature="e#5329#5330#0" expanded="false" />
-            <element signature="method#doAFterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="true" />
-            <element signature="e#6692#6696#0" expanded="true" />
-            <element signature="e#6697#6701#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="1411">
-          <caret line="375" column="10" selection-start-line="375" selection-start-column="10" selection-end-line="375" selection-end-column="10" />
-          <folding>
-            <marker date="1428423663700" expanded="true" signature="77:1102" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="153:207" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="211:1102" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="428:548" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="566:686" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="704:824" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="842:962" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="994:1030" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2637:2941" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2744:2801" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2807:2923" placeholder="{...}" />
-            <marker date="1428423663700" expanded="false" signature="4472:4579" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6333:6946" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6369:6737" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6811:6926" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7365:7384" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7522:7657" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7705:7804" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="3111">
-          <caret line="335" column="18" selection-start-line="335" selection-start-column="18" selection-end-line="335" selection-end-column="18" />
-          <folding>
-            <element signature="e#44#192#0#JSP" expanded="false" />
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#428#548#0#HTML" expanded="false" />
-            <element signature="e#566#686#0#HTML" expanded="false" />
-            <element signature="e#704#824#0#HTML" expanded="false" />
-            <element signature="e#842#962#0#HTML" expanded="false" />
-            <element signature="e#994#1030#0#HTML" expanded="false" />
-            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#1433#1553#0#HTML" expanded="false" />
-            <element signature="e#1571#1691#0#HTML" expanded="false" />
-            <element signature="e#1709#1829#0#HTML" expanded="false" />
-            <element signature="e#1847#1967#0#HTML" expanded="false" />
-            <element signature="e#2420#2475#0#HTML" expanded="false" />
-            <element signature="e#2700#2941#0#HTML" expanded="false" />
-            <element signature="e#2778#2846#0#HTML" expanded="false" />
-            <element signature="e#2852#2923#0#HTML" expanded="false" />
-            <element signature="e#3231#3470#0#HTML" expanded="false" />
-            <element signature="e#3365#3444#0#HTML" expanded="false" />
-            <element signature="e#3711#4089#0#HTML" expanded="false" />
-            <element signature="e#4200#4254#0#HTML" expanded="false" />
-            <element signature="e#4260#4315#0#HTML" expanded="false" />
-            <element signature="e#5851#5913#0#HTML" expanded="false" />
-            <element signature="e#6375#6428#0#HTML" expanded="false" />
-            <element signature="e#7096#7298#0#HTML" expanded="false" />
-            <element signature="e#7316#7370#0#HTML" expanded="false" />
-            <element signature="e#7972#8642#0#HTML" expanded="false" />
-            <element signature="e#8315#8468#0#HTML" expanded="false" />
-            <element signature="e#8474#8628#0#HTML" expanded="false" />
-            <element signature="e#8660#8726#0#HTML" expanded="false" />
-            <element signature="e#9335#9503#0#HTML" expanded="false" />
-            <element signature="e#9521#9587#0#HTML" expanded="false" />
-            <element signature="e#9790#9860#0#HTML" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#s:form#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#s:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#input#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#s:form#2;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="459">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1572#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#FirstPredictionLoadData2DBVisitor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitWorkdayPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitWeekendPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitQingmingPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#unnamed#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/success.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jfreechart/JFreeChartFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="510">
-          <caret line="96" column="35" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#3052#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createLineChart3D#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createLineChart#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createDataset#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="e#1715#1716#0" expanded="false" />
-            <element signature="e#1766#1767#0" expanded="false" />
-            <marker date="1428420246395" expanded="false" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/jfreechart-1.0.0.jar!/org/jfree/data/xy/CategoryTableXYDataset.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1122">
-          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/cache/OnedayAccuracyCheckingCacheEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -1700,13 +1570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/timerTask/IDataCopy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -1739,13 +1602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="38" column="69" selection-start-line="38" selection-start-column="69" selection-end-line="38" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -1847,64 +1703,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1343">
-          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6755#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#1210#1211#0" expanded="false" />
-            <element signature="e#1237#1238#0" expanded="false" />
-            <element signature="e#1317#1318#0" expanded="false" />
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#1454#1455#0" expanded="false" />
-            <element signature="e#1513#1514#0" expanded="false" />
-            <element signature="e#1567#1568#0" expanded="false" />
-            <element signature="e#1605#1606#0" expanded="false" />
-            <element signature="method#doGetPredictionDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#3088#3089#0" expanded="false" />
-            <element signature="e#3152#3153#0" expanded="false" />
-            <element signature="e#3216#3217#0" expanded="false" />
-            <element signature="e#3287#3288#0" expanded="false" />
-            <element signature="e#3351#3352#0" expanded="false" />
-            <element signature="e#3375#3376#0" expanded="false" />
-            <element signature="method#doGetHistoryDaysNbrs#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetHistoryDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#3856#3857#0" expanded="false" />
-            <element signature="e#3913#3914#0" expanded="false" />
-            <element signature="e#3995#3996#0" expanded="false" />
-            <element signature="e#4052#4053#0" expanded="false" />
-            <element signature="method#doGetHistoryWeatherExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetSimilarDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="method#doGetSimilarLoadsExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#4966#4967#0" expanded="false" />
-            <element signature="e#5025#5026#0" expanded="false" />
-            <element signature="method#getHistoryLoadTuplesExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-            <element signature="e#5302#5303#0" expanded="false" />
-            <element signature="e#5329#5330#0" expanded="false" />
-            <element signature="method#doAFterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jfreechart/JFreeChartFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1122" max-vertical-offset="1292">
           <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#3052#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createLineChart3D#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createLineChart#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="method#createDataset#0;class#JFreeChartFacade#0" expanded="false" />
-            <element signature="e#1715#1716#0" expanded="false" />
-            <element signature="e#1766#1767#0" expanded="false" />
-            <marker date="1428420246395" expanded="false" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1912,7 +1714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1122">
           <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1924,47 +1725,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1572#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#FirstPredictionLoadData2DBVisitor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitWorkdayPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitWeekendPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#visitQingmingPredictor#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-            <element signature="method#unnamed#0;class#FirstPredictionLoadData2DBVisitor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5440" max-vertical-offset="5542">
           <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
-          <folding>
-            <marker date="1428423663700" expanded="true" signature="77:1102" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="153:207" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="211:1102" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="428:548" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="566:686" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="704:824" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="842:962" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="994:1030" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2637:2941" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2744:2801" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="2807:2923" placeholder="{...}" />
-            <marker date="1428423663700" expanded="false" signature="4472:4579" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6333:6946" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6369:6737" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="6811:6926" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7365:7384" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7522:7657" placeholder="{...}" />
-            <marker date="1428423663700" expanded="true" signature="7705:7804" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1976,88 +1741,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="1887">
-          <caret line="153" column="32" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
-          <folding>
-            <element signature="e#1399#1400#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="method#predict#0;class#PredictionAction#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8461537" vertical-offset="359" max-vertical-offset="1207">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3281">
           <caret line="159" column="41" selection-start-line="159" selection-start-column="41" selection-end-line="159" selection-end-column="41" />
           <folding>
             <element signature="e#44#192#0#JSP" expanded="false" />
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#428#548#0#HTML" expanded="false" />
-            <element signature="e#566#686#0#HTML" expanded="false" />
-            <element signature="e#704#824#0#HTML" expanded="false" />
-            <element signature="e#842#962#0#HTML" expanded="false" />
-            <element signature="e#994#1030#0#HTML" expanded="false" />
-            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#1433#1553#0#HTML" expanded="false" />
-            <element signature="e#1571#1691#0#HTML" expanded="false" />
-            <element signature="e#1709#1829#0#HTML" expanded="false" />
-            <element signature="e#1847#1967#0#HTML" expanded="false" />
-            <element signature="e#2420#2475#0#HTML" expanded="false" />
-            <element signature="e#2700#2941#0#HTML" expanded="false" />
-            <element signature="e#2778#2846#0#HTML" expanded="false" />
-            <element signature="e#2852#2923#0#HTML" expanded="false" />
-            <element signature="e#3231#3470#0#HTML" expanded="false" />
-            <element signature="e#3365#3444#0#HTML" expanded="false" />
-            <element signature="e#3711#4089#0#HTML" expanded="false" />
-            <element signature="e#4200#4254#0#HTML" expanded="false" />
-            <element signature="e#4260#4315#0#HTML" expanded="false" />
-            <element signature="e#5851#5913#0#HTML" expanded="false" />
-            <element signature="e#6375#6428#0#HTML" expanded="false" />
-            <element signature="e#7096#7298#0#HTML" expanded="false" />
-            <element signature="e#7316#7370#0#HTML" expanded="false" />
-            <element signature="e#7972#8642#0#HTML" expanded="false" />
-            <element signature="e#8315#8468#0#HTML" expanded="false" />
-            <element signature="e#8474#8628#0#HTML" expanded="false" />
-            <element signature="e#8660#8726#0#HTML" expanded="false" />
-            <element signature="e#9335#9503#0#HTML" expanded="false" />
-            <element signature="e#9521#9587#0#HTML" expanded="false" />
-            <element signature="e#9790#9860#0#HTML" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#s:form#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#input#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#s:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#input#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#s:form#2;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1307" max-vertical-offset="2686">
-          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
-          <folding>
-            <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="true" />
-            <element signature="e#6692#6696#0" expanded="true" />
-            <element signature="e#6697#6701#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2072,8 +1764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2PictureVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="510">
-          <caret line="22" column="0" selection-start-line="21" selection-start-column="18" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -2086,34 +1778,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="490" max-vertical-offset="1836">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1307" max-vertical-offset="2686">
+          <caret line="139" column="20" selection-start-line="139" selection-start-column="20" selection-end-line="139" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-            <element signature="e#1456#1472#0" expanded="true" />
-            <element signature="method#visitWeekendPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-            <element signature="e#1612#1628#0" expanded="true" />
-            <element signature="method#visitQingmingPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-            <element signature="method#unnamed#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-            <element signature="e#1933#1941#0" expanded="true" />
-            <element signature="e#2003#2032#0" expanded="true" />
-            <element signature="e#2237#2253#0" expanded="true" />
+            <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3706">
+          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+          <folding>
+            <element signature="method#visitWorkdayPredictor#0;class#AllInformation2ExcelVisitor#0" expanded="true" />
+            <element signature="method#visitQingmingPredictor#0;class#AllInformation2ExcelVisitor#0" expanded="true" />
+            <element signature="method#visitWeekendPredictor#0;class#AllInformation2ExcelVisitor#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FileOutputVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73177844" vertical-offset="174" max-vertical-offset="595">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
           <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#visitWorkdayPredictor#0;class#FileOutputVisitor#0" expanded="false" />
+            <element signature="method#visitWeekendPredictor#0;class#FileOutputVisitor#0" expanded="false" />
+            <element signature="method#visitQingmingPredictor#0;class#FileOutputVisitor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad24LinePictureVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/log/CustomAppender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/log/Logging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="544">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="952">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="e#2742#2743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/SuperDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="1224">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/access/AccessDAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="99" max-vertical-offset="714">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8076925" vertical-offset="1651" max-vertical-offset="4284">
+          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="680">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="813" max-vertical-offset="1343">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/java2d/SunGraphics2D.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.6" vertical-offset="5548" max-vertical-offset="5865">
+          <caret line="2307" column="0" selection-start-line="2307" selection-start-column="0" selection-end-line="2307" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2152" max-vertical-offset="2482">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding>
+            <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
+            <element signature="method#doPredict#0;class#PredictionAction#0" expanded="true" />
+            <element signature="e#4867#5001#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/loadPrediction/action/PredictionActionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="408">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7017544" vertical-offset="2140" max-vertical-offset="2482">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#visitWorkdayPredictor#0;class#FileOutputVisitor#0" expanded="true" />
-            <element signature="method#visitWeekendPredictor#0;class#FileOutputVisitor#0" expanded="true" />
-            <element signature="method#visitQingmingPredictor#0;class#FileOutputVisitor#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="method#visitWorkdayPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="e#1540#1556#0" expanded="true" />
+            <element signature="method#visitWeekendPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="method#visitQingmingPredictor#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="method#unnamed#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="e#2124#2132#0" expanded="true" />
+            <element signature="e#2194#2223#0" expanded="true" />
+            <element signature="e#2428#2444#0" expanded="true" />
+            <element signature="e#3727#3735#0" expanded="true" />
+            <element signature="method#drawTableGrid#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="method#drawLeftLabels#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
+            <element signature="method#drawTopLabels#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2135,7 +1985,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
