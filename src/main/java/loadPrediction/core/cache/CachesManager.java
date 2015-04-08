@@ -1,7 +1,5 @@
-package loadPrediction.core;
+package loadPrediction.core.cache;
 
-import loadPrediction.core.cache.OnedayAccuracyCheckingCacheEntity;
-import loadPrediction.core.cache.PredictionCacheEntity;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.exception.LPE;
 
@@ -10,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 李倍存 创建于 2015-04-07 10:16。电邮 1174751315@qq.com。
+ * 李倍存 创建于 2015-04-08 17:21。电邮 1174751315@qq.com。
  */
-public class CachesMgr {
+public class CachesManager {
 
     private Map<String, PredictionCacheEntity> predictionCaches;
     private Map<String, OnedayAccuracyCheckingCacheEntity> accuracyCaches;
@@ -33,7 +31,7 @@ public class CachesMgr {
             accuracyCaches.put(entity.getDateString(), entity);
         }
     }
-    private CachesMgr() {
+    private CachesManager() {
         this.loadCaches();
     }
     private void storeCaches(Map<String, PredictionCacheEntity> caches) {
@@ -106,13 +104,5 @@ public class CachesMgr {
     }
 
 
-    public static CachesMgr INSTANCE=new CachesMgr();
-
+    public static CachesManager INSTANCE=new CachesManager();
 }
-
-
-
-
-
-
-

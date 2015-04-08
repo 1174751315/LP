@@ -57,9 +57,9 @@ public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor 
             List<String> list=new LinkedList<String>();
             MaxAveMinTuple<Double> tuple=predictions.get(i).toMaxAveMin();
             list.add(tuple.max.toString());
-            list.add("未知");
+            list.add(predictions.get(i).getMaxLabel());
             list.add(tuple.min.toString());
-            list.add("未知");
+            list.add(predictions.get(i).getMinLabel());
             list.add(tuple.ave.toString());
             Double diff=tuple.max - tuple.min;
             list.add(diff.toString());

@@ -38,7 +38,15 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
 
     private boolean maxed = false, mined = false, aveed = false;
     private Double max, min, ave;
-
+    private Integer maxIndex=0,minIndex=0;
+    public String getMaxLabel(){
+        getMax();
+        return TimeLabels.labels[maxIndex];
+    }
+    public String getMinLabel(){
+        getMin();
+        return TimeLabels.labels[minIndex];
+    }
     public Double getMax() {
         if (maxed == true)
             return max;
@@ -46,8 +54,11 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
         maxed = true;
         max = lst.get(0);
         for (int i = 0; i < 96; i++) {
-            if (max < lst.get(i))
+            if (max < lst.get(i)){
                 max = lst.get(i);
+                maxIndex=i;
+            }
+
         }
         return max;
     }
@@ -59,8 +70,11 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
         mined = true;
         min = lst.get(0);
         for (int i = 0; i < 96; i++) {
-            if (min > lst.get(i))
+            if (min > lst.get(i)){
                 min = lst.get(i);
+                minIndex=i;
+            }
+
         }
         return min;
     }

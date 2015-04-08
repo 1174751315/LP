@@ -8,7 +8,7 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import loadPrediction.core.CachesMgr;
+import loadPrediction.core.cache.CachesManager;
 import  loadPrediction.core.cache.PredictionCacheEntity;
 import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.core.predictor.PredictorFactory;
@@ -103,9 +103,9 @@ public class PredictionAction extends ActionSupport {
         Logger log = Logging.instance().createLogger("智能预测");
         try {
         /*若允许缓存，且缓存有对应项，则直接对用户返回缓存。*/
-            if (useCaches && CachesMgr.INSTANCE.hasPredictionCache(dateString)) {
+            if (useCaches && CachesManager.INSTANCE.hasPredictionCache(dateString)) {
                 try {
-                    PredictionCacheEntity cache = CachesMgr.INSTANCE.getPredictionEntity(dateString);
+                    PredictionCacheEntity cache = CachesManager.INSTANCE.getPredictionEntity(dateString);
                     warning = "OK";
                     String imgPath=cache.getOutputImagePath();
                     String xlPath=cache.getOutputExcelPath();
@@ -176,7 +176,7 @@ public class PredictionAction extends ActionSupport {
         String t = predictor.getPredictionDays().get(0).getDateType().getName();
         PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, path+rptImgName,warning);
                 /*添加至缓存管理器。*/
-        CachesMgr.INSTANCE.addPredictionEntity(entity);
+        CachesManager.INSTANCE.addPredictionEntity(entity);
         ;
         log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
     }
