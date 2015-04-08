@@ -9,10 +9,12 @@ package loadPrediction.core.predictor.visitors;
 import common.MaxAveMinTuple;
 import jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -23,6 +25,7 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.CategoryTableXYDataset;
 
 import java.awt.*;
+import java.sql.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -36,7 +39,8 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
         CategoryTableXYDataset ds = new CategoryTableXYDataset();
 
         LoadData actual = predictor.getActual96PointLoads().get(0);
-        LoadData prediction = predictor.getPrediction96PointLoads().get(0);
+        List<LoadData> predictions=predictor.getPrediction96PointLoads();
+        LoadData prediction = predictions.get(0);
         LoadData lwr=prediction.multiple(0.943396226415094);
         LoadData upr=prediction.multiple(1.06382978723404);
 
@@ -45,11 +49,14 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
         list.add(lwr);
         list.add(upr);
 
-        ds = (CategoryTableXYDataset) prediction.accept(new LoadDataAppend2DatasetVisitor_1(ds, "预测负荷"));
-        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
-        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));
+        ds = (CategoryTableXYDataset) prediction.accept(new LoadDataAppend2DatasetVisitor_1(ds, "今日预测负荷"));
+        ds=(CategoryTableXYDataset)predictions.get(1).accept(new LoadDataAppend2DatasetVisitor_1(ds,"明日预测负荷"));
+        ds=(CategoryTableXYDataset) DAOFactory.getDefault().createDaoLoadData().query(DateUtil.getDateBefore(Date.valueOf(predictor.getDateString()),1).toLocalDate().toString()).accept(new LoadDataAppend2DatasetVisitor_1(ds,"昨日实际负荷"));
+
+//        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
+//        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));
         if (actual != null) {
-            ds = (CategoryTableXYDataset) actual.accept(new LoadDataAppend2DatasetVisitor_1(ds, "实际负荷"));
+            ds = (CategoryTableXYDataset) actual.accept(new LoadDataAppend2DatasetVisitor_1(ds, "今日实际负荷"));
             list.add(actual);
         }
         Double acc = 0.;
@@ -63,17 +70,24 @@ public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor
         XYLineAndShapeRenderer renderer=new XYLineAndShapeRenderer();
 
         BasicStroke dotLine=new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[] {3.F, 3.F}, 1.0F);
+        BasicStroke line=new BasicStroke(2);
         renderer.setSeriesStroke(0, new BasicStroke(2));
         renderer.setSeriesPaint(0, MyColor.COMMON_SERIES_1);
-        renderer.setSeriesStroke(1, dotLine);
+        renderer.setSeriesStroke(1, line);
         renderer.setSeriesPaint(1, MyColor.COMMON_SERIES_3);
-        renderer.setSeriesStroke(2, dotLine);
+        renderer.setSeriesStroke(2, line);
         renderer.setSeriesPaint(2, MyColor.COMMON_SERIES_2);
         renderer.setBasePaint(Color.BLACK);
-        renderer.setSeriesShape(1,new Rectangle());
-        renderer.setSeriesShape(2,new Rectangle());
+
+
+//        renderer.setSeriesShape(0,new Rectangle());
+//        renderer.setSeriesShape(1,new Rectangle());
+//        renderer.setSeriesShape(2,new Rectangle());
+//        renderer.setSeriesShape(3,new Rectangle());
+        renderer.setSeriesShapesVisible(0,true);
         renderer.setSeriesShapesVisible(1,true);
         renderer.setSeriesShapesVisible(2,true);
+        renderer.setSeriesShapesVisible(3,true);
 
         if (actual != null) {
             renderer.setSeriesStroke(3, new BasicStroke(2));

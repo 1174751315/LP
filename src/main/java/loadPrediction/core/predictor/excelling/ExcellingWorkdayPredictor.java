@@ -52,7 +52,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     private Integer determineSeason(WeatherData weatherData){
-        if (weatherData.getAveTemperature()>30.)
+        if (weatherData.getAveTemperature()>20.)
              return SUMMER;
         else
              return WINTER;
@@ -107,8 +107,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     @Override
     protected String doGetInputWorkbookPath() {
         if (season.equals(SUMMER))
-            return IOPaths.WEB_CONTENT_WORKDAY_TEMPLATE_PATH;
-        return IOPaths.WEB_CONTENT_WORKDAY_TEMPLATE_PATH;
+            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
+        return IOPaths.WEB_CONTENT_WORKDAY_WINTER_TEMPLATE_PATH;
     }
 
     @Override

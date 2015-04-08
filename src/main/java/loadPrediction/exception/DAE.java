@@ -9,7 +9,7 @@ package loadPrediction.exception;
 /**
  * 李倍存 创建于 2015-03-25 14:19。电邮 1174751315@qq.com。
  */
-public class DAE extends Exception {
+public class DAE extends LPE {
 
     public DAE(String message, eType type) {
         super(message);

@@ -86,6 +86,8 @@ public interface IPredictor {
     ElementPrintableLinkedList<WeatherData> getPredictionWeathers();
 
 
+
+
     /**
      * 访问者模式接口，用于接受一个访问者对象。
      * @param visitor 访问者对象。
