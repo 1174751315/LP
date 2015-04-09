@@ -5,8 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/MedFiltVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/MedFiltVisitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/loadPrediction/action/PredictionActionTest.java" afterPath="$PROJECT_DIR$/src/test/java/loadPrediction/action/PredictionActionTest.java" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\Boss.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\CEO.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\Colleague.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\Handler.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\HandlerTest.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\Request.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\chainOfResponsibility\eRequestType.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\Caption.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\Footer.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\Header.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\Resume.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\ResumeElement.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\decorator\ResumeTest.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\Expression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\ExpressionTest.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\FunctionInvokingExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\SingleNumberExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\TwoOpsMathExpression$Add.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\TwoOpsMathExpression$TwoOpsOperator.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example1\TwoOpsMathExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example2\AndExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example2\BoolExpression.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example2\BoolVariable.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example2\Context.class" afterPath="" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\target\classes\designPattern\interpretor\example2\TwoParamsExpression.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/cache/CachesManager.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/cache/CachesManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/domain/visitors/MedFiltVisitor.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/domain/visitors/MedFiltVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/loadPrediction/core/cache/PredictionCacheEntity.class" afterPath="$PROJECT_DIR$/target/classes/loadPrediction/core/cache/PredictionCacheEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-common.FilterUtilsTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-common.FilterUtilsTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.GetDateTypeActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.GetDateTypeActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.PredictionActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.PredictionActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.ProblemReportingActionTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.action.ProblemReportingActionTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerFactoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerFactoryTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.exception.ExceptionHandlerTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherDataTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherDataTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LogMailingTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-loadPrediction.timerTask.TimerTask4LogMailingTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/all.xml" afterPath="$PROJECT_DIR$/.idea/libraries/all.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/common.FilterUtilsTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/common.FilterUtilsTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.PredictionActionTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.action.PredictionActionTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerFactoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerFactoryTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.exception.ExceptionHandlerTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LogMailingTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/loadPrediction.timerTask.TimerTask4LogMailingTest.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\Boss.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/Boss.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\CEO.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/CEO.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\Colleague.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/Colleague.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\Handler.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/Handler.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\HandlerTest.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/HandlerTest.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\Request.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/Request.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\chainOfResponsibility\eRequestType.java" afterPath="$PROJECT_DIR$/src/main/java/learning/chainOfResponsibility/eRequestType.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\Caption.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/Caption.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\Footer.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/Footer.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\Header.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/Header.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\Resume.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/Resume.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\ResumeElement.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/ResumeElement.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\decorator\ResumeTest.java" afterPath="$PROJECT_DIR$/src/main/java/learning/decorator/ResumeTest.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example1\Expression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example1/Expression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example1\ExpressionTest.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example1/ExpressionTest.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example1\FunctionInvokingExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example1/FunctionInvokingExpression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example1\SingleNumberExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example1/SingleNumberExpression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example1\TwoOpsMathExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example1/TwoOpsMathExpression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example2\AndExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example2/AndExpression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example2\BoolExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example2/BoolExpression.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example2\BoolVariable.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example2/BoolVariable.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example2\Context.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example2/Context.java" />
+      <change type="MOVED" beforePath="E:\IdeaProjects\LP\src\main\java\designPattern\interpretor\example2\TwoParamsExpression.java" afterPath="$PROJECT_DIR$/src/main/java/learning/interpretor/example2/TwoParamsExpression.java" />
     </list>
     <ignored path="LP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,117 +100,129 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChartBuilderImpl1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/ChartBuilderImpl1.java">
+      <file leaf-file-name="mail.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/mail.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2329">
-              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#2313#2314#0" expanded="true" />
-                <element signature="e#2388#2396#0" expanded="true" />
-                <element signature="e#3856#3909#0" expanded="true" />
-                <element signature="e#6536#6574#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DomainPrintVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/DomainPrintVisitor.java">
+      <file leaf-file-name="mail.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mail.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeekendQuery.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/WeekendQuery.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="String2NumericUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/String2NumericUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadData2JFreeChartVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/LoadData2JFreeChartVisitor.java">
+      <file leaf-file-name="JXLFormulas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/JXLFormulas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadData2AlterObjVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/LoadData2AlterObjVisitor.java">
+      <file leaf-file-name="FileContentUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/FileContentUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="476">
+              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+              <folding>
+                <element signature="e#675#676#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/LoadData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17170" max-vertical-offset="21930">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#46325#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#LoadData#0" expanded="true" />
+                <element signature="method#setNext#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getMaxLabel#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getMinLabel#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getMax#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getMin#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getAve#0;class#LoadData#0" expanded="true" />
+                <element signature="method#setDateString#0;class#LoadData#0" expanded="true" />
+                <element signature="method#setData#0;class#LoadData#0" expanded="true" />
+                <element signature="method#unList#0;class#LoadData#0" expanded="true" />
+                <element signature="method#update#0;class#LoadData#0" expanded="true" />
+                <element signature="method#dbgPrint#0;class#LoadData#0" expanded="true" />
+                <element signature="method#toList#0;class#LoadData#0" expanded="true" />
+                <element signature="method#toMaxAveMin#0;class#LoadData#0" expanded="true" />
+                <element signature="method#print#0;class#LoadData#0" expanded="true" />
+                <element signature="method#getPerUnits#0;class#LoadData#0" expanded="true" />
+                <element signature="method#multiple#0;class#LoadData#0" expanded="true" />
+                <element signature="method#convertLower#0;class#LoadData#0" expanded="true" />
+                <element signature="method#clone#0;class#LoadData#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoadDataTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/loadPrediction/domain/LoadDataTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyColor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/MyColor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadDataVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/LoadDataVisitor.java">
+      <file leaf-file-name="TestMockito.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/learning/mockito/TestMockito.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MedFiltVisitor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/MedFiltVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36247334" vertical-offset="85" max-vertical-offset="646">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.6247241" vertical-offset="6" max-vertical-offset="544">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="18" />
               <folding>
-                <element signature="method#MedFiltVisitor#0;class#MedFiltVisitor#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#551#552#0" expanded="true" />
-                <element signature="method#visit#0;class#MedFiltVisitor#0" expanded="true" />
-                <element signature="e#828#832#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#TestMockito#0;class#TestMockito#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAOLoadData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOLoadData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="24" max-vertical-offset="493">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuperDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/SuperDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="850">
-              <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
-              <folding>
-                <element signature="method#query#0;class#SuperDAO#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SessionImpl.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-4.3.8.Final.jar!/org/hibernate/internal/SessionImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.08" vertical-offset="3146" max-vertical-offset="7718">
-              <caret line="820" column="18" selection-start-line="820" selection-start-column="18" selection-end-line="820" selection-end-column="18" />
-              <folding>
-                <element signature="method#get#0;class#SessionImpl#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/DateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="612">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -156,9 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/IPredictorVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/Accuracy2DBVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ChartVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2DBVisitor.java" />
@@ -207,6 +283,9 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/ChartBuilderImpl1.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/action/PredictionActionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/MedFiltVisitor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/loadPrediction/domain/LoadDataTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/learning/mockito/TestMockito.java" />
       </list>
     </option>
   </component>
@@ -493,7 +572,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -572,11 +651,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="load-prediction-1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="load-prediction-1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,6 +706,24 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -638,6 +765,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -664,7 +813,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
+              <option name="myItemId" value="learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mockito" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,119 +843,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataAccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="visitors" />
+              <option name="myItemId" value="learning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -816,7 +863,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="options.lastSelected" value="File.Encoding" />
@@ -859,6 +906,7 @@
       <recent name="loadPrediction.timerTask" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="loadPrediction.domain" />
       <recent name="common" />
       <recent name="loadPrediction.timerTask" />
       <recent name="loadPrediction.exception" />
@@ -872,7 +920,7 @@
       <recent name="loadPrediction.timerTask" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.build">
+  <component name="RunManager" selected="JUnit.one-method">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1154,9 +1202,9 @@
       <module name="LP" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="loadPrediction.action" />
-      <option name="MAIN_CLASS_NAME" value="loadPrediction.action.PredictionActionTest" />
-      <option name="METHOD_NAME" value="testIntelli" />
+      <option name="PACKAGE_NAME" value="learning.mockito" />
+      <option name="MAIN_CLASS_NAME" value="learning.mockito.TestMockito" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
@@ -1372,7 +1420,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3373174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35856575" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -1440,7 +1488,7 @@
           <option name="timeStamp" value="115" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="116" />
+      <option name="time" value="117" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1456,84 +1504,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37939698" vertical-offset="1651" max-vertical-offset="4284">
-          <caret line="106" column="28" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2476415" vertical-offset="201" max-vertical-offset="680">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/java2d/SunGraphics2D.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7357513" vertical-offset="5479" max-vertical-offset="5865">
-          <caret line="2307" column="0" selection-start-line="2307" selection-start-column="0" selection-end-line="2307" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWeekendPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/IPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1054">
-          <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3129" max-vertical-offset="3706">
-          <caret line="631" column="0" selection-start-line="631" selection-start-column="0" selection-end-line="631" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingQingmingPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/load-prediction-1.0-SNAPSHOT/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9230769" vertical-offset="1514" max-vertical-offset="2040">
-          <caret line="236" column="9" selection-start-line="236" selection-start-column="9" selection-end-line="236" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="527">
-          <caret line="339" column="109" selection-start-line="339" selection-start-column="109" selection-end-line="339" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/FileContentUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="1173">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad23LinePictureVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/java/util/HashMap.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="2635">
@@ -1776,7 +1746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1784,11 +1753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1173">
           <caret line="44" column="87" selection-start-line="44" selection-start-column="87" selection-end-line="44" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doVisitAndOutput#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="true" />
-            <element signature="method#unnamed#0;class#PredictionLoad24LinePictureVisitor_1#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1797,8 +1761,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1156">
           <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#medFilter#0;class#FilterUtils#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#medFilter#0;class#FilterUtils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1807,7 +1771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1815,436 +1778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2280" max-vertical-offset="2652">
           <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding>
-            <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
-            <element signature="method#doPredict#0;class#PredictionAction#0" expanded="true" />
-            <element signature="e#5233#5367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/LoadData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="24981" max-vertical-offset="28662">
-          <caret line="1477" column="50" selection-start-line="1477" selection-start-column="50" selection-end-line="1477" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#46325#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#LoadData#0" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="method#setNext#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getMaxLabel#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getMinLabel#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getMax#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getMin#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getAve#0;class#LoadData#0" expanded="true" />
-            <element signature="e#2270#2271#0" expanded="true" />
-            <element signature="e#2297#2298#0" expanded="true" />
-            <element signature="e#2337#2338#0" expanded="true" />
-            <element signature="e#2369#2370#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="method#setDateString#0;class#LoadData#0" expanded="true" />
-            <element signature="method#setData#0;class#LoadData#0" expanded="true" />
-            <element signature="e#8244#8245#0" expanded="true" />
-            <element signature="e#8273#8274#0" expanded="true" />
-            <element signature="e#8317#8318#0" expanded="true" />
-            <element signature="e#8353#8354#0" expanded="true" />
-            <element signature="e#8386#8387#0" expanded="true" />
-            <element signature="e#8415#8416#0" expanded="true" />
-            <element signature="e#8459#8460#0" expanded="true" />
-            <element signature="e#8495#8496#0" expanded="true" />
-            <element signature="e#8528#8529#0" expanded="true" />
-            <element signature="e#8557#8558#0" expanded="true" />
-            <element signature="e#8601#8602#0" expanded="true" />
-            <element signature="e#8637#8638#0" expanded="true" />
-            <element signature="e#8670#8671#0" expanded="true" />
-            <element signature="e#8699#8700#0" expanded="true" />
-            <element signature="e#8743#8744#0" expanded="true" />
-            <element signature="e#8779#8780#0" expanded="true" />
-            <element signature="e#8812#8813#0" expanded="true" />
-            <element signature="e#8841#8842#0" expanded="true" />
-            <element signature="e#8885#8886#0" expanded="true" />
-            <element signature="e#8921#8922#0" expanded="true" />
-            <element signature="e#8954#8955#0" expanded="true" />
-            <element signature="e#8983#8984#0" expanded="true" />
-            <element signature="e#9027#9028#0" expanded="true" />
-            <element signature="e#9063#9064#0" expanded="true" />
-            <element signature="e#9096#9097#0" expanded="true" />
-            <element signature="e#9125#9126#0" expanded="true" />
-            <element signature="e#9169#9170#0" expanded="true" />
-            <element signature="e#9205#9206#0" expanded="true" />
-            <element signature="e#9238#9239#0" expanded="true" />
-            <element signature="e#9267#9268#0" expanded="true" />
-            <element signature="e#9311#9312#0" expanded="true" />
-            <element signature="e#9347#9348#0" expanded="true" />
-            <element signature="e#9380#9381#0" expanded="true" />
-            <element signature="e#9409#9410#0" expanded="true" />
-            <element signature="e#9453#9454#0" expanded="true" />
-            <element signature="e#9489#9490#0" expanded="true" />
-            <element signature="e#9522#9523#0" expanded="true" />
-            <element signature="e#9551#9552#0" expanded="true" />
-            <element signature="e#9595#9596#0" expanded="true" />
-            <element signature="e#9631#9632#0" expanded="true" />
-            <element signature="e#9664#9665#0" expanded="true" />
-            <element signature="e#9693#9694#0" expanded="true" />
-            <element signature="e#9737#9738#0" expanded="true" />
-            <element signature="e#9773#9774#0" expanded="true" />
-            <element signature="e#9806#9807#0" expanded="true" />
-            <element signature="e#9835#9836#0" expanded="true" />
-            <element signature="e#9879#9880#0" expanded="true" />
-            <element signature="e#9915#9916#0" expanded="true" />
-            <element signature="e#9948#9949#0" expanded="true" />
-            <element signature="e#9977#9978#0" expanded="true" />
-            <element signature="e#10021#10022#0" expanded="true" />
-            <element signature="e#10057#10058#0" expanded="true" />
-            <element signature="e#10090#10091#0" expanded="true" />
-            <element signature="e#10119#10120#0" expanded="true" />
-            <element signature="e#10163#10164#0" expanded="true" />
-            <element signature="e#10199#10200#0" expanded="true" />
-            <element signature="e#10232#10233#0" expanded="true" />
-            <element signature="e#10261#10262#0" expanded="true" />
-            <element signature="e#10305#10306#0" expanded="true" />
-            <element signature="e#10341#10342#0" expanded="true" />
-            <element signature="e#10374#10375#0" expanded="true" />
-            <element signature="e#10403#10404#0" expanded="true" />
-            <element signature="e#10447#10448#0" expanded="true" />
-            <element signature="e#10483#10484#0" expanded="true" />
-            <element signature="e#10516#10517#0" expanded="true" />
-            <element signature="e#10545#10546#0" expanded="true" />
-            <element signature="e#10589#10590#0" expanded="true" />
-            <element signature="e#10625#10626#0" expanded="true" />
-            <element signature="e#10658#10659#0" expanded="true" />
-            <element signature="e#10687#10688#0" expanded="true" />
-            <element signature="e#10731#10732#0" expanded="true" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10829#10830#0" expanded="true" />
-            <element signature="e#10873#10874#0" expanded="true" />
-            <element signature="e#10909#10910#0" expanded="true" />
-            <element signature="e#10942#10943#0" expanded="true" />
-            <element signature="e#10971#10972#0" expanded="true" />
-            <element signature="e#11015#11016#0" expanded="true" />
-            <element signature="e#11051#11052#0" expanded="true" />
-            <element signature="e#11084#11085#0" expanded="true" />
-            <element signature="e#11113#11114#0" expanded="true" />
-            <element signature="e#11157#11158#0" expanded="true" />
-            <element signature="e#11193#11194#0" expanded="true" />
-            <element signature="e#11226#11227#0" expanded="true" />
-            <element signature="e#11255#11256#0" expanded="true" />
-            <element signature="e#11299#11300#0" expanded="true" />
-            <element signature="e#11335#11336#0" expanded="true" />
-            <element signature="e#11368#11369#0" expanded="true" />
-            <element signature="e#11397#11398#0" expanded="true" />
-            <element signature="e#11441#11442#0" expanded="true" />
-            <element signature="e#11477#11478#0" expanded="true" />
-            <element signature="e#11510#11511#0" expanded="true" />
-            <element signature="e#11539#11540#0" expanded="true" />
-            <element signature="e#11583#11584#0" expanded="true" />
-            <element signature="e#11619#11620#0" expanded="true" />
-            <element signature="e#11652#11653#0" expanded="true" />
-            <element signature="e#11681#11682#0" expanded="true" />
-            <element signature="e#11725#11726#0" expanded="true" />
-            <element signature="e#11761#11762#0" expanded="true" />
-            <element signature="e#11794#11795#0" expanded="true" />
-            <element signature="e#11823#11824#0" expanded="true" />
-            <element signature="e#11867#11868#0" expanded="true" />
-            <element signature="e#11903#11904#0" expanded="true" />
-            <element signature="e#11936#11937#0" expanded="true" />
-            <element signature="e#11965#11966#0" expanded="true" />
-            <element signature="e#12009#12010#0" expanded="true" />
-            <element signature="e#12045#12046#0" expanded="true" />
-            <element signature="e#12078#12079#0" expanded="true" />
-            <element signature="e#12107#12108#0" expanded="true" />
-            <element signature="e#12151#12152#0" expanded="true" />
-            <element signature="e#12187#12188#0" expanded="true" />
-            <element signature="e#12220#12221#0" expanded="true" />
-            <element signature="e#12249#12250#0" expanded="true" />
-            <element signature="e#12293#12294#0" expanded="true" />
-            <element signature="e#12329#12330#0" expanded="true" />
-            <element signature="e#12362#12363#0" expanded="true" />
-            <element signature="e#12391#12392#0" expanded="true" />
-            <element signature="e#12435#12436#0" expanded="true" />
-            <element signature="e#12471#12472#0" expanded="true" />
-            <element signature="e#12504#12505#0" expanded="true" />
-            <element signature="e#12533#12534#0" expanded="true" />
-            <element signature="e#12577#12578#0" expanded="true" />
-            <element signature="e#12613#12614#0" expanded="true" />
-            <element signature="e#12646#12647#0" expanded="true" />
-            <element signature="e#12675#12676#0" expanded="true" />
-            <element signature="e#12719#12720#0" expanded="true" />
-            <element signature="e#12755#12756#0" expanded="true" />
-            <element signature="e#12788#12789#0" expanded="true" />
-            <element signature="e#12817#12818#0" expanded="true" />
-            <element signature="e#12861#12862#0" expanded="true" />
-            <element signature="e#12897#12898#0" expanded="true" />
-            <element signature="e#12930#12931#0" expanded="true" />
-            <element signature="e#12959#12960#0" expanded="true" />
-            <element signature="e#13003#13004#0" expanded="true" />
-            <element signature="e#13039#13040#0" expanded="true" />
-            <element signature="e#13072#13073#0" expanded="true" />
-            <element signature="e#13101#13102#0" expanded="true" />
-            <element signature="e#13145#13146#0" expanded="true" />
-            <element signature="e#13181#13182#0" expanded="true" />
-            <element signature="e#13214#13215#0" expanded="true" />
-            <element signature="e#13243#13244#0" expanded="true" />
-            <element signature="e#13287#13288#0" expanded="true" />
-            <element signature="e#13323#13324#0" expanded="true" />
-            <element signature="e#13356#13357#0" expanded="true" />
-            <element signature="e#13385#13386#0" expanded="true" />
-            <element signature="e#13429#13430#0" expanded="true" />
-            <element signature="e#13465#13466#0" expanded="true" />
-            <element signature="e#13498#13499#0" expanded="true" />
-            <element signature="e#13527#13528#0" expanded="true" />
-            <element signature="e#13571#13572#0" expanded="true" />
-            <element signature="e#13607#13608#0" expanded="true" />
-            <element signature="e#13640#13641#0" expanded="true" />
-            <element signature="e#13669#13670#0" expanded="true" />
-            <element signature="e#13713#13714#0" expanded="true" />
-            <element signature="e#13749#13750#0" expanded="true" />
-            <element signature="e#13782#13783#0" expanded="true" />
-            <element signature="e#13811#13812#0" expanded="true" />
-            <element signature="e#13855#13856#0" expanded="true" />
-            <element signature="e#13891#13892#0" expanded="true" />
-            <element signature="e#13924#13925#0" expanded="true" />
-            <element signature="e#13953#13954#0" expanded="true" />
-            <element signature="e#13997#13998#0" expanded="true" />
-            <element signature="e#14033#14034#0" expanded="true" />
-            <element signature="e#14066#14067#0" expanded="true" />
-            <element signature="e#14095#14096#0" expanded="true" />
-            <element signature="e#14139#14140#0" expanded="true" />
-            <element signature="e#14175#14176#0" expanded="true" />
-            <element signature="e#14208#14209#0" expanded="true" />
-            <element signature="e#14237#14238#0" expanded="true" />
-            <element signature="e#14281#14282#0" expanded="true" />
-            <element signature="e#14317#14318#0" expanded="true" />
-            <element signature="e#14350#14351#0" expanded="true" />
-            <element signature="e#14379#14380#0" expanded="true" />
-            <element signature="e#14423#14424#0" expanded="true" />
-            <element signature="e#14459#14460#0" expanded="true" />
-            <element signature="e#14492#14493#0" expanded="true" />
-            <element signature="e#14521#14522#0" expanded="true" />
-            <element signature="e#14565#14566#0" expanded="true" />
-            <element signature="e#14601#14602#0" expanded="true" />
-            <element signature="e#14634#14635#0" expanded="true" />
-            <element signature="e#14663#14664#0" expanded="true" />
-            <element signature="e#14707#14708#0" expanded="true" />
-            <element signature="e#14743#14744#0" expanded="true" />
-            <element signature="e#14776#14777#0" expanded="true" />
-            <element signature="e#14805#14806#0" expanded="true" />
-            <element signature="e#14849#14850#0" expanded="true" />
-            <element signature="e#14885#14886#0" expanded="true" />
-            <element signature="e#14918#14919#0" expanded="true" />
-            <element signature="e#14947#14948#0" expanded="true" />
-            <element signature="e#14991#14992#0" expanded="true" />
-            <element signature="e#15027#15028#0" expanded="true" />
-            <element signature="e#15060#15061#0" expanded="true" />
-            <element signature="e#15089#15090#0" expanded="true" />
-            <element signature="e#15133#15134#0" expanded="true" />
-            <element signature="e#15169#15170#0" expanded="true" />
-            <element signature="e#15202#15203#0" expanded="true" />
-            <element signature="e#15231#15232#0" expanded="true" />
-            <element signature="e#15275#15276#0" expanded="true" />
-            <element signature="e#15311#15312#0" expanded="true" />
-            <element signature="e#15344#15345#0" expanded="true" />
-            <element signature="e#15373#15374#0" expanded="true" />
-            <element signature="e#15417#15418#0" expanded="true" />
-            <element signature="e#15453#15454#0" expanded="true" />
-            <element signature="e#15486#15487#0" expanded="true" />
-            <element signature="e#15515#15516#0" expanded="true" />
-            <element signature="e#15559#15560#0" expanded="true" />
-            <element signature="e#15595#15596#0" expanded="true" />
-            <element signature="e#15628#15629#0" expanded="true" />
-            <element signature="e#15657#15658#0" expanded="true" />
-            <element signature="e#15701#15702#0" expanded="true" />
-            <element signature="e#15737#15738#0" expanded="true" />
-            <element signature="e#15770#15771#0" expanded="true" />
-            <element signature="e#15799#15800#0" expanded="true" />
-            <element signature="e#15843#15844#0" expanded="true" />
-            <element signature="e#15879#15880#0" expanded="true" />
-            <element signature="e#15912#15913#0" expanded="true" />
-            <element signature="e#15941#15942#0" expanded="true" />
-            <element signature="e#15985#15986#0" expanded="true" />
-            <element signature="e#16021#16022#0" expanded="true" />
-            <element signature="e#16054#16055#0" expanded="true" />
-            <element signature="e#16083#16084#0" expanded="true" />
-            <element signature="e#16127#16128#0" expanded="true" />
-            <element signature="e#16163#16164#0" expanded="true" />
-            <element signature="e#16196#16197#0" expanded="true" />
-            <element signature="e#16225#16226#0" expanded="true" />
-            <element signature="e#16269#16270#0" expanded="true" />
-            <element signature="e#16305#16306#0" expanded="true" />
-            <element signature="e#16338#16339#0" expanded="true" />
-            <element signature="e#16367#16368#0" expanded="true" />
-            <element signature="e#16411#16412#0" expanded="true" />
-            <element signature="e#16447#16448#0" expanded="true" />
-            <element signature="e#16480#16481#0" expanded="true" />
-            <element signature="e#16509#16510#0" expanded="true" />
-            <element signature="e#16553#16554#0" expanded="true" />
-            <element signature="e#16589#16590#0" expanded="true" />
-            <element signature="e#16622#16623#0" expanded="true" />
-            <element signature="e#16651#16652#0" expanded="true" />
-            <element signature="e#16695#16696#0" expanded="true" />
-            <element signature="e#16731#16732#0" expanded="true" />
-            <element signature="e#16764#16765#0" expanded="true" />
-            <element signature="e#16793#16794#0" expanded="true" />
-            <element signature="e#16837#16838#0" expanded="true" />
-            <element signature="e#16873#16874#0" expanded="true" />
-            <element signature="e#16906#16907#0" expanded="true" />
-            <element signature="e#16935#16936#0" expanded="true" />
-            <element signature="e#16979#16980#0" expanded="true" />
-            <element signature="e#17015#17016#0" expanded="true" />
-            <element signature="e#17048#17049#0" expanded="true" />
-            <element signature="e#17077#17078#0" expanded="true" />
-            <element signature="e#17121#17122#0" expanded="true" />
-            <element signature="e#17157#17158#0" expanded="true" />
-            <element signature="e#17190#17191#0" expanded="true" />
-            <element signature="e#17219#17220#0" expanded="true" />
-            <element signature="e#17263#17264#0" expanded="true" />
-            <element signature="e#17299#17300#0" expanded="true" />
-            <element signature="e#17332#17333#0" expanded="true" />
-            <element signature="e#17361#17362#0" expanded="true" />
-            <element signature="e#17405#17406#0" expanded="true" />
-            <element signature="e#17441#17442#0" expanded="true" />
-            <element signature="e#17474#17475#0" expanded="true" />
-            <element signature="e#17503#17504#0" expanded="true" />
-            <element signature="e#17547#17548#0" expanded="true" />
-            <element signature="e#17583#17584#0" expanded="true" />
-            <element signature="e#17616#17617#0" expanded="true" />
-            <element signature="e#17645#17646#0" expanded="true" />
-            <element signature="e#17689#17690#0" expanded="true" />
-            <element signature="e#17725#17726#0" expanded="true" />
-            <element signature="e#17758#17759#0" expanded="true" />
-            <element signature="e#17787#17788#0" expanded="true" />
-            <element signature="e#17831#17832#0" expanded="true" />
-            <element signature="e#17867#17868#0" expanded="true" />
-            <element signature="e#17900#17901#0" expanded="true" />
-            <element signature="e#17929#17930#0" expanded="true" />
-            <element signature="e#17973#17974#0" expanded="true" />
-            <element signature="e#18009#18010#0" expanded="true" />
-            <element signature="e#18042#18043#0" expanded="true" />
-            <element signature="e#18071#18072#0" expanded="true" />
-            <element signature="e#18115#18116#0" expanded="true" />
-            <element signature="e#18151#18152#0" expanded="true" />
-            <element signature="e#18184#18185#0" expanded="true" />
-            <element signature="e#18213#18214#0" expanded="true" />
-            <element signature="e#18257#18258#0" expanded="true" />
-            <element signature="e#18293#18294#0" expanded="true" />
-            <element signature="e#18326#18327#0" expanded="true" />
-            <element signature="e#18355#18356#0" expanded="true" />
-            <element signature="e#18399#18400#0" expanded="true" />
-            <element signature="e#18435#18436#0" expanded="true" />
-            <element signature="e#18468#18469#0" expanded="true" />
-            <element signature="e#18497#18498#0" expanded="true" />
-            <element signature="e#18541#18542#0" expanded="true" />
-            <element signature="e#18577#18578#0" expanded="true" />
-            <element signature="e#18610#18611#0" expanded="true" />
-            <element signature="e#18639#18640#0" expanded="true" />
-            <element signature="e#18683#18684#0" expanded="true" />
-            <element signature="e#18719#18720#0" expanded="true" />
-            <element signature="e#18752#18753#0" expanded="true" />
-            <element signature="e#18781#18782#0" expanded="true" />
-            <element signature="e#18825#18826#0" expanded="true" />
-            <element signature="e#18861#18862#0" expanded="true" />
-            <element signature="e#18894#18895#0" expanded="true" />
-            <element signature="e#18923#18924#0" expanded="true" />
-            <element signature="e#18967#18968#0" expanded="true" />
-            <element signature="e#19003#19004#0" expanded="true" />
-            <element signature="e#19036#19037#0" expanded="true" />
-            <element signature="e#19065#19066#0" expanded="true" />
-            <element signature="e#19109#19110#0" expanded="true" />
-            <element signature="e#19145#19146#0" expanded="true" />
-            <element signature="e#19178#19179#0" expanded="true" />
-            <element signature="e#19207#19208#0" expanded="true" />
-            <element signature="e#19251#19252#0" expanded="true" />
-            <element signature="e#19287#19288#0" expanded="true" />
-            <element signature="e#19320#19321#0" expanded="true" />
-            <element signature="e#19349#19350#0" expanded="true" />
-            <element signature="e#19393#19394#0" expanded="true" />
-            <element signature="e#19429#19430#0" expanded="true" />
-            <element signature="e#19462#19463#0" expanded="true" />
-            <element signature="e#19491#19492#0" expanded="true" />
-            <element signature="e#19535#19536#0" expanded="true" />
-            <element signature="e#19571#19572#0" expanded="true" />
-            <element signature="e#19604#19605#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19677#19678#0" expanded="true" />
-            <element signature="e#19713#19714#0" expanded="true" />
-            <element signature="e#19746#19747#0" expanded="true" />
-            <element signature="e#19775#19776#0" expanded="true" />
-            <element signature="e#19819#19820#0" expanded="true" />
-            <element signature="e#19855#19856#0" expanded="true" />
-            <element signature="e#19888#19889#0" expanded="true" />
-            <element signature="e#19917#19918#0" expanded="true" />
-            <element signature="e#19961#19962#0" expanded="true" />
-            <element signature="e#19997#19998#0" expanded="true" />
-            <element signature="e#20030#20031#0" expanded="true" />
-            <element signature="e#20059#20060#0" expanded="true" />
-            <element signature="e#20103#20104#0" expanded="true" />
-            <element signature="e#20139#20140#0" expanded="true" />
-            <element signature="e#20172#20173#0" expanded="true" />
-            <element signature="e#20201#20202#0" expanded="true" />
-            <element signature="e#20245#20246#0" expanded="true" />
-            <element signature="e#20281#20282#0" expanded="true" />
-            <element signature="e#20314#20315#0" expanded="true" />
-            <element signature="e#20343#20344#0" expanded="true" />
-            <element signature="e#20387#20388#0" expanded="true" />
-            <element signature="e#20423#20424#0" expanded="true" />
-            <element signature="e#20456#20457#0" expanded="true" />
-            <element signature="e#20485#20486#0" expanded="true" />
-            <element signature="e#20529#20530#0" expanded="true" />
-            <element signature="e#20565#20566#0" expanded="true" />
-            <element signature="e#20598#20599#0" expanded="true" />
-            <element signature="e#20627#20628#0" expanded="true" />
-            <element signature="e#20671#20672#0" expanded="true" />
-            <element signature="e#20707#20708#0" expanded="true" />
-            <element signature="e#20740#20741#0" expanded="true" />
-            <element signature="e#20769#20770#0" expanded="true" />
-            <element signature="e#20813#20814#0" expanded="true" />
-            <element signature="e#20849#20850#0" expanded="true" />
-            <element signature="e#20882#20883#0" expanded="true" />
-            <element signature="e#20911#20912#0" expanded="true" />
-            <element signature="e#20955#20956#0" expanded="true" />
-            <element signature="e#20991#20992#0" expanded="true" />
-            <element signature="e#21024#21025#0" expanded="true" />
-            <element signature="e#21053#21054#0" expanded="true" />
-            <element signature="e#21097#21098#0" expanded="true" />
-            <element signature="e#21133#21134#0" expanded="true" />
-            <element signature="e#21166#21167#0" expanded="true" />
-            <element signature="e#21195#21196#0" expanded="true" />
-            <element signature="e#21239#21240#0" expanded="true" />
-            <element signature="e#21275#21276#0" expanded="true" />
-            <element signature="e#21308#21309#0" expanded="true" />
-            <element signature="e#21337#21338#0" expanded="true" />
-            <element signature="e#21381#21382#0" expanded="true" />
-            <element signature="e#21417#21418#0" expanded="true" />
-            <element signature="e#21450#21451#0" expanded="true" />
-            <element signature="e#21479#21480#0" expanded="true" />
-            <element signature="e#21523#21524#0" expanded="true" />
-            <element signature="e#21559#21560#0" expanded="true" />
-            <element signature="e#21592#21593#0" expanded="true" />
-            <element signature="e#21621#21622#0" expanded="true" />
-            <element signature="e#21665#21666#0" expanded="true" />
-            <element signature="e#21701#21702#0" expanded="true" />
-            <element signature="e#21734#21735#0" expanded="true" />
-            <element signature="e#21763#21764#0" expanded="true" />
-            <element signature="e#21807#21808#0" expanded="true" />
-            <element signature="e#21843#21844#0" expanded="true" />
-            <element signature="method#unList#0;class#LoadData#0" expanded="true" />
-            <element signature="method#update#0;class#LoadData#0" expanded="true" />
-            <element signature="method#dbgPrint#0;class#LoadData#0" expanded="true" />
-            <element signature="method#toList#0;class#LoadData#0" expanded="true" />
-            <element signature="method#toMaxAveMin#0;class#LoadData#0" expanded="true" />
-            <element signature="method#print#0;class#LoadData#0" expanded="true" />
-            <element signature="method#getPerUnits#0;class#LoadData#0" expanded="true" />
-            <element signature="method#multiple#0;class#LoadData#0" expanded="true" />
-            <element signature="e#35016#35017#0" expanded="true" />
-            <element signature="e#35058#35059#0" expanded="true" />
-            <element signature="e#40728#40729#0" expanded="true" />
-            <element signature="e#40755#40756#0" expanded="true" />
-            <element signature="method#clone#0;class#LoadData#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2253,8 +1786,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="2091">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="false" />
+            <element signature="e#512#513#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2263,7 +1796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1397" max-vertical-offset="1853">
           <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2271,7 +1803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
           <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2279,10 +1810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="714">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="method#AccessDAOFactory#0;class#AccessDAOFactory#0" expanded="true" />
-            <element signature="e#2326#2327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2290,12 +1817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="986">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="method#createDaoPredictionLoadData#0;class#DAOFactory#0" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
-            <element signature="e#2742#2743#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2303,9 +1824,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="222" max-vertical-offset="2176">
           <caret line="292" column="0" selection-start-line="292" selection-start-column="0" selection-end-line="292" selection-end-column="0" />
-          <folding>
-            <element signature="e#10478#10479#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2313,7 +1831,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="143" max-vertical-offset="612">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#1349#0" expanded="false" />
+            <element signature="docComment;class#DateUtil#0" expanded="false" />
+            <element signature="method#dateStringHengxianfenge#0;class#DateUtil#0" expanded="false" />
+            <element signature="method#dateStringXiegangfenge#0;class#DateUtil#0" expanded="false" />
+            <element signature="method#dateStringHengxianfengeNoZero#0;class#DateUtil#0" expanded="false" />
+            <element signature="method#dateStringXiegangfengeNoZero#0;class#DateUtil#0" expanded="false" />
+            <element signature="method#getDateAfter#0;class#DateUtil#0" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1345#1346#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2330,18 +1858,34 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="341" max-vertical-offset="850">
           <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
           <folding>
-            <element signature="method#query#0;class#SuperDAO#0" expanded="true" />
+            <element signature="e#0#4524#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#SuperDAO#0" expanded="false" />
+            <element signature="method#SuperDAO#0;class#SuperDAO#0" expanded="false" />
+            <element signature="method#getInstanceOf#0;class#SuperDAO#0" expanded="false" />
+            <element signature="e#2002#2003#0" expanded="false" />
+            <element signature="e#2039#2040#0" expanded="false" />
+            <element signature="docComment;method#insert#0;class#SuperDAO#0" expanded="false" />
+            <element signature="method#insert#0;class#SuperDAO#0" expanded="false" />
+            <element signature="method#insertOrUpdate#0;class#SuperDAO#0" expanded="false" />
+            <element signature="docComment;method#query#0;class#SuperDAO#0" expanded="false" />
+            <element signature="docComment;method#query#1;class#SuperDAO#0" expanded="false" />
+            <element signature="method#query#1;class#SuperDAO#0" expanded="false" />
+            <element signature="docComment;method#update#0;class#SuperDAO#0" expanded="false" />
+            <element signature="method#update#0;class#SuperDAO#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#SuperDAO#0" expanded="false" />
+            <element signature="method#delete#0;class#SuperDAO#0" expanded="false" />
+            <element signature="docComment;method#delete#1;class#SuperDAO#0" expanded="false" />
+            <element signature="method#delete#1;class#SuperDAO#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/hibernate-core-4.3.8.Final.jar!/org/hibernate/internal/SessionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.08" vertical-offset="3146" max-vertical-offset="7718">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3298" max-vertical-offset="7684">
           <caret line="820" column="18" selection-start-line="820" selection-start-column="18" selection-end-line="820" selection-end-column="18" />
-          <folding>
-            <element signature="method#get#0;class#SessionImpl#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2350,10 +1894,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="2329">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#2313#2314#0" expanded="true" />
-            <element signature="e#2388#2396#0" expanded="true" />
-            <element signature="e#3856#3909#0" expanded="true" />
-            <element signature="e#6536#6574#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#ChartBuilderImpl1#0" expanded="false" />
+            <element signature="method#ChartBuilderImpl1#0;class#ChartBuilderImpl1#0" expanded="false" />
+            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#1321#1322#0" expanded="false" />
+            <element signature="e#2401#2501#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2362,7 +1908,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#371#0" expanded="false" />
+            <element signature="docComment;class#DomainPrintVisitor#0" expanded="false" />
+            <element signature="method#DomainPrintVisitor#0;class#DomainPrintVisitor#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2370,7 +1920,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#21487#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#LoadData2JFreeChartVisitor#0" expanded="false" />
+            <element signature="method#LoadData2JFreeChartVisitor#0;class#LoadData2JFreeChartVisitor#0" expanded="false" />
+            <element signature="method#visit#0;class#LoadData2JFreeChartVisitor#0" expanded="false" />
+            <element signature="e#852#913#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2378,7 +1935,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#LoadData2AlterObjVisitor#0" expanded="false" />
+            <element signature="method#visit#0;class#LoadData2AlterObjVisitor#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2386,20 +1947,146 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#0#356#0" expanded="false" />
+            <element signature="docComment;class#LoadDataVisitor#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/MedFiltVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36247334" vertical-offset="85" max-vertical-offset="646">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
           <folding>
-            <element signature="method#MedFiltVisitor#0;class#MedFiltVisitor#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-            <element signature="method#visit#0;class#MedFiltVisitor#0" expanded="true" />
-            <element signature="e#828#832#0" expanded="true" />
+            <element signature="method#MedFiltVisitor#0;class#MedFiltVisitor#0" expanded="false" />
+            <element signature="e#521#522#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.12" vertical-offset="0" max-vertical-offset="425">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="method#run#0;class#ReflectiveCallable#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="4386">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/mail.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mail.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/MyColor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="850">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/WeekendQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/String2NumericUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/JXLFormulas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/FileContentUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="476">
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+          <folding>
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/loadPrediction/domain/LoadDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/LoadData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17170" max-vertical-offset="21930">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#46325#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoadData#0" expanded="true" />
+            <element signature="method#setNext#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getMaxLabel#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getMinLabel#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getMax#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getMin#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getAve#0;class#LoadData#0" expanded="true" />
+            <element signature="method#setDateString#0;class#LoadData#0" expanded="true" />
+            <element signature="method#setData#0;class#LoadData#0" expanded="true" />
+            <element signature="method#unList#0;class#LoadData#0" expanded="true" />
+            <element signature="method#update#0;class#LoadData#0" expanded="true" />
+            <element signature="method#dbgPrint#0;class#LoadData#0" expanded="true" />
+            <element signature="method#toList#0;class#LoadData#0" expanded="true" />
+            <element signature="method#toMaxAveMin#0;class#LoadData#0" expanded="true" />
+            <element signature="method#print#0;class#LoadData#0" expanded="true" />
+            <element signature="method#getPerUnits#0;class#LoadData#0" expanded="true" />
+            <element signature="method#multiple#0;class#LoadData#0" expanded="true" />
+            <element signature="method#convertLower#0;class#LoadData#0" expanded="true" />
+            <element signature="method#clone#0;class#LoadData#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/learning/mockito/TestMockito.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6247241" vertical-offset="6" max-vertical-offset="544">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#TestMockito#0;class#TestMockito#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2421,7 +2108,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>Invalid</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

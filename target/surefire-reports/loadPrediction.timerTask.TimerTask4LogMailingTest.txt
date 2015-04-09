@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: loadPrediction.timerTask.TimerTask4LogMailingTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.232 sec
-=======
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.33 sec
->>>>>>> origin/develop
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.908 sec
