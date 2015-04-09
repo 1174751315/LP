@@ -52,7 +52,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     private Integer determineSeason(WeatherData weatherData){
-        if (weatherData.getAveTemperature()>20.)
+        if (weatherData.getMaxTemperature()>25.)
              return SUMMER;
         else
              return WINTER;

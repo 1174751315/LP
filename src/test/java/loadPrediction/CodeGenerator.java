@@ -24,7 +24,7 @@ public class CodeGenerator {
     public void generate() {
         try {
             PrintStream ps = new PrintStream(new File("code.txt"));
-            print8(ps);
+            print9(ps);
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -76,6 +76,11 @@ public class CodeGenerator {
     private void print8(PrintStream ps){
         for (int i = 0; i < 96; i++) {
             ps.println("ds.add(" + (i*0.25) + ",loadData.getData" + i + "(),label);");
+        }
+    }
+    private void print9(PrintStream ps){
+        for (int i = 0; i < 96; i++) {
+            ps.println("data" + (i ) + "=list.get(" + i + ");");
         }
     }
 }
