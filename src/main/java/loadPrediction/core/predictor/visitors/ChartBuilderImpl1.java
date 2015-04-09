@@ -5,6 +5,7 @@ import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
+import loadPrediction.domain.visitors.MedFiltVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
 import loadPrediction.utils.DateUtil;
@@ -72,27 +73,45 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
 
         BasicStroke dotLine=new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[] {3.F, 3.F}, 1.0F);
         BasicStroke line=new BasicStroke(2);
-        renderer.setSeriesStroke(0, new BasicStroke(2));
+
+
+        renderer.setSeriesStroke(0, line);
         renderer.setSeriesPaint(0, MyColor.COMMON_SERIES_1);
         renderer.setSeriesStroke(1, line);
-        renderer.setSeriesPaint(1, MyColor.COMMON_SERIES_3);
-        renderer.setSeriesStroke(2, line);
-        renderer.setSeriesPaint(2, MyColor.COMMON_SERIES_2);
+        renderer.setSeriesPaint(1, MyColor.COMMON_SERIES_2);
+        renderer.setSeriesStroke(2, dotLine);
+        renderer.setSeriesPaint(2, MyColor.COMMON_SERIES_3);
         renderer.setBasePaint(Color.BLACK);
 
 
 //        renderer.setSeriesShape(0,new Rectangle());
 //        renderer.setSeriesShape(1,new Rectangle());
-//        renderer.setSeriesShape(2,new Rectangle());
-//        renderer.setSeriesShape(3,new Rectangle());
+        renderer.setSeriesShape(2,new Rectangle());
+        renderer.setSeriesShape(3,new Rectangle());
         renderer.setSeriesShapesVisible(0,true);
         renderer.setSeriesShapesVisible(1,true);
         renderer.setSeriesShapesVisible(2,true);
         renderer.setSeriesShapesVisible(3,true);
 
         if (actual != null) {
-            renderer.setSeriesStroke(3, new BasicStroke(2));
+            renderer.setSeriesStroke(3, dotLine);
             renderer.setSeriesPaint(3, MyColor.COMMON_SERIES_4);
+
+            LoadData l1=((LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.AVE)));
+            ds=(CategoryTableXYDataset)  (l1).accept(new LoadDataAppend2DatasetVisitor_1(ds,"均值滤波"));
+            renderer.setSeriesStroke(4, line);
+            renderer.setSeriesPaint(4, MyColor.magenta);
+            renderer.setSeriesShapesVisible(4,true);
+
+            LoadData l2=(LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.MED));
+            ds=(CategoryTableXYDataset)  (l2).accept(new LoadDataAppend2DatasetVisitor_1(ds,"中值滤波"));
+
+            renderer.setSeriesStroke(5, line);
+            renderer.setSeriesPaint(5, MyColor.c4);
+            renderer.setSeriesShapesVisible(5,true);
+
+            list.add(l1);
+            list.add(l2);
         }
 
 //        CategoryPlot plot=chart.getCategoryPlot();
@@ -133,7 +152,8 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
 
         valueAxis.setLowerBound(t.min*0.99);
         valueAxis.setUpperBound(t.max * 1.01);
-
+//        valueAxis.setLowerBound(0.);
+//        valueAxis.setUpperBound(15000.);
         return chart;
     }
 }
