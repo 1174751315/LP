@@ -17,7 +17,7 @@ public class PredictionActionTest extends TestCase {
 
             PredictionAction action = new PredictionAction();
             action.setUseCaches(false);
-            action.setDateString("2014-02-07");
+            action.setDateString("2014-04-21");
             action.intelli();
 
 
