@@ -15,7 +15,7 @@ public class IOPaths {
     public static final String PYTHON_SCRIPT_SYNC_WEATHER = WORKSPACE_ROOT + "load_python\\syncb.py";
 
 
-    public static final String WEB_CONTENT_ROOT = "D:\\Apache Software Foundation\\Tomcat 7.0\\webapps\\TEST_war_exploded\\";//WEB根目录
+    public static final String WEB_CONTENT_ROOT = "D:\\Apache Software Foundation\\Tomcat 7.0\\webapps\\LPU\\";//WEB根目录
     private static final String WEB_CONTENT_NAME = WEB_CONTENT_ROOT.substring(WEB_CONTENT_ROOT.substring(WEB_CONTENT_ROOT.length() - 1).lastIndexOf("\\") + 1);
     public static final String WEB_CONTENT_CACHES = WEB_CONTENT_ROOT + "CACHES\\";//WEB的CACHES目录，用于保存缓存记录
     public static final String WEB_CONTENT_TEMP = WEB_CONTENT_ROOT + "TEMP\\";//WEB的TEMP目录，用于缓存数据或者其他
