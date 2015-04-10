@@ -6,7 +6,7 @@
 
     <groupId>com.ipso</groupId>
     <artifactId>LPU</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
     <packaging>war</packaging>
     <dependencies>
 

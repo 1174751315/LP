@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad2ReportPictureVisitor extends ImageFileOutputVisitor {
+public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisitor {
     private static final Integer WIDTH=1400,HEIGHT=200;
 
 

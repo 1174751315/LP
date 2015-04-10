@@ -2,22 +2,12 @@ package loadPrediction.core.predictor.visitors;
 
 import static org.mockito.Mockito.*;
 
-import com.opensymphony.xwork2.interceptor.annotations.Before;
-import common.ArgMatcher4IPredictor.AnyPredictor;
 import common.ElementPrintableLinkedList;
-import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.List2LoadDataVisitor;
-import loadPrediction.resouce.IOPaths;
-import org.hamcrest.core.AnyOf;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.CategoryPlot;
-import org.jfree.data.xy.CategoryTableXYDataset;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.internal.matchers.Any;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -27,7 +17,6 @@ import static org.junit.Assert.*;
 
 public class PredictionLoad24LinePictureVisitor_1Test{
     public   void setUp()throws Exception {
-
         load1.setDateString("TEST-1900-01-01");
         load2.setDateString("1900-01-02");
         for (int i = 0; i <96 ; i++) {
@@ -54,7 +43,7 @@ public class PredictionLoad24LinePictureVisitor_1Test{
     @Test
     public void testDoVisitAndOutput() throws Exception {
         setUp();
-        ImageFileOutputVisitor visitor=new PredictionLoad24LinePictureVisitor_1("f:\\",workdayPredictor.getDateString(),builder);
+        UnifiedImageOutputVisitor visitor=new PredictionLoad24LinePictureVisitor_1("f:\\",workdayPredictor.getDateString(),builder);
         String path=(String) visitor.visitWorkdayPredictor(workdayPredictor);
         assertTrue(new File(path).exists());
     }

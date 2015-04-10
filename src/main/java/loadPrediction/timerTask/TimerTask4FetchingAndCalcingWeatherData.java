@@ -28,10 +28,7 @@ public class TimerTask4FetchingAndCalcingWeatherData extends TimerTask {
     public void run() {
         Logger log=Logging.instance().createLogger("每日定时任务");
         try {
-
-
             /*定时同步负荷数据*/
-
             Date now=new Date();
             SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
             String t=simpleDateFormat.format(now);

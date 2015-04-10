@@ -8,18 +8,30 @@ import loadPrediction.exception.LPE;
 import loadPrediction.utils.FileContentUtils;
 
 /**
- * Created by LBC on 2015-04-08.
+ * 李倍存 创建于 2015-04-10 15:41。电邮 1174751315@qq.com。
  */
-public abstract class ImageFileOutputVisitor implements IPredictorVisitor {
-
+public abstract class UnifiedFileOutputVisitor implements IPredictorVisitor {
     abstract protected Object doVisitAndOutput(IPredictor predictor,String fileAbsPath) throws LPE;
     abstract protected String getFileNamePostfix();
-    public ImageFileOutputVisitor(String dir,String dateString) {
+    abstract protected String getFileExtend();
+    public UnifiedFileOutputVisitor(String dir, String dateString) {
         this.dir = dir;
         this.dateString=dateString;
     }
     private String dir;
     private String dateString;
+
+    public void setDir(String dir) {
+        this.dir = dir;
+    }
+
+    public String getDateString() {
+        return dateString;
+    }
+
+    public void setDateString(String dateString) {
+        this.dateString = dateString;
+    }
 
     public String getDir() {
         return dir;
@@ -40,6 +52,6 @@ public abstract class ImageFileOutputVisitor implements IPredictorVisitor {
     }
 
     private String generateFileName(String prefix){
-        return dir+prefix+FileContentUtils.autoFileName(dateString.replaceAll("-",""),"",4)+getFileNamePostfix()+".jpg";
+        return dir+prefix+ FileContentUtils.autoFileName(dateString.replaceAll("-", ""), "", 4)+getFileNamePostfix()+getFileExtend();
     }
 }

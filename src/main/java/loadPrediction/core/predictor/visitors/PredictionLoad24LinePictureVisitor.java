@@ -21,7 +21,7 @@ import java.awt.*;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor extends ImageFileOutputVisitor {
+public class PredictionLoad24LinePictureVisitor extends UnifiedImageOutputVisitor {
     @Override
     protected Object doVisitAndOutput(IPredictor predictor,String absPath) throws LPE {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();

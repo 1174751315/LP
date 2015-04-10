@@ -9,23 +9,10 @@ package loadPrediction.core.predictor.visitors;
 import common.MaxAveMinTuple;
 import jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
-import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.AccuracyUtils;
-import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.MyColor;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.axis.ValueAxis;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.xy.CategoryTableXYDataset;
 
-import java.awt.*;
-import java.sql.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -33,7 +20,7 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor{
+public class PredictionLoad24LinePictureVisitor_1 extends UnifiedImageOutputVisitor {
 
     public JChartBuilder4Predictor getChartBuilder() {
         return chartBuilder;
