@@ -35,6 +35,14 @@ import java.util.List;
  */
 public class PredictionLoad24LinePictureVisitor_1 extends ImageFileOutputVisitor{
 
+    public JChartBuilder4Predictor getChartBuilder() {
+        return chartBuilder;
+    }
+
+    public void setChartBuilder(JChartBuilder4Predictor chartBuilder) {
+        this.chartBuilder = chartBuilder;
+    }
+
     private JChartBuilder4Predictor chartBuilder;
     public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,JChartBuilder4Predictor builder){
         super(dir,ds);
