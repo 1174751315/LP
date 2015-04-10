@@ -128,7 +128,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         forceCalcAllFormulas(template);
 
 
-        this.doAFterInjectWeathers(template, historyDays, predictionDays);
+        this.doAfterInjectWeathers(template, historyDays, predictionDays);
         /*关闭工作表*/
 //        try {
 //            wwb.write();
@@ -403,7 +403,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         //DO NOTHING
     }
 
-    protected void doAFterInjectWeathers(Workbook activeWorkbook, ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays, ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
+    protected void doAfterInjectWeathers(Workbook activeWorkbook, ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays, ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         //DO NOTHING
     }
 

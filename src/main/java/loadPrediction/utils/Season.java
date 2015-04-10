@@ -4,12 +4,14 @@
  * 所有个人和组织均可不受约束地将该文件所包含的代码用于非商业用途。若需要将其用于商业软件的开发，请首先联系所有者以取得许可。
  */
 
+
 package loadPrediction.utils;
 
 /**
- * 李倍存 创建于 2015/3/17 8:06。电邮 1174751315@qq.com。
+ * 创建：2015/2/15 17:12
+ * 作者：李倍存
+ * 电邮：1174751315@qq.com
  */
-public class IDefaultCategoryDatasetVisitor {
-    public IDefaultCategoryDatasetVisitor() {
-    }
+public enum Season {
+    SUMMER, WINTER
 }

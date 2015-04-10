@@ -12,8 +12,8 @@ import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WeekendPredictorCfg;
 import  loadPrediction.core.AbstractEnhancedSimilarCoeCalculator;
 import  loadPrediction.core.EnhancedSimilarCoeCalculatorForWeekend;
-import  loadPrediction.core.noneWorkday.Season;
-import  loadPrediction.core.noneWorkday.SeasonIdentifier;
+import loadPrediction.utils.Season;
+import loadPrediction.utils.SeasonIdentifier;
 import  loadPrediction.core.noneWorkday.SimilarDayFinder;
 import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
@@ -184,7 +184,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
     doCalcPredictionLoadTuple2(ElementPrintableLinkedList<SimpleDate> predictionDays,
                                ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> similarCoes,
                                ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> similarLoads) {
-        Season season = SeasonIdentifier.getSeason(predictionDays.get(0).getDate());
+        Season season = SeasonIdentifier.getSeasonByDate(predictionDays.get(0).getDate());
         Double a0ave, a1ave, a2ave, a0min, a1min, a2min;
         switch (season) {
             case WINTER: {

@@ -5,7 +5,9 @@
  */
 
 
-package loadPrediction.core.noneWorkday;
+package loadPrediction.utils;
+
+import loadPrediction.domain.WeatherData;
 
 import java.sql.Date;
 
@@ -20,13 +22,20 @@ public class SeasonIdentifier {
      * @param date 给定的日期。
      * @return 给定日期所属的电力系统季节。
      */
-    public static Season getSeason(Date date) {
+    public static Season getSeasonByDate(Date date) {
         Integer month = date.toLocalDate().getMonthValue();
         Integer[] summer = {6, 7, 8, 9, 10};
         for (int i = 0; i < summer.length; i++) {
-            if (month == summer[i])
+            if (month.equals(summer[i]))
                 return Season.SUMMER;
         }
         return Season.WINTER;
+    }
+
+    public static Season getSeasonByWeather(WeatherData weatherData){
+        if (weatherData.getMaxTemperature()>25.)
+            return Season.SUMMER;
+        else
+            return Season.WINTER;
     }
 }

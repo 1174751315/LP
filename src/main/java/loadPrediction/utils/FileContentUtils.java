@@ -34,9 +34,10 @@ public class FileContentUtils {
         return prefix + rand.substring(0) + ext;
     }
 
-    public static String webContentRoot = "D:\\Apache Software Foundation\\Tomcat 7.0\\webapps\\TEST_war";
 
     public static void copyFromFileSystem2WebContent(String filePath, String WebContent) {
+        String webContentRoot = "D:\\Apache Software Foundation\\Tomcat 7.0\\webapps\\TEST_war";
+
         String fileName = getFileNameFromPath(filePath);
         String outputPath = webContentRoot + WebContent + fileName;
 

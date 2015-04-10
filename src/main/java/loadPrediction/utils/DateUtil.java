@@ -12,29 +12,6 @@ import java.sql.Date;
  * 李倍存 创建于 2015/2/19 20:20。电邮 1174751315@qq.com。
  */
 public class DateUtil {
-    public static String dateStringHengxianfenge(String dateString) {
-        String s = "";
-        return s;
-    }
-
-    public static String dateStringXiegangfenge(String dateString) {
-        String s = "";
-        return s;
-
-    }
-
-    public static String dateStringHengxianfengeNoZero(String dateString) {
-        String s = "";
-        return s;
-
-    }
-
-    public static String dateStringXiegangfengeNoZero(String dateString) {
-        String s = "";
-        return s;
-
-    }
-
     public static Date getDateBefore(Date date, Integer before) {
         if (before == 0)
             return new Date(date.getTime());
