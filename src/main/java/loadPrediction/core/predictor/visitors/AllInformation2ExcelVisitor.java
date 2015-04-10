@@ -32,6 +32,14 @@ import java.util.List;
 public class AllInformation2ExcelVisitor implements IPredictorVisitor {
     private String dir;
 
+    public String getDir() {
+        return dir;
+    }
+
+    public void setDir(String dir) {
+        this.dir = dir;
+    }
+
     public AllInformation2ExcelVisitor(String directoryPath) {
         dir = directoryPath;
     }
