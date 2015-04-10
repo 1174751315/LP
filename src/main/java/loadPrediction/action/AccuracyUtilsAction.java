@@ -85,7 +85,7 @@ public class AccuracyUtilsAction extends ActionSupport {
                 List<String> labels = new LinkedList<String>();
                 labels.add("预测负荷曲线");
                 labels.add("实际负荷曲线");
-                new JFreeChartFacade().saveAs(new LoadData2ChartUtils().loadData2Chart(loadDatas, labels, ""), filename);
+                new JFreeChartFacade().saveAs(new LoadData2ChartUtils().loadDatas2Chart(loadDatas, labels, ""), filename);
                 Integer i = filename.indexOf("TEMP");
                 filename = filename.substring(i + 5);
 

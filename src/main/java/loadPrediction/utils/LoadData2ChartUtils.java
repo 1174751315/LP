@@ -25,7 +25,7 @@ public class LoadData2ChartUtils {
     public LoadData2ChartUtils() {
     }
 
-    public JFreeChart loadData2Chart(List<LoadData> loadDatas, List<String> labels, String title) {
+    public JFreeChart loadDatas2Chart(List<LoadData> loadDatas, List<String> labels, String title) {
         if (title == null) {
             title = "未命名";
         }
@@ -47,19 +47,4 @@ public class LoadData2ChartUtils {
         return chart;
     }
 
-    public JFreeChart loadData2Chart(LoadData loadData, String label, String title) {
-        DefaultCategoryDataset ds = new JFreeChartFacade().createDataset();
-
-        ds = (DefaultCategoryDataset) loadData.accept(new LoadDataAppend2DatasetVisitor(ds, label));
-        if (title == null) {
-            title = "未命名";
-        }
-        JFreeChart chart = ChartFactory.createLineChart(title, "时刻", "全网耗电功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);
-        chart.setBorderVisible(true);
-
-        LineAndShapeRenderer renderer = (LineAndShapeRenderer) chart.getCategoryPlot().getRenderer();
-        renderer.setSeriesStroke(0, new BasicStroke(2));
-        chart.getCategoryPlot().setRenderer(renderer);
-        return chart;
-    }
 }
