@@ -1,6 +1,7 @@
 package loadPrediction.core.predictor.visitors;
 
 import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.exception.LPE;
 import org.jfree.chart.JFreeChart;
 
@@ -11,4 +12,5 @@ import java.awt.*;
  */
 public interface JChartBuilder4Predictor {
     JFreeChart build(IPredictor predictor) throws LPE;
+    void setDaoLoadData(DAOLoadData loadData);
 }

@@ -3,6 +3,7 @@ package loadPrediction.core.predictor.visitors;
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.domain.visitors.MedFiltVisitor;
@@ -36,6 +37,12 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
     public ChartBuilderImpl1(){
         this(MyColor.COMMON_FOREGROUND,MyColor.COMMON_BACKGROUND,MyColor.COMMON_GRID_LINE);
     }
+    private DAOLoadData daoLoadData=DAOFactory.getDefault().createDaoLoadData();
+@Override
+    public void setDaoLoadData(DAOLoadData daoLoadData) {
+        this.daoLoadData = daoLoadData;
+    }
+
     @Override
     public JFreeChart build(IPredictor predictor) throws LPE {
         CategoryTableXYDataset ds = new CategoryTableXYDataset();
@@ -53,7 +60,9 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
 
         ds = (CategoryTableXYDataset) prediction.accept(new LoadDataAppend2DatasetVisitor_1(ds, "今日预测负荷"));
         ds=(CategoryTableXYDataset)predictions.get(1).accept(new LoadDataAppend2DatasetVisitor_1(ds,"明日预测负荷"));
-        ds=(CategoryTableXYDataset) DAOFactory.getDefault().createDaoLoadData().query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString()).accept(new LoadDataAppend2DatasetVisitor_1(ds,"昨日实际负荷"));
+        ds=(CategoryTableXYDataset)
+                daoLoadData.query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString())
+                .accept(new LoadDataAppend2DatasetVisitor_1(ds,"昨日实际负荷"));
 
 //        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
 //        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));

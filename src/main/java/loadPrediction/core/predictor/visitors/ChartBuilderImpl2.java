@@ -3,6 +3,7 @@ package loadPrediction.core.predictor.visitors;
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
 import loadPrediction.exception.LPE;
@@ -126,5 +127,10 @@ public class ChartBuilderImpl2 implements JChartBuilder4Predictor {
         valueAxis.setUpperBound(t.max * 1.01);
 
         return chart;
+    }
+
+    @Override
+    public void setDaoLoadData(DAOLoadData loadData) {
+
     }
 }
