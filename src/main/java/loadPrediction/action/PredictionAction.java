@@ -31,48 +31,30 @@ import java.text.SimpleDateFormat;
  * 电邮：1174751315@qq.com
  */
 public class PredictionAction extends ActionSupport {
-    //    OracleDAOFactory oracleDaoFactory = OracleDAOFactory.getInstance();
     private JFreeChart chart;
-
     public JFreeChart getChart() {
         return chart;
     }
-
-    public void setChart(JFreeChart chart) {
-        this.chart = chart;
-    }
-
     public String getRoot() {
         root="TEMP/";
         return root;
     }
-
     public void setRoot(String root) {
         this.root = root;
     }
-
     private String imgFileName;
     private String rptImgName;
-
     public String getRptImgName() {
         return rptImgName;
     }
-
     private String xlFileName;
     private String root = "";
-
     public String getXlFileName() {
         return xlFileName;
     }
-
-    public void setXlFileName(String xlFileName) {
-        this.xlFileName = xlFileName;
-    }
-
     public String getImgFileName() {
         return imgFileName;
     }
-
     public void setImgFileName(String imgFileName) {
         this.imgFileName = imgFileName;
     }
