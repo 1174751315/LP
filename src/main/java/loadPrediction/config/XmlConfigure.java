@@ -10,7 +10,6 @@ package loadPrediction.config;
 import  common.ElementPrintableLinkedList;
 import  loadPrediction.adm.user.User;
 import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.String2NumericUtil;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -81,28 +80,28 @@ public class XmlConfigure implements IConfigure {
 
         TestCfg testCfg1 = new TestCfg();
         System.out.println(root.element("workday-predictor").attribute("enabled") != null);
-        workdayCfg.setIsEnabled(String2NumericUtil.toBoolean(root.element("workday-predictor").attribute("enabled").getValue()));
-        workdayCfg.setPredictionWorkdayNumber(String2NumericUtil.toInteger(root.element("workday-predictor").element("prediction-workday-number").getText()));
-        workdayCfg.setHistoryWorkdayNumber(String2NumericUtil.toInteger(root.element("workday-predictor").element("history-workday-number").getText()));
-        testCfg1.setAccuracyThreshold(String2NumericUtil.toDouble(root.element("workday-predictor").element("test").element("accuracy-threshold").getText()));
-        testCfg1.setAccuracyCounter(String2NumericUtil.toInteger(root.element("workday-predictor").element("test").element("accuracy-counter").getText()));
+        workdayCfg.setIsEnabled(Boolean.valueOf(root.element("workday-predictor").attribute("enabled").getValue()));
+        workdayCfg.setPredictionWorkdayNumber(Integer.valueOf(root.element("workday-predictor").element("prediction-workday-number").getText()));
+        workdayCfg.setHistoryWorkdayNumber(Integer.valueOf(root.element("workday-predictor").element("history-workday-number").getText()));
+        testCfg1.setAccuracyThreshold(Double.valueOf(root.element("workday-predictor").element("test").element("accuracy-threshold").getText()));
+        testCfg1.setAccuracyCounter(Integer.valueOf(root.element("workday-predictor").element("test").element("accuracy-counter").getText()));
         workdayCfg.setTestCfg(testCfg1);
 
         TestCfg testCfg2 = new TestCfg();
-        weekendCfg.setIsEnabled(String2NumericUtil.toBoolean(root.element("weekend-predictor").attribute("enabled").getValue()));
-        weekendCfg.setHistoryWorkdayNumber(String2NumericUtil.toInteger(root.element("weekend-predictor").element("history-workday-number").getText()));
-        weekendCfg.setHistoryWeekendNumber(String2NumericUtil.toInteger(root.element("weekend-predictor").element("history-weekend-number").getText()));
-        weekendCfg.setPredictionWeekendNumber(String2NumericUtil.toInteger(root.element("weekend-predictor").element("prediction-weekend-number").getText()));
-        testCfg2.setAccuracyThreshold(String2NumericUtil.toDouble(root.element("weekend-predictor").element("test").element("accuracy-threshold").getText()));
-        testCfg2.setAccuracyCounter(String2NumericUtil.toInteger(root.element("weekend-predictor").element("test").element("accuracy-counter").getText()));
+        weekendCfg.setIsEnabled(Boolean.valueOf(root.element("weekend-predictor").attribute("enabled").getValue()));
+        weekendCfg.setHistoryWorkdayNumber(Integer.valueOf(root.element("weekend-predictor").element("history-workday-number").getText()));
+        weekendCfg.setHistoryWeekendNumber(Integer.valueOf(root.element("weekend-predictor").element("history-weekend-number").getText()));
+        weekendCfg.setPredictionWeekendNumber(Integer.valueOf(root.element("weekend-predictor").element("prediction-weekend-number").getText()));
+        testCfg2.setAccuracyThreshold(Double.valueOf(root.element("weekend-predictor").element("test").element("accuracy-threshold").getText()));
+        testCfg2.setAccuracyCounter(Integer.valueOf(root.element("weekend-predictor").element("test").element("accuracy-counter").getText()));
         weekendCfg.setTestCfg(testCfg2);
 
         TestCfg testCfg3 = new TestCfg();
-        festivalCfg.setIsEnabled(String2NumericUtil.toBoolean(root.element("festival-predictor").attribute("enabled").getValue()));
-        festivalCfg.setHistoryFestivalNumber(String2NumericUtil.toInteger(root.element("festival-predictor").element("history-festival-number").getText()));
-        festivalCfg.setPredictionFestivalNumber(String2NumericUtil.toInteger(root.element("festival-predictor").element("prediction-festival-number").getText()));
-        testCfg3.setAccuracyThreshold(String2NumericUtil.toDouble(root.element("festival-predictor").element("test").element("accuracy-threshold").getText()));
-        testCfg3.setAccuracyCounter(String2NumericUtil.toInteger(root.element("festival-predictor").element("test").element("accuracy-counter").getText()));
+        festivalCfg.setIsEnabled(Boolean.valueOf(root.element("festival-predictor").attribute("enabled").getValue()));
+        festivalCfg.setHistoryFestivalNumber(Integer.valueOf(root.element("festival-predictor").element("history-festival-number").getText()));
+        festivalCfg.setPredictionFestivalNumber(Integer.valueOf(root.element("festival-predictor").element("prediction-festival-number").getText()));
+        testCfg3.setAccuracyThreshold(Double.valueOf(root.element("festival-predictor").element("test").element("accuracy-threshold").getText()));
+        testCfg3.setAccuracyCounter(Integer.valueOf(root.element("festival-predictor").element("test").element("accuracy-counter").getText()));
         festivalCfg.setTestCfg(testCfg3);
 
         cfg.setWorkdayPredictorCfg(workdayCfg);
