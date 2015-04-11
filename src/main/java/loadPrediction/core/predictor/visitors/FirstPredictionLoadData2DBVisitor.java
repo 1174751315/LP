@@ -20,7 +20,7 @@ public class FirstPredictionLoadData2DBVisitor extends AbstractPredictionAccessD
         PredictionLoadData loadData = null;
         try {
             loadData = predictor.getPrediction96PointLoads().get(0).convertLower();
-            DAOFactory.getDefault().createDaoPredictionLoadData().insertOrUpdate(loadData);
+            daoFactory.createDaoPredictionLoadData().insertOrUpdate(loadData);
         } catch (Exception e) {
             throw new LPE("在将预测负荷存入数据库时发生异常");
         }
