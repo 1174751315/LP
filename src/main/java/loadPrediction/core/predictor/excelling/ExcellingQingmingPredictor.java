@@ -54,7 +54,7 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
 
     @Override
     protected List<Integer> doGetHistoryDaysNbrs() {
-        return CommonUtils.unnamed(20,12);
+        return ListUtils.unnamed(20,12);
     }
 
     @Override
@@ -92,7 +92,7 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
 
     @Override
     protected List<CellPosition> doGetHistoryDaysExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("B2","3天节假日气象数据"),new CellPosition("B29","3天节假日气象数据"));
+        return ListUtils.unnamed(new CellPosition("B2","3天节假日气象数据"),new CellPosition("B29","3天节假日气象数据"));
     }
 
     @Override
@@ -107,17 +107,17 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
 
     @Override
     protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("D2","3天节假日气象数据"),new CellPosition("D29","3天节假日气象数据"));
+        return ListUtils.unnamed(new CellPosition("D2","3天节假日气象数据"),new CellPosition("D29","3天节假日气象数据"));
     }
 
     @Override
     protected List<CellPosition> doGetSimilarDaysExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("C31","相似日查找-相似日为工作日"),new CellPosition("C23","相似日查找-相似日为同类型日"));
+        return ListUtils.unnamed(new CellPosition("C31","相似日查找-相似日为工作日"),new CellPosition("C23","相似日查找-相似日为同类型日"));
     }
 
     @Override
     protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
-        return CommonUtils.unnamed(new CellPosition("B20","3天假期96节点负荷预测"),new CellPosition("G20","3天假期96节点负荷预测"));
+        return ListUtils.unnamed(new CellPosition("B20","3天假期96节点负荷预测"),new CellPosition("G20","3天假期96节点负荷预测"));
     }
 
     @Override

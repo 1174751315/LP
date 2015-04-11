@@ -25,8 +25,39 @@ import java.util.List;
  * 李倍存 创建于 2015-03-22 10:57。电邮 1174751315@qq.com。
  */
 public class CommonUtils {
+    private DAOFactory generalDaoFactory;
+
+    public CommonUtils() {
+    }
+
+    public CommonUtils(DAOFactory generalDaoFactory, DAOFactory backupDaoFactory) {
+
+        this.generalDaoFactory = generalDaoFactory;
+        this.backupDaoFactory = backupDaoFactory;
+    }
+
+    public DAOFactory getBackupDaoFactory() {
+
+        return backupDaoFactory;
+    }
+
+    public void setBackupDaoFactory(DAOFactory backupDaoFactory) {
+        this.backupDaoFactory = backupDaoFactory;
+    }
+
+    public DAOFactory getGeneralDaoFactory() {
+        return generalDaoFactory;
+    }
+
+    public void setGeneralDaoFactory(DAOFactory generalDaoFactory) {
+        this.generalDaoFactory = generalDaoFactory;
+    }
+
+    private DAOFactory backupDaoFactory;
+
+
     /*辅助计算函数.*/
-    public static ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>
+    public  ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>
     getHistoryWeather(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> weather = new ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>("");
         Integer iSize = historyDays.size();
@@ -36,11 +67,11 @@ public class CommonUtils {
             }
             return weather;
        }
-    public static ElementPrintableLinkedList<WeatherData>
+    public  ElementPrintableLinkedList<WeatherData>
     getPredictionWeather(ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         return tryGetSomeWeathers(simpleDate2DateString(predictionDays));
     }
-    public static ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
+    public  ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
     getSimilarDaysLoad(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> similarDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> loads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("loads");
         for (int i = 0; i < similarDays.size(); i++) {
@@ -51,7 +82,7 @@ public class CommonUtils {
         return loads;
 
     }
-    public static ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
+    public  ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
     getSimilarDaysLoad_1(ElementPrintableLinkedList<PrintableLinkedList<String>> similarDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> loads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("loads");
         for (int i = 0; i < similarDays.size(); i++) {
@@ -61,22 +92,22 @@ public class CommonUtils {
         }
         return loads;
     }
-    public static ElementPrintableLinkedList<LoadData>
+    public  ElementPrintableLinkedList<LoadData>
     getActualLoad(ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         return tryGetSomeLoads(simpleDate2DateString(predictionDays));
     }
-    private static ElementPrintableLinkedList<LoadData> tryGetSomeLoads(List<String> dateStrings) throws LPE{
+    private  ElementPrintableLinkedList<LoadData> tryGetSomeLoads(List<String> dateStrings) throws LPE{
         Integer size=dateStrings.size();
         ElementPrintableLinkedList<LoadData> loadDatas=new ElementPrintableLinkedList<LoadData>("");
         for (int i = 0; i <size ; i++) {
             String dateString=dateStrings.get(i);
             try {
-                loadDatas.add(DAOFactory.getDefault().createDaoLoadData().query(dateString));
+                loadDatas.add(generalDaoFactory.createDaoLoadData().query(dateString));
             }catch (DAE e){
                 Logging.instance().createLogger().info("负荷数据缺失  "+dateStrings.get(i)+"。尝试重新同步负荷");
                 /*处理数据缺失异常：同步负荷*/
                 try {
-                    loadDatas.add((LoadData) new LoadDataCopy(DAOFactory.getAlter(), DAOFactory.getDefault()).copy(dateString));
+                    loadDatas.add((LoadData) new LoadDataCopy(backupDaoFactory, generalDaoFactory).copy(dateString));
                     /*若在同步负荷的过程中又出现异常，则处理失败，抛出业务异常。*/
                 } catch (DAE dae) {
                     Logging.instance().createLogger().info("同步失败");
@@ -90,13 +121,13 @@ public class CommonUtils {
         }
         return loadDatas;
     }
-    private static ElementPrintableLinkedList<WeatherData> tryGetSomeWeathers(List<String> dateStrings)throws LPE{
+    private  ElementPrintableLinkedList<WeatherData> tryGetSomeWeathers(List<String> dateStrings)throws LPE{
         Integer size=dateStrings.size();
         ElementPrintableLinkedList<WeatherData> weathers=new ElementPrintableLinkedList<WeatherData>("");
         for (int i = 0; i < size; i++) {
             String dateString=dateStrings.get(i);
             try{
-                weathers.add(DAOFactory.getDefault().createDaoWeatherData().query(dateString));
+                weathers.add(generalDaoFactory.createDaoWeatherData().query(dateString));
             }catch (DAE e){
                 Logging.instance().createLogger().debug("气象数据缺失");
                 Logging.instance().createLogger().error("气象数据缺失，算法异常终止");
@@ -108,7 +139,7 @@ public class CommonUtils {
         }
         return weathers;
     }
-    public static List<String> simpleDate2DateString(List<SimpleDate> simpleDates){
+    public  List<String> simpleDate2DateString(List<SimpleDate> simpleDates){
         List<String> dates=new LinkedList<String>();
         for (int i = 0; i <simpleDates.size() ; i++) {
             dates.add(simpleDates.get(i).getDateString());
@@ -116,12 +147,7 @@ public class CommonUtils {
         return dates;
     }
 
-    public static  <T> List<T> unnamed(T t1, T t2) {
-        List<T> list = new LinkedList<T>();
-        list.add(t1);
-        list.add(t2);
-        return list;
-    }
+
 
 
 }

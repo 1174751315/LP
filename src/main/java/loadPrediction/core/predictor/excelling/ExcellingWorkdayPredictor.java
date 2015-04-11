@@ -21,6 +21,7 @@ import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
+import loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery;
 import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -40,8 +41,17 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private static final Integer WINTER=0,SUMMER=1;
     private  Season season;
 
-    public ExcellingWorkdayPredictor(Date date) {
+    public ExcellingWorkdayPredictor(Date date){
         super(date);
+
+        try {
+            dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
+            dayQuery4PredictionDays=new PowerSystemWorkdayQuery(date);
+        } catch (Exception e) {
+            e.printStackTrace();
+            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(e, "查询历史日或预测日时发生异常");
+        }
+
         String dateString=date.toLocalDate().toString();
         try {
             WeatherData weatherData= DAOFactory.getDefault().createDaoWeatherData().query(dateString);
@@ -67,11 +77,21 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
         return "EXCELLING 工作日 "+(modelName+"模型");
     }
 
+
+    public void setDayQuery4PredictionDays(AbstractPowerSystemDayQuery dayQuery4PredictionDays) {
+        this.dayQuery4PredictionDays = dayQuery4PredictionDays;
+    }
+
+    public void setDayQuery4HistoryDays(AbstractPowerSystemDayQuery dayQuery4HistoryDays) {
+        this.dayQuery4HistoryDays = dayQuery4HistoryDays;
+    }
+
+    private AbstractPowerSystemDayQuery dayQuery4PredictionDays,dayQuery4HistoryDays;
     @Override
     protected ElementPrintableLinkedList<SimpleDate> doGetPredictionDays() throws LPE {
         Integer number = predictionDaysNbr;
         try {
-            List<SimpleDate> list = new PowerSystemWorkdayQuery(date).list(1, number);
+            List<SimpleDate> list = dayQuery4PredictionDays.list(1, number);
             if (list.size() != number)
                 throw new LPE("获取预测日时发生异常：数据不完整", LPE.eScope.USER);
             return ConvertUtils.toElementPrintableLinkedList(list, "prediction Days");
@@ -83,12 +103,10 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> doGetHistoryDays() throws LPE {
-        PowerSystemWorkdayQuery dq = null;
-        ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("unnamed");
+               ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("unnamed");
         try {
-            dq = new PowerSystemWorkdayQuery(date);
             history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("historyDays");
-            ElementPrintableLinkedList<SimpleDate> list = ConvertUtils.toElementPrintableLinkedList(dq.list(historyDaysNbr + 1, historyDaysNbr + 1), "workday");
+            ElementPrintableLinkedList<SimpleDate> list = ConvertUtils.toElementPrintableLinkedList(dayQuery4HistoryDays.list(historyDaysNbr + 1, historyDaysNbr + 1), "workday");
             list.removeLast();
             history.add(list);
         } catch (Exception e) {
@@ -183,7 +201,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     protected void doAfterInjectWeathers(Workbook activeWorkbook, ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays, ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         /*获取历史负荷*/
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> historyLoads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("历史负荷");
-        historyLoads= CommonUtils.getSimilarDaysLoad(historyDays);
+        historyLoads= commonUtils.getSimilarDaysLoad(historyDays);
         historyLoads.print(System.err);
 
         /*填充历史负荷三值*/

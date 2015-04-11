@@ -1,7 +1,7 @@
 package loadPrediction.core.predictor.visitors;
 
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.TestUtils;
+import loadPrediction.core.predictor.WorkdayPredictorTestDataRepo;
 import loadPrediction.dataAccess.DAOAccuracy;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
@@ -42,12 +42,12 @@ public class Accuracy2DBVisitorTest {
         mockPredictor=mock(IPredictor.class);
 
 
-        when(mockPredictor.getPredictionDays()).thenReturn(TestUtils.INSTANCE.getSimpleDates());
-        when(mockPredictor.getActual96PointLoads()).thenReturn(TestUtils.INSTANCE.getLoadDatas());
-        when(mockPredictor.getPrediction96PointLoads()).thenReturn(TestUtils.INSTANCE.getLoadDatas());
+        when(mockPredictor.getPredictionDays()).thenReturn(WorkdayPredictorTestDataRepo.INSTANCE.getSimpleDates());
+        when(mockPredictor.getActual96PointLoads()).thenReturn(WorkdayPredictorTestDataRepo.INSTANCE.getLoadDatas());
+        when(mockPredictor.getPrediction96PointLoads()).thenReturn(WorkdayPredictorTestDataRepo.INSTANCE.getLoadDatas());
         when(mockDaoFactory.createDAOAccuracy()).thenReturn(mockDaoAcc);
         when(mockDaoFactory.createDaoLoadData()).thenReturn(mockDaoLoadData);
-        when(mockDaoLoadData.query(anyString())).thenReturn(TestUtils.INSTANCE.getLoadData(0));
+        when(mockDaoLoadData.query(anyString())).thenReturn(WorkdayPredictorTestDataRepo.INSTANCE.getLoadData(0));
         when(mockDaoAcc.insertOrUpdate(any(Accuracy.class))).thenReturn(null);
 
 

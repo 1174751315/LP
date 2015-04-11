@@ -41,6 +41,12 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected String dateString;
     Workbook template = null;
     FormulaEvaluator evaluator = null;
+    protected CommonUtils commonUtils=new CommonUtils(DAOFactory.getDefault(),DAOFactory.getAlter());
+
+    public void setCommonUtils(CommonUtils commonUtils) {
+        this.commonUtils = commonUtils;
+    }
+
     public AbstractTemplateMethodExcellingPredictor(Date date) {
         this.date = date;
         dateString = date.toLocalDate().toString();
@@ -74,11 +80,11 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
 
         log.debug("获取历史气象数据");
-        historyWeathers = CommonUtils.getHistoryWeather(this.historyDays);
+        historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
         historyWeathers.print(System.err);
         log.debug("完成");
         log.debug("获取预测气象数据");
-        predictionWeathers = CommonUtils.getPredictionWeather(predictionDays);
+        predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
         predictionWeathers.print(System.out);
         log.debug("完成");
 
@@ -183,7 +189,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         similarDayStrings.print(System.err);
 
         /*获取相似日负荷*/
-        similarLoads = CommonUtils.getSimilarDaysLoad_1(similarDayStrings);
+        similarLoads = commonUtils.getSimilarDaysLoad_1(similarDayStrings);
         /*填充相似日负荷*/
         List<CellPosition> ofSimilarLoads = doGetSimilarLoadsExcelPosition();
         for (int i = 0; i < ofSimilarLoads.size(); i++) {
@@ -203,7 +209,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
 
         /*获取实际负荷数据：若存在*/
-        actualLoads = CommonUtils.getActualLoad(predictionDays);
+        actualLoads = commonUtils.getActualLoad(predictionDays);
         actualLoads.print(System.err);
         CellPosition t = doGetActualLoadsExcelPosition();
         Sheet ws2 = template.getSheet(t.getSheetName());
