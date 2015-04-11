@@ -2,7 +2,6 @@ package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
@@ -21,26 +20,48 @@ import org.jfree.data.xy.CategoryTableXYDataset;
 
 import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 /**
  * Created by LBC on 2015-04-08.
  */
-public class ChartBuilderImpl1 implements IChartBuilder {
+public class ChartBuilderImpl1 extends AbstractChartBuilder {
 
-    Color foreColor;Color backColor;Color gridColor;
-
-    public ChartBuilderImpl1(Color foreColor, Color backColor, Color gridColor) {
-        this.foreColor = foreColor;
-        this.backColor = backColor;
-        this.gridColor = gridColor;
+    java.util.List<Color> series;
+    {
+        List<Color> list=new LinkedList<Color>();
+        list.add(MyColor.COMMON_SERIES_1);
+        list.add(MyColor.COMMON_SERIES_2);
+        list.add(MyColor.COMMON_SERIES_3);
+        list.add(MyColor.COMMON_SERIES_4);
+        list.add(MyColor.COMMON_SERIES_5);
+        list.add(MyColor.COMMON_SERIES_6);
+        series=list;
+    }
+    public ChartBuilderImpl1(Color foreColor, Color backColor, Color gridColor,List<Color> series) {
+        super(foreColor,backColor,gridColor);
+        this.series=series;
     }
     public ChartBuilderImpl1(){
-        this(MyColor.COMMON_FOREGROUND,MyColor.COMMON_BACKGROUND,MyColor.COMMON_GRID_LINE);
     }
-    private DAOLoadData daoLoadData=DAOFactory.getDefault().createDaoLoadData();
-@Override
-    public void setDaoLoadData(DAOLoadData daoLoadData) {
-        this.daoLoadData = daoLoadData;
+
+    public List<Color> getSeries() {
+        return series;
+    }
+
+    public void setSeries(List<Color> series) {
+        if (series.size()<6)
+        {
+            extend(series);
+        }
+        this.series = series;
+    }
+
+    private void extend(List<Color> series){
+        Integer dif=6-series.size();
+        for (int i=series.size();i<6;i++){
+            series.add(MyColor.getRandomColor());
+        }
     }
 
     @Override
@@ -57,13 +78,12 @@ public class ChartBuilderImpl1 implements IChartBuilder {
         list.add(prediction);
         list.add(lwr);
         list.add(upr);
-
+        list.add(predictions.get(1));
         ds = (CategoryTableXYDataset) prediction.accept(new AppendTableXYDatasetVisitor(ds, "今日预测负荷"));
         ds=(CategoryTableXYDataset)predictions.get(1).accept(new AppendTableXYDatasetVisitor(ds,"明日预测负荷"));
-        ds=(CategoryTableXYDataset)
-                daoLoadData.query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString())
-                .accept(new AppendTableXYDatasetVisitor(ds,"昨日实际负荷"));
-
+        LoadData yesterday=daoLoadData.query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString());
+        ds=(CategoryTableXYDataset) yesterday.accept(new AppendTableXYDatasetVisitor(ds,"昨日实际负荷"));
+        list.add(yesterday);
 //        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
 //        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));
         if (actual != null) {
@@ -85,11 +105,11 @@ public class ChartBuilderImpl1 implements IChartBuilder {
 
 
         renderer.setSeriesStroke(0, line);
-        renderer.setSeriesPaint(0, MyColor.COMMON_SERIES_1);
+        renderer.setSeriesPaint(0, series.get(0));
         renderer.setSeriesStroke(1, line);
-        renderer.setSeriesPaint(1, MyColor.COMMON_SERIES_2);
+        renderer.setSeriesPaint(1, series.get(1));
         renderer.setSeriesStroke(2, dotLine);
-        renderer.setSeriesPaint(2, MyColor.COMMON_SERIES_3);
+        renderer.setSeriesPaint(2, series.get(2));
         renderer.setBasePaint(Color.BLACK);
 
 
@@ -104,19 +124,19 @@ public class ChartBuilderImpl1 implements IChartBuilder {
 
         if (actual != null) {
             renderer.setSeriesStroke(3, dotLine);
-            renderer.setSeriesPaint(3, MyColor.COMMON_SERIES_4);
+            renderer.setSeriesPaint(3, series.get(3));
 
             LoadData l1=((LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.AVE)));
             ds=(CategoryTableXYDataset)  (l1).accept(new AppendTableXYDatasetVisitor(ds,"均值滤波"));
-            renderer.setSeriesStroke(4, line);
-            renderer.setSeriesPaint(4, MyColor.magenta);
+                        renderer.setSeriesStroke(4, line);
+            renderer.setSeriesPaint(4, series.get(4));
             renderer.setSeriesShapesVisible(4,true);
 
             LoadData l2=(LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.MED));
             ds=(CategoryTableXYDataset)  (l2).accept(new AppendTableXYDatasetVisitor(ds,"中值滤波"));
 
             renderer.setSeriesStroke(5, line);
-            renderer.setSeriesPaint(5, MyColor.c4);
+            renderer.setSeriesPaint(5, series.get(5));
             renderer.setSeriesShapesVisible(5,true);
 
             list.add(l1);
@@ -159,10 +179,13 @@ public class ChartBuilderImpl1 implements IChartBuilder {
         chart.getTitle().setPaint(foreColor);
         MaxAveMinTuple<Double> t=PredictionLoad24LinePictureVisitor_1.unnamed(list);
 
-        valueAxis.setLowerBound(t.min*0.99);
-        valueAxis.setUpperBound(t.max * 1.01);
+//        valueAxis.setLowerBound(t.min*1);
+//        valueAxis.setUpperBound(t.max * 1);
+//        valueAxis.setRange(t.min,t.max);
 //        valueAxis.setLowerBound(0.);
 //        valueAxis.setUpperBound(15000.);
+//               valueAxis.setRange(t.min,t.max);
+        valueAxis.setRange(t.min, t.max);
         return chart;
     }
 }

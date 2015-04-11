@@ -24,15 +24,11 @@ import java.util.LinkedList;
 /**
  * Created by LBC on 2015-04-08.
  */
-public class ChartBuilderImpl2 implements IChartBuilder {
-    Color foreColor;
-    Color backColor;
-    Color gridColor;
+public class ChartBuilderImpl2 extends AbstractChartBuilder {
+
 
     public ChartBuilderImpl2(Color foreColor, Color backColor, Color gridColor) {
-        this.foreColor = foreColor;
-        this.backColor = backColor;
-        this.gridColor = gridColor;
+        super(foreColor,backColor,gridColor);
     }
     public ChartBuilderImpl2(){
         this(MyColor.white,MyColor.c4,MyColor.lightGray);
@@ -117,21 +113,12 @@ public class ChartBuilderImpl2 implements IChartBuilder {
         domainAxis.setLabelFont(new Font("微软雅黑",Font.BOLD,20));
         domainAxis.setLabelPaint(Color.white);
 
-
         chart.getTitle().setFont(new Font("Arial",Font.BOLD,20));
         chart.getTitle().setPaint(Color.white);
         MaxAveMinTuple<Double> t=PredictionLoad24LinePictureVisitor_1.unnamed(list);
 
         valueAxis.setLowerBound(t.min*0.99);
         valueAxis.setUpperBound(t.max * 1.01);
-
         return chart;
     }
-
-    @Override
-    public void setDaoLoadData(DAOLoadData loadData) {
-        daoLoadData=loadData;
-    }
-
-    private DAOLoadData daoLoadData= DAOFactory.getDefault().createDaoLoadData();
 }

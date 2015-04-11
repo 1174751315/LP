@@ -30,6 +30,14 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
         return next;
     }
 
+    public LoadData(String dateString) {
+        this.dateString = dateString;
+    }
+
+    public LoadData() {
+
+    }
+
     public void setNext(LoadData next) {
         if (next == this)
             return;

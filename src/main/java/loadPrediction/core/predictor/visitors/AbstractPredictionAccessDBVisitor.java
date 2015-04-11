@@ -4,6 +4,7 @@ import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.core.predictor.IQingmingPredictor;
 import loadPrediction.core.predictor.IWeekendPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.exception.LPE;
 
 /**
@@ -13,6 +14,20 @@ public abstract class AbstractPredictionAccessDBVisitor implements IPredictorVis
     public AbstractPredictionAccessDBVisitor() {
     }
 
+    public AbstractPredictionAccessDBVisitor(DAOFactory daoFactory) {
+        this.daoFactory = daoFactory;
+    }
+
+    public DAOFactory getDaoFactory() {
+
+        return daoFactory;
+    }
+
+    public void setDaoFactory(DAOFactory daoFactory) {
+        this.daoFactory = daoFactory;
+    }
+
+    protected DAOFactory daoFactory=DAOFactory.getDefault();
     @Override
     public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         return this.doAccessDB(predictor);

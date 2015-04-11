@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT user-interface-configuration (
+                colors
+                )>
+
+
+
+<!ELEMENT colors (chart-colors,menu-colors,client-colors)>
+
+        <!ELEMENT chart-colors (background-color,fore-color,grid-color,series-colors)>
+        <!ELEMENT menu-colors (background-color,fore-color)>
+        <!ELEMENT client-colors (background-color)>
+
+<!ELEMENT background-color (#PCDATA)>
+<!ELEMENT fore-color (#PCDATA)>
+<!ELEMENT grid-color (#PCDATA)>
+<!ELEMENT series-colors (color+)>
+<!ELEMENT color (#PCDATA)>
+
+

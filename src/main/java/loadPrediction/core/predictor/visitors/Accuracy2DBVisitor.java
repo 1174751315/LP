@@ -35,12 +35,12 @@ public class Accuracy2DBVisitor extends AbstractPredictionAccessDBVisitor {
     @Override
     protected Object doAccessDB(IPredictor predictor) throws LPE {
         try {
-            LoadData ld = DAOFactory.getDefault().createDaoLoadData().query(predictor.getPredictionDays().get(0).getDateString());
+            LoadData ld = daoFactory.createDaoLoadData().query(predictor.getPredictionDays().get(0).getDateString());
             if (ld != null) {
                 Accuracy accuracy = new Accuracy();
                 accuracy.setAccuracy(this.calcOneAccuracy(ld, predictor.getPrediction96PointLoads().get(0)));
                 accuracy.setDateString(Date2StringAdapter.toString(predictor.getPredictionDays().get(0).getDate()));
-                DAOFactory.getDefault().createDAOAccuracy().insertOrUpdate(accuracy);
+                daoFactory.createDAOAccuracy().insertOrUpdate(accuracy);
                 return accuracy;
             }
         } catch (Exception e) {
