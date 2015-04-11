@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LP.iws" />
@@ -40,8 +38,16 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="417" max-vertical-offset="1003">
               <caret line="64" column="17" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="17" />
               <folding>
-                <element signature="method#getActualLoad#0;class#CommonUtils#0" expanded="true" />
-                <element signature="method#tryGetSomeLoads#0;class#CommonUtils#0" expanded="true" />
+                <element signature="e#0#5768#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#CommonUtils#0" expanded="false" />
+                <element signature="method#getHistoryWeather#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#getPredictionWeather#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#getSimilarDaysLoad#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#getSimilarDaysLoad_1#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#tryGetSomeWeathers#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#simpleDate2DateString#0;class#CommonUtils#0" expanded="false" />
+                <element signature="method#unnamed#0;class#CommonUtils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -52,7 +58,87 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="3706">
               <caret line="553" column="0" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#23315#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="e#996#997#0" expanded="false" />
+                <element signature="e#1048#1049#0" expanded="false" />
+                <element signature="e#2359#2360#0" expanded="false" />
+                <element signature="e#2390#2391#0" expanded="false" />
+                <element signature="e#2555#2556#0" expanded="false" />
+                <element signature="e#2606#2607#0" expanded="false" />
+                <element signature="e#2672#2673#0" expanded="false" />
+                <element signature="e#2732#2733#0" expanded="false" />
+                <element signature="e#2828#2829#0" expanded="false" />
+                <element signature="e#2862#2863#0" expanded="false" />
+                <element signature="e#2937#2938#0" expanded="false" />
+                <element signature="e#2978#2979#0" expanded="false" />
+                <element signature="e#3060#3061#0" expanded="false" />
+                <element signature="e#3094#3095#0" expanded="false" />
+                <element signature="e#3123#3124#0" expanded="false" />
+                <element signature="e#3150#3151#0" expanded="false" />
+                <element signature="e#3248#3249#0" expanded="false" />
+                <element signature="e#3282#3283#0" expanded="false" />
+                <element signature="e#3334#3335#0" expanded="false" />
+                <element signature="e#3375#3376#0" expanded="false" />
+                <element signature="method#getHistoryWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="e#3584#3585#0" expanded="false" />
+                <element signature="e#3617#3618#0" expanded="false" />
+                <element signature="e#3690#3691#0" expanded="false" />
+                <element signature="e#3727#3728#0" expanded="false" />
+                <element signature="e#3806#3807#0" expanded="false" />
+                <element signature="e#3851#3852#0" expanded="false" />
+                <element signature="e#3899#3900#0" expanded="false" />
+                <element signature="e#3942#3943#0" expanded="false" />
+                <element signature="e#4032#4033#0" expanded="false" />
+                <element signature="e#4074#4075#0" expanded="false" />
+                <element signature="e#4152#4153#0" expanded="false" />
+                <element signature="e#4193#4194#0" expanded="false" />
+                <element signature="method#getSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="e#4439#4440#0" expanded="false" />
+                <element signature="e#4473#4474#0" expanded="false" />
+                <element signature="e#4557#4558#0" expanded="false" />
+                <element signature="e#4587#4588#0" expanded="false" />
+                <element signature="docComment;method#predict#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#predict#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="e#7981#8111#0" expanded="false" />
+                <element signature="method#AbstractTemplateMethodForHardCodingPredictor#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#checkParameters#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#getHistoryWeather#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#getPredictionWeather#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#getSimilarDaysLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#getActualLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#calcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#getActualLoadOfFirstPredictionDayIfExistAndCalcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doCalcCorrectCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doGetHistoryDaysNumbers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doGetPredictionDaysNumber#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doValidate#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doGetHistoryDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doGetPredictionDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doCalcSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doCheckAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doCalcPredictionLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="docComment;method#doAfterBasicPrediction#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doCalcPredictionLoadTuple1#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doCalcPredictionLoadTuple2#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doCalcPredictionLoadTuple3#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetHistoryDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetPredictionDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetHistoryWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetPredictionWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcSimilarDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetSimilarDaysLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcPredictionLoadTuples#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcCorrectCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcPredictionLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterGetActualLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doAfterCalcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#doBeforeWholePrediction#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+                <element signature="method#isFirstPredictionDateExistInLoadDataDB#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +149,9 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="731">
               <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
-                <element signature="method#getHistoryDays#0;class#WorkdayUtils#0" expanded="true" />
-                <element signature="method#getPredictionDays#0;class#WorkdayUtils#0" expanded="true" />
+                <element signature="e#0#1932#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#WorkdayUtils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -73,28 +160,48 @@
       <file leaf-file-name="WeekendUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/util/WeekendUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="816">
               <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
               <folding>
-                <element signature="method#doGetHistoryDays#0;class#WeekendUtils#0" expanded="true" />
-                <element signature="method#doGetPredictionDays#0;class#WeekendUtils#0" expanded="true" />
+                <element signature="e#0#2307#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="docComment;class#WeekendUtils#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExcellingWorkdayPredictor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExcellingWorkdayPredictor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5783898" vertical-offset="543" max-vertical-offset="2006">
-              <caret line="103" column="63" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="2006">
+              <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
               <folding>
                 <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-                <element signature="e#3215#3255#0" expanded="true" />
+                <element signature="method#doGetInputWorkbookPath#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
                 <element signature="e#3861#3904#0" expanded="true" />
                 <element signature="method#doAfterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-                <element signature="e#6589#6627#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="170">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/temp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5833333" vertical-offset="0" max-vertical-offset="3366">
+              <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FileOutputVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/UnifiedImageOutputVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/CONFIG/Tomcat conf/lpu.xml" />
@@ -158,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
+        <option value="$PROJECT_DIR$/temp/index.jsp" />
       </list>
     </option>
   </component>
@@ -184,10 +291,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="261" />
-    <option name="y" value="39" />
-    <option name="width" value="789" />
-    <option name="height" value="870" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -470,7 +577,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -525,190 +631,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="excelling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -1263,13 +1188,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="261" y="39" width="789" height="870" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30122116" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30081302" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1277,13 +1202,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36653388" sideWeight="0.49924356" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36653388" sideWeight="0.49924356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.59396434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27827764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3359894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1297,6 +1221,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5815832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3359894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1365,20 +1290,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/workday/PredictionLoadTupleCalculatorWithActualValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/workday/PredictionLoadTupleCalculatorWithPerUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/workday/IPredictionLoadTupleCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -1397,11 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="17" column="56" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="method#execute#0;class#WorkdayTestCommand#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,7 +1449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1551,11 +1456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1972">
           <caret line="70" column="110" selection-start-line="70" selection-start-column="110" selection-end-line="70" selection-end-column="110" />
-          <folding>
-            <element signature="e#2852#2853#0" expanded="true" />
-            <element signature="e#2901#2905#0" expanded="true" />
-            <element signature="e#2931#2935#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1563,9 +1463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1687" max-vertical-offset="2397">
           <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
-          <folding>
-            <element signature="method#build#0;class#ChartBuilderImpl1#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1587,7 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
           <caret line="45" column="31" selection-start-line="42" selection-start-column="16" selection-end-line="45" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1630,23 +1526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="method#doVisitAndGenerateChart#0;class#PredictionLoad24LinePictureVisitor#0" expanded="true" />
-            <element signature="e#1378#1384#0" expanded="true" />
-            <element signature="e#1508#1514#0" expanded="true" />
-            <element signature="e#1639#1645#0" expanded="true" />
-            <element signature="e#1772#1778#0" expanded="true" />
-            <element signature="e#2075#2079#0" expanded="true" />
-            <element signature="e#2081#2092#0" expanded="true" />
-            <element signature="e#2234#2235#0" expanded="true" />
-            <element signature="e#2290#2291#0" expanded="true" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#2397#2398#0" expanded="true" />
-            <element signature="e#2488#2489#0" expanded="true" />
-            <element signature="e#2548#2549#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1668,13 +1547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
           <caret line="29" column="82" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="82" />
-          <folding>
-            <element signature="method#doVisitAndOutput#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-            <element signature="e#3053#3059#0" expanded="true" />
-            <element signature="e#3072#3074#0" expanded="true" />
-            <element signature="e#3402#3407#0" expanded="true" />
-            <element signature="method#isNumeric#0;class#PredictionLoad2ReportPictureVisitor#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1696,9 +1568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28947368" vertical-offset="0" max-vertical-offset="2788">
           <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-          <folding>
-            <element signature="method#doCalcSimilarCoes#0;class#HardCodingWorkdayPredictor#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1941,10 +1810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7631578" vertical-offset="1445" max-vertical-offset="3128">
           <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding>
-            <element signature="method#doCalcSimilarCoes#0;class#HardCodingWeekendPredictor#0" expanded="true" />
-            <element signature="method#doCalcSimilarDays#0;class#HardCodingWeekendPredictor#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1953,8 +1818,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="731">
           <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
-            <element signature="method#getHistoryDays#0;class#WorkdayUtils#0" expanded="true" />
-            <element signature="method#getPredictionDays#0;class#WorkdayUtils#0" expanded="true" />
+            <element signature="e#0#1932#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#WorkdayUtils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1964,8 +1830,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
           <folding>
-            <element signature="method#doGetHistoryDays#0;class#WeekendUtils#0" expanded="true" />
-            <element signature="method#doGetPredictionDays#0;class#WeekendUtils#0" expanded="true" />
+            <element signature="e#0#2307#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#WeekendUtils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1975,8 +1842,16 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="417" max-vertical-offset="1003">
           <caret line="64" column="17" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="17" />
           <folding>
-            <element signature="method#getActualLoad#0;class#CommonUtils#0" expanded="true" />
-            <element signature="method#tryGetSomeLoads#0;class#CommonUtils#0" expanded="true" />
+            <element signature="e#0#5768#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#CommonUtils#0" expanded="false" />
+            <element signature="method#getHistoryWeather#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#getPredictionWeather#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#getSimilarDaysLoad#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#getSimilarDaysLoad_1#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#tryGetSomeWeathers#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#simpleDate2DateString#0;class#CommonUtils#0" expanded="false" />
+            <element signature="method#unnamed#0;class#CommonUtils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1985,21 +1860,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="3706">
           <caret line="553" column="0" selection-start-line="553" selection-start-column="0" selection-end-line="553" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#23315#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="e#996#997#0" expanded="false" />
+            <element signature="e#1048#1049#0" expanded="false" />
+            <element signature="e#2359#2360#0" expanded="false" />
+            <element signature="e#2390#2391#0" expanded="false" />
+            <element signature="e#2555#2556#0" expanded="false" />
+            <element signature="e#2606#2607#0" expanded="false" />
+            <element signature="e#2672#2673#0" expanded="false" />
+            <element signature="e#2732#2733#0" expanded="false" />
+            <element signature="e#2828#2829#0" expanded="false" />
+            <element signature="e#2862#2863#0" expanded="false" />
+            <element signature="e#2937#2938#0" expanded="false" />
+            <element signature="e#2978#2979#0" expanded="false" />
+            <element signature="e#3060#3061#0" expanded="false" />
+            <element signature="e#3094#3095#0" expanded="false" />
+            <element signature="e#3123#3124#0" expanded="false" />
+            <element signature="e#3150#3151#0" expanded="false" />
+            <element signature="e#3248#3249#0" expanded="false" />
+            <element signature="e#3282#3283#0" expanded="false" />
+            <element signature="e#3334#3335#0" expanded="false" />
+            <element signature="e#3375#3376#0" expanded="false" />
+            <element signature="method#getHistoryWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="e#3584#3585#0" expanded="false" />
+            <element signature="e#3617#3618#0" expanded="false" />
+            <element signature="e#3690#3691#0" expanded="false" />
+            <element signature="e#3727#3728#0" expanded="false" />
+            <element signature="e#3806#3807#0" expanded="false" />
+            <element signature="e#3851#3852#0" expanded="false" />
+            <element signature="e#3899#3900#0" expanded="false" />
+            <element signature="e#3942#3943#0" expanded="false" />
+            <element signature="e#4032#4033#0" expanded="false" />
+            <element signature="e#4074#4075#0" expanded="false" />
+            <element signature="e#4152#4153#0" expanded="false" />
+            <element signature="e#4193#4194#0" expanded="false" />
+            <element signature="method#getSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="e#4439#4440#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
+            <element signature="e#4557#4558#0" expanded="false" />
+            <element signature="e#4587#4588#0" expanded="false" />
+            <element signature="docComment;method#predict#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#predict#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="e#7981#8111#0" expanded="false" />
+            <element signature="method#AbstractTemplateMethodForHardCodingPredictor#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#checkParameters#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#getHistoryWeather#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#getPredictionWeather#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#getSimilarDaysLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#getActualLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#calcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#getActualLoadOfFirstPredictionDayIfExistAndCalcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doCalcCorrectCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doGetHistoryDaysNumbers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doGetPredictionDaysNumber#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doValidate#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doGetHistoryDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doGetPredictionDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doCalcSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doCheckAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doCalcPredictionLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="docComment;method#doAfterBasicPrediction#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doCalcPredictionLoadTuple1#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doCalcPredictionLoadTuple2#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doCalcPredictionLoadTuple3#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetHistoryDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetPredictionDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetHistoryWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetPredictionWeathers#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcSimilarCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcSimilarDays#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetSimilarDaysLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcPredictionLoadTuples#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcCorrectCoes#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcPredictionLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterGetActualLoad#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doAfterCalcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#doBeforeWholePrediction#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+            <element signature="method#isFirstPredictionDateExistInLoadDataDB#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5783898" vertical-offset="543" max-vertical-offset="2006">
-          <caret line="103" column="63" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="2006">
+          <caret line="147" column="9" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
           <folding>
             <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="e#3215#3255#0" expanded="true" />
+            <element signature="method#doGetInputWorkbookPath#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
             <element signature="e#3861#3904#0" expanded="true" />
             <element signature="method#doAfterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="e#6589#6627#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.72" vertical-offset="0" max-vertical-offset="170">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5833333" vertical-offset="0" max-vertical-offset="3366">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
