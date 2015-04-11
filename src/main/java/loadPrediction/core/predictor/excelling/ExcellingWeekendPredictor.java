@@ -17,6 +17,7 @@ import  loadPrediction.exception.DAE;
 import  loadPrediction.exception.LPE;
 import  loadPrediction.resouce.IOPaths;
 import  loadPrediction.utils.DateUtil;
+import loadPrediction.utils.ListUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -34,7 +35,7 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
     * */
 
 
-    List<Integer> his = CommonUtils.unnamed(20, 12);
+    List<Integer> his = ListUtils.unnamed(20, 12);
     Integer pre = 2;
 
     public ExcellingWeekendPredictor(Date date) {
@@ -79,7 +80,7 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected List<CellPosition> doGetHistoryDaysExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("B2", "周末气象数据"), new CellPosition("B28", "周末气象数据"));
+        return ListUtils.unnamed(new CellPosition("B2", "周末气象数据"), new CellPosition("B28", "周末气象数据"));
     }
 
     @Override
@@ -94,17 +95,17 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("D2", "周末气象数据"), new CellPosition("D28", "周末气象数据"));
+        return ListUtils.unnamed(new CellPosition("D2", "周末气象数据"), new CellPosition("D28", "周末气象数据"));
     }
 
     @Override
     protected List<CellPosition> doGetSimilarDaysExcelPositions() {
-        return CommonUtils.unnamed(new CellPosition("C29", "相似日查找-相似日为工作日"), new CellPosition("C21", "相似日查找-相似日为周末"));
+        return ListUtils.unnamed(new CellPosition("C29", "相似日查找-相似日为工作日"), new CellPosition("C21", "相似日查找-相似日为周末"));
     }
 
     @Override
     protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
-        return CommonUtils.unnamed(new CellPosition("B20", "周末96节点负荷预测"), new CellPosition("F20", "周末96节点负荷预测"));
+        return ListUtils.unnamed(new CellPosition("B20", "周末96节点负荷预测"), new CellPosition("F20", "周末96节点负荷预测"));
     }
 
     @Override

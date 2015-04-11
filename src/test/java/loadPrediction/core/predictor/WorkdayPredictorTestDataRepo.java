@@ -3,16 +3,18 @@ package loadPrediction.core.predictor;
 import common.ElementPrintableLinkedList;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
 import loadPrediction.domain.visitors.Array2LoadDataVisitor;
+import loadPrediction.resouce.WeatherDataMappingKeys;
 
-import java.util.LinkedList;
+import java.awt.*;
 import java.util.List;
 
 /**
  * Created by LBC on 2015-04-11.
  */
-public class TestUtils {
-    Double[] loads1 = {
+public class WorkdayPredictorTestDataRepo {
+   Double[] loads1 = {
             8831.6110,
             8709.8950,
             8630.0280,
@@ -693,36 +695,83 @@ public class TestUtils {
                     9846.7090,
                     9642.7130,
                     9212.5210};
+        private ElementPrintableLinkedList<LoadData> loadDatas = new ElementPrintableLinkedList<LoadData>("TEST");
+        private ElementPrintableLinkedList<SimpleDate> simpleDates = new ElementPrintableLinkedList<SimpleDate>("TEST");
 
-    private ElementPrintableLinkedList<LoadData> loadDatas = new ElementPrintableLinkedList<LoadData>("TEST");
-        private ElementPrintableLinkedList<SimpleDate> simpleDates=new ElementPrintableLinkedList<SimpleDate>("TEST");
-    private TestUtils() {
-        loadDatas.add((LoadData) (new LoadData("TEST1")).accept(new Array2LoadDataVisitor(loads1)));
-        loadDatas.add((LoadData) (new LoadData("TEST2")).accept(new Array2LoadDataVisitor(loads2)));
-        loadDatas.add((LoadData) (new LoadData("TEST3")).accept(new Array2LoadDataVisitor(loads3)));
-        loadDatas.add((LoadData) (new LoadData("TEST4")).accept(new Array2LoadDataVisitor(loads4)));
-        loadDatas.add((LoadData) (new LoadData("TEST5")).accept(new Array2LoadDataVisitor(loads5)));
-        loadDatas.add((LoadData) (new LoadData("TEST6")).accept(new Array2LoadDataVisitor(loads6)));
-        loadDatas.add((LoadData) (new LoadData("TEST7")).accept(new Array2LoadDataVisitor(loads7)));
+        private WorkdayPredictorTestDataRepo() {
+                loadDatas.add((LoadData) (new LoadData("TEST1")).accept(new Array2LoadDataVisitor(loads1)));
+                loadDatas.add((LoadData) (new LoadData("TEST2")).accept(new Array2LoadDataVisitor(loads2)));
+                loadDatas.add((LoadData) (new LoadData("TEST3")).accept(new Array2LoadDataVisitor(loads3)));
+                loadDatas.add((LoadData) (new LoadData("TEST4")).accept(new Array2LoadDataVisitor(loads4)));
+                loadDatas.add((LoadData) (new LoadData("TEST5")).accept(new Array2LoadDataVisitor(loads5)));
+                loadDatas.add((LoadData) (new LoadData("TEST6")).accept(new Array2LoadDataVisitor(loads6)));
+                loadDatas.add((LoadData) (new LoadData("TEST7")).accept(new Array2LoadDataVisitor(loads7)));
 
-            for (int i = 0; i <7 ; i++) {
-                    simpleDates.add(new SimpleDate("2000-01-01",null,null));
-            }
-    }
+                for (int i = 0; i < 7; i++) {
+                        simpleDates.add(new SimpleDate("2000-01-01", null, null));
+                }
+        }
 
-    public static TestUtils INSTANCE = new TestUtils();
+        public static WorkdayPredictorTestDataRepo INSTANCE = new WorkdayPredictorTestDataRepo();
 
-    public LoadData getLoadData(Integer index) {
-        return loadDatas.get(index).clone();
-    }
+        public LoadData getLoadData(Integer index) {
+                return loadDatas.get(index).clone();
+        }
 
-    public ElementPrintableLinkedList<LoadData> getLoadDatas() {
-        return loadDatas;
-    }
-        public ElementPrintableLinkedList<SimpleDate> getSimpleDates(){
+        public ElementPrintableLinkedList<LoadData> getLoadDatas() {
+                return loadDatas;
+        }
+
+        public ElementPrintableLinkedList<SimpleDate> getSimpleDates() {
                 return simpleDates;
         }
-public SimpleDate getSimpleDate(Integer index){
-        return simpleDates.get(index);
-}
+
+        public SimpleDate getSimpleDate(Integer index) {
+                return simpleDates.get(index);
+        }
+
+
+        public ElementPrintableLinkedList<WeatherData> historyWeathers = new ElementPrintableLinkedList<WeatherData>("TEST"), predictionWeathers = new ElementPrintableLinkedList<WeatherData>("TEST");
+        Double[]
+                weather1 = {26.28, 22.187, 18.265, 96.826, 78.01, 54.417, 4.343, 0.028, 78.914, 70.225, 63.207, 20.279, 15.686, 10.532, 39.782, 34.867, 27.849, 181.845, 274.193, 373.129},
+                weather2 = {26.603, 23.065, 19.319, 92.574, 74.182, 53.827, 5.256, 0.859, 78.977, 71.269, 64.552, 20.097, 16.2, 11.13, 38.286, 35.201, 28.484, 176.772, 256.086, 352.631},
+                weather3 = {26.944, 23.683, 20.751, 92.979, 80.041, 65.068, 5.227, 3.258, 79.596, 72.724, 67.164, 20.991, 17.249, 13.141, 40.135, 36.713, 31.153, 164.61, 239.651, 314.949},
+                weather4 = {26.607, 23.604, 21.189, 92.985, 72.748, 51.939, 7.542, 10.684, 78.959, 71.853, 66.878, 19.94, 16.067, 12.503, 37.386, 34.364, 29.389, 176.514, 248.614, 312.372},
+                weather5 = {21.685, 19.983, 18.397, 81.368, 70.3, 58.177, 7.073, 5.489, 69.642, 66.295, 63.524, 13.021, 11.521, 9.438, 30.33, 29.156, 26.385, 305.831, 341.946, 383.563},
+                weather6 = {25.077, 22.28, 19.657, 93.097, 81.798, 66.107, 4.944, 0.638, 76.392, 70.656, 65.61, 18.618, 15.714, 12.062, 38.069, 34.928, 29.882, 211.906, 273.546, 340.447},
+                weather7 = {24.016, 22.215, 20.875, 94.809, 86.609, 76.195, 4.91, 13.133, 74.735, 70.909, 68.067, 17.077, 15.978, 13.993, 36.258, 35.304, 32.461, 240.632, 273.356, 307.785},
+                weather8 = {25.736, 23.512, 21.827, 94.778, 86.123, 74.877, 6.189, 5.896, 77.643, 72.925, 69.376, 19.432, 17.433, 14.879, 38.146, 36.633, 33.084, 195.087, 242.295, 286.35},
+                weather9 = {26.628, 24.785, 22.802, 90.785, 81.308, 66.496, 7.653, 0.445, 78.735, 74.61, 70.201, 20.289, 18.466, 15.327, 38.365, 37.378, 32.969, 173.601, 213.71, 266.06},
+                weather10 = {28.858, 25.583, 22.368, 86.781, 72.396, 55.132, 6.033, 1.454, 82.07, 75.011, 68.721, 23.547, 19.212, 14.552, 41.65, 38.506, 32.215, 109.692, 192.939, 276.333},
+                weather11 = {26.724, 25.134, 23.763, 84.625, 76.078, 67.304, 8.633, 0.615, 78.157, 74.63, 71.741, 19.662, 18.093, 15.997, 36.307, 36.597, 33.708, 174.672, 209.958, 246.125},
+                weather12 = {26.912, 25.154, 23.353, 86.602, 78.038, 67.097, 8.716, 0.056, 78.676, 74.883, 71.085, 20.408, 18.246, 15.444, 38.051, 36.82, 33.021, 166.53, 208.986, 257.074},
+                weather13 = {28.996, 26.276, 23.561, 87.076, 75.062, 59.532, 6.819, 0.045, 82.242, 76.318, 70.726, 23.569, 20.199, 16.106, 41.995, 39.428, 33.835, 109.727, 174.707, 245.599},
+                weather14 = {28.355, 26.247, 24.082, 84.689, 74.544, 62.291, 7.672, 0.025, 80.91, 76.21, 71.716, 22.411, 19.778, 16.421, 39.825, 38.672, 34.178, 127.699, 178.2, 235.882};
+
+        {
+                for (int i = 0; i < 14; i++) {
+                        WeatherData weatherData = new WeatherData();
+                        for (int j = 0; j < WeatherDataMappingKeys.keys.length; j++) {
+                                weatherData.putMap(WeatherDataMappingKeys.keys[j], weather1[j]);
+                        }
+                        weatherData.unMap();
+                        historyWeathers.add(weatherData);
+                }
+                for (int i = 0; i < 7; i++) {
+                        WeatherData weatherData = new WeatherData();
+                        for (int j = 0; j < WeatherDataMappingKeys.keys.length; j++) {
+                                weatherData.putMap(WeatherDataMappingKeys.keys[j], weather11[j]);
+                        }
+                        predictionWeathers.add(weatherData);
+                }
+        }
+
+
+        public List<SimpleDate> getPredictionDays(){
+                return null;
+        }
+        public List<SimpleDate> getHistoryDays(){
+                return null;
+        }
+
 }
