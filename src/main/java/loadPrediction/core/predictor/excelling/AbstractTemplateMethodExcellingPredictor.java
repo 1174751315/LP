@@ -41,18 +41,33 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected String dateString;
     Workbook template = null;
     FormulaEvaluator evaluator = null;
-    protected CommonUtils commonUtils=new CommonUtils(DAOFactory.getDefault(),DAOFactory.getAlter());
-
+    protected  CommonUtils commonUtils;
+    protected DAOFactory defaultDaoFactory;
     public void setCommonUtils(CommonUtils commonUtils) {
         this.commonUtils = commonUtils;
     }
 
+    public AbstractTemplateMethodExcellingPredictor(Date date,CommonUtils commonUtils) {
+        this.date = date;
+        dateString = date.toLocalDate().toString();
+        this.commonUtils=commonUtils;
+    }
+    public AbstractTemplateMethodExcellingPredictor(Date date,DAOFactory defaultDaoFactory){
+        this(date);
+        this.defaultDaoFactory=defaultDaoFactory;
+    }
     public AbstractTemplateMethodExcellingPredictor(Date date) {
         this.date = date;
         dateString = date.toLocalDate().toString();
     }
 
+    public void setDefaultDaoFactory(DAOFactory defaultDaoFactory) {
+        this.defaultDaoFactory = defaultDaoFactory;
+    }
+
     public Object predict() throws LPE {
+        if (commonUtils==null)
+            commonUtils=new CommonUtils(DAOFactory.getDefault(),DAOFactory.getAlter());
         if (!doValidate(date))
             throw new LPE("预测器执行前验证失败。\n预测算法被终止。");
         String inPath = doGetInputWorkbookPath();
@@ -69,11 +84,11 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         log.debug("获取历史日");
         historyDays = doGetHistoryDays();
         log.debug("完成");
-        historyDays.print(System.err);
+//        historyDays.print(System.err);
         log.debug("获取预测日");
         predictionDays = doGetPredictionDays();
         log.debug("完成");
-        predictionDays.print(System.out);
+//        predictionDays.print(System.out);
 
 //        closeTemplate(outPath);
 //        openTemplate(outPath);
@@ -81,11 +96,11 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         log.debug("获取历史气象数据");
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
-        historyWeathers.print(System.err);
+//        historyWeathers.print(System.err);
         log.debug("完成");
         log.debug("获取预测气象数据");
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
-        predictionWeathers.print(System.out);
+//        predictionWeathers.print(System.out);
         log.debug("完成");
 
 
@@ -101,13 +116,13 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             writeSomeDateStrings2Cells(ws0, pos.getCol().intValue(), pos.getRow(), historyDays.get(i));
         }
         log.debug("完成");
-        historyDays.print(System.err);
+//        historyDays.print(System.err);
         /*填充预测日*/
         log.debug("填充预测日");
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
         Sheet ws0 = template.getSheet(predictionDaysExcelPosition.getSheetName());
         writeSomeDateStrings2Cells(ws0, predictionDaysExcelPosition.getCol().intValue(), predictionDaysExcelPosition.getRow(), predictionDays);
-        predictionDays.print(System.out);
+//        predictionDays.print(System.out);
         log.debug("完成");
         /*填充历史气象数据*/
         log.debug("填充历史气象数据");

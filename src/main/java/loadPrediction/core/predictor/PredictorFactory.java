@@ -44,7 +44,7 @@ public class PredictorFactory {
         if (DateUtil.getISOWeekday(date) == 7 && dao.query(ds).getDateType().getCode()==1)//周日且非节假日
             throw new LPE("请不要选择周日作为第一预测日。\n若要进行工作日预测，请选择周一至周五中的某一天；\n若要进行周末预测，请选择周六。");
         if (PowerSystemDateUtil.isPowerSystemWorkday(date) && dao.query(ds).getDateType().getCode()==0)
-            return new ExcellingWorkdayPredictor(date);
+            return new ExcellingWorkdayPredictor(date,null);
         if(DAOFactory.getDefault().createDaoSimpleDate().query(date.toLocalDate().toString()).getDateType().getCode().equals(4))
             return new ExcellingQingmingPredictor(date);
         throw new LPE("对不起，尚未实现所选日期 【 "+ds+" 】对应的预测算法。请联系开发者。" );

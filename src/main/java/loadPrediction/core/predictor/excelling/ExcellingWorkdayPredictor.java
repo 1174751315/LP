@@ -41,20 +41,20 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private static final Integer WINTER=0,SUMMER=1;
     private  Season season;
 
-    public ExcellingWorkdayPredictor(Date date){
-        super(date);
+    public ExcellingWorkdayPredictor(Date date,DAOFactory defaultDaoFactory){
+        super(date,defaultDaoFactory);
 
-        try {
-            dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
-            dayQuery4PredictionDays=new PowerSystemWorkdayQuery(date);
-        } catch (Exception e) {
-            e.printStackTrace();
-            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(e, "查询历史日或预测日时发生异常");
-        }
+//        try {
+//            dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
+//            dayQuery4PredictionDays=new PowerSystemWorkdayQuery(date);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(e, "查询历史日或预测日时发生异常");
+//        }
 
         String dateString=date.toLocalDate().toString();
         try {
-            WeatherData weatherData= DAOFactory.getDefault().createDaoWeatherData().query(dateString);
+            WeatherData weatherData= defaultDaoFactory.createDaoWeatherData().query(dateString);
             season= SeasonIdentifier.getSeasonByWeather(weatherData);
         } catch (Exception dae) {
             ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(dae, "读取综合气象数据时出现异常");
@@ -91,6 +91,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     protected ElementPrintableLinkedList<SimpleDate> doGetPredictionDays() throws LPE {
         Integer number = predictionDaysNbr;
         try {
+            if (dayQuery4PredictionDays==null)
+                dayQuery4PredictionDays=new PowerSystemWorkdayQuery(date);
             List<SimpleDate> list = dayQuery4PredictionDays.list(1, number);
             if (list.size() != number)
                 throw new LPE("获取预测日时发生异常：数据不完整", LPE.eScope.USER);
@@ -106,6 +108,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
                ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("unnamed");
         try {
             history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("historyDays");
+            if (dayQuery4HistoryDays==null)
+                dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
             ElementPrintableLinkedList<SimpleDate> list = ConvertUtils.toElementPrintableLinkedList(dayQuery4HistoryDays.list(historyDaysNbr + 1, historyDaysNbr + 1), "workday");
             list.removeLast();
             history.add(list);
