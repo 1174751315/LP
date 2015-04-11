@@ -32,11 +32,12 @@ public class DAOAccuracy extends AbstractDAO {
         return superDAO.query(Accuracy.class);
     }
 
-    public void insertOrUpdate(Accuracy o) throws DAE {
+    public Void insertOrUpdate(Accuracy o) throws DAE {
         if (superDAO.query(Accuracy.class, o.getDateString()) != null) {
             superDAO.delete(Accuracy.class, o.getDateString());
         }
         superDAO.insert(o);
+        return null;
     }
 
     public void delete(Date key) throws DAE {

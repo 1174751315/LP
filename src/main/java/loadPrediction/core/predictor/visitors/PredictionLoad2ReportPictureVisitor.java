@@ -64,11 +64,11 @@ public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisit
 
         BufferedImage bufferedImage=new BufferedImage(WIDTH,AC_HEIGHT,BufferedImage.TYPE_3BYTE_BGR);
         Graphics2D graphics= bufferedImage.createGraphics();
-        graphics.setPaint(MyColor.COMMON_BACKGROUND);
-        graphics.setBackground(MyColor.COMMON_BACKGROUND);
+        graphics.setPaint(imageColorCfg.getBackGround());
+        graphics.setBackground(imageColorCfg.getBackGround());
 
         graphics.fill3DRect(0, 0, WIDTH, AC_HEIGHT, true);
-        graphics.setPaint(MyColor.COMMON_FOREGROUND);
+        graphics.setPaint(imageColorCfg.getForeGround());
 
 
         List<String> leftLabels=new LinkedList<String>();
@@ -83,7 +83,7 @@ public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisit
 
         drawLeftLabels(graphics, leftLabels);
         drawTopLabels(graphics, TOP_LABELS);
-        drawTableGridValue(graphics, MyColor.COMMON_FOREGROUND, outputs);
+        drawTableGridValue(graphics,imageColorCfg.getForeGround(), outputs);
 //        graphics.drawString(outputs.get(predictions.get(0).getDateString()).get("max_load"),0,100);
 
         try {

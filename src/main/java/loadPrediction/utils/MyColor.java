@@ -2,6 +2,8 @@ package loadPrediction.utils;
 
 import java.awt.*;
 import java.awt.color.ColorSpace;
+import java.util.Date;
+import java.util.Random;
 
 /**
  * 李倍存 创建于 2015-04-08 11:01。电邮 1174751315@qq.com。
@@ -58,4 +60,48 @@ public class MyColor extends Color {
     public static final Color COMMON_SERIES_2=Color.darkGray;
     public static final Color COMMON_SERIES_3=Color.magenta;
     public static final Color COMMON_SERIES_4=Color.blue;
+    public static final Color COMMON_SERIES_5=Color.magenta;
+    public static final Color COMMON_SERIES_6=c4;
+
+    /**
+     * 根据HTML格式的颜色码获取对应的Color对象。
+     * @param code 代表一种颜色值的形如“#01234”格式的字符串
+     * @return 对应于code的Color对象
+     */
+    public static Color getColorOfHTMLFormat(String code){
+        if (code.charAt(0)!='#')
+            return null;
+        code=code.substring(1);
+        String r=code.substring(0,2);
+        String g=code.substring(2,4);
+        String b=code.substring(4,6);
+
+        Integer rInt=Integer.parseInt(r,16);
+        Integer gInt=Integer.parseInt(g,16);
+        Integer bInt=Integer.parseInt(b,16);
+
+        return new Color(rInt,gInt,bInt);
+    }
+    public static Color getRandomGray(Color color){
+        Date date=new Date();
+        Double r= new Random(color.hashCode()).nextDouble();
+        Double d=(r * 255.);
+        Integer n=d.intValue();
+        return new Color(n,n,n);
+    }
+    public static Color getRandomColor(){
+        Date date=new Date();
+        Double d=(new Random(date.getTime()).nextDouble())*255.;
+        Integer r=d.intValue();
+
+        date=new Date();
+        d=(new Random(date.hashCode()).nextDouble())*255.;
+        Integer g=d.intValue();
+
+        date=new Date();
+        d=(new Random(date.hashCode()).nextDouble())*255.;
+        Integer b=d.intValue();
+
+        return new Color(r,g,b);
+    }
 }

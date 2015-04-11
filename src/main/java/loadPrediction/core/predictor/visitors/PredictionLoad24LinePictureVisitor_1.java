@@ -10,7 +10,6 @@ import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.domain.LoadData;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.MyColor;
 import org.jfree.chart.JFreeChart;
 
 import java.util.LinkedList;
@@ -22,19 +21,21 @@ import java.util.List;
  */
 public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutputVisitor {
 
-    public IChartBuilder getChartBuilder() {
+    public AbstractChartBuilder getChartBuilder() {
         return chartBuilder;
     }
 
-    public void setChartBuilder(IChartBuilder chartBuilder) {
+    public void setChartBuilder(AbstractChartBuilder chartBuilder) {
         this.chartBuilder = chartBuilder;
     }
 
-    private IChartBuilder chartBuilder;
-    public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,IChartBuilder builder){
+    private AbstractChartBuilder chartBuilder;
+
+    public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,AbstractChartBuilder builder){
         super(dir,ds);
         this.chartBuilder=builder;
     }
+
 
     @Override
     protected JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE {
@@ -42,7 +43,14 @@ public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutpu
     }
 
     public PredictionLoad24LinePictureVisitor_1(String dir,String ds) {
-        this(dir, ds, new ChartBuilderImpl1(MyColor.COMMON_FOREGROUND,MyColor.COMMON_BACKGROUND,MyColor.COMMON_GRID_LINE));
+        super(dir,ds);
+        ChartBuilderImpl1 defaultBuilder=new ChartBuilderImpl1();
+        defaultBuilder.setGridColor(imageColorCfg.getGrid());
+        defaultBuilder.setSeries(imageColorCfg.getSeries());
+        defaultBuilder.setForeColor(imageColorCfg.getForeGround());
+        defaultBuilder.setBackColor(imageColorCfg.getBackGround());
+
+        chartBuilder=defaultBuilder;
     }
 
     @Override
@@ -55,7 +63,6 @@ public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutpu
         for (int i = 0; i <list.size() ; i++) {
             list1.add(list.get(i).toMaxAveMin());
         }
-
         MaxAveMinTuple<Double> t=new MaxAveMinTuple<Double>(0.,0.,100000.);
 
         for (int i = 0; i <list1.size() ; i++) {
