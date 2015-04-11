@@ -5,7 +5,7 @@ import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
-import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
+import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
 import loadPrediction.domain.visitors.MedFiltVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
@@ -58,16 +58,16 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
         list.add(lwr);
         list.add(upr);
 
-        ds = (CategoryTableXYDataset) prediction.accept(new LoadDataAppend2DatasetVisitor_1(ds, "今日预测负荷"));
-        ds=(CategoryTableXYDataset)predictions.get(1).accept(new LoadDataAppend2DatasetVisitor_1(ds,"明日预测负荷"));
+        ds = (CategoryTableXYDataset) prediction.accept(new AppendTableXYDatasetVisitor(ds, "今日预测负荷"));
+        ds=(CategoryTableXYDataset)predictions.get(1).accept(new AppendTableXYDatasetVisitor(ds,"明日预测负荷"));
         ds=(CategoryTableXYDataset)
                 daoLoadData.query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString())
-                .accept(new LoadDataAppend2DatasetVisitor_1(ds,"昨日实际负荷"));
+                .accept(new AppendTableXYDatasetVisitor(ds,"昨日实际负荷"));
 
 //        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
 //        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));
         if (actual != null) {
-            ds = (CategoryTableXYDataset) actual.accept(new LoadDataAppend2DatasetVisitor_1(ds, "今日实际负荷"));
+            ds = (CategoryTableXYDataset) actual.accept(new AppendTableXYDatasetVisitor(ds, "今日实际负荷"));
             list.add(actual);
         }
         Double acc = 0.;
@@ -107,13 +107,13 @@ public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
             renderer.setSeriesPaint(3, MyColor.COMMON_SERIES_4);
 
             LoadData l1=((LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.AVE)));
-            ds=(CategoryTableXYDataset)  (l1).accept(new LoadDataAppend2DatasetVisitor_1(ds,"均值滤波"));
+            ds=(CategoryTableXYDataset)  (l1).accept(new AppendTableXYDatasetVisitor(ds,"均值滤波"));
             renderer.setSeriesStroke(4, line);
             renderer.setSeriesPaint(4, MyColor.magenta);
             renderer.setSeriesShapesVisible(4,true);
 
             LoadData l2=(LoadData)prediction.accept(new MedFiltVisitor(MedFiltVisitor.MED));
-            ds=(CategoryTableXYDataset)  (l2).accept(new LoadDataAppend2DatasetVisitor_1(ds,"中值滤波"));
+            ds=(CategoryTableXYDataset)  (l2).accept(new AppendTableXYDatasetVisitor(ds,"中值滤波"));
 
             renderer.setSeriesStroke(5, line);
             renderer.setSeriesPaint(5, MyColor.c4);

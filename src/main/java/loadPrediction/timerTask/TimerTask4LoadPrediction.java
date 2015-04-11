@@ -29,7 +29,7 @@ public class TimerTask4LoadPrediction extends TimerTask {
         Logging.instance().createLogger("每日定时任务").info("开始执行自动负荷预测并缓存");
         PredictionAction action=new PredictionAction();
         action.setDateString(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
-        action.setUseCaches(true);
+        action.setUseCaches(false);
 
         try {
             action.intelli();

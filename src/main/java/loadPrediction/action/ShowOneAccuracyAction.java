@@ -79,7 +79,7 @@ public class ShowOneAccuracyAction extends ActionSupport {
                 labels.add("实际负荷曲线");
                 accuracy = AccuracyUtils.calcOneAccuracy(actual, prediction);
 
-                new JFreeChartFacade().saveAs(new LoadData2ChartUtils().loadData2Chart(loadDatas, labels, dateString + "：准确度为  " + accuracy.toString()), path + fileName);
+                new JFreeChartFacade().saveAs(new LoadData2ChartUtils().loadDatas2Chart(loadDatas, labels, dateString + "：准确度为  " + accuracy.toString()), path + fileName);
 
                 filename = fileName;
 

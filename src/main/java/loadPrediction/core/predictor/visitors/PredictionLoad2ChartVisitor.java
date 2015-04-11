@@ -11,7 +11,7 @@ import  loadPrediction.core.predictor.IQingmingPredictor;
 import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import loadPrediction.exception.LPE;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -52,9 +52,9 @@ public class PredictionLoad2ChartVisitor implements IPredictorVisitor {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
 
 
-        ds = (DefaultCategoryDataset) l.accept(new LoadDataAppend2DatasetVisitor(ds, "下包络线"));
-        ds = (DefaultCategoryDataset) real.accept(new LoadDataAppend2DatasetVisitor(ds, "中间线"));
-        ds = (DefaultCategoryDataset) u.accept(new LoadDataAppend2DatasetVisitor(ds, "上包络线"));
+        ds = (DefaultCategoryDataset) l.accept(new AppendCategoryDatasetVisitor(ds, "下包络线"));
+        ds = (DefaultCategoryDataset) real.accept(new AppendCategoryDatasetVisitor(ds, "中间线"));
+        ds = (DefaultCategoryDataset) u.accept(new AppendCategoryDatasetVisitor(ds, "上包络线"));
 
         JFreeChart chart = ChartFactory.createLineChart("负荷预测", "时刻", "全网耗电功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);
         chart.setBorderVisible(true);

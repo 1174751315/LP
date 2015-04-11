@@ -13,11 +13,11 @@ import org.jfree.data.xy.CategoryTableXYDataset;
 /**
  * 李倍存 创建于 2015-03-21 9:12。电邮 1174751315@qq.com。
  */
-public class LoadDataAppend2DatasetVisitor_1 implements LoadDataVisitor {
+public class AppendTableXYDatasetVisitor implements LoadDataVisitor {
     private CategoryTableXYDataset ds;
     private String label;
 
-    public LoadDataAppend2DatasetVisitor_1(CategoryTableXYDataset ds, String label) {
+    public AppendTableXYDatasetVisitor(CategoryTableXYDataset ds, String label) {
         this.ds = ds;
         this.label = label;
     }

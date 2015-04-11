@@ -18,24 +18,17 @@ import java.util.Map;
  * Created by LBC on 2015/2/12.
  */
 public class WeatherFactorCalculator {
-    private static WeatherFactorCalculator instance;
     private String[] keys = WeatherDataMappingKeys.keys;
 
     private WeatherFactorCalculator() {
 
     }
 
-    public static WeatherFactorCalculator getInstance() {
-        if (instance == null) {
-            instance = new WeatherFactorCalculator();
-        }
-        return instance;
-    }
-
+    public static WeatherFactorCalculator INSTANCE=new WeatherFactorCalculator();
     /**
      * 计算中间值（【相似日查找-工作日】右部）。
      */
-    public WeatherData getWeatherFactor(WeatherData weatherData, WeatherCoesPackage weatherCoesPackage) {
+    public WeatherData calcWeatherFactor(WeatherData weatherData, WeatherCoesPackage weatherCoesPackage) {
         WeatherData weatherDataFactor = new WeatherData();
 
         Map<String, Double> mapWeatherData = weatherData.toMap();

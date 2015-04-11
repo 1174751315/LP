@@ -20,8 +20,8 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015/3/11 20:48。电邮 1174751315@qq.com。
  */
-public class WeatherUtil {
-    public WeatherUtil() {
+public class WeatherCalcAndSyncUtil {
+    public WeatherCalcAndSyncUtil() {
     }
 
     public static void syncWeatherData(String pythonScriptFilePath) {
@@ -78,7 +78,13 @@ public class WeatherUtil {
         return weatherData;
     }
 
-    public static ElementPrintableLinkedList<WeatherData> getWeatherDataFormDb() throws Exception {
+
+    /**
+     * 从数据库获取所有可用的原始气象数据，并对每一个日期（包含14市的数据）分别计算综合气象数据；随后删除所有原始气象数据，保存所有综合气象数据。
+     * @return 所有的综合气象数据
+     * @throws Exception 当某日原始气象数据不完整或数据访问异常
+     */
+    public static ElementPrintableLinkedList<WeatherData> calcWeatherDataFromRawWeatherDataInDbThenWriteDb() throws Exception {
         ElementPrintableLinkedList<WeatherData> list = new ElementPrintableLinkedList<WeatherData>("");
         List<RawWeatherData> raws = DAOFactory.getDefault().createDaoRawWeatherData().query();
 
@@ -91,7 +97,7 @@ public class WeatherUtil {
 
         for (int i = 0; i < contains.size(); i++) {
             try {
-                list.add(getWeatherDataFormDb(contains.get(i)));
+                list.add(calcWeatherDataFromRawWeatherDataInDbThenWriteDb(contains.get(i)));
             } catch (Exception e) {
                 DAOFactory.getDefault().createDaoRawWeatherData().delete(contains.get(i));
                 e.printStackTrace();
@@ -102,7 +108,13 @@ public class WeatherUtil {
 
     }
 
-    public static WeatherData getWeatherDataFormDb(String dateString) throws Exception {
+    /**
+     * 从原始气象数据库取出dateString所指日期的14市原始气象数据，并计算当天的综合气象数据；计算完成后，从数据库删除当天14市原始气象数据，将综合气象数据存入数据库。
+     * @param dateString 日期字符串
+     * @return 当天的综合气象数据
+     * @throws Exception 当原始数据不完整或数据访问异常
+     */
+    public static WeatherData calcWeatherDataFromRawWeatherDataInDbThenWriteDb(String dateString) throws Exception {
         ElementPrintableLinkedList<RawWeatherData> raws = new ElementPrintableLinkedList<RawWeatherData>("");
         ElementPrintableLinkedList<WeatherData> weatherDatas = new ElementPrintableLinkedList<WeatherData>("");
         for (int i = 0; i < 14; i++) {

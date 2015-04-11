@@ -8,7 +8,7 @@ package loadPrediction.timerTask;
 
 import loadPrediction.log.Logging;
 import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.weather.WeatherUtil;
+import loadPrediction.utils.weather.WeatherCalcAndSyncUtil;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -40,7 +40,7 @@ public class TimerTask4FetchingAndCalcingWeatherData extends TimerTask {
 
             log.info("开始同步并计算综合气象数据  "+t);
             /*首先检查气象预报数据库是否有遗留数据，若有则处理之。*/
-            WeatherUtil.getWeatherDataFormDb().print(System.err);
+            WeatherCalcAndSyncUtil.calcWeatherDataFromRawWeatherDataInDbThenWriteDb().print(System.err);
 
             /*同步气象预报远程数据库至本地ORACLE。*/
             Process pr = Runtime.getRuntime().exec("python " + IOPaths.PYTHON_SCRIPT_SYNC_WEATHER);
@@ -53,7 +53,7 @@ public class TimerTask4FetchingAndCalcingWeatherData extends TimerTask {
             pr.waitFor();
 
             /*再次检查气象预报数据库，若有数据则处理之。*/
-            WeatherUtil.getWeatherDataFormDb().print(System.err);
+            WeatherCalcAndSyncUtil.calcWeatherDataFromRawWeatherDataInDbThenWriteDb().print(System.err);
 
             log.info("完成");
         } catch (Exception e) {

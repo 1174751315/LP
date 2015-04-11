@@ -24,7 +24,7 @@ public class EnhancedSimilarCoeCalculatorFactory {
 
     private EnhancedSimilarCoeCalculatorFactory() {
         pool = new HashMap<String, AbstractEnhancedSimilarCoeCalculator>();
-        pool.put("basic", new EnhancedSimilarCoeCalculator());
+        pool.put("basic", new EnhancedSimilarCoeCalculatorForWorkday());
     }
 
     public AbstractEnhancedSimilarCoeCalculator getBasic() {

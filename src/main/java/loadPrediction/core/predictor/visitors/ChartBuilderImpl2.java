@@ -2,13 +2,11 @@ package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
-import loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor_1;
+import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyUtils;
-import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -52,11 +50,11 @@ public class ChartBuilderImpl2 implements JChartBuilder4Predictor {
         list.add(lwr);
         list.add(upr);
 
-        ds = (CategoryTableXYDataset) prediction.accept(new LoadDataAppend2DatasetVisitor_1(ds, "预测负荷"));
-        ds = (CategoryTableXYDataset) upr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "上包络线"));
-        ds = (CategoryTableXYDataset) lwr.accept(new LoadDataAppend2DatasetVisitor_1(ds, "下包络线"));
+        ds = (CategoryTableXYDataset) prediction.accept(new AppendTableXYDatasetVisitor(ds, "预测负荷"));
+        ds = (CategoryTableXYDataset) upr.accept(new AppendTableXYDatasetVisitor(ds, "上包络线"));
+        ds = (CategoryTableXYDataset) lwr.accept(new AppendTableXYDatasetVisitor(ds, "下包络线"));
         if (actual != null) {
-            ds = (CategoryTableXYDataset) actual.accept(new LoadDataAppend2DatasetVisitor_1(ds, "实际负荷"));
+            ds = (CategoryTableXYDataset) actual.accept(new AppendTableXYDatasetVisitor(ds, "实际负荷"));
             list.add(actual);
         }
         Double acc = 0.;

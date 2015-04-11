@@ -7,7 +7,6 @@
 
 package loadPrediction.core;
 
-import  loadPrediction.domain.WeatherCoes4Workday;
 import  loadPrediction.domain.WeatherCoesPackage;
 import  loadPrediction.domain.WeatherData;
 import  loadPrediction.resouce.WeatherDataMappingKeys;
@@ -26,8 +25,8 @@ public abstract class AbstractEnhancedSimilarCoeCalculator {
         weatherCoesPackage.print(System.err);
 
         Double coe = 0.0;
-        WeatherData weatherDataFactor1 = calcWeatherFactor(weatherData1, weatherCoesPackage);
-        WeatherData weatherDataFactor2 = calcWeatherFactor(weatherData2, weatherCoesPackage);
+        WeatherData weatherDataFactor1 = WeatherFactorCalculator.INSTANCE.calcWeatherFactor(weatherData1, weatherCoesPackage);
+        WeatherData weatherDataFactor2 = WeatherFactorCalculator.INSTANCE.calcWeatherFactor(weatherData2, weatherCoesPackage);
         weatherDataFactor1.print(System.out);
         weatherDataFactor2.print(System.err);
 
@@ -45,22 +44,4 @@ public abstract class AbstractEnhancedSimilarCoeCalculator {
     }
 
     protected abstract WeatherCoesPackage doGetCoes();
-
-
-    private WeatherData calcWeatherFactor(WeatherData weatherData, WeatherCoesPackage weatherCoesPackage) {
-        WeatherData weatherDataFactor = new WeatherData();
-
-        Map<String, Double> mapWeatherData = weatherData.toMap();
-        Map<String, WeatherCoes4Workday> mapCoes = weatherCoesPackage.toMap();
-
-        weatherDataFactor.setDateString(weatherData.getDateString());
-        for (int j = 0; j < keys.length; j++) {
-            String s = keys[j];
-            Double minBase = mapCoes.get(s).getMinBase(), maxBase = mapCoes.get(s).getMaxBase();
-            weatherDataFactor.putMap(s, (mapWeatherData.get(s) - minBase) / (maxBase - minBase));
-
-        }
-        weatherDataFactor.unMap();
-        return weatherDataFactor;
-    }
 }

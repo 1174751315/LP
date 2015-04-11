@@ -12,11 +12,11 @@ import org.jfree.data.category.DefaultCategoryDataset;
 /**
  * 李倍存 创建于 2015-03-21 9:12。电邮 1174751315@qq.com。
  */
-public class LoadDataAppend2DatasetVisitor implements LoadDataVisitor {
+public class AppendCategoryDatasetVisitor implements LoadDataVisitor {
     private DefaultCategoryDataset ds;
     private String label;
 
-    public LoadDataAppend2DatasetVisitor(DefaultCategoryDataset ds, String label) {
+    public AppendCategoryDatasetVisitor(DefaultCategoryDataset ds, String label) {
         this.ds = ds;
         this.label = label;
     }

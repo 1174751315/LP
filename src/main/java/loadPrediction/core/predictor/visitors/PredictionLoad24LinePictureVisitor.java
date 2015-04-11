@@ -9,7 +9,7 @@ package loadPrediction.core.predictor.visitors;
 import  jfreechart.JFreeChartFacade;
 import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import loadPrediction.exception.LPE;
 import  loadPrediction.utils.AccuracyUtils;
 import org.jfree.chart.JFreeChart;
@@ -29,11 +29,11 @@ public class PredictionLoad24LinePictureVisitor extends UnifiedImageOutputVisito
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
 
 
-        ds = (DefaultCategoryDataset) prediction.accept(new LoadDataAppend2DatasetVisitor(ds, "预测负荷"));
-        ds = (DefaultCategoryDataset) prediction.multiple(1.06382978723404).accept(new LoadDataAppend2DatasetVisitor(ds, "上包络线"));
-        ds = (DefaultCategoryDataset) prediction.multiple(0.943396226415094).accept(new LoadDataAppend2DatasetVisitor(ds, "下包络线"));
+        ds = (DefaultCategoryDataset) prediction.accept(new AppendCategoryDatasetVisitor(ds, "预测负荷"));
+        ds = (DefaultCategoryDataset) prediction.multiple(1.06382978723404).accept(new AppendCategoryDatasetVisitor(ds, "上包络线"));
+        ds = (DefaultCategoryDataset) prediction.multiple(0.943396226415094).accept(new AppendCategoryDatasetVisitor(ds, "下包络线"));
         if (actual != null) {
-            ds = (DefaultCategoryDataset) actual.accept(new LoadDataAppend2DatasetVisitor(ds, "实际负荷"));
+            ds = (DefaultCategoryDataset) actual.accept(new AppendCategoryDatasetVisitor(ds, "实际负荷"));
         }
         Double acc = 0.;
         if (actual != null) {
