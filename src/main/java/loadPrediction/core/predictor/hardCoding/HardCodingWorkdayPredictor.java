@@ -158,7 +158,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             EnhancedLinkedList<Double> coe = new EnhancedLinkedList<Double>("");
             for (int j = 1; j <= historyDays; j++) {
                 wdBefore = listAllWeatherData.get(historyDays + i - j);
-                Double subcoe = new EnhancedSimilarCoeCalculatorForWorkday().getSimilarCoe(wdNow, wdBefore);
+                Double subcoe = new EnhancedSimilarCoeCalculatorForWorkday().calcSimilarCoe(wdNow, wdBefore);
                 coe.add(subcoe);
             }
             subCoes.add(coe);

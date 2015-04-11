@@ -9,22 +9,25 @@ package loadPrediction.core;
 
 import  loadPrediction.domain.WeatherCoesPackage;
 import  loadPrediction.domain.WeatherData;
-import  loadPrediction.resouce.WeatherDataMappingKeys;
 
 import java.util.Map;
 
 /**
  * Created by LBC on 2015/2/12.
  */
-public class SimilarCoeCalculatorImpl1 implements ISimilarCoeCalculator {
-    private Double coe = 0.0;
-    private static WeatherCoesPackage weatherCoesPackage;// = WeatherCoesPackage.getInstance();
-    private static String[] keys = WeatherDataMappingKeys.keys;
+public class SimilarCoeCalculatorImpl1 extends AbstractCalculatorUseWeatherCoes implements ISimilarCoeCalculator {
+
+    public SimilarCoeCalculatorImpl1(WeatherCoesPackage weatherCoesPackage) {
+        super(weatherCoesPackage);
+    }
 
     @Override
-    public Double getSimilarCoe(WeatherData weatherDataFactor1, WeatherData weatherDataFactor2) {
+    public Double calcSimilarCoe(WeatherData weatherDataFactor1, WeatherData weatherDataFactor2) {
+        Double coe=0.;
         Map<String, Double> map1 = weatherDataFactor1.toMap(), map2 = weatherDataFactor2.toMap();
         Double weight, d1, d2;
+        String[] keys= AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
+        WeatherCoesPackage weatherCoesPackage=super.getWeatherCoes();
         for (int i = 0; i < keys.length; i++) {
             String s = keys[i];
             weight = weatherCoesPackage.toMap().get(s).getWeight();
@@ -33,6 +36,5 @@ public class SimilarCoeCalculatorImpl1 implements ISimilarCoeCalculator {
             coe += weight * (d1 - d2) * (d1 - d2);
         }
         return coe;
-
     }
 }

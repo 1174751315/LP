@@ -10,30 +10,26 @@ package loadPrediction.core;
 import  loadPrediction.domain.WeatherCoes4Workday;
 import  loadPrediction.domain.WeatherCoesPackage;
 import  loadPrediction.domain.WeatherData;
-import  loadPrediction.resouce.WeatherDataMappingKeys;
 
 import java.util.Map;
 
 /**
  * Created by LBC on 2015/2/12.
  */
-public class WeatherFactorCalculator {
-    private String[] keys = WeatherDataMappingKeys.keys;
-
-    private WeatherFactorCalculator() {
-
+public class WeatherFactorCalculatorImpl1 extends AbstractCalculatorUseWeatherCoes implements IWeatherFactorCalculator {
+    public WeatherFactorCalculatorImpl1(WeatherCoesPackage weatherCoesPackage) {
+        super(weatherCoesPackage);
     }
 
-    public static WeatherFactorCalculator INSTANCE=new WeatherFactorCalculator();
     /**
      * 计算中间值（【相似日查找-工作日】右部）。
      */
-    public WeatherData calcWeatherFactor(WeatherData weatherData, WeatherCoesPackage weatherCoesPackage) {
+    public WeatherData calcWeatherFactor(WeatherData weatherData) {
         WeatherData weatherDataFactor = new WeatherData();
-
+        WeatherCoesPackage weatherCoesPackage=super.getWeatherCoes();
         Map<String, Double> mapWeatherData = weatherData.toMap();
         Map<String, WeatherCoes4Workday> mapCoes = weatherCoesPackage.toMap();
-
+        String[] keys= AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
         weatherDataFactor.setDateString(weatherData.getDateString());
         for (int j = 0; j < keys.length; j++) {
             String s = keys[j];

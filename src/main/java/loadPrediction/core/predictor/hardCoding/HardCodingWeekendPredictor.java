@@ -10,7 +10,7 @@ package loadPrediction.core.predictor.hardCoding;
 import  common.*;
 import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WeekendPredictorCfg;
-import  loadPrediction.core.AbstractEnhancedSimilarCoeCalculator;
+import loadPrediction.core.EnhancedSimilarCoeCalculator;
 import  loadPrediction.core.EnhancedSimilarCoeCalculatorForWeekend;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
@@ -132,19 +132,19 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
         Integer historyWorkdays = historyWeather.get(0).size();
         Integer historyWeekends = historyWeather.get(1).size();
 
-        AbstractEnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculatorForWeekend();
+        EnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculatorForWeekend();
 
         for (int i = 0; i < 1; i++) {
             EnhancedLinkedList<Double> coes1 = new EnhancedLinkedList<Double>("coes1");
             for (int j = historyWorkdays - 1; j >= 0; j--) {
-                coes1.add(calculator.getSimilarCoe(predictionWeather.get(i), historyWeather.get(0).get(j)));
+                coes1.add(calculator.calcSimilarCoe(predictionWeather.get(i), historyWeather.get(0).get(j)));
             }
             workdayCoes.add(coes1);
         }
         for (int i = 1; i < 2; i++) {
             EnhancedLinkedList<Double> coes2 = new EnhancedLinkedList<Double>("coes2");
             for (int j = historyWorkdays - 1; j >= 1; j--) {
-                coes2.add(calculator.getSimilarCoe(predictionWeather.get(i), historyWeather.get(0).get(j)));
+                coes2.add(calculator.calcSimilarCoe(predictionWeather.get(i), historyWeather.get(0).get(j)));
             }
             workdayCoes.add(coes2);
         }
@@ -154,7 +154,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
             EnhancedLinkedList<Double> coes1 = new EnhancedLinkedList<Double>("coes1");
 //            coes1.add(1000.);
             for (int j = historyWeekends - 1; j >= 0; j--) {
-                coes1.add(calculator.getSimilarCoe(predictionWeather.get(i), historyWeather.get(1).get(j)));
+                coes1.add(calculator.calcSimilarCoe(predictionWeather.get(i), historyWeather.get(1).get(j)));
             }
             weekendCoes.add(coes1);
         }
@@ -162,7 +162,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
             EnhancedLinkedList<Double> coes2 = new EnhancedLinkedList<Double>("coes2");
 //            coes2.add(1000.);
             for (int j = historyWeekends - 1; j >= 1; j--) {
-                coes2.add(calculator.getSimilarCoe(predictionWeather.get(i), historyWeather.get(1).get(j)));
+                coes2.add(calculator.calcSimilarCoe(predictionWeather.get(i), historyWeather.get(1).get(j)));
             }
             weekendCoes.add(coes2);
         }

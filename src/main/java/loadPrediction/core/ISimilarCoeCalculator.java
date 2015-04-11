@@ -12,6 +12,6 @@ import  loadPrediction.domain.WeatherData;
 /**
  * 李倍存 创建于 2015/2/12 21:58。电邮 1174751315@qq.com。
  */
-public interface ISimilarCoeCalculator {
-    Double getSimilarCoe(WeatherData weatherDataFactor1, WeatherData weatherDataFactor2);
+public interface ISimilarCoeCalculator{
+    Double calcSimilarCoe(WeatherData weatherDataFactor1, WeatherData weatherDataFactor2);
 }
