@@ -8,7 +8,7 @@ package loadPrediction.utils;
 
 import  jfreechart.JFreeChartFacade;
 import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
@@ -25,13 +25,13 @@ public class LoadData2ChartUtils {
     public LoadData2ChartUtils() {
     }
 
-    public JFreeChart loadData2Chart(List<LoadData> loadDatas, List<String> labels, String title) {
+    public JFreeChart loadDatas2Chart(List<LoadData> loadDatas, List<String> labels, String title) {
         if (title == null) {
             title = "未命名";
         }
         DefaultCategoryDataset ds = new JFreeChartFacade().createDataset();
         for (int i = 0; i < loadDatas.size(); i++) {
-            ds = (DefaultCategoryDataset) loadDatas.get(i).accept(new LoadDataAppend2DatasetVisitor(ds, labels.get(i)));
+            ds = (DefaultCategoryDataset) loadDatas.get(i).accept(new AppendCategoryDatasetVisitor(ds, labels.get(i)));
         }
 
         JFreeChart chart = ChartFactory.createLineChart(title, "时刻", "全网耗电功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);
@@ -47,19 +47,4 @@ public class LoadData2ChartUtils {
         return chart;
     }
 
-    public JFreeChart loadData2Chart(LoadData loadData, String label, String title) {
-        DefaultCategoryDataset ds = new JFreeChartFacade().createDataset();
-
-        ds = (DefaultCategoryDataset) loadData.accept(new LoadDataAppend2DatasetVisitor(ds, label));
-        if (title == null) {
-            title = "未命名";
-        }
-        JFreeChart chart = ChartFactory.createLineChart(title, "时刻", "全网耗电功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);
-        chart.setBorderVisible(true);
-
-        LineAndShapeRenderer renderer = (LineAndShapeRenderer) chart.getCategoryPlot().getRenderer();
-        renderer.setSeriesStroke(0, new BasicStroke(2));
-        chart.getCategoryPlot().setRenderer(renderer);
-        return chart;
-    }
 }

@@ -8,7 +8,7 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import loadPrediction.core.CachesMgr;
+import loadPrediction.core.cache.CachesManager;
 import  loadPrediction.core.cache.PredictionCacheEntity;
 import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.core.predictor.PredictorFactory;
@@ -31,46 +31,40 @@ import java.text.SimpleDateFormat;
  * 电邮：1174751315@qq.com
  */
 public class PredictionAction extends ActionSupport {
-    //    OracleDAOFactory oracleDaoFactory = OracleDAOFactory.getInstance();
     private JFreeChart chart;
-
     public JFreeChart getChart() {
         return chart;
     }
-
-    public void setChart(JFreeChart chart) {
-        this.chart = chart;
-    }
-
     public String getRoot() {
         root="TEMP/";
         return root;
     }
-
     public void setRoot(String root) {
         this.root = root;
     }
-
     private String imgFileName;
+    private String rptImgName;
+    public String getRptImgName() {
+        return rptImgName;
+    }
     private String xlFileName;
     private String root = "";
-
     public String getXlFileName() {
         return xlFileName;
     }
-
-    public void setXlFileName(String xlFileName) {
-        this.xlFileName = xlFileName;
-    }
-
     public String getImgFileName() {
         return imgFileName;
     }
-
     public void setImgFileName(String imgFileName) {
         this.imgFileName = imgFileName;
     }
 
+
+    private String predictorType="未知预测器类型";
+
+    public String getPredictorType() {
+        return predictorType;
+    }
 
     private String dateString;
 
@@ -97,17 +91,20 @@ public class PredictionAction extends ActionSupport {
         Logger log = Logging.instance().createLogger("智能预测");
         try {
         /*若允许缓存，且缓存有对应项，则直接对用户返回缓存。*/
-            if (useCaches && CachesMgr.INSTANCE.hasPredictionCache(dateString)) {
+            if (useCaches && CachesManager.INSTANCE.hasPredictionCache(dateString)) {
                 try {
-                    PredictionCacheEntity cache = CachesMgr.INSTANCE.getPredictionEntity(dateString);
+                    PredictionCacheEntity cache = CachesManager.INSTANCE.getPredictionEntity(dateString);
                     warning = "OK";
                     String imgPath=cache.getOutputImagePath();
                     String xlPath=cache.getOutputExcelPath();
+                    String rptImgPath=cache.getOutputRptImagePath();
                     File fxl=new File(xlPath);
                     File fimg=new File(imgPath);
-                    if (fxl.exists()&&fimg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                    File frptImg=new File(rptImgPath);
+                    if (fxl.exists()&&fimg.exists()&&frptImg.exists()) {//若缓存文件均未丢失，直接返回文件路径
                         imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
                         xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
+                        rptImgName=FileContentUtils.getFileNameFromPath(rptImgPath);
                         root = "";
                         log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
                         return SUCCESS;
@@ -155,18 +152,23 @@ public class PredictionAction extends ActionSupport {
         warning = "OK";
         String temp=(String) predictor.predict();
         predictor.accept(new FirstPredictionLoadData2DBVisitor());
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
-        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
-        imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path)));
-        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
+//        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
+        imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path,dateString)));
+//        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
         xlFileName=FileContentUtils.getFileNameFromPath(temp);
+
+//        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl1())));
+//        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl2())));
+        rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path,dateString)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
         String t = predictor.getPredictionDays().get(0).getDateType().getName();
-        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, warning);
+        predictorType=predictor.getPredictorType();
+        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, path+rptImgName,warning);
                 /*添加至缓存管理器。*/
-        CachesMgr.INSTANCE.addPredictionEntity(entity);
+        CachesManager.INSTANCE.addPredictionEntity(entity);
         ;
         log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
     }

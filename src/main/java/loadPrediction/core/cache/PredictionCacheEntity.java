@@ -11,18 +11,29 @@ package loadPrediction.core.cache;
  */
 public class PredictionCacheEntity {
 
-    public PredictionCacheEntity(String dateString, String type, String outputExcelPath, String outputImagePath, String warning) {
+    public PredictionCacheEntity(String dateString, String type, String outputExcelPath, String outputImagePath, String outputRptImagePath,String warning) {
         this.dateString = dateString;
         this.type = type;
         this.outputExcelPath = outputExcelPath;
         this.outputImagePath = outputImagePath;
         this.warning = warning;
+        this.outputRptImagePath=outputRptImagePath;
     }
 
     private String dateString;
     private String type;
     private String outputExcelPath;
     private String outputImagePath;
+
+    public String getOutputRptImagePath() {
+        return outputRptImagePath;
+    }
+
+    public void setOutputRptImagePath(String outputRptImagePath) {
+        this.outputRptImagePath = outputRptImagePath;
+    }
+
+    private String outputRptImagePath;
     private String warning;
 
     public String getDateString() {

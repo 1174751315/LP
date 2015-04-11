@@ -57,6 +57,6 @@ public class PredictorFactory {
      * @throws Exception 当在获取预测器示例的过程中发生任何其它异常
      */
     public IPredictor getProperPredictor(String date) throws Exception {
-        return getProperPredictor(Date2StringAdapter.toDate(date));
+        return getProperPredictor(Date.valueOf(date));
     }
 }

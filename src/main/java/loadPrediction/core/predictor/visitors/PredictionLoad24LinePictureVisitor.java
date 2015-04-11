@@ -8,14 +8,10 @@ package loadPrediction.core.predictor.visitors;
 
 import  jfreechart.JFreeChartFacade;
 import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.visitors.LoadDataAppend2DatasetVisitor;
+import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import loadPrediction.exception.LPE;
 import  loadPrediction.utils.AccuracyUtils;
-import  loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -25,43 +21,26 @@ import java.awt.*;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor implements IPredictorVisitor {
+public class PredictionLoad24LinePictureVisitor extends UnifiedChartImageOutputVisitor {
+    @Override
+    protected String getFileNamePostfix() {
+        return "-4LINE";
+    }
 
-    private String dir;
-
-    public PredictionLoad24LinePictureVisitor(String dir) {
-        this.dir = dir;
+    public PredictionLoad24LinePictureVisitor(String dir,String ds) {
+        super(dir,ds);
     }
 
     @Override
-    public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-        return unnamed(predictor, "WORKDAY_4_LINE");
-    }
-
-    @Override
-    public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-        return unnamed(predictor, "WEEKEND_4_LINE");
-    }
-
-    @Override
-    public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        throw new LPE("方法未实现");
-    }
-
-
-    public String unnamed(IPredictor predictor, String prefix) {
-        String fileName = FileContentUtils.autoFileName(prefix + predictor.getDateString(), ".JPG");
-
+    protected JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
-
-
-        ds = (DefaultCategoryDataset) prediction.accept(new LoadDataAppend2DatasetVisitor(ds, "预测负荷"));
-        ds = (DefaultCategoryDataset) prediction.multiple(1.06382978723404).accept(new LoadDataAppend2DatasetVisitor(ds, "上包络线"));
-        ds = (DefaultCategoryDataset) prediction.multiple(0.943396226415094).accept(new LoadDataAppend2DatasetVisitor(ds, "下包络线"));
+        ds = (DefaultCategoryDataset) prediction.accept(new AppendCategoryDatasetVisitor(ds, "预测负荷"));
+        ds = (DefaultCategoryDataset) prediction.multiple(1.06382978723404).accept(new AppendCategoryDatasetVisitor(ds, "上包络线"));
+        ds = (DefaultCategoryDataset) prediction.multiple(0.943396226415094).accept(new AppendCategoryDatasetVisitor(ds, "下包络线"));
         if (actual != null) {
-            ds = (DefaultCategoryDataset) actual.accept(new LoadDataAppend2DatasetVisitor(ds, "实际负荷"));
+            ds = (DefaultCategoryDataset) actual.accept(new AppendCategoryDatasetVisitor(ds, "实际负荷"));
         }
         Double acc = 0.;
         if (actual != null) {
@@ -78,10 +57,7 @@ public class PredictionLoad24LinePictureVisitor implements IPredictorVisitor {
             renderer.setSeriesPaint(3, Color.GREEN);
         }
         chart.getCategoryPlot().setRenderer(renderer);
-
-        new JFreeChartFacade().saveAs(chart, dir + fileName);
-
-        return dir + fileName;
+        return chart;
     }
 }
 

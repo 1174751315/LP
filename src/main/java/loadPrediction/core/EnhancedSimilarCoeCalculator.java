@@ -8,19 +8,49 @@
 package loadPrediction.core;
 
 import  loadPrediction.domain.WeatherCoesPackage;
+import  loadPrediction.domain.WeatherData;
 
 /**
- * Created by LBC on 2015/2/12.
+ * 李倍存 创建于 2015/2/12 21:58。电邮 1174751315@qq.com。
  */
-public class EnhancedSimilarCoeCalculator extends AbstractEnhancedSimilarCoeCalculator {
+public class EnhancedSimilarCoeCalculator extends AbstractCalculatorUseWeatherCoes {
+    public EnhancedSimilarCoeCalculator(WeatherCoesPackage weatherCoesPackage) {
+        super(weatherCoesPackage);
+        similarCoeCalculator=new SimilarCoeCalculatorImpl1(weatherCoesPackage);
+        weatherFactorCalculator=new WeatherFactorCalculatorImpl1(weatherCoesPackage);
+    }
+    private ISimilarCoeCalculator similarCoeCalculator;
+    private IWeatherFactorCalculator weatherFactorCalculator ;
 
-    public EnhancedSimilarCoeCalculator() {
-//        weatherCoesPackage = WeatherCoesPackage.getInstance();
-        WeatherFactorCalculator weatherFactorCalculator;
+    public ISimilarCoeCalculator getSimilarCoeCalculator() {
+        return similarCoeCalculator;
     }
 
-    @Override
-    protected WeatherCoesPackage doGetCoes() {
-        return null;
+    public void setSimilarCoeCalculator(ISimilarCoeCalculator similarCoeCalculator) {
+        this.similarCoeCalculator = similarCoeCalculator;
     }
+
+    public IWeatherFactorCalculator getWeatherFactorCalculator() {
+        return weatherFactorCalculator;
+    }
+
+    public void setWeatherFactorCalculator(IWeatherFactorCalculator weatherFactorCalculator) {
+        this.weatherFactorCalculator = weatherFactorCalculator;
+    }
+
+    public Double calcSimilarCoe(WeatherData weatherData1, WeatherData weatherData2) {
+        WeatherCoesPackage weatherCoesPackage =super.getWeatherCoes();
+        weatherCoesPackage.print(System.err);
+
+        Double coe = 0.0;
+        WeatherData weatherDataFactor1 = weatherFactorCalculator.calcWeatherFactor(weatherData1);
+        WeatherData weatherDataFactor2 = weatherFactorCalculator.calcWeatherFactor(weatherData2);
+
+        weatherDataFactor1.print(System.out);
+        weatherDataFactor2.print(System.err);
+
+        return similarCoeCalculator.calcSimilarCoe(weatherDataFactor1,weatherDataFactor2);
+
+    }
+
 }

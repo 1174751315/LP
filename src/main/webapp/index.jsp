@@ -158,10 +158,11 @@
             var res = JSON.parse(request.responseText);
 
             if (res["warning"] == "OK") {
-                alert("已完成预测。");
+                alert("已完成预测。\n"+"预测器类型："+res['predictorType']);
                 document.getElementById("outputExcel").href = res["root"] + res["xlFileName"] + "?now=" + new Date().getTime();
 //                document.getElementById("outputImg").src = "javascript:void(0)";
                 document.getElementById("outputImg").src = res["root"] + res["imgFileName"] + "?now=" + new Date().getTime();
+                document.getElementById("outRptImg").src = res["root"] + res["rptImgName"] + "?now=" + new Date().getTime();
 //              var url='/general/downloadOutputExcel.action';
 //              var params=Form.serialize('input');
 //              var myAjax=new Ajax.Request(url,
@@ -269,7 +270,7 @@
 
 <body>
 <div id="appDiv1" style="width: 100%;height: 100%;">
-    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;">
+    <div id="apDiv2" style="height:100%;width:20%;left:0%;top:0%;border:solid 1px #101010;background-color: #CCCCCC;">
         <div id="panels" style="width:100%;height:80%;top:0%;left:0%;border :solid 1px #101010;">
             <div id="CollapsiblePanel1" class="CollapsiblePanel" onclick="setClient(this.id);" style="width:100%;">
                 <div class="CollapsiblePanelTab" tabindex="0">智能预测</div>
@@ -330,11 +331,13 @@
             <h5>测试版本 BETA 1.0</h5>
         </div>
     </div>
-    <div id="apDiv3" style="width:80%;height:20%;left:20%;top:0%;border:2px;">
-        <div id="apDiv5" style="width:20%;height:100%;left:0%;top:0%;border:solid 1px #101010;"></div>
-        <div id="apDiv6" style="width:80%;left:20%;height:100%;top:0%;border:solid 1px #101010;"></div>
+    <div id="apDiv3" style="width:80%;height:20%;left:20%;top:0%;border:2px;background-color:#76b7f7;">
+        <%--<div id="apDiv5" style="width:20%;height:100%;left:0%;top:0%;border:solid 1px #101010;"></div>--%>
+        <div id="apDiv6" style="width:100%;left:0%;height:100%;top:0%;border:solid 1px #101010;">
+            <img src="" id="outRptImg" style="width: 100%;height: 100%;"/>
+        </div>
     </div>
-    <div id="apDiv4" style="width:80%;height:80%;left:20%;top:20%;border:2px #000000">
+    <div id="apDiv4" style="width:80%;height:80%;left:20%;top:20%;border:2px #000000;background-color:#76b7f7 ;">
         <img src="" id="outputImg" style="width:100%;height: 100%;border : 2px #101010;"/>
     </div>
 </div>
