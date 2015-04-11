@@ -14,7 +14,7 @@ import loadPrediction.exception.LPE;
 /**
  * 李倍存 创建于 2015-03-24 21:45。电邮 1174751315@qq.com。
  */
-public class FirstPredictionLoadData2DBVisitor extends PredictionAccessDBVisitor {
+public class FirstPredictionLoadData2DBVisitor extends AbstractPredictionAccessDBVisitor {
     @Override
     protected Object doAccessDB(IPredictor predictor) throws LPE{
         PredictionLoadData loadData = null;

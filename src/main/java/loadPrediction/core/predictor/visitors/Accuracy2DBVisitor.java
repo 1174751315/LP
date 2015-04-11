@@ -7,9 +7,6 @@
 package loadPrediction.core.predictor.visitors;
 
 import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
@@ -21,7 +18,7 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-05 20:37。电邮 1174751315@qq.com。
  */
-public class Accuracy2DBVisitor extends PredictionAccessDBVisitor {
+public class Accuracy2DBVisitor extends AbstractPredictionAccessDBVisitor {
      private Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
         List<Double> actual = actualLoadData.toList();
         List<Double> prediction = predictionLoadData.toList();

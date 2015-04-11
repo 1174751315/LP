@@ -7,11 +7,11 @@
 package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
-import jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.domain.LoadData;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.MyColor;
+import org.jfree.chart.JFreeChart;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -20,26 +20,25 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor_1 extends UnifiedImageOutputVisitor {
+public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutputVisitor {
 
-    public JChartBuilder4Predictor getChartBuilder() {
+    public IChartBuilder getChartBuilder() {
         return chartBuilder;
     }
 
-    public void setChartBuilder(JChartBuilder4Predictor chartBuilder) {
+    public void setChartBuilder(IChartBuilder chartBuilder) {
         this.chartBuilder = chartBuilder;
     }
 
-    private JChartBuilder4Predictor chartBuilder;
-    public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,JChartBuilder4Predictor builder){
+    private IChartBuilder chartBuilder;
+    public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,IChartBuilder builder){
         super(dir,ds);
         this.chartBuilder=builder;
     }
 
     @Override
-    protected Object doVisitAndOutput(IPredictor predictor, String absPath) throws LPE {
-        new JFreeChartFacade().saveAs(chartBuilder.build(predictor),absPath);
-        return absPath;
+    protected JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE {
+        return chartBuilder.build(predictor);
     }
 
     public PredictionLoad24LinePictureVisitor_1(String dir,String ds) {

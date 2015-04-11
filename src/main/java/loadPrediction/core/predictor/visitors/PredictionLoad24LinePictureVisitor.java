@@ -21,14 +21,21 @@ import java.awt.*;
 /**
  * 李倍存 创建于 2015-03-21 9:09。电邮 1174751315@qq.com。
  */
-public class PredictionLoad24LinePictureVisitor extends UnifiedImageOutputVisitor {
+public class PredictionLoad24LinePictureVisitor extends UnifiedChartImageOutputVisitor {
     @Override
-    protected Object doVisitAndOutput(IPredictor predictor,String absPath) throws LPE {
+    protected String getFileNamePostfix() {
+        return "-4LINE";
+    }
+
+    public PredictionLoad24LinePictureVisitor(String dir,String ds) {
+        super(dir,ds);
+    }
+
+    @Override
+    protected JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE {
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
-
-
         ds = (DefaultCategoryDataset) prediction.accept(new AppendCategoryDatasetVisitor(ds, "预测负荷"));
         ds = (DefaultCategoryDataset) prediction.multiple(1.06382978723404).accept(new AppendCategoryDatasetVisitor(ds, "上包络线"));
         ds = (DefaultCategoryDataset) prediction.multiple(0.943396226415094).accept(new AppendCategoryDatasetVisitor(ds, "下包络线"));
@@ -50,18 +57,7 @@ public class PredictionLoad24LinePictureVisitor extends UnifiedImageOutputVisito
             renderer.setSeriesPaint(3, Color.GREEN);
         }
         chart.getCategoryPlot().setRenderer(renderer);
-
-        new JFreeChartFacade().saveAs(chart,absPath);
-        return absPath;
-    }
-
-    @Override
-    protected String getFileNamePostfix() {
-        return "-4LINE";
-    }
-
-    public PredictionLoad24LinePictureVisitor(String dir,String ds) {
-        super(dir,ds);
+        return chart;
     }
 }
 

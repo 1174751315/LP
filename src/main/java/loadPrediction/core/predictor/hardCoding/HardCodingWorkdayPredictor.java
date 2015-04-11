@@ -13,17 +13,14 @@ import  common.MaxAveMinTuple;
 import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WorkdayPredictorCfg;
 import  loadPrediction.config.predictionCalculator.XmlCalculatorCfg;
-import  loadPrediction.core.EnhancedSimilarCoeCalculatorForWorkday;
+import loadPrediction.core.EnhancedSimilarCoeCalculator;
 import  loadPrediction.core.predictor.IWorkdayPredictor;
 import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import  loadPrediction.core.workday.IPredictionLoadTupleCalculator;
 import  loadPrediction.core.workday.PredictionLoadTupleCalculatorWithPerUnit;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.dataAccess.DAOLoadBase;
-import  loadPrediction.domain.LoadBase;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.domain.WeatherData;
+import loadPrediction.domain.*;
 import  loadPrediction.exception.LPE;
 import  loadPrediction.resouce.IOPaths;
 import  loadPrediction.utils.Date2StringAdapter;
@@ -152,13 +149,15 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             listAllWeatherData.add(predictionWeather.get(i));
         }
 
+        EnhancedSimilarCoeCalculator similarCoeCalculator=new EnhancedSimilarCoeCalculator(new WeatherCoesPackage("WORKDAY"));
+
         for (int i = 0; i < predictionDays; i++) {
             WeatherData wdNow, wdBefore;
             wdNow = predictionWeather.get(i);
             EnhancedLinkedList<Double> coe = new EnhancedLinkedList<Double>("");
             for (int j = 1; j <= historyDays; j++) {
                 wdBefore = listAllWeatherData.get(historyDays + i - j);
-                Double subcoe = new EnhancedSimilarCoeCalculatorForWorkday().calcSimilarCoe(wdNow, wdBefore);
+                Double subcoe = similarCoeCalculator.calcSimilarCoe(wdNow, wdBefore);
                 coe.add(subcoe);
             }
             subCoes.add(coe);

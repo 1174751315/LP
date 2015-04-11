@@ -11,7 +11,7 @@ import  common.*;
 import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WeekendPredictorCfg;
 import loadPrediction.core.EnhancedSimilarCoeCalculator;
-import  loadPrediction.core.EnhancedSimilarCoeCalculatorForWeekend;
+import loadPrediction.domain.WeatherCoesPackage;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
 import  loadPrediction.core.noneWorkday.SimilarDayFinder;
@@ -132,7 +132,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
         Integer historyWorkdays = historyWeather.get(0).size();
         Integer historyWeekends = historyWeather.get(1).size();
 
-        EnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculatorForWeekend();
+        EnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculator(new WeatherCoesPackage("WEEKEND"));
 
         for (int i = 0; i < 1; i++) {
             EnhancedLinkedList<Double> coes1 = new EnhancedLinkedList<Double>("coes1");

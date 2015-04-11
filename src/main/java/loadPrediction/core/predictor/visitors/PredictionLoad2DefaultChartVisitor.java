@@ -24,8 +24,8 @@ import java.awt.*;
 /**
  * 李倍存 创建于 2015-03-05 21:40。电邮 1174751315@qq.com。
  */
-public class PredictionLoad2ChartVisitor implements IPredictorVisitor {
-    public PredictionLoad2ChartVisitor() {
+public class PredictionLoad2DefaultChartVisitor implements IPredictorVisitor {
+    public PredictionLoad2DefaultChartVisitor() {
     }
 
     @Override

@@ -25,7 +25,7 @@ import java.util.*;
 /**
  * Created by LBC on 2015-04-08.
  */
-public class ChartBuilderImpl1 implements JChartBuilder4Predictor {
+public class ChartBuilderImpl1 implements IChartBuilder {
 
     Color foreColor;Color backColor;Color gridColor;
 

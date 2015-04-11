@@ -38,20 +38,20 @@ public abstract class UnifiedFileOutputVisitor implements IPredictorVisitor {
     }
     @Override
     public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
-        return doVisitAndOutput(predictor,generateFileName("WD"));
+        return doVisitAndOutput(predictor, generateFileAbsPath("WD"));
     }
 
     @Override
     public Object visitWeekendPredictor(IWeekendPredictor predictor) throws LPE {
-        return doVisitAndOutput(predictor,generateFileName("WK"));
+        return doVisitAndOutput(predictor, generateFileAbsPath("WK"));
     }
 
     @Override
     public Object visitQingmingPredictor(IQingmingPredictor predictor) throws LPE {
-        return doVisitAndOutput(predictor,generateFileName("QM"));
+        return doVisitAndOutput(predictor, generateFileAbsPath("QM"));
     }
 
-    private String generateFileName(String prefix){
+    private String generateFileAbsPath(String prefix){
         return dir+prefix+ FileContentUtils.autoFileName(dateString.replaceAll("-", ""), "", 4)+getFileNamePostfix()+getFileExtend();
     }
 }

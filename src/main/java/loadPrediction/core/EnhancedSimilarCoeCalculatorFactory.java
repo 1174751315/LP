@@ -6,6 +6,8 @@
 
 package loadPrediction.core;
 
+import loadPrediction.domain.WeatherCoesPackage;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,7 +26,7 @@ public class EnhancedSimilarCoeCalculatorFactory {
 
     private EnhancedSimilarCoeCalculatorFactory() {
         pool = new HashMap<String, EnhancedSimilarCoeCalculator>();
-        pool.put("basic", new ());
+        pool.put("basic", new EnhancedSimilarCoeCalculator(new WeatherCoesPackage("WORKDAY")));
     }
 
     public EnhancedSimilarCoeCalculator getBasic() {

@@ -10,7 +10,7 @@ import java.awt.*;
 /**
  * Created by LBC on 2015-04-08.
  */
-public interface JChartBuilder4Predictor {
+public interface IChartBuilder {
     JFreeChart build(IPredictor predictor) throws LPE;
     void setDaoLoadData(DAOLoadData loadData);
 }

@@ -9,8 +9,8 @@ import loadPrediction.exception.LPE;
 /**
  * 李倍存 创建于 2015-04-08 20:44。电邮 1174751315@qq.com。
  */
-public abstract class PredictionAccessDBVisitor implements IPredictorVisitor {
-    public PredictionAccessDBVisitor() {
+public abstract class AbstractPredictionAccessDBVisitor implements IPredictorVisitor {
+    public AbstractPredictionAccessDBVisitor() {
     }
 
     @Override

@@ -2,6 +2,7 @@ package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
@@ -23,7 +24,7 @@ import java.util.LinkedList;
 /**
  * Created by LBC on 2015-04-08.
  */
-public class ChartBuilderImpl2 implements JChartBuilder4Predictor {
+public class ChartBuilderImpl2 implements IChartBuilder {
     Color foreColor;
     Color backColor;
     Color gridColor;
@@ -129,6 +130,8 @@ public class ChartBuilderImpl2 implements JChartBuilder4Predictor {
 
     @Override
     public void setDaoLoadData(DAOLoadData loadData) {
-
+        daoLoadData=loadData;
     }
+
+    private DAOLoadData daoLoadData= DAOFactory.getDefault().createDaoLoadData();
 }
