@@ -127,7 +127,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         if (!doValidate(date)) {
             throw new LPE("预测器执行前验证失败。\n预测算法被终止�??");
         }
-new Test().test();
+ 
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
 
@@ -220,7 +220,6 @@ new Test().test();
                 predictionWeatherExcelPosition.getCol().intValue(),
                 predictionWeatherExcelPosition.getRow() + i, weatherData);
         }
-new Test().test();
         log.debug("完成");
         forceCalcAllFormulas(template);
 
@@ -354,9 +353,7 @@ new Test().test();
                         acc));
             }
         }
-
         accuracies.print(System.err);
-new Test().test();
         /*关闭工作�?*/
         try {
             template.write(new FileOutputStream(outPath));

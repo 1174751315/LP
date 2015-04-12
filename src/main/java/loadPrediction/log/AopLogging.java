@@ -16,22 +16,23 @@ import java.lang.reflect.Method;
  */
 
 @Aspect
-public class AopLogging implements AfterReturningAdvice{
+public class AopLogging implements AfterReturningAdvice,ThrowsAdvice{
 
 //    @AfterReturning(pointcut = "execution(* loadPrediction.core.predictor.excelling.*.*(..))")
 
 
     @Override
     public void afterReturning(Object o, Method method, Object[] objects, Object o1) throws Throwable {
-        Logging.instance().createLogger(o.getClass().toString()+method.getName()).info(method.getName()+"执行完毕");
-        System.out.println("RETURN!!!!!!!!");
+        Logging.instance().createLogger("方法跟踪").info(method.getClass().getName() + ". " + method.getName() + "执行\n");
+//        System.out.println("RETURN!!!!!!!!");
     }
+
     @AfterReturning(returning = "r",pointcut = "execution(* loadPrediction.core.predictor.excelling.*.*(..))")
     public void doAfterEveryMethods(Object r){
-        logger.error("TEST");
-        logger.info("TEST");
-        logger.debug("TEST");
-        System.out.println("AOP!");
+//        logger.error("TEST");
+//        logger.info("TEST");
+//        logger.debug("TEST");
+//        System.out.println("AOP!");
 
     }
     private static Logger logger=Logging.instance().createLogger();

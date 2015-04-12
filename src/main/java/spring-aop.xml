@@ -8,6 +8,14 @@
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
     <bean id="aopLogging" class="loadPrediction.log.AopLogging"/>
 
+    <!--<bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
+        <!--<property name="advice" ref="aopLogging"/>-->
+        <!--<property name="patterns">-->
+            <!--<list>-->
+                <!--<value>.*</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 <aop:config proxy-target-class="true">
 </aop:config>
 </beans>

@@ -1,4 +1,4 @@
-package loadPrediction;
+package spring.config;
 
 /**
  * 李倍存 创建于 2015-04-12 13:34。电邮 1174751315@qq.com。

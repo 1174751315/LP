@@ -6,16 +6,13 @@
 
 package loadPrediction.core.predictor;
 
-import loadPrediction.BeanFactory;
+import spring.config.MyBeanFactory;
 import  loadPrediction.core.predictor.excelling.ExcellingQingmingPredictor;
-import  loadPrediction.core.predictor.excelling.ExcellingWeekendPredictor;
-import  loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.dataAccess.DAOSimpleDate;
 import  loadPrediction.exception.LPE;
 import  loadPrediction.utils.DateUtil;
 import  loadPrediction.utils.PowerSystemDateUtil;
-import loadPrediction.BeanFactory;
 
 import java.sql.Date;
 
@@ -54,18 +51,22 @@ private PowerSystemDateUtil powerSystemDateUtil;
         if (powerSystemDateUtil==null)
             powerSystemDateUtil=new PowerSystemDateUtil();
         String ds=date.toLocalDate().toString();
-        if (DateUtil.getISOWeekday(date) == 6 &&daoSimpleDate.query(ds).getDateType().getCode()==1)
-            return new ExcellingWeekendPredictor(date);
+        if (DateUtil.getISOWeekday(date) == 6 &&daoSimpleDate.query(ds).getDateType().getCode()==1){
+            IPredictor predictor=(IPredictor) MyBeanFactory.INSTANCE.getBean("excellingWeekendPredictor");
+            predictor.setDate(date);
+            return predictor;
+        }
+
         if (DateUtil.getISOWeekday(date) == 7 && daoSimpleDate.query(ds).getDateType().getCode()==1)//周日且非节假日
             throw new LPE("请不要选择周日作为第一预测日。\n若要进行工作日预测，请选择周一至周五中的某一天；\n若要进行周末预测，请选择周六。");
         if (daoSimpleDate.query(ds).getDateType().getCode()==0){
             if (powerSystemDateUtil.isPowerSystemWorkday(date) ){
-                IPredictor predictor= (IPredictor) BeanFactory.INSTANCE.getBean("excellingWorkdayPredictor");
+                IPredictor predictor= (IPredictor) MyBeanFactory.INSTANCE.getBean("excellingWorkdayPredictor");
                 predictor.setDate(date);
                 return predictor;
              }
         }
-        if(DAOFactory.getDefault().createDaoSimpleDate().query(date.toLocalDate().toString()).getDateType().getCode().equals(4))
+        if(daoSimpleDate.query(date.toLocalDate().toString()).getDateType().getCode().equals(4))
             return new ExcellingQingmingPredictor(date);
         throw new LPE("对不起，尚未实现所选日期 【 "+ds+" 】对应的预测算法。请联系开发者。" );
 //        throw new Exception("未能获取合适的预测器，因此预测算法不能启动。\n" +
