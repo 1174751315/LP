@@ -91,7 +91,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
     @Override
     protected Boolean
     doValidate(Date date) {
-        return ((PowerSystemDateUtil.isPowerSystemWorkday(date)) && workdayPredictorCfg.getIsEnabled());
+        return ((new PowerSystemDateUtil().isPowerSystemWorkday(date)) && workdayPredictorCfg.getIsEnabled());
     }
 
     @Override

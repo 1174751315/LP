@@ -17,6 +17,14 @@ public class SimpleDateWeatherType implements IDomain, Serializable {
     private int code;
     private String name;
 
+    public SimpleDateWeatherType() {
+    }
+
+    public SimpleDateWeatherType(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

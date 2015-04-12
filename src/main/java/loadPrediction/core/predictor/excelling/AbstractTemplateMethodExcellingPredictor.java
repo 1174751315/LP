@@ -58,6 +58,17 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             "acc");
     ElementPrintableLinkedList<LoadData> predictionLoads = new ElementPrintableLinkedList<LoadData>(
             "al");
+
+    public void setDateString(String dateString) {
+        this.date=Date.valueOf(dateString);
+        this.dateString = dateString;
+    }
+
+    public void setDate(Date date) {
+        this.dateString=date.toLocalDate().toString();
+        this.date = date;
+    }
+
     private Integer predictionDaysNbr;
     private List<Integer> historyDaysNbrs;
     private List<CellPosition> historyDaysExcelPositions;
@@ -94,6 +105,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         dateString = date.toLocalDate().toString();
     }
 
+    public AbstractTemplateMethodExcellingPredictor() {
+    }
+
     public void setCommonUtils(CommonUtils commonUtils) {
         this.commonUtils = commonUtils;
     }
@@ -113,7 +127,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         if (!doValidate(date)) {
             throw new LPE("预测器执行前验证失败。\n预测算法被终止�??");
         }
-
+new Test().test();
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
 
@@ -206,7 +220,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
                 predictionWeatherExcelPosition.getCol().intValue(),
                 predictionWeatherExcelPosition.getRow() + i, weatherData);
         }
-
+new Test().test();
         log.debug("完成");
         forceCalcAllFormulas(template);
 
@@ -342,7 +356,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         }
 
         accuracies.print(System.err);
-
+new Test().test();
         /*关闭工作�?*/
         try {
             template.write(new FileOutputStream(outPath));

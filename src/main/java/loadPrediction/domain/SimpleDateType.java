@@ -18,6 +18,14 @@ public class SimpleDateType implements IDomain, Serializable {
     private Integer code;
     private String name;
 
+    public SimpleDateType() {
+    }
+
+    public SimpleDateType(Integer code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
     public Integer getCode() {
         return code;
     }

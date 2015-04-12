@@ -31,7 +31,9 @@ import java.util.Map;
  * 电邮：1174751315@qq.com
  */
 public abstract class AbstractTemplateMethodForHardCodingPredictor {
-
+    public void setDate(Date date){
+        this.date=date;
+    }
     public String getDateString() {
         return date.toLocalDate().toString();
     }

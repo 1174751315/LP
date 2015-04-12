@@ -34,6 +34,8 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
     * Index 1 周末
     * */
 
+    public ExcellingWeekendPredictor() {
+    }
 
     List<Integer> his = ListUtils.unnamed(20, 12);
     Integer pre = 2;

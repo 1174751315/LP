@@ -41,6 +41,10 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private static final Integer WINTER=0,SUMMER=1;
     private  Season season;
 
+    public ExcellingWorkdayPredictor() {
+        super();
+    }
+
     public ExcellingWorkdayPredictor(Date date,DAOFactory defaultDaoFactory){
         super(date,defaultDaoFactory);
 

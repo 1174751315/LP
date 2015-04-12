@@ -14,13 +14,14 @@ import  loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
 import  loadPrediction.exception.LPE;
 
+import java.sql.Date;
 import java.util.List;
 
 /**
  * 李倍存 创建于 2015-03-21 14:48。电邮 1174751315@qq.com。
  */
 public interface IPredictor {
-
+    void setDate(Date date);
 
     /**
      * @return 包含预测相关信息的对象；该对象包含何种信息未有定义，由实现者决定。
