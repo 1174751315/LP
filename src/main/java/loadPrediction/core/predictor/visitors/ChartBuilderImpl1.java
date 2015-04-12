@@ -2,6 +2,7 @@ package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
@@ -26,7 +27,14 @@ import java.util.List;
  * Created by LBC on 2015-04-08.
  */
 public class ChartBuilderImpl1 extends AbstractChartBuilder {
+    protected DAOLoadData daoLoadData= DAOFactory.getDefault().createDaoLoadData();
 
+    public DAOLoadData getDaoLoadData() {
+        return daoLoadData;
+    }
+    public void setDaoLoadData(DAOLoadData daoLoadData) {
+        this.daoLoadData = daoLoadData;
+    }
     java.util.List<Color> series;
     {
         List<Color> list=new LinkedList<Color>();
@@ -81,6 +89,8 @@ public class ChartBuilderImpl1 extends AbstractChartBuilder {
         list.add(predictions.get(1));
         ds = (CategoryTableXYDataset) prediction.accept(new AppendTableXYDatasetVisitor(ds, "今日预测负荷"));
         ds=(CategoryTableXYDataset)predictions.get(1).accept(new AppendTableXYDatasetVisitor(ds,"明日预测负荷"));
+        if (daoLoadData==null)
+            daoLoadData=DAOFactory.getDefault().createDaoLoadData();
         LoadData yesterday=daoLoadData.query(DateUtil.getDateBefore(java.sql.Date.valueOf(predictor.getDateString()), 1).toLocalDate().toString());
         ds=(CategoryTableXYDataset) yesterday.accept(new AppendTableXYDatasetVisitor(ds,"昨日实际负荷"));
         list.add(yesterday);

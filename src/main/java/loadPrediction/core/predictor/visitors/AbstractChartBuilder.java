@@ -19,7 +19,6 @@ public abstract class AbstractChartBuilder {
     protected Color foreColor= MyColor.COMMON_FOREGROUND;
     protected Color backColor=MyColor.COMMON_BACKGROUND;
     protected Color gridColor=MyColor.COMMON_GRID_LINE;
-    protected DAOLoadData daoLoadData= DAOFactory.getDefault().createDaoLoadData();
 
     public AbstractChartBuilder(Color foreColor, Color backColor, Color gridColor) {
         this.foreColor = foreColor;
@@ -30,12 +29,6 @@ public abstract class AbstractChartBuilder {
     public AbstractChartBuilder() {
     }
 
-    public DAOLoadData getDaoLoadData() {
-        return daoLoadData;
-    }
-    public void setDaoLoadData(DAOLoadData daoLoadData) {
-        this.daoLoadData = daoLoadData;
-    }
     public Color getForeColor() {
         return foreColor;
     }

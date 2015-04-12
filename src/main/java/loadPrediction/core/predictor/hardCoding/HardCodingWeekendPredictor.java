@@ -11,10 +11,11 @@ import  common.*;
 import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WeekendPredictorCfg;
 import loadPrediction.core.EnhancedSimilarCoeCalculator;
+import loadPrediction.core.noneWorkday.SimilarDayFinder;
 import loadPrediction.domain.WeatherCoesPackage;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
-import  loadPrediction.core.noneWorkday.SimilarDayFinder;
+
 import  loadPrediction.core.predictor.IWeekendPredictor;
 import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import  loadPrediction.domain.LoadData;

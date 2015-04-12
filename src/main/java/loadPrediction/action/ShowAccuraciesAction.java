@@ -7,7 +7,7 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import  io.BarChartRendererWithThreshold;
+import jfreechart.BarChartRendererWithThreshold;
 import  jfreechart.JFreeChartFacade;
 import  loadPrediction.dataAccess.DAOAccuracy;
 import  loadPrediction.dataAccess.oracle.OracleDAOFactory;

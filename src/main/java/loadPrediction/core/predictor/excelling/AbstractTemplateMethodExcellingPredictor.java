@@ -130,42 +130,30 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
  
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
-
-        Logger log = Logging.instance().createLogger("EXCELLING预测");
-        log.debug("打开模板文件");
-
         openTemplate(inPath);
 
         historyDaysNbrs = doGetHistoryDaysNbrs();
         predictionDaysNbr = doGetPredictionDaysNbr();
 
-        log.debug("获取历史�?");
         historyDays = doGetHistoryDays();
-        log.debug("完成");
 
         //        historyDays.print(System.err);
-        log.debug("获取预测�?");
+
         predictionDays = doGetPredictionDays();
-        log.debug("完成");
 
         //        predictionDays.print(System.out);
 
         //        closeTemplate(outPath);
         //        openTemplate(outPath);
-        log.debug("获取历史气象数据");
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
 
         //        historyWeathers.print(System.err);
-        log.debug("完成");
-        log.debug("获取预测气象数据");
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
 
         //        predictionWeathers.print(System.out);
-        log.debug("完成");
 
         //        closeTemplate(outPath);
         //        openTemplate(outPath);
-        log.debug("填充历史�?");
         historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
 
         for (int i = 0; i < historyDaysExcelPositions.size(); i++) {
@@ -175,11 +163,8 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
                 pos.getRow(), historyDays.get(i));
         }
 
-        log.debug("完成");
-
-        //        historyDays.print(System.err);
+                //        historyDays.print(System.err);
         /*填充预测�?*/
-        log.debug("填充预测�?");
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
 
         Sheet ws0 = template.getSheet(predictionDaysExcelPosition.getSheetName());
@@ -188,10 +173,10 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             predictionDaysExcelPosition.getRow(), predictionDays);
 
         //        predictionDays.print(System.out);
-        log.debug("完成");
+
 
         /*填充历史气象数据*/
-        log.debug("填充历史气象数据");
+
         historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
 
         for (int i = 0; i < historyWeatherExcelPositions.size(); i++) {
@@ -207,10 +192,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             }
         }
 
-        log.debug("完成");
 
         /*填充预测气象数据*/
-        log.debug("填充预测气象数据");
+
         this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
         ws0 = template.getSheet(predictionWeatherExcelPosition.getSheetName());
 
@@ -220,7 +204,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
                 predictionWeatherExcelPosition.getCol().intValue(),
                 predictionWeatherExcelPosition.getRow() + i, weatherData);
         }
-        log.debug("完成");
         forceCalcAllFormulas(template);
 
         this.doAfterInjectWeathers(template, historyDays, predictionDays);
@@ -361,8 +344,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         } catch (IOException e) {
             throw new LPE("保存并关闭工作簿时发生异�?");
         }
-
-        log.debug("完成�?次预�?");
+//        throw new LPE();
 
         //        wb.close(true);
         //        app.close(true);

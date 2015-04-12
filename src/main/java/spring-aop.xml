@@ -6,8 +6,22 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
        <!--<aop:aspectj-autoproxy/>-->
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
-    <bean id="aopLogging" class="loadPrediction.log.AopLogging"/>
 
+    <bean id="defaultLogger" class="org.apache.log4j.Logger">
+        <constructor-arg value="默认记录仪"/>
+    </bean>
+
+
+    <bean id="aopLogging" class="loadPrediction.log.AopTraceLogging"/>
+    <bean id="aopFunctionLogging" class="loadPrediction.log.AopFunctionLogging"/>
+    <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice" ref="aopLogging"/>
+        <property name="pattern" value=".*"/>
+    </bean>
+    <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice" ref="aopFunctionLogging"/>
+        <property name="pattern" value="loadPrediction.core.predictor.excelling.*.predict*"/>
+    </bean>
     <!--<bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
         <!--<property name="advice" ref="aopLogging"/>-->
         <!--<property name="patterns">-->
@@ -16,6 +30,6 @@
             <!--</list>-->
         <!--</property>-->
     <!--</bean>-->
-<aop:config proxy-target-class="true">
-</aop:config>
+<!--<aop:config proxy-target-class="true">-->
+<!--</aop:config>-->
 </beans>

@@ -48,7 +48,7 @@ public class PredictionLoad24LinePictureVisitor_1Test{
         assertTrue(new File(path).exists());
     }
 
-    AbstractChartBuilder builder=new ChartBuilderImpl1();
+    ChartBuilderImpl1 builder=new ChartBuilderImpl1();
     DAOLoadData daoLoadData;
     IWorkdayPredictor workdayPredictor;
     private List<Double> loads_list1=new LinkedList<Double>(),loads_list2=new LinkedList<Double>();
