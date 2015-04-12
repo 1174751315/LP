@@ -40,7 +40,6 @@ public class CommonUtils {
     }
 
     public CommonUtils(LoadsObtainer loadsObtainer, WeatherObtainer weatherObtainer) {
-
         this.loadsObtainer = loadsObtainer;
         this.weatherObtainer = weatherObtainer;
     }
