@@ -9,6 +9,8 @@ package loadPrediction.core.predictor.excelling;
 import  common.ElementPrintableLinkedList;
 import  common.PrintableLinkedList;
 import  loadPrediction.core.predictor.util.CommonUtils;
+import loadPrediction.core.predictor.util.LoadsObtainer;
+import loadPrediction.core.predictor.util.WeatherObtainer;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
@@ -66,8 +68,10 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     }
 
     public Object predict() throws LPE {
-        if (commonUtils==null)
-            commonUtils=new CommonUtils(DAOFactory.getDefault(),DAOFactory.getAlter());
+        if (commonUtils==null){
+            commonUtils=new CommonUtils(new LoadsObtainer(DAOFactory.getDefault(),DAOFactory.getAlter()),new WeatherObtainer(DAOFactory.getDefault(),DAOFactory.getAlter()));
+        }
+
         if (!doValidate(date))
             throw new LPE("预测器执行前验证失败。\n预测算法被终止。");
         String inPath = doGetInputWorkbookPath();
