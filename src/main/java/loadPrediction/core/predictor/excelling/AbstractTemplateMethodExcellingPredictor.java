@@ -346,9 +346,8 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             throw new LPE("保存并关闭工作簿时发生异�?");
         }
 //        throw new LPE();
-
-        //        wb.close(true);
-        //        app.close(true);
+//
+//
         return outPath;
     }
 
