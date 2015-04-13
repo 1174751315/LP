@@ -16,6 +16,7 @@ import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.DAE;
 import loadPrediction.exception.ExceptionHandlerFactory;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
@@ -42,7 +43,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private  Season season;
 
     public ExcellingWorkdayPredictor() {
-        super();
+//        this(null,null);
     }
 
     public ExcellingWorkdayPredictor(Date date,DAOFactory defaultDaoFactory){
@@ -57,14 +58,21 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 //        }
 
         String dateString=date.toLocalDate().toString();
-        try {
-            WeatherData weatherData= defaultDaoFactory.createDaoWeatherData().query(dateString);
-            season= SeasonIdentifier.getSeasonByWeather(weatherData);
-        } catch (Exception dae) {
-            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(dae, "读取综合气象数据时出现异常");
-        }
+        getSeason(dateString);
     }
 
+    private void getSeason(String ds){
+        try {
+            WeatherData weatherData= defaultDaoFactory.createDaoWeatherData().query(ds);
+            season= SeasonIdentifier.getSeasonByWeather(weatherData);
+            return;
+        } catch (DAE dae) {
+            dae.printStackTrace();
+        }catch (Exception e){
+
+        }
+        season= Season.SUMMER;
+    }
     @Override
     protected CellPosition doGetPredictionLoadsExcelPosition() {
         return new CellPosition("B115", "工作日96节点负荷预测");
@@ -125,8 +133,11 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetInputWorkbookPath() {
-//        if (season.equals(Season.SUMMER))
-//            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
+        if (season==null){
+            getSeason(dateString);
+        }
+        if (season.equals(Season.SUMMER))
+            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
         return IOPaths.WEB_CONTENT_WORKDAY_WINTER_TEMPLATE_PATH;
     }
     @Override

@@ -1,6 +1,5 @@
 package loadPrediction.exception;
 
-import jdk.nashorn.internal.runtime.Logging;
 import org.apache.log4j.Logger;
 
 /**
@@ -22,7 +21,7 @@ public class ExceptionLogger extends ExceptionHandlerDecorator {
     }
 
     @Override
-    public void handle(Exception exception) {
+    public void handle(Throwable exception) {
         String info="";
         info+=msgPrefix+"\n"+exception.getMessage()+"\n";
         StackTraceElement[] traceElements=exception.getStackTrace();

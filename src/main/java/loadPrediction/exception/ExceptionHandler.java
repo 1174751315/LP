@@ -31,7 +31,7 @@ public   class ExceptionHandler {
 
     public ExceptionHandler(){
     }
-    public  void handle(Exception exception){
+    public  void handle(Throwable exception){
         exception.printStackTrace();
     }
 

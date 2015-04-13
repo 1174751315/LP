@@ -16,15 +16,21 @@ import java.lang.reflect.Method;
  */
 
 @Aspect
-public class AopTraceLogging extends AbsLogging{
+public class AopTraceLogging extends AbsLogging implements MethodBeforeAdvice{
 
-    private static Logger methodTracingLogger=Logging.instance().createLogger("方法调用跟踪");
+    private static Logger methodTracingLogger=Logging.instance().createLogger("方法调用跟踪：退出");
+    private static Logger methodenterTracingLogger=Logging.instance().createLogger("方法调用跟踪：进入");
     private static Logger exceptionLogger=Logging.instance().createLogger("异常跟踪");
 
+    @Override
+    public void before(Method method, Object[] objects, Object o) throws Throwable {
+        methodenterTracingLogger.debug("进入  "+o.getClass().getSimpleName()+"."+method.getName());
+    }
 
     @Override
     protected void doAfterReturn(Object o, Method method, Object[] objects, Object o1) throws Throwable {
-        methodTracingLogger.debug("通过"+o1.toString()+"\n调用"+method.toString()+"\n返回 "+o+"\n");
+        String text="通过  "+o1.toString()+"\r调用  "+method.toString()+"\r返回  "+o+"\r";
+        methodTracingLogger.debug(text);
 
     }
 

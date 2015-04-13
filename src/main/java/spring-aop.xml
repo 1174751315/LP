@@ -6,10 +6,10 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
        <!--<aop:aspectj-autoproxy/>-->
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
-
-    <bean id="defaultLogger" class="org.apache.log4j.Logger">
-        <constructor-arg value="默认记录仪"/>
-    </bean>
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator"/>
+    <!--<bean id="defaultLogger" class="org.apache.log4j.Logger">-->
+        <!--<constructor-arg value="默认记录仪"/>-->
+    <!--</bean>-->
 
 
     <bean id="aopLogging" class="loadPrediction.log.AopTraceLogging"/>
@@ -20,7 +20,12 @@
     </bean>
     <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
         <property name="advice" ref="aopFunctionLogging"/>
-        <property name="pattern" value="loadPrediction.core.predictor.excelling.*.predict*"/>
+        <property name="patterns" >
+            <list>
+                <value>loadPrediction.core.predictor.excelling.*.predict*</value>
+                <value>loadPrediction.action.*.*</value>
+            </list>
+        </property>
     </bean>
     <!--<bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
         <!--<property name="advice" ref="aopLogging"/>-->

@@ -309,6 +309,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         Sheet sh = template.getSheet(ofPredictionLoads.getSheetName());
         forceCalcAllFormulas(template);
 
+        predictionLoads.clear();
         for (int i = 0; i < predictionDaysNbr; i++) {
             LoadData ld = readOneLoadDataFromFormulas(sh, evaluator,
                     ofPredictionLoads.getCol() + i, ofPredictionLoads.getRow());

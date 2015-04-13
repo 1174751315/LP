@@ -23,23 +23,23 @@ public class ExceptionHandler4LowerException implements IExceptionHandler {
 
 
     @Override
-    public String handle(Exception e,String prefix) {
-        defaultHandling(e,Logging.instance().createLogger(loggerName),prefix);
-        return prefix+e.getMessage();
+    public String handle(Throwable throwable,String prefix) {
+        defaultHandling(throwable,Logging.instance().createLogger(loggerName),prefix);
+        return prefix+ throwable.getMessage();
     }
 
 
 
-    public static void defaultHandling(Exception exception,Logger logger,String msgPrefix){
+    public static void defaultHandling(Throwable exception,Logger logger,String msgPrefix){
         new ExceptionLogger(new ExceptionMailler(new ExceptionHandler()),logger,msgPrefix).handle(exception);
     }
-    public static void defaultHandling(Exception exception,String msgPrefix){
+    public static void defaultHandling(Throwable exception,String msgPrefix){
         defaultHandling(exception, Logging.instance().createLogger(),msgPrefix);
     }
-    public static void defaultHandling(Exception exception,Logger logger){
+    public static void defaultHandling(Throwable exception,Logger logger){
         defaultHandling(exception,logger,"【未指定异常提示】");
     }
-    public static void defaultHandling(Exception e){
+    public static void defaultHandling(Throwable e){
         defaultHandling(e,Logging.instance().createLogger(),"【未指定异常提示】");
     }
 }

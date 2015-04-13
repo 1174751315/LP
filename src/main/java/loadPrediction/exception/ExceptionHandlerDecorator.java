@@ -11,7 +11,7 @@ public class ExceptionHandlerDecorator extends ExceptionHandler {
     }
 
     @Override
-    public void handle(Exception exception) {
+    public void handle(Throwable exception) {
         handler.handle(exception);
     }
 }

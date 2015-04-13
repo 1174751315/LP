@@ -1,8 +1,6 @@
 package loadPrediction.exception;
 
-import loadPrediction.log.Logging;
 import loadPrediction.utils.LogMailingUtils;
-import org.apache.log4j.Logger;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import javax.mail.internet.MimeMessage;
@@ -23,12 +21,12 @@ public class ExceptionMailler extends ExceptionHandlerDecorator {
     }
 
     @Override
-    public void handle(Exception exception) {
+    public void handle(Throwable exception) {
         handleWithMailing(exception,prefix);
         super.handle(exception);
     }
 
-    private void handleWithMailing(Exception ex,String prefix){
+    private void handleWithMailing(Throwable ex,String prefix){
         StackTraceElement[] traceElements=ex.getStackTrace();
 
         String text="负荷预测过程发生异常。\n";

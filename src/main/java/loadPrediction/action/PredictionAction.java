@@ -164,9 +164,9 @@ public class PredictionAction extends ActionSupport {
         rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path,dateString)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
-        String t = predictor.getPredictionDays().get(0).getDateType().getName();
+//        String t = predictor.getPredictionDays().get(0).getDateType().getName();
         predictorType=predictor.getPredictorType();
-        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, t, path + xlFileName, path + imgFileName, path+rptImgName,warning);
+        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, predictorType, path + xlFileName, path + imgFileName, path+rptImgName,warning);
                 /*添加至缓存管理器。*/
         CachesManager.INSTANCE.addPredictionEntity(entity);
         ;
