@@ -3,20 +3,11 @@ package loadPrediction.timerTask;
 
 
 import loadPrediction.exception.LPE;
-import loadPrediction.log.Logging;
-import loadPrediction.resouce.IOPaths;
+import loadPrediction.aop.Logging;
 import loadPrediction.utils.LogMailingUtils;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessageHelper;
 
-import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.TimerTask;
 
 /**

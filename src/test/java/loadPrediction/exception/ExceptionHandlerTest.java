@@ -1,7 +1,6 @@
 package loadPrediction.exception;
 
 import junit.framework.TestCase;
-import loadPrediction.log.Logging;
 
 public class ExceptionHandlerTest extends TestCase {
 

@@ -8,16 +8,11 @@ package loadPrediction.core.predictor.util;
 
 import  common.ElementPrintableLinkedList;
 import  common.PrintableLinkedList;
-import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.SimpleDate;
 import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.DAE;
 import  loadPrediction.exception.LPE;
-import  loadPrediction.log.Logging;
-import loadPrediction.timerTask.LoadDataCopy;
 
-import java.sql.Date;
 import java.util.LinkedList;
 import java.util.List;
 

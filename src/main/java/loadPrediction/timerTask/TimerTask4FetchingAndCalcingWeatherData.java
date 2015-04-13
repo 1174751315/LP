@@ -6,7 +6,7 @@
 
 package loadPrediction.timerTask;
 
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 import  loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.weather.WeatherCalcAndSyncUtil;
 import org.apache.log4j.Logger;

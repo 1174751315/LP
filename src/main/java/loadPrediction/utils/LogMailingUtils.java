@@ -1,13 +1,11 @@
 package loadPrediction.utils;
 
 import loadPrediction.exception.LPE;
-import loadPrediction.log.Logging;
 import loadPrediction.resouce.IOPaths;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
 import javax.mail.MessagingException;

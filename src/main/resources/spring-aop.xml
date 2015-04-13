@@ -12,11 +12,15 @@
     <!--</bean>-->
 
 
-    <bean id="aopLogging" class="loadPrediction.log.AopTraceLogging"/>
-    <bean id="aopFunctionLogging" class="loadPrediction.log.AopFunctionLogging"/>
+    <bean id="aopLogging" class="loadPrediction.aop.AopTraceMethodsAndThrows"/>
+    <bean id="aopFunctionLogging" class="loadPrediction.aop.AopTraceFunctional"/>
     <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
         <property name="advice" ref="aopLogging"/>
-        <property name="pattern" value=".*"/>
+        <property name="patterns" >
+            <list>
+                <value>.*</value>
+            </list>
+        </property>
     </bean>
     <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
         <property name="advice" ref="aopFunctionLogging"/>
@@ -35,6 +39,6 @@
             <!--</list>-->
         <!--</property>-->
     <!--</bean>-->
-<aop:config proxy-target-class="true">
-</aop:config>
+<!--<aop:config proxy-target-class="true">-->
+<!--</aop:config>-->
 </beans>

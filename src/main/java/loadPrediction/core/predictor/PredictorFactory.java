@@ -10,7 +10,7 @@ import  loadPrediction.core.predictor.excelling.ExcellingQingmingPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.dataAccess.DAOSimpleDate;
 import  loadPrediction.exception.LPE;
-import loadPrediction.log.BeanFactory;
+import loadPrediction.aop.BeanFactory;
 import  loadPrediction.utils.DateUtil;
 import  loadPrediction.utils.PowerSystemDateUtil;
 

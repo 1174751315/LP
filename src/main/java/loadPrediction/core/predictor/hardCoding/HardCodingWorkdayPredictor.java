@@ -198,7 +198,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>
     doCalcSimilarDays(Integer predictionDaysNumber, ElementPrintableLinkedList<SimpleDate> predictionDays, ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays, ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> similarCoes) {
-        Integer similarOffset, similarIndex;
+        Integer similarOffset;
         Double min;
         Integer predictionDaysNbr = predictionDaysNumber;
         Integer historyDaysNbr = historyDays.get(0).size();

@@ -32,7 +32,7 @@ public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisit
 
 
 
-    private static final String[] LEFT_LABELS={},TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差","最高温度","平均温度","最低温度","降雨量"};
+    private static final String[] TOP_LABELS={"最大负荷","最大负荷时刻","最小负荷","最小负荷时刻","平均负荷","峰谷差","最高温度","平均温度","最低温度","降雨量"};
 
     @Override
     protected Object doVisitAndOutput(IPredictor predictor, String fileAbsPath) throws LPE {
@@ -104,8 +104,10 @@ public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisit
         for (int i = 0; i <row ; i++) {
             g.drawLine(0,(i+1)*perRow,WIDTH,(i+1)*perRow);
         }
-        for (int i=0;i<col;i++)
+        for (int i=0;i<col;i++){
             g.drawLine((i+1)*perCol,0,(i+1)*perCol,HEIGHT);
+        }
+
 
         g.setPaint(old);
     }

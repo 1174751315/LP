@@ -49,9 +49,6 @@ public class CachesManager {
     }
 
     public void addAccuracyEntity(OnedayAccuracyCheckingCacheEntity entity) throws LPE {
-        if (false) {
-            throw new LPE("未完整设置缓存实体对象。", LPE.eScope.DEVELOPER);
-        }
         if (!entity.equals(accuracyCaches.get(entity.getDateString()))) {
             accuracyCaches.put(entity.getDateString(), entity);
             DAOFactory.getDefault().createDAOOnedayAccuracyCheckingCacheEntity().insertOrUpdate(entity);

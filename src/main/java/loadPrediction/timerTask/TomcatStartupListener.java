@@ -1,10 +1,9 @@
 package loadPrediction.timerTask;
 
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import java.util.Date;
 import java.util.Timer;
 
 /**

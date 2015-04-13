@@ -8,13 +8,13 @@ import javax.mail.internet.MimeMessage;
 /**
  * Created by LBC on 2015-04-05.
  */
-public class ExceptionMailler extends ExceptionHandlerDecorator {
+public class ExceptionMailer extends ExceptionHandlerDecorator {
 
-    public ExceptionMailler(ExceptionHandler handler){
+    public ExceptionMailer(ExceptionHandler handler){
         this(handler, "");
     }
     private String prefix;
-    public ExceptionMailler(ExceptionHandler handler,String subjectPrefix){
+    public ExceptionMailer(ExceptionHandler handler, String subjectPrefix){
         super(handler);
         this.prefix=subjectPrefix;
 
