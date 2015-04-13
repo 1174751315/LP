@@ -15,7 +15,6 @@ import  loadPrediction.utils.DateUtil;
 import  loadPrediction.utils.PowerSystemDateUtil;
 
 import java.sql.Date;
-
 /**
  * 李倍存 创建于 2015-02-25 13:33。电邮 1174751315@qq.com。
  */
@@ -80,4 +79,4 @@ private PowerSystemDateUtil powerSystemDateUtil;
     public IPredictor getProperPredictor(String date) throws Exception {
         return getProperPredictor(Date.valueOf(date));
     }
-}
+    }

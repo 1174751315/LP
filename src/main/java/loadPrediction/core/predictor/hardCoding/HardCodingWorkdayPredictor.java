@@ -133,7 +133,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
 
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>>
-    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) {
+    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> coes = new ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>>("");
 
         ElementPrintableLinkedList<EnhancedLinkedList<Double>> subCoes = new ElementPrintableLinkedList<EnhancedLinkedList<Double>>("");
@@ -149,7 +149,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             listAllWeatherData.add(predictionWeather.get(i));
         }
 
-        EnhancedSimilarCoeCalculator similarCoeCalculator=new EnhancedSimilarCoeCalculator(new WeatherCoesPackage("WORKDAY"));
+        EnhancedSimilarCoeCalculator similarCoeCalculator=new EnhancedSimilarCoeCalculator(new WeatherCoesPackage(DAOFactory.getDefault().createDaoWeatherCoes4Workday()));
 
         for (int i = 0; i < predictionDays; i++) {
             WeatherData wdNow, wdBefore;

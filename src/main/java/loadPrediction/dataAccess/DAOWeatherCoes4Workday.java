@@ -7,6 +7,7 @@
 
 package loadPrediction.dataAccess;
 
+import loadPrediction.domain.WeatherCoes;
 import  loadPrediction.domain.WeatherCoes4Workday;
 
 import java.util.List;
@@ -14,25 +15,12 @@ import java.util.List;
 /**
  * Created by LBC on 2015/2/9.
  */
-public class DAOWeatherCoes4Workday extends AbstractDAO {
+public class DAOWeatherCoes4Workday extends AbstractDAO  implements IDAOWeatherCoes{
 
     public DAOWeatherCoes4Workday(SuperDAO superDAO) {
         this.superDAO = superDAO;
     }
-
-    public WeatherCoes4Workday query(String key) throws Exception {
+    public WeatherCoes query(String key) throws Exception {
         return (WeatherCoes4Workday) superDAO.query(WeatherCoes4Workday.class, key);
-    }
-
-    public List query() throws Exception {
-        return superDAO.query(WeatherCoes4Workday.class);
-    }
-
-    public void update(WeatherCoes4Workday o) throws Exception {
-        superDAO.update(o);
-    }
-
-    public void delete(String key) throws Exception {
-        superDAO.delete(WeatherCoes4Workday.class, key);
     }
 }

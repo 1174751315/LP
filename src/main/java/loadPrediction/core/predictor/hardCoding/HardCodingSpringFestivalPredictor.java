@@ -56,7 +56,7 @@ public class HardCodingSpringFestivalPredictor extends AbstractTemplateMethodFor
     }
 
     @Override
-    protected ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) {
+    protected ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) throws LPE {
         return null;
     }
 

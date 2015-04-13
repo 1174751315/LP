@@ -12,6 +12,7 @@ import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.WeekendPredictorCfg;
 import loadPrediction.core.EnhancedSimilarCoeCalculator;
 import loadPrediction.core.noneWorkday.SimilarDayFinder;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.WeatherCoesPackage;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
@@ -121,7 +122,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
 
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>>
-    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) {
+    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) throws LPE {
 
         ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> coes = new ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>>("similar_coes");
 
@@ -133,7 +134,7 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
         Integer historyWorkdays = historyWeather.get(0).size();
         Integer historyWeekends = historyWeather.get(1).size();
 
-        EnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculator(new WeatherCoesPackage("WEEKEND"));
+        EnhancedSimilarCoeCalculator calculator = new EnhancedSimilarCoeCalculator(new WeatherCoesPackage(DAOFactory.getDefault().createDaoWeatherCoes4Weekend()));
 
         for (int i = 0; i < 1; i++) {
             EnhancedLinkedList<Double> coes1 = new EnhancedLinkedList<Double>("coes1");

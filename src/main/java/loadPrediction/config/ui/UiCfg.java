@@ -39,6 +39,9 @@ public class UiCfg {
     public void update(){
         Document document=null;
         try {
+            if (saxReader==null){
+                saxReader=new SAXReader();
+            }
             document = saxReader.read(new File(cfgFilePath));
         } catch (DocumentException e) {
             e.printStackTrace();
@@ -64,8 +67,8 @@ public class UiCfg {
         }
         outputChartImageCfg.setSeries(colorList);
     }
-    private SAXReader saxReader=new SAXReader();
 
+    private SAXReader saxReader;
     public SAXReader getSaxReader() {
         return saxReader;
     }

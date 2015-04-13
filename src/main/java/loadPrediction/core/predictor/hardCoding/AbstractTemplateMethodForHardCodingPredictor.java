@@ -473,7 +473,7 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
      * @return 预测日与各历史日的相似系数。
      */
     protected abstract ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>>
-    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather);
+    doCalcSimilarCoes(ElementPrintableLinkedList<WeatherData> predictionWeather, ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeather) throws LPE;
 
     /**
      * @param threshold 精度的阈值。
