@@ -11,7 +11,8 @@ public class BeanFactory {
             "spring-config.xml",
             "spring-predictors.xml",
             "spring-mail-appcontext.xml",
-            "spring-aop.xml"
+            "spring-aop.xml",
+            "spring-jobs.xml"
 //            "spring-aop-exception-handling.xml"
     };
     private ApplicationContext context;

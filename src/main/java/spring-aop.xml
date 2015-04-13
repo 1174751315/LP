@@ -16,7 +16,7 @@
     <bean id="aopFunctionLogging" class="loadPrediction.aop.AopTraceFunctional"/>
     <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
         <property name="advice" ref="aopLogging"/>
-        <property name="patterns">
+        <property name="patterns" >
             <list>
                 <value>.*</value>
             </list>
