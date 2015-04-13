@@ -40,15 +40,8 @@ public class EnhancedSimilarCoeCalculator extends AbstractCalculatorUseWeatherCo
 
     public Double calcSimilarCoe(WeatherData weatherData1, WeatherData weatherData2) {
         WeatherCoesPackage weatherCoesPackage =super.getWeatherCoes();
-        weatherCoesPackage.print(System.err);
-
-        Double coe = 0.0;
-        WeatherData weatherDataFactor1 = weatherFactorCalculator.calcWeatherFactor(weatherData1);
+         WeatherData weatherDataFactor1 = weatherFactorCalculator.calcWeatherFactor(weatherData1);
         WeatherData weatherDataFactor2 = weatherFactorCalculator.calcWeatherFactor(weatherData2);
-
-        weatherDataFactor1.print(System.out);
-        weatherDataFactor2.print(System.err);
-
         return similarCoeCalculator.calcSimilarCoe(weatherDataFactor1,weatherDataFactor2);
 
     }

@@ -1,13 +1,11 @@
 package loadPrediction.core.predictor.util;
 
 import common.ElementPrintableLinkedList;
-import loadPrediction.dataAccess.AbstractDAO;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.exception.DAE;
 import loadPrediction.exception.LPE;
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 import loadPrediction.timerTask.LoadDataCopy;
 
 import java.sql.Date;

@@ -23,11 +23,7 @@ import loadPrediction.domain.visitors.List2LoadDataVisitor;
 
 import loadPrediction.exception.LPE;
 
-import loadPrediction.log.Logging;
-
 import loadPrediction.resouce.WeatherDataMappingKeys;
-
-import org.apache.log4j.Logger;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
@@ -75,8 +71,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     private CellPosition predictionDaysExcelPosition;
     private CellPosition predictionWeatherExcelPosition;
     private List<CellPosition> historyWeatherExcelPositions;
-    private List<CellPosition> similarDaysExcelPositions;
-    private List<CellPosition> similarLoadsExcelPosition;
     private ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays;
     private ElementPrintableLinkedList<SimpleDate> predictionDays;
     private ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeathers;
@@ -322,7 +316,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         /*获取预测精度*/
         CellPosition ofAcc = doGetAccuraciesExcelPosition();
         sh = template.getSheet(ofAcc.getSheetName());
-
+        accuracies.clear();
         for (int i = 0; i < predictionDaysNbr; i++) {
             Cell cell = null;
             CellValue cv = null;
@@ -346,8 +340,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             throw new LPE("保存并关闭工作簿时发生异�?");
         }
 //        throw new LPE();
-//
-//
         return outPath;
     }
 

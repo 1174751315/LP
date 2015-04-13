@@ -151,7 +151,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         /*验证参数是否合法。*/
         if (!this.doValidate(this.date))
             throw new LPE("预测算法未能启动，请检查参数或配置。");
-        if (!true) ;
 
         /*获取历史日数量链表。*/
         historyDaysNumbers = this.doGetHistoryDaysNumbers();
@@ -215,7 +214,7 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
 
 
         /*最大、平均、最小负荷预测。*/
-        if (true)
+
             predictionLoadTuple = this.doCalcPredictionLoadTuple1(predictionWeathers, historyWeathers, predictionDays, historyDays);
         if (predictionLoadTuple == null)
             predictionLoadTuple = this.doCalcPredictionLoadTuple2(predictionDays, similarCoes, similarLoad);
@@ -302,11 +301,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
     public AbstractTemplateMethodForHardCodingPredictor(Date date, Boolean dbg) {
         this.date = date;
         this.debug = dbg;
-    }
-//    private AbstractPredictor(){}
-
-    private void checkParameters() throws LPE {
-
     }
 
     /*辅助计算函数.*/

@@ -48,7 +48,6 @@ public class PredictionLoad2DefaultChartVisitor implements IPredictorVisitor {
         LoadData real = predictor.getPrediction96PointLoads().get(0);
         LoadData u = real.multiple(upr);
         LoadData l = real.multiple(lwr);
-        String col;
         DefaultCategoryDataset ds = new DefaultCategoryDataset();
 
 

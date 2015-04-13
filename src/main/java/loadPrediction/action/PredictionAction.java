@@ -14,10 +14,9 @@ import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.core.predictor.PredictorFactory;
 import  loadPrediction.core.predictor.visitors.*;
 import loadPrediction.exception.*;
-import  loadPrediction.log.Logging;
+import  loadPrediction.aop.Logging;
 import  loadPrediction.resouce.IOPaths;
 import  loadPrediction.utils.FileContentUtils;
-import org.apache.log4j.Logger;
 import org.jfree.chart.JFreeChart;
 
 import java.io.File;
@@ -88,7 +87,6 @@ public class PredictionAction extends ActionSupport {
     }
 
     public String intelli() throws Exception {
-        Logger log = Logging.instance().createLogger("智能预测");
         try {
         /*若允许缓存，且缓存有对应项，则直接对用户返回缓存。*/
             if (useCaches && CachesManager.INSTANCE.hasPredictionCache(dateString)) {
@@ -106,31 +104,28 @@ public class PredictionAction extends ActionSupport {
                         xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
                         rptImgName=FileContentUtils.getFileNameFromPath(rptImgPath);
                         root = "";
-                        log.info("【" + dateString + "】  成功地进行了一次预测  【未知预测类型】  【使用缓存】");
                         return SUCCESS;
                     }
                     else {//否则进行一次无缓存常规预测
-                        log.info("【"+dateString+"】  在进行【使用缓存】的预测时发现文件丢失，转而进行无缓存常规预测。"  );
-                        return predict(dateString,log);
+                        return predict(dateString);
                     }
                 } catch (Exception e) {
-                    warning =failed(log,dateString,e);
+                    warning =failed(dateString,e);
                 }
 
             } else {/*否则执行计算，返回计算结果并添加至缓存。*/
-                return predict(dateString,log);
+                return predict(dateString);
             }
 
             return SUCCESS;
         } catch (Throwable e) {
             Exception ex=new Exception(e);
-            warning=failed(log,dateString,ex);
+            warning=failed(dateString,ex);
             return SUCCESS;
         }
     }
-    private String failed(Logger log,String dateString,Exception e){
-    IExceptionHandler handler=ExceptionHandlerFactory.INSTANCE.getUpperHandler();
-    return handler.handle(e,dateString+"预测失败");
+    private String failed(String dateString,Exception e){
+    return dateString+"预测失败";
 
 
 }
@@ -141,7 +136,7 @@ public class PredictionAction extends ActionSupport {
     }
 
 
-    private void doPredict(String dateString,Logger log)throws LPE,IllegalArgumentException,Exception{
+    private void doPredict(String dateString)throws LPE,IllegalArgumentException,Exception{
         if (dateString == null){
             java.util.Date date=new java.util.Date();
             SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
@@ -170,21 +165,20 @@ public class PredictionAction extends ActionSupport {
                 /*添加至缓存管理器。*/
         CachesManager.INSTANCE.addPredictionEntity(entity);
         ;
-        log.info("【" + dateString + "】  成功地进行了一次预测  【" + predictor.getPredictorType() + "】  【不使用缓存】");
     }
-    private String predict(String dateString,Logger log){
+    private String predict(String dateString){
         try {
-            doPredict(dateString,log);
+            doPredict(dateString);
             return SUCCESS;
         } catch (LPE e) {
-            warning= failed(log,dateString,e);
+            warning= failed(dateString,e);
             e.printStackTrace();
         } catch (IllegalArgumentException e) {
 
-            warning =  failed(log,dateString,e);
+            warning =  failed(dateString,e);
             e.printStackTrace();
         } catch (Exception e){
-            warning=failed(log,dateString,e);
+            warning=failed(dateString,e);
             e.printStackTrace();
         }
         return SUCCESS;

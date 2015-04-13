@@ -8,7 +8,7 @@ package loadPrediction.timerTask;
 
 import loadPrediction.action.PredictionAction;
 import loadPrediction.exception.ExceptionHandlerFactory;
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

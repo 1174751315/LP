@@ -1,6 +1,5 @@
-package loadPrediction.log;
+package loadPrediction.aop;
 
-import loadPrediction.exception.DAE;
 import loadPrediction.exception.LPE;
 
 /**

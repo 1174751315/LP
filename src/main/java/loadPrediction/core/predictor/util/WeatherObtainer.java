@@ -1,12 +1,11 @@
 package loadPrediction.core.predictor.util;
 
 import common.ElementPrintableLinkedList;
-import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOWeatherData;
 import loadPrediction.domain.WeatherData;
 import loadPrediction.exception.DAE;
 import loadPrediction.exception.LPE;
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 
 import java.util.List;
 

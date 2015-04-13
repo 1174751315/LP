@@ -66,7 +66,6 @@ public class ChartBuilderImpl1 extends AbstractChartBuilder {
     }
 
     private void extend(List<Color> series){
-        Integer dif=6-series.size();
         for (int i=series.size();i<6;i++){
             series.add(MyColor.getRandomColor());
         }

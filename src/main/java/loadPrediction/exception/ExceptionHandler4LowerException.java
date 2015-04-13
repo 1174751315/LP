@@ -1,6 +1,6 @@
 package loadPrediction.exception;
 
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 import org.apache.log4j.Logger;
 
 /**
@@ -31,7 +31,7 @@ public class ExceptionHandler4LowerException implements IExceptionHandler {
 
 
     public static void defaultHandling(Throwable exception,Logger logger,String msgPrefix){
-        new ExceptionLogger(new ExceptionMailler(new ExceptionHandler()),logger,msgPrefix).handle(exception);
+        new ExceptionLogger(new ExceptionMailer(new ExceptionHandler()),logger,msgPrefix).handle(exception);
     }
     public static void defaultHandling(Throwable exception,String msgPrefix){
         defaultHandling(exception, Logging.instance().createLogger(),msgPrefix);

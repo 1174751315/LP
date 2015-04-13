@@ -14,10 +14,10 @@ public class ExceptionLogger extends ExceptionHandlerDecorator {
         this.msgPrefix=msgPrefix;
     }
     public ExceptionLogger(ExceptionHandler handler,String msgPrefix){
-        this(handler, loadPrediction.log.Logging.instance().createLogger(),msgPrefix);
+        this(handler, loadPrediction.aop.Logging.instance().createLogger(),msgPrefix);
     }
     public ExceptionLogger(ExceptionHandler handler){
-        this(handler, loadPrediction.log.Logging.instance().createLogger(),"【未指定异常提示】]");
+        this(handler, loadPrediction.aop.Logging.instance().createLogger(),"【未指定异常提示】]");
     }
 
     @Override

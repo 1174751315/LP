@@ -51,8 +51,6 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
         try {
             Workbook template = Workbook.getWorkbook(new File(IOPaths.WEB_CONTENT_WORKDAY_OUTPUT_TEMPLATE_XL_PATH));
             WritableWorkbook wwb = Workbook.createWorkbook(new File(path), template);
-            Integer count;
-
             WritableSheet ws0 = wwb.getSheet("相似日");
 
             ws0.addCell(new Label(0, 0, "待预测日"));

@@ -2,7 +2,7 @@ package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import loadPrediction.exception.LPE;
-import loadPrediction.log.Logging;
+import loadPrediction.aop.Logging;
 import loadPrediction.utils.LogMailingUtils;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
