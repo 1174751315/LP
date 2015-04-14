@@ -1,7 +1,8 @@
 package loadPrediction.config.ui;
 
 import loadPrediction.resouce.IOPaths;
-import loadPrediction.utils.MyColor;
+import loadPrediction.utils.color.IColorParser;
+import loadPrediction.utils.color.MyColor;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -53,22 +54,31 @@ public class UiCfg {
         Element chart_colors=colors.element("chart-colors");
 
         String text=chart_colors.element("background-color").getText();
-        outputChartImageCfg.setBackGround(MyColor.getColorOfHTMLFormat(text));
+        outputChartImageCfg.setBackGround(colorParser.parse(text));
         text=chart_colors.element("fore-color").getText();
-        outputChartImageCfg.setForeGround(MyColor.getColorOfHTMLFormat(text));
+        outputChartImageCfg.setForeGround(colorParser.parse(text));
         text=chart_colors.element("grid-color").getText();
-        outputChartImageCfg.setGrid(MyColor.getColorOfHTMLFormat(text));
+        outputChartImageCfg.setGrid(colorParser.parse(text));
 
         Element seriesColors=chart_colors.element("series-colors");
         List series=seriesColors.elements();
         List<Color> colorList=new LinkedList<Color>();
         for (int i = 0; i < series.size(); i++) {
-            colorList.add(MyColor.getColorOfHTMLFormat(((Element) series.get(i)).getText()));
+            colorList.add(colorParser.parse(((Element) series.get(i)).getText()));
         }
         outputChartImageCfg.setSeries(colorList);
     }
 
+    public IColorParser getColorParser() {
+        return colorParser;
+    }
+
+    public void setColorParser(IColorParser colorParser) {
+        this.colorParser = colorParser;
+    }
+
     private SAXReader saxReader;
+    private IColorParser colorParser;
     public SAXReader getSaxReader() {
         return saxReader;
     }

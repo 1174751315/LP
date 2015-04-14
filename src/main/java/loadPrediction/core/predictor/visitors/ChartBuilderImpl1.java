@@ -10,7 +10,7 @@ import loadPrediction.domain.visitors.MedFiltVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyCalculator;
 import loadPrediction.utils.DateUtil;
-import loadPrediction.utils.MyColor;
+import loadPrediction.utils.color.MyColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.ValueAxis;
