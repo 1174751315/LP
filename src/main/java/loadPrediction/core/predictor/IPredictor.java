@@ -7,6 +7,7 @@
 package loadPrediction.core.predictor;
 
 import  common.ElementPrintableLinkedList;
+import common.PrintableLinkedList;
 import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import  loadPrediction.domain.Accuracy;
 import  loadPrediction.domain.LoadData;
@@ -34,7 +35,7 @@ public interface IPredictor {
      * 执行该函数之前必须调用predict函数。
      * @return 精度链表。
      */
-    ElementPrintableLinkedList<Accuracy> getAccuracy();
+    PrintableLinkedList<Double> getAccuracy();
 
 
     /**

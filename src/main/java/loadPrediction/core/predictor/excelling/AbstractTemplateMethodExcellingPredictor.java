@@ -46,12 +46,15 @@ import java.util.Map;
 public abstract class AbstractTemplateMethodExcellingPredictor {
     protected Date date;
     protected String dateString;
-    Workbook template = null;
-    FormulaEvaluator evaluator = null;
     protected CommonUtils commonUtils;
     protected DAOFactory defaultDaoFactory;
-    private ElementPrintableLinkedList<Accuracy> accuracies = new ElementPrintableLinkedList<Accuracy>(
-            "acc");
+    private XlAccess xlAccessor;
+
+    public void setXlAccessor(XlAccess xlAccessor) {
+        this.xlAccessor = xlAccessor;
+    }
+
+    private PrintableLinkedList<Double> accuracies;
     ElementPrintableLinkedList<LoadData> predictionLoads = new ElementPrintableLinkedList<LoadData>(
             "al");
 
@@ -111,6 +114,8 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     }
 
     public Object predict() throws LPE {
+        if (xlAccessor==null)
+            xlAccessor=new XlAccess();
         if (commonUtils == null) {
             commonUtils = new CommonUtils(new LoadsObtainer(
                         DAOFactory.getDefault().createDaoLoadData(), DAOFactory.getAlter().createDaoLoadData()),
@@ -124,7 +129,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
  
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
-        openTemplate(inPath);
+        xlAccessor.openWorkbook(inPath);
 
         historyDaysNbrs = doGetHistoryDaysNbrs();
         predictionDaysNbr = doGetPredictionDaysNbr();
@@ -152,18 +157,16 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         for (int i = 0; i < historyDaysExcelPositions.size(); i++) {
             CellPosition pos = historyDaysExcelPositions.get(i);
-            Sheet ws0 = template.getSheet(pos.getSheetName());
-            writeSomeDateStrings2Cells(ws0, pos.getCol().intValue(),
-                pos.getRow(), historyDays.get(i));
+            xlAccessor.writeSomeDateStrings2Cells(pos.getSheetName(),pos.getCol().intValue(),
+                    pos.getRow(), historyDays.get(i));
         }
 
         /*填充预测�?*/
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
 
-        Sheet ws0 = template.getSheet(predictionDaysExcelPosition.getSheetName());
-        writeSomeDateStrings2Cells(ws0,
-            predictionDaysExcelPosition.getCol().intValue(),
-            predictionDaysExcelPosition.getRow(), predictionDays);
+        xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition.getSheetName(),
+               predictionDaysExcelPosition.getCol().intValue(),
+               predictionDaysExcelPosition.getRow(), predictionDays);
 
 
 
@@ -173,14 +176,12 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         for (int i = 0; i < historyWeatherExcelPositions.size(); i++) {
             CellPosition pos = historyWeatherExcelPositions.get(i);
-            Sheet ws1 = template.getSheet(pos.getSheetName());
-
             for (int k = 0; k < historyWeathers.get(i).size(); k++) {
                 WeatherData weatherData = historyWeathers.get(i).get(k);
-                writeOneWeatherData2Cells(ws1,
-                    historyWeatherExcelPositions.get(i).getCol().intValue(),
-                    historyWeatherExcelPositions.get(i).getRow() + k,
-                    weatherData);
+               xlAccessor.writeOneWeatherData2Cells(pos.getSheetName(),
+                       historyWeatherExcelPositions.get(i).getCol().intValue(),
+                       historyWeatherExcelPositions.get(i).getRow() + k,
+                       weatherData);
             }
         }
 
@@ -188,17 +189,15 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         /*填充预测气象数据*/
 
         this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
-        ws0 = template.getSheet(predictionWeatherExcelPosition.getSheetName());
 
         for (int i = 0; i < predictionWeathers.size(); i++) {
             WeatherData weatherData = predictionWeathers.get(i);
-            writeOneWeatherData2Cells(ws0,
-                predictionWeatherExcelPosition.getCol().intValue(),
-                predictionWeatherExcelPosition.getRow() + i, weatherData);
+            xlAccessor.writeOneWeatherData2Cells(predictionWeatherExcelPosition.getSheetName(),
+                    predictionWeatherExcelPosition.getCol().intValue(),
+                    predictionWeatherExcelPosition.getRow() + i, weatherData);
         }
-        forceCalcAllFormulas(template);
 
-        this.doAfterInjectWeathers(template, historyDays, predictionDays);
+        this.doAfterInjectWeathers(xlAccessor.getWorkbook(), historyDays, predictionDays);
 
         /*打开工作�?*/
         //        com.jniwrapper.win32.jexcel.Workbook wb=null;
@@ -211,38 +210,12 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         //            wb.close(true);
         //            app.close();
         //        }
-        closeTemplate(outPath);
-        openTemplate(outPath);
+        xlAccessor.writeAndClose(outPath);
+        xlAccessor.openWorkbook(outPath);
         outPath += ".xls";
 
-
-        /////////////////
-
-        //POI__________________________________________________________________________________________________
-
-        //        try {
-        //            wb=new HSSFWorkbook(new FileInputStream(outPath));
         List<CellPosition> ofSimilarDayStrings = doGetSimilarDaysExcelPositions();
-
-        for (int i = 0; i < ofSimilarDayStrings.size(); i++) {
-            CellPosition pos = ofSimilarDayStrings.get(i);
-            org.apache.poi.ss.usermodel.Sheet sh = template.getSheet(pos.getSheetName());
-            sh.setForceFormulaRecalculation(true);
-
-            PrintableLinkedList<String> dates = new PrintableLinkedList<String>(
-                    "unnamed");
-
-            for (int j = 0; j < predictionDaysNbr; j++) {
-                org.apache.poi.ss.usermodel.Cell cell = sh.getRow(pos.getRow() +
-                        j).getCell(pos.getCol()); //sh.getRow(pos.row+j).getCell(pos.getCol()+1);
-                CellValue cv = evaluator.evaluate(cell);
-                dates.add(cv.formatAsString().replaceAll("\"", ""));
-            }
-
-            similarDayStrings.add(dates);
-        }
-
-        similarDayStrings.print(System.err);
+        similarDayStrings=xlAccessor.readSimilarDateStrings(ofSimilarDayStrings,predictionDaysNbr);
 
         /*获取相似日负�?*/
         similarLoads = commonUtils.getSimilarDaysLoad_1(similarDayStrings);
@@ -253,91 +226,35 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         for (int i = 0; i < ofSimilarLoads.size(); i++) {
             CellPosition pos = ofSimilarLoads.get(i);
-            Sheet ws1 = template.getSheet(pos.getSheetName());
             List<LoadData> loads = similarLoads.get(i);
-
             for (int j = 0; j < loads.size(); j++) {
-                writeOneLoadData2Cells(ws1, pos.getCol().intValue() + j,
-                    pos.getRow(), loads.get(j));
+                xlAccessor.writeOneLoadData2Cells(pos.getSheetName(), pos.getCol().intValue() + j,
+                        pos.getRow(), loads.get(j));
             }
-
-            ws1.setForceFormulaRecalculation(true);
         }
 
-        this.doAfterInjectSimilarLoads(template);
-        forceCalcAllFormulas(template);
+        this.doAfterInjectSimilarLoads(xlAccessor.getWorkbook());
 
         /*获取实际负荷数据：若存在*/
         actualLoads = commonUtils.getActualLoad(predictionDays);
         actualLoads.print(System.err);
 
         CellPosition t = doGetActualLoadsExcelPosition();
-        Sheet ws2 = template.getSheet(t.getSheetName());
         List<LoadData> loads = actualLoads;
-
         for (int j = 0; j < loads.size(); j++) {
             if (loads.get(j) != null) {
-                writeOneLoadData2Cells(ws2, t.getCol() + j, t.getRow(),
-                    loads.get(j));
+                xlAccessor.writeOneLoadData2Cells(t.getSheetName(), t.getCol() + j, t.getRow(),
+                        loads.get(j));
             }
         }
-
-        /*�?始从EXCEL工作簿提取预测计算结�?*/
-
-        /*打开工作�?*/
-
-        //        try {
-        //            app=new Application();
-        //            wb=app.openWorkbook(new File(outPath));
-        //        }catch (Exception e){
-        //            e.printStackTrace();
-        //        }
-        for (int i = 0; i < template.getNumberOfSheets(); i++) {
-            template.getSheetAt(i).setForceFormulaRecalculation(true);
-        }
-
         /*获取预测负荷*/
         CellPosition ofPredictionLoads = doGetPredictionLoadsExcelPosition();
-        Sheet sh = template.getSheet(ofPredictionLoads.getSheetName());
-        forceCalcAllFormulas(template);
-
-        predictionLoads.clear();
-        for (int i = 0; i < predictionDaysNbr; i++) {
-            LoadData ld = readOneLoadDataFromFormulas(sh, evaluator,
-                    ofPredictionLoads.getCol() + i, ofPredictionLoads.getRow());
-            ld.setDateString(predictionDays.get(i).getDateString());
-            predictionLoads.add(ld);
-        }
-
+        predictionLoads= xlAccessor.readSomeLoadDataFromFormulas(ofPredictionLoads,predictionDaysNbr);
         predictionLoads.print(System.out);
-
         /*获取预测精度*/
         CellPosition ofAcc = doGetAccuraciesExcelPosition();
-        sh = template.getSheet(ofAcc.getSheetName());
-        accuracies.clear();
-        for (int i = 0; i < predictionDaysNbr; i++) {
-            Cell cell = null;
-            CellValue cv = null;
-            cell = sh.getRow(ofAcc.getRow()).getCell(ofAcc.getCol() + i);
-            cv = evaluator.evaluate(cell);
-
-            Double acc = cv.getNumberValue();
-
-            if ((acc >= 0.001) && (dateString != null) &&
-                    !dateString.equals("")) {
-                accuracies.add(new Accuracy(predictionDays.get(i).getDateString(),
-                        acc));
-            }
-        }
-        accuracies.print(System.err);
-        /*关闭工作�?*/
-        try {
-            template.write(new FileOutputStream(outPath));
-            template.close();
-        } catch (IOException e) {
-            throw new LPE("保存并关闭工作簿时发生异�?");
-        }
-//        throw new LPE();
+        accuracies=xlAccessor.readSomeAccuracies(ofAcc,predictionDaysNbr);
+        xlAccessor.writeAndClose(outPath);
         return outPath;
     }
 
@@ -402,7 +319,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         return similarLoads;
     }
 
-    public ElementPrintableLinkedList<Accuracy> getAccuracy() {
+    public PrintableLinkedList<Double> getAccuracy() {
         return accuracies;
     }
 
@@ -454,85 +371,13 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         //DO NOTHING
     }
 
-    private void forceCalcAllFormulas(Workbook workbook) {
-        for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
-            workbook.getSheetAt(i).setForceFormulaRecalculation(true);
-        }
-    }
 
-    private void writeOneLoadData2Cells(Sheet sheet, Integer col, Integer row,
-        LoadData data) {
-        List<Double> loadData = data.toList();
 
-        for (int k = 0; k < 96; k++) {
-            Cell cell = sheet.getRow(row + k).getCell(col);
-            cell.setCellValue(loadData.get(k));
-        }
-    }
 
-    private void writeOneWeatherData2Cells(Sheet sheet, Integer col,
-        Integer row, WeatherData data) {
-        Map<String,Double> map = data.toMap();
-        Row row_ = sheet.getRow(row);
 
-        for (int j = 0; j < WeatherDataMappingKeys.keys.length; j++) {
-            try {
-                row_.getCell(col + j)
-                    .setCellValue(map.get(WeatherDataMappingKeys.keys[j]));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
-    private LoadData readOneLoadDataFromFormulas(Sheet sheet,
-        FormulaEvaluator evaluator, Integer col, Integer row) {
-        List<Double> loadData = new LinkedList<Double>();
 
-        for (int k = 0; k < 96; k++) {
-            Cell cell = sheet.getRow(row + k).getCell(col);
-            CellValue cv = evaluator.evaluate(cell);
-            loadData.add(cv.getNumberValue());
-        }
 
-        LoadData l = new LoadData();
-        l.setName("From Calc");
-        l.accept(new List2LoadDataVisitor(loadData));
-
-        return l;
-    }
-
-    private void writeSomeDateStrings2Cells(Sheet sheet, Integer col,
-        Integer row, List<SimpleDate> dates) {
-        for (int j = 0; j < dates.size(); j++) {
-            String ds = dates.get(j).getDateString();
-            sheet.getRow(row + j).getCell(col).setCellValue(Date.valueOf(ds));
-        }
-    }
-
-    private void closeTemplate(String path) throws LPE {
-        try {
-            template.write(new FileOutputStream(path));
-            template.close();
-        } catch (FileNotFoundException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
-        } catch (IOException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
-        }
-    }
-
-    private void openTemplate(String path) throws LPE {
-        try {
-            template = WorkbookFactory.create(new FileInputStream(path));
-            evaluator = template.getCreationHelper().createFormulaEvaluator();
-        } catch (FileNotFoundException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
-        } catch (InvalidFormatException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
-        } catch (IOException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
-        }
-    }
 
     public ElementPrintableLinkedList<WeatherData> getPredictionWeathers() {
         return predictionWeathers;
