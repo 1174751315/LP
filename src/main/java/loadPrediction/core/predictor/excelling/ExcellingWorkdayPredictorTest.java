@@ -3,6 +3,7 @@ package loadPrediction.core.predictor.excelling;
 import common.ElementPrintableLinkedList;
 import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.core.predictor.WorkdayPredictorTestDataRepo;
+import loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor;
 import loadPrediction.core.predictor.util.CommonUtils;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOWeatherData;

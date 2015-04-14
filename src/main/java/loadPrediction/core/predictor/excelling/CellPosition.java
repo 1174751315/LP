@@ -20,6 +20,10 @@ public class CellPosition {
         cellReference = new CellReference(cellRef);
         this.sheetName = sheetName;
     }
+    public CellPosition(Integer col,Integer row,String sheetName){
+        cellReference=new CellReference(row,col);
+        this.sheetName=sheetName;
+    }
 
     private String sheetName;
     private CellReference cellReference;
@@ -41,5 +45,19 @@ public class CellPosition {
      */
     public Short getCol() {
         return cellReference.getCol();
+
+    }
+
+
+    public CellPosition ofColAfter(Integer offset){
+        return this.ofAfter(offset,0);
+    }
+    public CellPosition ofRowAfter(Integer offset){
+        return this.ofAfter(0,offset);
+    }
+
+    public CellPosition ofAfter(Integer colOffset,Integer rowOffset){
+        return  new CellPosition(Integer.valueOf(this.cellReference.getCol()+colOffset),this.cellReference.getRow()+rowOffset,this.getSheetName());
+
     }
 }

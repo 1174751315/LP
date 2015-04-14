@@ -1,6 +1,7 @@
 package loadPrediction.action;
 
 import junit.framework.TestCase;
+import loadPrediction.action.PredictionAction;
 
 public class PredictionActionTest extends TestCase {
 

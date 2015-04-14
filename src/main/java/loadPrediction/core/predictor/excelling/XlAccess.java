@@ -69,29 +69,58 @@ public class XlAccess {
     private String wbPath;
     private FormulaEvaluator evaluator;
 
-    public void writeSomeDateStrings2Cells(String sheetName, Integer col, Integer row, List<SimpleDate> dates) {
+    public void writeSomeDateStrings2Cells(CellPosition position, List<SimpleDate> dates) {
+        String sheetName=position.getSheetName();
+        Short col=position.getCol();
+        Integer row=position.getRow();
         Sheet sheet=workbook.getSheet(sheetName);
         for (int j = 0; j < dates.size(); j++) {
             String ds = dates.get(j).getDateString();
             sheet.getRow(row + j).getCell(col).setCellValue(Date.valueOf(ds));
         }
     }
-    public void writeOneWeatherData2Cells(String sheetName, Integer col,
-                                           Integer row, WeatherData data) {
+    public void writeSomeDateStrings2Cells(List<CellPosition> positions, List<ElementPrintableLinkedList<SimpleDate>> dates) {
+        for (int i = 0; i < positions.size(); i++) {
+            CellPosition pos = positions.get(i);
+            this.writeSomeDateStrings2Cells(pos, dates.get(i));
+        }
+    }
+
+    public void writeSomeWeatherData2Cells(CellPosition position, List<WeatherData> datas) {
+        for (int k = 0; k < datas.size(); k++) {
+            WeatherData weatherData = datas.get(k);
+            this.writeOneWeatherData2Cells(position.ofRowAfter(k),weatherData);
+        }
+    }
+
+    private void writeOneWeatherData2Cells(CellPosition position, WeatherData data) {
+
+        String sheetName=position.getSheetName();
+        Short col=position.getCol();
+        Integer row=position.getRow();
         Sheet sheet=workbook.getSheet(sheetName);
         Map<String,Double> map = data.toMap();
         Row row_ = sheet.getRow(row);
         for (int j = 0; j < WeatherDataMappingKeys.keys.length; j++) {
             try {
-                row_.getCell(col + j)
-                        .setCellValue(map.get(WeatherDataMappingKeys.keys[j]));
+                row_.getCell(col + j).setCellValue(map.get(WeatherDataMappingKeys.keys[j]));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
-    public void writeOneLoadData2Cells(String sheetName, Integer col, Integer row,
+
+    public void writeSomeWeatherData2Cells(List<CellPosition> positions, List<ElementPrintableLinkedList<WeatherData>> datas) {
+    for (int i = 0; i < positions.size(); i++) {
+        CellPosition pos = positions.get(i);
+        this.writeSomeWeatherData2Cells(pos,datas.get(i));
+        }
+    }
+    public void writeOneLoadData2Cells(CellPosition position,
                                         LoadData data) {
+        String sheetName=position.getSheetName();
+        Short col=position.getCol();
+        Integer row=position.getRow();
         Sheet sheet=workbook.getSheet(sheetName);
         List<Double> loadData = data.toList();
 
@@ -100,8 +129,22 @@ public class XlAccess {
             cell.setCellValue(loadData.get(k));
         }
     }
-
-
+    public void writeSomeLoadData2Cells(CellPosition positions,
+                                       List<LoadData> datas) {
+        for (int j = 0; j < datas.size(); j++) {
+            this.writeOneLoadData2Cells(positions.ofColAfter(j), datas.get(j));
+        }
+    }
+    public void writeSomeLoadData2Cells(List<CellPosition> positions,
+                                        List<ElementPrintableLinkedList<LoadData>> datas) {
+        for (int i = 0; i < positions.size(); i++) {
+            CellPosition pos = positions.get(i);
+            List<LoadData> loads = datas.get(i);
+            for (int j = 0; j < loads.size(); j++) {
+                this.writeOneLoadData2Cells(pos, loads.get(j));
+            }
+        }
+    }
     private LoadData readOneLoadDataFromFormulas(String sheetName,Integer col,Integer row) {
         forceCalcAllFormulas();
         List<Double> loadData = new LinkedList<Double>();

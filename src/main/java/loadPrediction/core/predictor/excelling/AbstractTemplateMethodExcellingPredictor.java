@@ -130,72 +130,26 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
         xlAccessor.openWorkbook(inPath);
-
         historyDaysNbrs = doGetHistoryDaysNbrs();
         predictionDaysNbr = doGetPredictionDaysNbr();
-
         historyDays = doGetHistoryDays();
-
-        //        historyDays.print(System.err);
-
         predictionDays = doGetPredictionDays();
 
-        //        predictionDays.print(System.out);
-
-        //        closeTemplate(outPath);
-        //        openTemplate(outPath);
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
-
-        //        historyWeathers.print(System.err);
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
-
-        //        predictionWeathers.print(System.out);
-
-        //        closeTemplate(outPath);
-        //        openTemplate(outPath);
         historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
-
-        for (int i = 0; i < historyDaysExcelPositions.size(); i++) {
-            CellPosition pos = historyDaysExcelPositions.get(i);
-            xlAccessor.writeSomeDateStrings2Cells(pos.getSheetName(),pos.getCol().intValue(),
-                    pos.getRow(), historyDays.get(i));
-        }
-
+        xlAccessor.writeSomeDateStrings2Cells(historyDaysExcelPositions,historyDays);
         /*填充预测�?*/
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
-
-        xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition.getSheetName(),
-               predictionDaysExcelPosition.getCol().intValue(),
-               predictionDaysExcelPosition.getRow(), predictionDays);
-
-
+        xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition,predictionDays);
 
         /*填充历史气象数据*/
-
         historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
-
-        for (int i = 0; i < historyWeatherExcelPositions.size(); i++) {
-            CellPosition pos = historyWeatherExcelPositions.get(i);
-            for (int k = 0; k < historyWeathers.get(i).size(); k++) {
-                WeatherData weatherData = historyWeathers.get(i).get(k);
-               xlAccessor.writeOneWeatherData2Cells(pos.getSheetName(),
-                       historyWeatherExcelPositions.get(i).getCol().intValue(),
-                       historyWeatherExcelPositions.get(i).getRow() + k,
-                       weatherData);
-            }
-        }
-
-
-        /*填充预测气象数据*/
+        xlAccessor.writeSomeWeatherData2Cells(historyDaysExcelPositions,historyWeathers);
+       /*填充预测气象数据*/
 
         this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
-
-        for (int i = 0; i < predictionWeathers.size(); i++) {
-            WeatherData weatherData = predictionWeathers.get(i);
-            xlAccessor.writeOneWeatherData2Cells(predictionWeatherExcelPosition.getSheetName(),
-                    predictionWeatherExcelPosition.getCol().intValue(),
-                    predictionWeatherExcelPosition.getRow() + i, weatherData);
-        }
+        xlAccessor.writeSomeWeatherData2Cells(predictionDaysExcelPosition,predictionWeathers);
 
         this.doAfterInjectWeathers(xlAccessor.getWorkbook(), historyDays, predictionDays);
 
@@ -223,15 +177,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         /*填充相似日负�?*/
         List<CellPosition> ofSimilarLoads = doGetSimilarLoadsExcelPosition();
+        xlAccessor.writeSomeLoadData2Cells(ofSimilarLoads,similarLoads);
 
-        for (int i = 0; i < ofSimilarLoads.size(); i++) {
-            CellPosition pos = ofSimilarLoads.get(i);
-            List<LoadData> loads = similarLoads.get(i);
-            for (int j = 0; j < loads.size(); j++) {
-                xlAccessor.writeOneLoadData2Cells(pos.getSheetName(), pos.getCol().intValue() + j,
-                        pos.getRow(), loads.get(j));
-            }
-        }
+
 
         this.doAfterInjectSimilarLoads(xlAccessor.getWorkbook());
 
