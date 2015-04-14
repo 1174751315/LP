@@ -5,6 +5,7 @@
  */
 package loadPrediction.core.predictor.excelling;
 
+import com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor;
 import common.ElementPrintableLinkedList;
 import common.PrintableLinkedList;
 
@@ -123,11 +124,32 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         predictionDays = doGetPredictionDays();
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
+
+
+        /*填充历史日*/
         historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
         xlAccessor.writeSomeDateStrings2Cells(historyDaysExcelPositions,historyDays);
         /*填充预测�?*/
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
         xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition,predictionDays);
+
+//        Workbook template=xlAccessor.getWorkbook();
+         /*填充历史日*/
+//        historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
+//        for (int i = 0; i < historyDaysExcelPositions.size(); i++) {
+//            CellPosition pos = historyDaysExcelPositions.get(i);
+//            Sheet ws0 = template.getSheet(pos.getSheetName());
+//            writeSomeDateStrings2Cells(ws0, pos.getCol().intValue(), pos.getRow(), historyDays.get(i));
+//        }
+//        historyDays.print(System.err);
+        /*填充预测日*/
+//        predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
+//        Sheet ws0 = template.getSheet(predictionDaysExcelPosition.getSheetName());
+//        writeSomeDateStrings2Cells(ws0, predictionDaysExcelPosition.getCol().intValue(), predictionDaysExcelPosition.getRow(), predictionDays);
+//        predictionDays.print(System.out);
+
+
+
         /*填充历史气象数据*/
         historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
         xlAccessor.writeSomeWeatherData2Cells(historyDaysExcelPositions,historyWeathers);
@@ -280,7 +302,12 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
 
 
-
+    private void writeSomeDateStrings2Cells(Sheet sheet, Integer col, Integer row, List<SimpleDate> dates) {
+        for (int j = 0; j < dates.size(); j++) {
+            String ds = dates.get(j).getDateString();
+            sheet.getRow(row + j).getCell(col).setCellValue(Date.valueOf(ds));
+        }
+    }
 
 
 

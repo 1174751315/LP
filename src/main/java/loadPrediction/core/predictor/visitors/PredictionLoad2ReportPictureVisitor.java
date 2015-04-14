@@ -12,8 +12,6 @@ import loadPrediction.domain.LoadData;
 import loadPrediction.domain.WeatherData;
 import loadPrediction.exception.LPE;
 
-import loadPrediction.utils.MyColor;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;

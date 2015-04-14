@@ -1,14 +1,11 @@
 package loadPrediction.core.predictor.visitors;
 
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.dataAccess.DAOFactory;
-import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.MyColor;
+import loadPrediction.utils.color.MyColor;
 import org.jfree.chart.JFreeChart;
 
 import java.awt.*;
-import java.util.*;
 
 /**
  * Created by LBC on 2015-04-08.

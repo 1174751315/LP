@@ -10,9 +10,15 @@ import loadPrediction.domain.WeatherData;
 import loadPrediction.domain.visitors.List2LoadDataVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.WeatherDataMappingKeys;
+import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,6 +29,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.*;
+import java.sql.Date;
 import java.util.logging.SimpleFormatter;
 
 /**
@@ -58,13 +65,14 @@ public class XlLpModelAccessor {
     public void openWorkbook(String path)throws LPE{
         try {
             wbPath=path;
-            workbook = WorkbookFactory.create(new FileInputStream(path));
+//            workbook = WorkbookFactory.create(new FileInputStream(path));
+            workbook=new HSSFWorkbook(new FileInputStream(path));
             evaluator = workbook.getCreationHelper().createFormulaEvaluator();
         } catch (FileNotFoundException e) {
 
             throw new LPE(e.getMessage(), LPE.eScope.USER);
-        } catch (InvalidFormatException e) {
-            throw new LPE(e.getMessage(), LPE.eScope.USER);
+//        } catch (InvalidFormatException e) {
+//            throw new LPE(e.getMessage(), LPE.eScope.USER);
         } catch (IOException e) {
             throw new LPE(e.getMessage(), LPE.eScope.USER);
         }
@@ -80,16 +88,10 @@ public class XlLpModelAccessor {
         Sheet sheet=workbook.getSheet(sheetName);
         for (int j = 0; j < dates.size(); j++) {
             String ds = dates.get(j).getDateString();
-            SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
-            Date date=null;
-            try {
-                date=formatter.parse(ds);
-            } catch (ParseException e) {
-                date=new Date();
-            }
-            Cell cell=sheet.getRow(row+j).getCell(col);
-            Date origin=new Date(0);
-            cell.setCellValue(date.getTime()-origin.getTime());
+            Cell cell=sheet.getRow(row+j).getCell(col.intValue());
+            Date date=Date.valueOf(ds);
+            cell.setCellValue(date);
+            System.out.println(cell.getDateCellValue().toString());
         }
         forceCalcAllFormulas();
     }
