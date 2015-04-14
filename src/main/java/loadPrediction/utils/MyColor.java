@@ -1,5 +1,7 @@
 package loadPrediction.utils;
 
+import com.sun.xml.internal.fastinfoset.util.CharArrayString;
+
 import java.awt.*;
 import java.awt.color.ColorSpace;
 import java.util.Date;
@@ -65,13 +67,10 @@ public class MyColor extends Color {
 
     /**
      * 根据HTML格式的颜色码获取对应的Color对象。
-     * @param code 代表一种颜色值的形如“#01234”格式的字符串
+     * @param code 代表一种颜色值的形如“HTML:01234”格式的字符串
      * @return 对应于code的Color对象
      */
     public static Color getColorOfHTMLFormat(String code){
-        if (code.charAt(0)!='#')
-            return null;
-        code=code.substring(1);
         String r=code.substring(0,2);
         String g=code.substring(2,4);
         String b=code.substring(4,6);
@@ -79,6 +78,18 @@ public class MyColor extends Color {
         Integer rInt=Integer.parseInt(r,16);
         Integer gInt=Integer.parseInt(g,16);
         Integer bInt=Integer.parseInt(b,16);
+
+        return new Color(rInt,gInt,bInt);
+    }
+    public static Color getColorOfRGBFormat(String code){
+        String[] rgb=code.split(",");
+        String r=rgb[0];
+        String g=rgb[1];
+        String b=rgb[2];
+
+        Integer rInt=Integer.parseInt(r,10);
+        Integer gInt=Integer.parseInt(g,10);
+        Integer bInt=Integer.parseInt(b,10);
 
         return new Color(rInt,gInt,bInt);
     }
@@ -103,5 +114,17 @@ public class MyColor extends Color {
         Integer b=d.intValue();
 
         return new Color(r,g,b);
+    }
+
+    public static Color parse(String s) {
+        if (s.contains(new CharArrayString("HTML:"))){
+            return getColorOfHTMLFormat(s.substring(5));
+        }
+        if (s.contains(new CharArrayString("RGB:"))) {
+        return getColorOfRGBFormat(s.substring(4)) ;
+        }
+
+
+        return null;
     }
 }
