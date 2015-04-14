@@ -12,53 +12,7 @@ import  loadPrediction.domain.visitors.IDomainVisitor;
 /**
  * Created by LBC on 2015/2/9.
  */
-public class WeatherCoes4Workday implements IDomain {
-    private String type;
-    private Double maxBase;
-    private Double minBase;
-    private Double relationCoe;
-    private Double weight;
-
-    public Double getMaxBase() {
-        return maxBase;
-    }
-
-    public void setMaxBase(Double maxBase) {
-        this.maxBase = maxBase;
-    }
-
-    public Double getMinBase() {
-        return minBase;
-    }
-
-    public void setMinBase(Double minBase) {
-        this.minBase = minBase;
-    }
-
-    public Double getRelationCoe() {
-        return relationCoe;
-    }
-
-    public void setRelationCoe(Double relationCoe) {
-        this.relationCoe = relationCoe;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
-
+public class WeatherCoes4Workday extends WeatherCoes implements IDomain {
     @Override
     public Object accept(IDomainVisitor visitor) {
         return null;

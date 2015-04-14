@@ -11,10 +11,9 @@ import  loadPrediction.domain.visitors.IDomainVisitor;
 /**
  * 李倍存 创建于 2015-03-02 19:08。电邮 1174751315@qq.com。
  */
-public class WeatherCoes4Weekend extends WeatherCoes4Workday implements IDomain {
+public class WeatherCoes4Weekend extends WeatherCoes implements IDomain {
     public WeatherCoes4Weekend() {
     }
-
     @Override
     public Object accept(IDomainVisitor visitor) {
         return null;
