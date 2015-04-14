@@ -16,7 +16,7 @@ import  loadPrediction.domain.LoadData;
 import loadPrediction.exception.DAE;
 import loadPrediction.exception.ExceptionHandlerFactory;
 import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 import  loadPrediction.utils.LoadData2ChartUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -89,7 +89,7 @@ public class AccuracyUtilsAction extends ActionSupport {
                 Integer i = filename.indexOf("TEMP");
                 filename = filename.substring(i + 5);
 
-                accuracy = AccuracyUtils.calcOneAccuracy(actual, prediction);
+                accuracy =new  AccuracyCalculator().calc(actual, prediction);
             } else if (actual != null && prediction == null) {
                 warning = "您并未执行针对此日期的负荷预测，因此无法查看准确度。";
             }

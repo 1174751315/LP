@@ -11,7 +11,7 @@ import  jfreechart.JFreeChartFacade;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.domain.LoadData;
 import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 import  loadPrediction.utils.FileContentUtils;
 import  loadPrediction.utils.LoadData2ChartUtils;
 
@@ -77,7 +77,7 @@ public class ShowOneAccuracyAction extends ActionSupport {
                 List<String> labels = new LinkedList<String>();
                 labels.add("预测负荷曲线");
                 labels.add("实际负荷曲线");
-                accuracy = AccuracyUtils.calcOneAccuracy(actual, prediction);
+                accuracy =new AccuracyCalculator().calc(actual, prediction);
 
                 new JFreeChartFacade().saveAs(new LoadData2ChartUtils().loadDatas2Chart(loadDatas, labels, dateString + "：准确度为  " + accuracy.toString()), path + fileName);
 

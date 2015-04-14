@@ -8,7 +8,7 @@ import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
 import loadPrediction.domain.visitors.MedFiltVisitor;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
@@ -101,7 +101,7 @@ public class ChartBuilderImpl1 extends AbstractChartBuilder {
         }
         Double acc = 0.;
         if (actual != null) {
-            acc = AccuracyUtils.calcOneAccuracy(actual, prediction);
+            acc =new AccuracyCalculator().calc(actual, prediction);
         }
         JFreeChart chart = ChartFactory.createXYLineChart(predictor.getDateString(), "时刻", "功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);// new JFreeChartFacade().createLineChart(predictor.getDateString(),"时刻","功率/MW",ds);
 

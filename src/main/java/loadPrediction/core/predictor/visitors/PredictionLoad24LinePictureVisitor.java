@@ -11,7 +11,7 @@ import  loadPrediction.core.predictor.IPredictor;
 import  loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import loadPrediction.exception.LPE;
-import  loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.renderer.category.LineAndShapeRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
@@ -44,7 +44,7 @@ public class PredictionLoad24LinePictureVisitor extends UnifiedChartImageOutputV
         }
         Double acc = 0.;
         if (actual != null) {
-            acc = AccuracyUtils.calcOneAccuracy(actual, prediction);
+            acc =new AccuracyCalculator().calc(actual, prediction);
         }
         JFreeChart chart = new JFreeChartFacade().createLineChart(prediction.getDateString() + "  准确度:" + (actual == null ? "不可用" : acc.toString()), "时刻", "全网耗电功率/MW", ds);
         LineAndShapeRenderer renderer = (LineAndShapeRenderer) chart.getCategoryPlot().getRenderer();

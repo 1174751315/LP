@@ -18,7 +18,7 @@ import  loadPrediction.domain.LoadData;
 import  loadPrediction.domain.SimpleDate;
 import  loadPrediction.domain.WeatherData;
 import  loadPrediction.exception.LPE;
-import  loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 
 import java.sql.Date;
 import java.util.HashMap;
@@ -399,7 +399,7 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         for (int i = 0; i < actualLoads.size(); i++) {
             Accuracy acc = new Accuracy();
             acc.setDateString(actualLoads.get(i).getDateString());
-            acc.setAccuracy(AccuracyUtils.calcOneAccuracy(actualLoads.get(i), predictionLoadsMap.get(actualLoads.get(i).getDateString())));
+            acc.setAccuracy(new AccuracyCalculator().calc(actualLoads.get(i), predictionLoadsMap.get(actualLoads.get(i).getDateString())));
             accuracy.add(acc);
         }
         return accuracy;
@@ -412,7 +412,7 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
             Double acc = 0.;
             if (ld != null) {
                 this.actual96PointLoadOfFirstPredictionDay = ld;
-                acc = AccuracyUtils.calcOneAccuracy(ld, prediction96PointLoads.get(0));
+                acc =new AccuracyCalculator().calc(ld, prediction96PointLoads.get(0));
             }
             this.accuracyOfFirstPredictionDay = acc;
         } catch (Exception e) {

@@ -13,8 +13,8 @@ import java.util.List;
 /**
  * 李倍存 创建于 2015/3/17 18:05。电邮 1174751315@qq.com。
  */
-public class AccuracyUtils {
-    public static Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
+public class AccuracyCalculator {
+    public Double calc(LoadData actualLoadData, LoadData predictionLoadData) {
         List<Double> actual = actualLoadData.toList();
         List<Double> prediction = predictionLoadData.toList();
         Double acc = 0.0;

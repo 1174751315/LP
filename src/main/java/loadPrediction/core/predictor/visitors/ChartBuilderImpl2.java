@@ -2,12 +2,10 @@ package loadPrediction.core.predictor.visitors;
 
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.dataAccess.DAOFactory;
-import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendTableXYDatasetVisitor;
 import loadPrediction.exception.LPE;
-import loadPrediction.utils.AccuracyUtils;
+import loadPrediction.utils.AccuracyCalculator;
 import loadPrediction.utils.MyColor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -56,7 +54,7 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
         }
         Double acc = 0.;
         if (actual != null) {
-            acc = AccuracyUtils.calcOneAccuracy(actual, prediction);
+            acc =new AccuracyCalculator().calc(actual, prediction);
         }
         JFreeChart chart = ChartFactory.createXYLineChart(predictor.getDateString(),"时刻","功率/MW",ds, PlotOrientation.VERTICAL,true,true,true);// new JFreeChartFacade().createLineChart(predictor.getDateString(),"时刻","功率/MW",ds);
 

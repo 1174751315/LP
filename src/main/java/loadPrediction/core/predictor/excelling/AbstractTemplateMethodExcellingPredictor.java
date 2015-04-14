@@ -157,7 +157,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
                 pos.getRow(), historyDays.get(i));
         }
 
-                //        historyDays.print(System.err);
         /*填充预测�?*/
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
 
@@ -166,7 +165,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
             predictionDaysExcelPosition.getCol().intValue(),
             predictionDaysExcelPosition.getRow(), predictionDays);
 
-        //        predictionDays.print(System.out);
 
 
         /*填充历史气象数据*/
