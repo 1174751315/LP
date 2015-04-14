@@ -14,30 +14,17 @@ import loadPrediction.core.predictor.util.WeatherObtainer;
 
 import loadPrediction.dataAccess.DAOFactory;
 
-import loadPrediction.domain.Accuracy;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
 
-import loadPrediction.domain.visitors.List2LoadDataVisitor;
-
 import loadPrediction.exception.LPE;
 
-import loadPrediction.resouce.WeatherDataMappingKeys;
-
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 import java.sql.Date;
 
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -48,9 +35,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected String dateString;
     protected CommonUtils commonUtils;
     protected DAOFactory defaultDaoFactory;
-    private XlAccess xlAccessor;
+    private XlLpModelAccessor xlAccessor;
 
-    public void setXlAccessor(XlAccess xlAccessor) {
+    public void setXlAccessor(XlLpModelAccessor xlAccessor) {
         this.xlAccessor = xlAccessor;
     }
 
@@ -115,7 +102,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
     public Object predict() throws LPE {
         if (xlAccessor==null)
-            xlAccessor=new XlAccess();
+            xlAccessor=new XlLpModelAccessor();
         if (commonUtils == null) {
             commonUtils = new CommonUtils(new LoadsObtainer(
                         DAOFactory.getDefault().createDaoLoadData(), DAOFactory.getAlter().createDaoLoadData()),
@@ -134,7 +121,6 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         predictionDaysNbr = doGetPredictionDaysNbr();
         historyDays = doGetHistoryDays();
         predictionDays = doGetPredictionDays();
-
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
         historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
@@ -142,59 +128,30 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         /*填充预测�?*/
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
         xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition,predictionDays);
-
         /*填充历史气象数据*/
         historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
         xlAccessor.writeSomeWeatherData2Cells(historyDaysExcelPositions,historyWeathers);
        /*填充预测气象数据*/
-
         this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
         xlAccessor.writeSomeWeatherData2Cells(predictionDaysExcelPosition,predictionWeathers);
-
         this.doAfterInjectWeathers(xlAccessor.getWorkbook(), historyDays, predictionDays);
-
-        /*打开工作�?*/
-        //        com.jniwrapper.win32.jexcel.Workbook wb=null;
-        //        Application app=null;
-        //        try {
-        //            app=new Application();
-        //            wb=app.openWorkbook(new File(outPath));
-        //        }catch (Exception e){
-        //            e.printStackTrace();
-        //            wb.close(true);
-        //            app.close();
-        //        }
         xlAccessor.writeAndClose(outPath);
         xlAccessor.openWorkbook(outPath);
         outPath += ".xls";
-
         List<CellPosition> ofSimilarDayStrings = doGetSimilarDaysExcelPositions();
         similarDayStrings=xlAccessor.readSimilarDateStrings(ofSimilarDayStrings,predictionDaysNbr);
 
         /*获取相似日负�?*/
         similarLoads = commonUtils.getSimilarDaysLoad_1(similarDayStrings);
-
-
         /*填充相似日负�?*/
         List<CellPosition> ofSimilarLoads = doGetSimilarLoadsExcelPosition();
         xlAccessor.writeSomeLoadData2Cells(ofSimilarLoads,similarLoads);
-
-
-
         this.doAfterInjectSimilarLoads(xlAccessor.getWorkbook());
-
         /*获取实际负荷数据：若存在*/
         actualLoads = commonUtils.getActualLoad(predictionDays);
         actualLoads.print(System.err);
-
         CellPosition t = doGetActualLoadsExcelPosition();
-        List<LoadData> loads = actualLoads;
-        for (int j = 0; j < loads.size(); j++) {
-            if (loads.get(j) != null) {
-                xlAccessor.writeOneLoadData2Cells(t.getSheetName(), t.getCol() + j, t.getRow(),
-                        loads.get(j));
-            }
-        }
+        xlAccessor.writeSomeLoadData2Cells(t,actualLoads);
         /*获取预测负荷*/
         CellPosition ofPredictionLoads = doGetPredictionLoadsExcelPosition();
         predictionLoads= xlAccessor.readSomeLoadDataFromFormulas(ofPredictionLoads,predictionDaysNbr);

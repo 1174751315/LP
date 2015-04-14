@@ -12,7 +12,7 @@ package loadPrediction.resouce;
  */
 public class IOPaths {
     private static final String WORKSPACE_ROOT = "E:\\IdeaProjects\\";
-    public static final String PYTHON_SCRIPT_SYNC_WEATHER = WORKSPACE_ROOT + "load_python\\syncb.py";
+    public static final String PYTHON_SCRIPT_SYNC_WEATHER = WORKSPACE_ROOT + "load_python\\Syncb.py";
 
 
     public static final String WEB_CONTENT_ROOT = "D:\\Apache Software Foundation\\Tomcat 7.0\\webapps\\LPU\\";//WEB根目录

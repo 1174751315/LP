@@ -7,6 +7,7 @@
 package loadPrediction.core.predictor;
 
 import  loadPrediction.core.predictor.excelling.ExcellingQingmingPredictor;
+import loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.dataAccess.DAOSimpleDate;
 import  loadPrediction.exception.LPE;
@@ -51,7 +52,8 @@ private PowerSystemDateUtil powerSystemDateUtil;
             powerSystemDateUtil=new PowerSystemDateUtil();
         String ds=date.toLocalDate().toString();
         if (DateUtil.getISOWeekday(date) == 6 &&daoSimpleDate.query(ds).getDateType().getCode()==1){
-            IPredictor predictor=(IPredictor) BeanFactory.INSTANCE.getBean("excellingWeekendPredictor");
+//            IPredictor predictor=(IPredictor) BeanFactory.INSTANCE.getBean("excellingWeekendPredictor");
+            IPredictor predictor=new ExcellingWorkdayPredictor();
             predictor.setDate(date);
             return predictor;
         }

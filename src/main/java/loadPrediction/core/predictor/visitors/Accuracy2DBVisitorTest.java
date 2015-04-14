@@ -1,11 +1,11 @@
 package loadPrediction.core.predictor.visitors;
 
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.WorkdayPredictorTestDataRepo;
 import loadPrediction.dataAccess.DAOAccuracy;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.Accuracy;
+import loadPrediction.domain.visitors.WorkdayPredictorTestDataRepo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

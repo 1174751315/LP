@@ -12,7 +12,7 @@ public class PredictionActionTest extends TestCase {
             action.setDateString("2014-04-21");
             action.intelli();
 //            action.setDateString("2014-04-26");
-            action.intelli();
+//            action.intelli();
 
 
 //        Logging.instance().createLogger("INFO").info("INFO");

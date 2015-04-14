@@ -26,14 +26,12 @@ public class DAORawWeatherData extends AbstractDAO {
 
     public List<RawWeatherData> query() {
         List<RawWeatherData> list = new LinkedList<RawWeatherData>();
-
         Session defaultSession = SuperDAO.getInstanceOf(eDbType.ACCESS).getSessionFactory().openSession();
         Transaction t = defaultSession.beginTransaction();
         String ql = "from RawWeatherData";
         Query sq = defaultSession.createQuery(ql);
-        List l = sq.list();
+          List l = sq.list();
         t.commit();
-
         for (int i = 0; i < l.size(); i++) {
             list.add((RawWeatherData) l.get(i));
         }

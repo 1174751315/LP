@@ -91,6 +91,8 @@
       <root url="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/asm-5.0.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/asm-all-3.3.jar!/" />
       <root url="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/cglib-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/commons-codec-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.8.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

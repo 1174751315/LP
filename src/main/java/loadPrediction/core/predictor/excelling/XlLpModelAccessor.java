@@ -1,5 +1,6 @@
 package loadPrediction.core.predictor.excelling;
 
+import com.sun.xml.internal.fastinfoset.util.CharArrayString;
 import common.ElementPrintableLinkedList;
 import common.PrintableLinkedList;
 import loadPrediction.domain.Accuracy;
@@ -9,6 +10,7 @@ import loadPrediction.domain.WeatherData;
 import loadPrediction.domain.visitors.List2LoadDataVisitor;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.WeatherDataMappingKeys;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
@@ -16,19 +18,21 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.*;
+import java.util.logging.SimpleFormatter;
 
 /**
  * 李倍存 创建于 2015-04-14 11:22。电邮 1174751315@qq.com。
  */
-public class XlAccess {
-    public XlAccess(){
+public class XlLpModelAccessor {
+    public XlLpModelAccessor(){
     }
 
-    public XlAccess(String wbPath)throws LPE{
+    public XlLpModelAccessor(String wbPath)throws LPE{
         this.wbPath = wbPath;
         openWorkbook(wbPath);
     }
@@ -76,8 +80,18 @@ public class XlAccess {
         Sheet sheet=workbook.getSheet(sheetName);
         for (int j = 0; j < dates.size(); j++) {
             String ds = dates.get(j).getDateString();
-            sheet.getRow(row + j).getCell(col).setCellValue(Date.valueOf(ds));
+            SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
+            Date date=null;
+            try {
+                date=formatter.parse(ds);
+            } catch (ParseException e) {
+                date=new Date();
+            }
+            Cell cell=sheet.getRow(row+j).getCell(col);
+            Date origin=new Date(0);
+            cell.setCellValue(date.getTime()-origin.getTime());
         }
+        forceCalcAllFormulas();
     }
     public void writeSomeDateStrings2Cells(List<CellPosition> positions, List<ElementPrintableLinkedList<SimpleDate>> dates) {
         for (int i = 0; i < positions.size(); i++) {
@@ -108,6 +122,7 @@ public class XlAccess {
                 e.printStackTrace();
             }
         }
+        forceCalcAllFormulas();
     }
 
     public void writeSomeWeatherData2Cells(List<CellPosition> positions, List<ElementPrintableLinkedList<WeatherData>> datas) {
@@ -128,6 +143,7 @@ public class XlAccess {
             Cell cell = sheet.getRow(row + k).getCell(col);
             cell.setCellValue(loadData.get(k));
         }
+        forceCalcAllFormulas();
     }
     public void writeSomeLoadData2Cells(CellPosition positions,
                                        List<LoadData> datas) {
@@ -197,6 +213,7 @@ public class XlAccess {
     }
 
     PrintableLinkedList<String> readSomeDateStrings(CellPosition position,Integer nbr){
+        forceCalcAllFormulas();
         Sheet sheet=workbook.getSheet(position.getSheetName());
         Integer row=position.getRow();
         Short col=position.getCol();
@@ -210,6 +227,7 @@ public class XlAccess {
         return strings;
     }
     ElementPrintableLinkedList<PrintableLinkedList<String>> readSimilarDateStrings(List<CellPosition> positions,Integer nbr){
+
         ElementPrintableLinkedList<PrintableLinkedList<String>> similar=new ElementPrintableLinkedList<PrintableLinkedList<String>>("similar");
         for (int i = 0; i < positions.size(); i++) {
             CellPosition pos = positions.get(i);

@@ -9,6 +9,7 @@ package loadPrediction.core.predictor.hardCoding;
 import  common.ElementPrintableLinkedList;
 import  common.EnhancedLinkedList;
 import  common.MaxAveMinTuple;
+import common.PrintableLinkedList;
 import  loadPrediction.config.ConfigureFactory;
 import  loadPrediction.config.OutputCfg;
 import  loadPrediction.dataAccess.DAOFactory;
@@ -57,8 +58,8 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
     private ElementPrintableLinkedList<LoadData> actual96PointLoads;
     private ElementPrintableLinkedList<Accuracy> accuracy;
 
-    public ElementPrintableLinkedList<Accuracy> getAccuracy() {
-        return accuracy;
+    public PrintableLinkedList<Double> getAccuracy() {
+        return null;
     }
 
     private Double accuracyOfFirstPredictionDay;

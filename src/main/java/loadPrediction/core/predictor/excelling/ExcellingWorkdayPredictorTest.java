@@ -2,12 +2,12 @@ package loadPrediction.core.predictor.excelling;
 
 import common.ElementPrintableLinkedList;
 import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.WorkdayPredictorTestDataRepo;
 import loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor;
 import loadPrediction.core.predictor.util.CommonUtils;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOWeatherData;
 import loadPrediction.domain.LoadData;
+import loadPrediction.domain.visitors.WorkdayPredictorTestDataRepo;
 import loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery;
 import org.junit.Test;
 
@@ -57,8 +57,6 @@ public class ExcellingWorkdayPredictorTest {
         predictor.setDayQuery4HistoryDays(mockHistoryQuery);
         predictor.setDayQuery4PredictionDays(mockPredictionQuery);
         predictor.setCommonUtils(mockUtils);
-
-
 
     }
 }

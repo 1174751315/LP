@@ -96,10 +96,10 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
             }
 
             WritableSheet ws3 = wwb.getSheet("准确度");
-            List<Accuracy> accuracies = predictor.getAccuracy();
+            List<Double> accuracies = predictor.getAccuracy();
             for (int i = 0; i < accuracies.size(); i++) {
-                ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
-                ws3.addCell(new Number(i, 1, accuracies.get(i).getAccuracy()));
+//                ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
+                ws3.addCell(new Number(i, 1, accuracies.get(i)));
             }
 
 
@@ -259,12 +259,12 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
 //            }
 
             WritableSheet ws3 = wwb.getSheet("准确度");
-            List<Accuracy> accuracies = predictor.getAccuracy();
+            List<Double> accuracies = predictor.getAccuracy();
             for (int i = 0; i < accuracies.size(); i++) {
-                ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
+//                ws3.addCell(new Label(i, 0, accuracies.get(i).getDateString()));
             }
             for (int i = 0; i < accuracies.size(); i++) {
-                ws3.addCell(new Number(i, 1, accuracies.get(i).getAccuracy()));
+                ws3.addCell(new Number(i, 1, accuracies.get(i)));
             }
 
 //
