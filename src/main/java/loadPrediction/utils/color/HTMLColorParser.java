@@ -1,5 +1,6 @@
 package loadPrediction.utils.color;
 
+
 import com.sun.xml.internal.fastinfoset.util.CharArrayString;
 
 import java.awt.*;

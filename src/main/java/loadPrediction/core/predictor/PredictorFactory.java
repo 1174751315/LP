@@ -7,6 +7,7 @@
 package loadPrediction.core.predictor;
 
 import  loadPrediction.core.predictor.excelling.ExcellingQingmingPredictor;
+import loadPrediction.core.predictor.excelling.ExcellingWeekendPredictor;
 import loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor;
 import  loadPrediction.dataAccess.DAOFactory;
 import  loadPrediction.dataAccess.DAOSimpleDate;
@@ -53,7 +54,7 @@ private PowerSystemDateUtil powerSystemDateUtil;
         String ds=date.toLocalDate().toString();
         if (DateUtil.getISOWeekday(date) == 6 &&daoSimpleDate.query(ds).getDateType().getCode()==1){
 //            IPredictor predictor=(IPredictor) BeanFactory.INSTANCE.getBean("excellingWeekendPredictor");
-            IPredictor predictor=new ExcellingWorkdayPredictor();
+            IPredictor predictor=new ExcellingWeekendPredictor();
             predictor.setDate(date);
             return predictor;
         }
@@ -62,7 +63,8 @@ private PowerSystemDateUtil powerSystemDateUtil;
             throw new LPE("请不要选择周日作为第一预测日。\n若要进行工作日预测，请选择周一至周五中的某一天；\n若要进行周末预测，请选择周六。");
         if (daoSimpleDate.query(ds).getDateType().getCode()==0){
             if (powerSystemDateUtil.isPowerSystemWorkday(date) ){
-                IPredictor predictor= (IPredictor) BeanFactory.INSTANCE.getBean("excellingWorkdayPredictor");
+//                IPredictor predictor= (IPredictor) BeanFactory.INSTANCE.getBean("excellingWorkdayPredictor");
+                IPredictor predictor=new ExcellingWorkdayPredictor();
                 predictor.setDate(date);
                 return predictor;
              }
