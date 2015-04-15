@@ -7,9 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/PoiTest.java" afterPath="$PROJECT_DIR$/src/test/java/PoiTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/XlLpModelAccessor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/XlLpModelAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml" afterPath="$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LP.iws" />
@@ -41,89 +43,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="XlLpModelAccessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/XlLpModelAccessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1756" max-vertical-offset="3060">
-              <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#XlLpModelAccessor#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#XlLpModelAccessor#1;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#writeAndClose#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#setWorkbook#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#openWorkbook#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="e#2604#2650#0" expanded="true" />
-                <element signature="method#writeSomeDateStrings2Cells#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#writeSomeDateStrings2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#writeSomeWeatherData2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#writeOneLoadData2Cells#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#writeSomeLoadData2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#forceCalcAllFormulas#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#readSomeDateStrings#0;class#XlLpModelAccessor#0" expanded="true" />
-                <element signature="method#readSimilarDateStrings#0;class#XlLpModelAccessor#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictorFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="986">
-              <caret line="66" column="66" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictionActionTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PredictionActionTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.62653565" vertical-offset="0" max-vertical-offset="442">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PoiTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/PoiTest.java">
+      <file leaf-file-name="FloatingDecimal.class" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="748">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.68" vertical-offset="1136" max-vertical-offset="1530">
+              <caret line="1521" column="0" selection-start-line="1521" selection-start-column="0" selection-end-line="1521" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictionLoad2ReportPictureVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1003">
+              <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#652#656#0" expanded="true" />
-                <element signature="e#657#666#0" expanded="true" />
+                <element signature="e#4355#4362#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PredictionAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
+      <file leaf-file-name="Axis.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/jfreechart-1.0.0.jar!/org/jfree/chart/axis/Axis.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1524" max-vertical-offset="2312">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.68" vertical-offset="2436" max-vertical-offset="2805">
+              <caret line="531" column="0" selection-start-line="531" selection-start-column="0" selection-end-line="531" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChartBuilderImpl1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/ChartBuilderImpl1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="2499">
+              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UiCfg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1156">
+              <caret line="26" column="63" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="63" />
               <folding>
-                <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
-                <element signature="method#predict#0;class#PredictionAction#0" expanded="true" />
+                <element signature="method#UiCfg#0;class#UiCfg#0" expanded="true" />
+                <element signature="method#update#0;class#UiCfg#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractTemplateMethodExcellingPredictor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java">
+      <file leaf-file-name="IOPaths.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0195382" vertical-offset="3721" max-vertical-offset="4284">
-              <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#10909#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="method#writeSomeDateStrings2Cells#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="646">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui_cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.3116883" vertical-offset="231" max-vertical-offset="561">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,47 +131,23 @@
       <file leaf-file-name="ExcellingWorkdayPredictor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="2363">
-              <caret line="140" column="63" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1666">
+              <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
               <folding>
-                <element signature="method#ExcellingWorkdayPredictor#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
                 <element signature="method#getPredictorType#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-                <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-                <element signature="e#5084#5112#0" expanded="true" />
-                <element signature="method#doGetSimilarDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-                <element signature="method#doAfterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstPredictionLoadData2DBVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
+      <file leaf-file-name="ColorParserFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/ColorParserFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="442">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="POIDocument.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.11.jar!/org/apache/poi/POIDocument.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HSSFWorkbook.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.11.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.92" vertical-offset="523" max-vertical-offset="4624">
-              <caret line="200" column="11" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
-                <element signature="method#HSSFWorkbook#6;class#HSSFWorkbook#0" expanded="true" />
+                <element signature="method#ColorParserFactory#0;class#ColorParserFactory#0" expanded="true" />
+                <element signature="method#getProperParser#0;class#ColorParserFactory#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,9 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/IDAOWeatherCoes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOWeatherCoes4Workday.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOWeatherCoes4Weekend.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/EnhancedSimilarCoeCalculatorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java" />
@@ -226,16 +199,19 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/RGBColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/HTMLColorParserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/config/ui/UiCfgTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/MyColor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/PoiTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/XlLpModelAccessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/ColorParserFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java" />
       </list>
     </option>
   </component>
@@ -262,8 +238,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-73" />
-    <option name="y" value="273" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1616" />
     <option name="height" value="886" />
   </component>
@@ -805,34 +781,8 @@
               <option name="myItemId" value="loadPrediction" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataAccess" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -859,44 +809,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="predictor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1022,23 +934,24 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1069,17 +982,46 @@
       </MavenSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -1108,6 +1050,124 @@
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="LP" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="false" name="unit-test-all" type="JUnit" factoryName="JUnit">
@@ -1346,33 +1406,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-73" y="273" width="1616" height="886" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="886" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3001328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.50064266" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2682603" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23071979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41965473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2682603" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23071979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16069058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23771581" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1382,7 +1443,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5815832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1472,14 +1532,8 @@
           <properties />
           <option name="timeStamp" value="348" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java</url>
-          <line>12</line>
-          <properties />
-          <option name="timeStamp" value="353" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="354" />
+      <option name="time" value="355" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1495,59 +1549,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/java/util/LinkedList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="2380">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2678" max-vertical-offset="3689">
-          <caret line="266" column="62" selection-start-line="266" selection-start-column="62" selection-end-line="266" selection-end-column="62" />
-          <folding>
-            <element signature="method#visitWorkdayPredictor#0;class#AllInformation2ExcelVisitor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/visitors/WorkdayPredictorTestDataRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="12512">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8947368" vertical-offset="85" max-vertical-offset="3893">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
-          <folding>
-            <element signature="e#2454#2455#0" expanded="false" />
-            <element signature="e#2481#2482#0" expanded="false" />
-            <element signature="method#getActualLoadOfFirstPredictionDayIfExistAndCalcAccuracy#0;class#AbstractTemplateMethodForHardCodingPredictor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
-          <caret line="40" column="92" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/Accuracy2DBVisitorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88631576" vertical-offset="191" max-vertical-offset="901">
-          <caret line="49" column="68" selection-start-line="49" selection-start-column="68" selection-end-line="49" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5037037" vertical-offset="0" max-vertical-offset="1462">
@@ -1559,14 +1560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="680">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="14" column="89" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="89" />
           <folding />
         </state>
       </provider>
@@ -1747,13 +1740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1411">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/loadPrediction/config/ui/UiCfgTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.54545456" vertical-offset="888" max-vertical-offset="1394">
@@ -1772,12 +1758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#463#465#0" expanded="true" />
-            <element signature="e#508#510#0" expanded="true" />
-            <element signature="e#552#554#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1785,7 +1765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7" max-vertical-offset="595">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1820,53 +1799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="method#query#1;class#SuperDAO#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/MyColor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1496">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getRandomGray#0;class#MyColor#0" expanded="true" />
-            <element signature="method#getRandomColor#0;class#MyColor#0" expanded="true" />
-            <element signature="method#getColor#0;class#MyColor#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="612">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1524" max-vertical-offset="2312">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding>
-            <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
-            <element signature="method#predict#0;class#PredictionAction#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1875,9 +1807,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="748">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#652#656#0" expanded="true" />
-            <element signature="e#657#666#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1900,34 +1830,9 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.11.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.92" vertical-offset="523" max-vertical-offset="4624">
+        <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="4590">
           <caret line="200" column="11" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
-          <folding>
-            <element signature="method#HSSFWorkbook#6;class#HSSFWorkbook#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="86" max-vertical-offset="442">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="2363">
-          <caret line="140" column="63" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="63" />
-          <folding>
-            <element signature="method#ExcellingWorkdayPredictor#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="method#getPredictorType#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="e#5084#5112#0" expanded="true" />
-            <element signature="method#doGetSimilarDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-            <element signature="method#doAfterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1955,23 +1860,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/FirstPredictionLoadData2DBVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="442">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1524" max-vertical-offset="2312">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding>
+            <element signature="method#intelli#0;class#PredictionAction#0" expanded="true" />
+            <element signature="method#predict#0;class#PredictionAction#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0195382" vertical-offset="3721" max-vertical-offset="4284">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2348" max-vertical-offset="4335">
+          <caret line="175" column="102" selection-start-line="175" selection-start-column="102" selection-end-line="175" selection-end-column="102" />
           <folding>
-            <element signature="e#0#10909#0" expanded="true" />
+            <element signature="e#0#11067#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="method#writeSomeDateStrings2Cells#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="612">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="476">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/MyColor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1496">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getRandomGray#0;class#MyColor#0" expanded="true" />
+            <element signature="method#getRandomColor#0;class#MyColor#0" expanded="true" />
+            <element signature="method#getColor#0;class#MyColor#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/ColorParserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="method#ColorParserFactory#0;class#ColorParserFactory#0" expanded="true" />
+            <element signature="method#getProperParser#0;class#ColorParserFactory#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/jfreechart-1.0.0.jar!/org/jfree/chart/axis/Axis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.68" vertical-offset="2436" max-vertical-offset="2805">
+          <caret line="531" column="0" selection-start-line="531" selection-start-column="0" selection-end-line="531" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/ChartBuilderImpl1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="2499">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1156">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="63" />
+          <folding>
+            <element signature="method#UiCfg#0;class#UiCfg#0" expanded="true" />
+            <element signature="method#update#0;class#UiCfg#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="646">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3116883" vertical-offset="231" max-vertical-offset="561">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1666">
+          <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
+          <folding>
+            <element signature="method#getPredictorType#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.68" vertical-offset="1136" max-vertical-offset="1530">
+          <caret line="1521" column="0" selection-start-line="1521" selection-start-column="0" selection-end-line="1521" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1003">
+          <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+          <folding>
+            <element signature="e#4355#4362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62653565" vertical-offset="0" max-vertical-offset="442">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

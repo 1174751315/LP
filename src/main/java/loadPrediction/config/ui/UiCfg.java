@@ -1,6 +1,7 @@
 package loadPrediction.config.ui;
 
 import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.color.HTMLColorParser;
 import loadPrediction.utils.color.IColorParser;
 import loadPrediction.utils.color.MyColor;
 import org.dom4j.Document;
@@ -78,7 +79,7 @@ public class UiCfg {
     }
 
     private SAXReader saxReader;
-    private IColorParser colorParser;
+    private IColorParser colorParser=new HTMLColorParser();
     public SAXReader getSaxReader() {
         return saxReader;
     }

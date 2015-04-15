@@ -174,6 +174,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         /*获取预测负荷*/
         CellPosition ofPredictionLoads = doGetPredictionLoadsExcelPosition();
         predictionLoads= xlAccessor.readSomeLoadDataFromFormulas(ofPredictionLoads,predictionDaysNbr);
+        for (int i = 0; i < predictionLoads.size(); i++) {
+            predictionLoads.get(i).setDateString(predictionDays.get(i).getDateString());
+        }
         predictionLoads.print(System.out);
 
         /*获取预测精度*/

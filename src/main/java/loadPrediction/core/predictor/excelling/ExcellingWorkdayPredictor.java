@@ -40,7 +40,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private Integer historyDaysNbr = 14;
 
     private static final Integer WINTER=0,SUMMER=1;
-    private  Season season;
+    private  Season season=Season.SUMMER;
 
     public ExcellingWorkdayPredictor() {
 //        this(null,null);
@@ -133,11 +133,11 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetInputWorkbookPath() {
-//        if (season==null){
-//            getSeason(dateString);
-//        }
-//        if (season.equals(Season.SUMMER))
-//            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
+        if (season==null){
+            getSeason(dateString);
+        }
+        if (season.equals(Season.SUMMER))
+            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
         return IOPaths.WEB_CONTENT_WORKDAY_WINTER_TEMPLATE_PATH;
     }
     @Override

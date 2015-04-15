@@ -121,7 +121,7 @@ public class PredictionLoad2ReportPictureVisitor extends UnifiedImageOutputVisit
                 try {
                     s=String.format("%5.2f",Double.valueOf(s));
                 } catch (NumberFormatException e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
                 }
                 g.drawString(s,(j+1)*perCol,(i+2)*perRow);
             }

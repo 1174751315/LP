@@ -11,6 +11,10 @@ public class PredictionActionTest extends TestCase {
             action.setUseCaches(false);
             action.setDateString("2014-04-21");
             action.intelli();
+        action.intelli();
+
+        action.setDateString("2014-04-26");
+        action.intelli();
 //            action.setDateString("2014-04-26");
 //            action.intelli();
 
