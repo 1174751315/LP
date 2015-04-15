@@ -62,6 +62,10 @@ public class XlLpModelAccessor {
         return wbPath;
     }
 
+    public void setWorkbook(Workbook workbook){
+        this.workbook=workbook;
+        this.evaluator=workbook.getCreationHelper().createFormulaEvaluator();
+    }
     public void openWorkbook(String path)throws LPE{
         try {
             wbPath=path;
@@ -159,7 +163,7 @@ public class XlLpModelAccessor {
             CellPosition pos = positions.get(i);
             List<LoadData> loads = datas.get(i);
             for (int j = 0; j < loads.size(); j++) {
-                this.writeOneLoadData2Cells(pos, loads.get(j));
+                this.writeOneLoadData2Cells(pos.ofColAfter(j), loads.get(j));
             }
         }
     }

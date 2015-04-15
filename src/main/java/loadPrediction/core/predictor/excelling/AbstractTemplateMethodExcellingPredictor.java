@@ -20,8 +20,12 @@ import loadPrediction.domain.WeatherData;
 
 import loadPrediction.exception.LPE;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.*;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Date;
 
 import java.util.List;
@@ -116,15 +120,27 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
  
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
+
+        /*打开模板*/
         xlAccessor.openWorkbook(inPath);
+
+        /*获取历史日和预测日*/
         historyDaysNbrs = doGetHistoryDaysNbrs();
         predictionDaysNbr = doGetPredictionDaysNbr();
         historyDays = doGetHistoryDays();
         predictionDays = doGetPredictionDays();
+
+        /*获取历史气象和预测气象*/
         historyWeathers = commonUtils.getHistoryWeather(this.historyDays);
         predictionWeathers = commonUtils.getPredictionWeather(predictionDays);
 
-
+        /*填充历史气象数据*/
+        historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
+        xlAccessor.writeSomeWeatherData2Cells(historyWeatherExcelPositions,historyWeathers);
+       /*填充预测气象数据*/
+        this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
+        xlAccessor.writeSomeWeatherData2Cells(predictionWeatherExcelPosition,predictionWeathers);
+        this.doAfterInjectWeathers(xlAccessor.getWorkbook(), historyDays, predictionDays);
         /*填充历史日*/
         historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
         xlAccessor.writeSomeDateStrings2Cells(historyDaysExcelPositions,historyDays);
@@ -132,34 +148,13 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
         xlAccessor.writeSomeDateStrings2Cells(predictionDaysExcelPosition,predictionDays);
 
-//        Workbook template=xlAccessor.getWorkbook();
-         /*填充历史日*/
-//        historyDaysExcelPositions = doGetHistoryDaysExcelPositions();
-//        for (int i = 0; i < historyDaysExcelPositions.size(); i++) {
-//            CellPosition pos = historyDaysExcelPositions.get(i);
-//            Sheet ws0 = template.getSheet(pos.getSheetName());
-//            writeSomeDateStrings2Cells(ws0, pos.getCol().intValue(), pos.getRow(), historyDays.get(i));
-//        }
-//        historyDays.print(System.err);
-        /*填充预测日*/
-//        predictionDaysExcelPosition = doGetPredictionDaysExcelPosition();
-//        Sheet ws0 = template.getSheet(predictionDaysExcelPosition.getSheetName());
-//        writeSomeDateStrings2Cells(ws0, predictionDaysExcelPosition.getCol().intValue(), predictionDaysExcelPosition.getRow(), predictionDays);
-//        predictionDays.print(System.out);
-
-
-
-        /*填充历史气象数据*/
-        historyWeatherExcelPositions = doGetHistoryWeatherExcelPositions();
-        xlAccessor.writeSomeWeatherData2Cells(historyDaysExcelPositions,historyWeathers);
-       /*填充预测气象数据*/
-        this.predictionWeatherExcelPosition = doGetPredictionWeatherExcelPosition();
-        xlAccessor.writeSomeWeatherData2Cells(predictionDaysExcelPosition,predictionWeathers);
-        this.doAfterInjectWeathers(xlAccessor.getWorkbook(), historyDays, predictionDays);
+        /*重新打开模板*/
         xlAccessor.writeAndClose(outPath);
         xlAccessor.openWorkbook(outPath);
         outPath += ".xls";
-        List<CellPosition> ofSimilarDayStrings = doGetSimilarDaysExcelPositions();
+
+        /*从模板读取相似日计算结果*/
+       List<CellPosition> ofSimilarDayStrings = doGetSimilarDaysExcelPositions();
         similarDayStrings=xlAccessor.readSimilarDateStrings(ofSimilarDayStrings,predictionDaysNbr);
 
         /*获取相似日负�?*/
@@ -167,19 +162,24 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
         /*填充相似日负�?*/
         List<CellPosition> ofSimilarLoads = doGetSimilarLoadsExcelPosition();
         xlAccessor.writeSomeLoadData2Cells(ofSimilarLoads,similarLoads);
+
         this.doAfterInjectSimilarLoads(xlAccessor.getWorkbook());
+
         /*获取实际负荷数据：若存在*/
         actualLoads = commonUtils.getActualLoad(predictionDays);
         actualLoads.print(System.err);
         CellPosition t = doGetActualLoadsExcelPosition();
         xlAccessor.writeSomeLoadData2Cells(t,actualLoads);
+
         /*获取预测负荷*/
         CellPosition ofPredictionLoads = doGetPredictionLoadsExcelPosition();
         predictionLoads= xlAccessor.readSomeLoadDataFromFormulas(ofPredictionLoads,predictionDaysNbr);
         predictionLoads.print(System.out);
+
         /*获取预测精度*/
         CellPosition ofAcc = doGetAccuraciesExcelPosition();
         accuracies=xlAccessor.readSomeAccuracies(ofAcc,predictionDaysNbr);
+
         xlAccessor.writeAndClose(outPath);
         return outPath;
     }
