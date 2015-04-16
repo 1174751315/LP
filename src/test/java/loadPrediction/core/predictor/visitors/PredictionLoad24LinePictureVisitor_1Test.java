@@ -1,7 +1,5 @@
 package loadPrediction.core.predictor.visitors;
 
-import static org.mockito.Mockito.*;
-
 import common.ElementPrintableLinkedList;
 import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.dataAccess.DAOLoadData;
@@ -14,8 +12,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.Assert.*;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-public class PredictionLoad24LinePictureVisitor_1Test{
+public class PredictionLoad24LinePictureVisitor_1Test {
     public   void setUp()throws Exception {
         load1.setDateString("TEST-1900-01-01");
         load2.setDateString("1900-01-02");

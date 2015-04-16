@@ -1,9 +1,10 @@
-package loadPrediction.domain.visitors;
+package loadPrediction;
 
 import common.ElementPrintableLinkedList;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
+import loadPrediction.domain.visitors.Array2LoadDataVisitor;
 import loadPrediction.resouce.WeatherDataMappingKeys;
 
 import java.util.List;

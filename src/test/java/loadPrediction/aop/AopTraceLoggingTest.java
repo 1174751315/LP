@@ -1,10 +1,6 @@
 package loadPrediction.aop;
 
-import loadPrediction.exception.DAE;
-import loadPrediction.exception.LPE;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class AopTraceLoggingTest {
 

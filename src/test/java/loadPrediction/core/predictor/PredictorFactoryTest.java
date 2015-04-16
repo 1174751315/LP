@@ -5,20 +5,34 @@ import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.SimpleDateType;
 import loadPrediction.domain.SimpleDateWeatherType;
 import loadPrediction.utils.PowerSystemDateUtil;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.Date;
-import java.time.LocalDate;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class PredictorFactoryTest {
 
-//    @Test
+    @Before
+    public void setUp() throws Exception {
+
+    }
+
+    @After
+    public void tearDown() throws Exception {
+
+    }
+
+
+        @Test
     public void testGetProperPredictor() throws Exception {
 
         DAOSimpleDate mockDao=mock(DAOSimpleDate.class);
-        Date  date=Date.valueOf("2014-04-21");
+        Date date=Date.valueOf("2014-04-21");
         PowerSystemDateUtil dateUtil=mock(PowerSystemDateUtil.class);
 
         when(dateUtil.isPowerSystemWorkday(date)).thenReturn(true);

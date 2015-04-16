@@ -1,17 +1,22 @@
 package loadPrediction.core.predictor.visitors;
 
-import com.opensymphony.xwork2.interceptor.annotations.Before;
-import common.ElementPrintableLinkedList;
-import loadPrediction.core.predictor.IPredictor;
 import loadPrediction.core.predictor.IQingmingPredictor;
 import loadPrediction.core.predictor.IWeekendPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
 
 public class AllInformation2ExcelVisitorTest {
+
+
+    @After
+    public void tearDown() throws Exception {
+
+    }
 
     @Before
     public void setUp() throws Exception{
@@ -40,5 +45,4 @@ public class AllInformation2ExcelVisitorTest {
     private IWeekendPredictor weekendPredictor;
     private IQingmingPredictor qingmingPredictor;
     private String ds="2000-01-01";
-
 }
