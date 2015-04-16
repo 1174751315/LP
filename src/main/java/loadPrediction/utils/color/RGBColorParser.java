@@ -1,6 +1,6 @@
 package loadPrediction.utils.color;
 
-import com.sun.xml.internal.fastinfoset.util.CharArrayString;
+//import com.sun.xml.internal.fastinfoset.util.CharArrayString;
 
 import java.awt.*;
 
@@ -10,7 +10,7 @@ import java.awt.*;
 public class RGBColorParser implements IColorParser {
     @Override
     public Color parse(String s) {
-        if (!s.contains(new CharArrayString("RGB:"))) {
+        if (s.indexOf("RGB:")==-1) {
             return null;
         }
         String code=s.substring(4);

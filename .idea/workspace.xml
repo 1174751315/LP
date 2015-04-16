@@ -6,7 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java" />
     </list>
     <ignored path="LP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,66 +45,6 @@
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="method#TimerTask4FetchingAndCalcingWeatherData#0;class#TimerTask4FetchingAndCalcingWeatherData#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XlLpAccuracyAccessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/xlAccessor/XlLpAccuracyAccessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="592">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="docComment;class#XlLpAccuracyAccessor#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractTemplateMethodExcellingPredictor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3181" max-vertical-offset="3904">
-              <caret line="175" column="20" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#12194#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="docComment;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#setDateString#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#setDate#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#AbstractTemplateMethodExcellingPredictor#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#AbstractTemplateMethodExcellingPredictor#1;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#AbstractTemplateMethodExcellingPredictor#2;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#AbstractTemplateMethodExcellingPredictor#3;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="e#4072#4073#0" expanded="false" />
-                <element signature="e#4118#4119#0" expanded="false" />
-                <element signature="e#4188#4189#0" expanded="false" />
-                <element signature="e#4246#4247#0" expanded="false" />
-                <element signature="e#8363#8364#0" expanded="false" />
-                <element signature="e#8415#8416#0" expanded="false" />
-                <element signature="e#8476#8477#0" expanded="false" />
-                <element signature="e#8514#8515#0" expanded="false" />
-                <element signature="e#8571#8572#0" expanded="false" />
-                <element signature="e#8611#8612#0" expanded="false" />
-                <element signature="e#8693#8694#0" expanded="false" />
-                <element signature="e#8730#8731#0" expanded="false" />
-                <element signature="e#8837#8838#0" expanded="false" />
-                <element signature="e#8871#8872#0" expanded="false" />
-                <element signature="method#getSimilarDays#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="e#9849#9850#0" expanded="false" />
-                <element signature="e#9883#9884#0" expanded="false" />
-                <element signature="e#9988#9989#0" expanded="false" />
-                <element signature="e#10023#10024#0" expanded="false" />
-                <element signature="e#10079#10080#0" expanded="false" />
-                <element signature="e#10112#10113#0" expanded="false" />
-                <element signature="e#10191#10192#0" expanded="false" />
-                <element signature="e#10229#10230#0" expanded="false" />
-                <element signature="method#doAfterInjectSimilarLoads#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#doAfterInjectWeathers#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="method#writeSomeDateStrings2Cells#0;class#AbstractTemplateMethodExcellingPredictor#0" expanded="false" />
-                <element signature="e#12149#12150#0" expanded="false" />
-                <element signature="e#12190#12191#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -152,18 +93,38 @@
       <file leaf-file-name="HTMLColorParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="576">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RGBColorParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33826637" vertical-offset="0" max-vertical-offset="473">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharArrayString.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/FastInfoset-1.2.13.jar!/com/sun/xml/fastinfoset/util/CharArrayString.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="400">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35714287" vertical-offset="80" max-vertical-offset="5296">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state vertical-scroll-proportion="-10.88" vertical-offset="80" max-vertical-offset="5296">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -223,12 +184,10 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorFormat.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/ColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/ColorParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/RGBColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/HTMLColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/config/ui/UiCfgTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/MyColor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/PoiTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/ColorParserFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java" />
@@ -252,6 +211,8 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/accessor/XlLpDateStringAccessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java" />
       </list>
     </option>
   </component>
@@ -599,98 +560,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LPU-BETA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LPU-BETA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LPU-BETA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LPU-BETA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1111,7 +980,7 @@
       <recent name="loadPrediction.timerTask" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.build">
+  <component name="RunManager" selected="Maven.maven-build">
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1388,6 +1257,33 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
+    <configuration default="false" name="unit-one-method" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="LP" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="loadPrediction.utils" />
+      <option name="MAIN_CLASS_NAME" value="loadPrediction.utils.HTMLColorParserTest" />
+      <option name="METHOD_NAME" value="testParse" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
     <configuration default="false" name="unit-test-all" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="LP" />
@@ -1413,7 +1309,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="one-method" type="JUnit" factoryName="JUnit">
+    <configuration default="false" name="inte-one-method" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="LP" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1443,7 +1339,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="build" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration default="false" name="maven-build" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -1548,11 +1444,12 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.unit-test-all" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.one-method" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.build" />
-      <item index="3" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.unit-one-method" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.unit-test-all" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.inte-one-method" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.maven-build" />
+      <item index="4" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1650,7 +1547,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3001328" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4674635" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23771581" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1713,7 +1610,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="369" />
+      <option name="time" value="371" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1729,13 +1626,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.11.jar!/org/apache/poi/POIDocument.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/poi-3.11.jar!/org/apache/poi/hssf/usermodel/HSSFWorkbook.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="4590">
@@ -1747,13 +1637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="442">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="476">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -2192,6 +2075,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.88" vertical-offset="80" max-vertical-offset="5296">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/target/LPU-BETA/WEB-INF/lib/FastInfoset-1.2.13.jar!/com/sun/xml/fastinfoset/util/CharArrayString.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.84" vertical-offset="0" max-vertical-offset="400">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/xlAccessor/XlLpDateStringAccessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1104">
@@ -2216,16 +2115,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="576">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/RGBColorParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35714287" vertical-offset="80" max-vertical-offset="5296">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.33826637" vertical-offset="0" max-vertical-offset="473">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding />
         </state>
       </provider>

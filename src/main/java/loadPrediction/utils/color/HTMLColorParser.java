@@ -1,7 +1,7 @@
 package loadPrediction.utils.color;
 
 
-import com.sun.xml.internal.fastinfoset.util.CharArrayString;
+//import com.sun.xml.internal.fastinfoset.util.CharArrayString;
 
 import java.awt.*;
 
@@ -10,7 +10,7 @@ import java.awt.*;
  */
 public class HTMLColorParser implements IColorParser {
     public  Color parse(String s) {
-        if (!s.contains(new CharArrayString("HTML:"))) {
+        if (s.indexOf("HTML:")==-1) {
             return null;
         }
 
