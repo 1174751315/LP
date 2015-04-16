@@ -32,6 +32,16 @@ public class RawWeatherData implements IDomain, IPrintable, Serializable {
 
     private Integer id;
     private String dateString;
+    private String baseString;
+
+    public String getBaseString() {
+        return baseString;
+    }
+
+    public void setBaseString(String baseString) {
+        this.baseString = baseString;
+    }
+
     private Integer cityId;
 
     public Double getAveHumid() {

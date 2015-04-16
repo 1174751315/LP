@@ -28,11 +28,11 @@
 
     <task:scheduled-tasks scheduler="defaultScheduler">
         <!--自动邮件，每日22：00发送-->
-        <task:scheduled ref="auto-mailing" method="run" cron="0 0 22 * * ?"/>
+        <task:scheduled ref="auto-mailing" method="run" cron="0 0 0/6 * * ?"/>
         <!--同步实际负荷和计算综合气象数据，每隔12小时-->
-        <task:scheduled ref="fetch-and-calc-new-weather" method="run" cron="0 0 0/12 * * ?"/>
+        <task:scheduled ref="fetch-and-calc-new-weather" method="run" cron="0 0 0/6 * * ?"/>
         <!--执行自动预测并缓存，每日08:00-->
-        <task:scheduled ref="auto-predict" method="run" cron="0 0 8 * * ?"/>
+        <task:scheduled ref="auto-predict" method="run" cron="0 0 0/6 * * ?"/>
     </task:scheduled-tasks>
 
     <task:scheduler id="defaultScheduler" pool-size="10"/>

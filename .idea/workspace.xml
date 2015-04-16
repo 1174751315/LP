@@ -6,8 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/all.xml" afterPath="$PROJECT_DIR$/.idea/libraries/all.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/DATA/load.mdb" afterPath="$PROJECT_DIR$/src/main/webapp/DATA/load.mdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/DATA/load_bkp.mdb" afterPath="$PROJECT_DIR$/src/main/webapp/DATA/load_bkp.mdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java" afterPath="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/spring-jobs.xml" afterPath="$PROJECT_DIR$/src/main/java/spring-jobs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-jobs.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-jobs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LP.iws" />
@@ -39,108 +45,119 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PredictionActionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
+      <file leaf-file-name="RawWeatherData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LP.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LP.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3893">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="5542">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PowerSystemDateUtil.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/PowerSystemDateUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19162641" vertical-offset="0" max-vertical-offset="621">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatingDecimal.class" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.68" vertical-offset="1136" max-vertical-offset="1530">
-              <caret line="1521" column="0" selection-start-line="1521" selection-start-column="0" selection-end-line="1521" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PredictionLoad2ReportPictureVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1003">
-              <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1632">
+              <caret line="34" column="30" selection-start-line="32" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
               <folding>
-                <element signature="e#4355#4362#0" expanded="true" />
+                <element signature="e#842#843#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UiCfg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/config/ui/UiCfg.java">
+      <file leaf-file-name="TimerTask4FetchingAndCalcingWeatherData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1156">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="969">
+              <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-jobs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/spring-jobs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.384615" vertical-offset="81" max-vertical-offset="765">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-jobs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-jobs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="765">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PredictorFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="986">
+              <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6267281" vertical-offset="0" max-vertical-offset="434">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAORawWeatherData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAORawWeatherData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="1122">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
-                <element signature="method#UiCfg#0;class#UiCfg#0" expanded="true" />
-                <element signature="method#update#0;class#UiCfg#0" expanded="true" />
+                <element signature="method#query#0;class#DAORawWeatherData#0" expanded="true" />
+                <element signature="method#delete#0;class#DAORawWeatherData#0" expanded="true" />
+                <element signature="method#unnamed#0;class#DAORawWeatherData#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOPaths.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java">
+      <file leaf-file-name="WeatherCalcAndSyncUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="646">
-              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui_cfg.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3116883" vertical-offset="231" max-vertical-offset="561">
-              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExcellingWorkdayPredictor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1666">
-              <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1577" max-vertical-offset="2091">
+              <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
               <folding>
-                <element signature="method#getPredictorType#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
+                <element signature="method#calcWeatherData#0;class#WeatherCalcAndSyncUtil#0" expanded="true" />
+                <element signature="method#calcWeatherDataFromRawWeatherDataInDbThenWriteDb#0;class#WeatherCalcAndSyncUtil#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DAOFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="952">
+              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding>
+                <element signature="e#2697#2698#0" expanded="true" />
+                <element signature="e#2742#2743#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessDAOFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/access/AccessDAOFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="714">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="method#AccessDAOFactory#0;class#AccessDAOFactory#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/EnhancedSimilarCoeCalculatorFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/domain/WeatherCoesPackage.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/WeatherFactorCalculatorImpl1.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/AccuracyUtils.java" />
@@ -178,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/AllInformation2ExcelVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/resouce/IOPaths.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAORawWeatherData.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/aop/AopTraceLoggingTest.java" />
@@ -192,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/RGBColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/utils/HTMLColorParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/loadPrediction/config/ui/UiCfgTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/MyColor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/utils/color/HTMLColorParser.java" />
         <option value="$PROJECT_DIR$/src/test/java/PoiTest.java" />
@@ -205,6 +217,11 @@
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/spring-jobs.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -231,9 +248,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
+    <option name="x" value="382" />
+    <option name="y" value="245" />
+    <option name="width" value="588" />
     <option name="height" value="886" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -551,7 +568,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="temp" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +644,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -650,47 +671,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="loadPrediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timerTask" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -718,7 +705,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="PAT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/action/PredictionActionTest.java&#10;EWP&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java&#10;PF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/PredictorFactory.java&#10;AbsEx&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;AP&#9;PSI&#9;JAVA://loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery&#10;Cell&#9;PSI&#9;JAVA://org.apache.poi.ss.usermodel.Cell&#10;Abs&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;EPL&#9;PSI&#9;JAVA://common.ElementPrintableLinkedList&#10;AbsE&#9;PSI&#9;JAVA://loadPrediction.core.predictor.excelling.AbstractTemplateMethodExcellingPredictor&#10;Aop&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/aop/AopTraceLogging.java&#10;A&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;PRPV&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java&#10;IP&#9;PSI&#9;JAVA://loadPrediction.core.predictor.IPredictor&#10;Ab&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;Tra&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/log/AopTraceLogging.java&#10;PFT&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactoryTest&#10;Advi&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/ThrowsAdvice.class&#10;AfterA&#9;PSI&#9;JAVA://org.springframework.aop.AfterAdvice&#10;ThrA&#9;PSI&#9;JAVA://org.springframework.aop.ThrowsAdvice&#10;AspectThr&#9;PSI&#9;JAVA://org.springframework.aop.aspectj.AspectJAfterThrowingAdvice&#10;AfterThrowing&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/aspectjrt-1.8.5.jar!/org/aspectj/lang/annotation/AfterThrowing.class&#10;AfterThr&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/aspectjrt-1.8.5.jar!/org/aspectj/lang/annotation/AfterThrowing.class&#10;PreF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/PredictorFactory.java&#10;Pre&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;Exce&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java&#10;BeanN&#9;PSI&#9;JAVA://org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator&#10;FT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;PreFT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;PredicFa&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;POM&#9;FILE&#9;file://E:/IdeaProjects/LP/pom.xml&#10;MyCo&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/MyColor.java&#10;MyColo&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/MyColor.java&#10;DataSet&#9;PSI&#9;JAVA://org.jfree.data.xy.CategoryTableXYDataset&#10;pu&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/PowerSystemDateUtil.java&#10;Properti&#9;PSI&#9;JAVA://java.util.Properties&#10;MailS&#9;PSI&#9;JAVA://org.springframework.mail.javamail.JavaMailSenderImpl" />
+    <property name="SearchEverywhereHistoryKey" value="PF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/PredictorFactory.java&#10;TTF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java&#10;PAT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/action/PredictionActionTest.java&#10;EWP&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java&#10;AbsEx&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;AP&#9;PSI&#9;JAVA://loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery&#10;Cell&#9;PSI&#9;JAVA://org.apache.poi.ss.usermodel.Cell&#10;Abs&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;EPL&#9;PSI&#9;JAVA://common.ElementPrintableLinkedList&#10;AbsE&#9;PSI&#9;JAVA://loadPrediction.core.predictor.excelling.AbstractTemplateMethodExcellingPredictor&#10;Aop&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/aop/AopTraceLogging.java&#10;A&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;PRPV&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java&#10;IP&#9;PSI&#9;JAVA://loadPrediction.core.predictor.IPredictor&#10;Ab&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;Tra&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/log/AopTraceLogging.java&#10;PFT&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactoryTest&#10;Advi&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/ThrowsAdvice.class&#10;AfterA&#9;PSI&#9;JAVA://org.springframework.aop.AfterAdvice&#10;ThrA&#9;PSI&#9;JAVA://org.springframework.aop.ThrowsAdvice&#10;AspectThr&#9;PSI&#9;JAVA://org.springframework.aop.aspectj.AspectJAfterThrowingAdvice&#10;AfterThrowing&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/aspectjrt-1.8.5.jar!/org/aspectj/lang/annotation/AfterThrowing.class&#10;AfterThr&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/aspectjrt-1.8.5.jar!/org/aspectj/lang/annotation/AfterThrowing.class&#10;PreF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/PredictorFactory.java&#10;Pre&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;Exce&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictor.java&#10;BeanN&#9;PSI&#9;JAVA://org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator&#10;FT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;PreFT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;PredicFa&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/loadPrediction/core/predictor/PredictorFactoryTest.java&#10;POM&#9;FILE&#9;file://E:/IdeaProjects/LP/pom.xml&#10;MyCo&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/MyColor.java&#10;MyColo&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/MyColor.java&#10;DataSet&#9;PSI&#9;JAVA://org.jfree.data.xy.CategoryTableXYDataset&#10;pu&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/utils/PowerSystemDateUtil.java&#10;Properti&#9;PSI&#9;JAVA://java.util.Properties&#10;MailS&#9;PSI&#9;JAVA://org.springframework.mail.javamail.JavaMailSenderImpl" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
@@ -729,9 +716,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\LP\src\main\resources" />
       <recent name="E:\IdeaProjects\LP\src\main\java\hibernate" />
       <recent name="E:\IdeaProjects\LP\src\main\java" />
-      <recent name="E:\IdeaProjects\LP\src\main\resources" />
       <recent name="E:\IdeaProjects\LP\target\LPU-BETA\WEB-INF\lib" />
       <recent name="E:\IdeaProjects\LP\src\main\java\loadPrediction\config\ui" />
     </key>
@@ -1075,9 +1062,9 @@
       <module name="LP" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="loadPrediction.action" />
-      <option name="MAIN_CLASS_NAME" value="loadPrediction.action.PredictionActionTest" />
-      <option name="METHOD_NAME" value="testIntelli" />
+      <option name="PACKAGE_NAME" value="loadPrediction.timerTask" />
+      <option name="MAIN_CLASS_NAME" value="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherDataTest" />
+      <option name="METHOD_NAME" value="testRun" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
@@ -1281,43 +1268,43 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
+    <frame x="382" y="245" width="588" height="886" extended-state="0" />
+    <editor active="false" />
     <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3001328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.50064266" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33200532" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.84090906" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41965473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13545817" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23071979" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43406594" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23771581" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="DSM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49164525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="686" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12084994" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5815832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1371,36 +1358,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="283" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="286" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java</url>
-          <line>97</line>
-          <properties />
-          <option name="timeStamp" value="287" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="288" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAORawWeatherData.java</url>
-          <line>33</line>
-          <properties />
-          <option name="timeStamp" value="300" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/XlLpModelAccessor.java</url>
           <line>97</line>
@@ -1408,7 +1365,7 @@
           <option name="timeStamp" value="348" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="355" />
+      <option name="time" value="367" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1424,121 +1381,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="918">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="28" />
-          <folding>
-            <element signature="method#createDaoRawWeatherData#0;class#DAOFactory#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/LoadBase.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="515">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/SimpleWeatherData.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="515">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="969">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/PredictionLoadData.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="1938">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="833">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate.cfg.access.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.3333335" vertical-offset="170" max-vertical-offset="1173">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAORawWeatherData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1394">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="method#query#0;class#DAORawWeatherData#0" expanded="false" />
-            <element signature="method#query#1;class#DAORawWeatherData#0" expanded="false" />
-            <element signature="method#queryThenDelete#0;class#DAORawWeatherData#0" expanded="false" />
-            <element signature="method#delete#0;class#DAORawWeatherData#0" expanded="false" />
-            <element signature="method#unnamed#0;class#DAORawWeatherData#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="459">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/ExcellingWorkdayPredictorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="358" max-vertical-offset="816">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/util/CommonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="884">
-          <caret line="72" column="85" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/excelling/CellPosition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1567#0" expanded="false" />
-            <element signature="docComment;class#CellPosition#0" expanded="false" />
-            <element signature="docComment;method#CellPosition#0;class#CellPosition#0" expanded="false" />
-            <element signature="method#CellPosition#0;class#CellPosition#0" expanded="false" />
-            <element signature="method#CellPosition#1;class#CellPosition#0" expanded="false" />
-            <element signature="e#848#849#0" expanded="false" />
-            <element signature="e#885#886#0" expanded="false" />
-            <element signature="docComment;method#getRow#0;class#CellPosition#0" expanded="false" />
-            <element signature="e#969#970#0" expanded="false" />
-            <element signature="e#1014#1015#0" expanded="false" />
-            <element signature="docComment;method#getCol#0;class#CellPosition#0" expanded="false" />
-            <element signature="method#getCol#0;class#CellPosition#0" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1240#1241#0" expanded="false" />
-            <element signature="e#1292#1293#0" expanded="false" />
-            <element signature="e#1337#1338#0" expanded="false" />
-            <element signature="method#ofAfter#0;class#CellPosition#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1546,7 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="211" max-vertical-offset="833">
           <caret line="44" column="77" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1632,7 +1477,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="612">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1640,10 +1484,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="935">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="method#AbstractPowerSystemDayQuery#0;class#AbstractPowerSystemDayQuery#0" expanded="false" />
-            <element signature="method#AbstractPowerSystemDayQuery#1;class#AbstractPowerSystemDayQuery#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1658,17 +1498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="748">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="590" max-vertical-offset="986">
-          <caret line="66" column="66" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,7 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1684,7 +1512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="4590">
           <caret line="200" column="11" selection-start-line="200" selection-start-column="11" selection-end-line="200" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1693,21 +1520,21 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1756" max-vertical-offset="3060">
           <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#XlLpModelAccessor#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#XlLpModelAccessor#1;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#writeAndClose#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#setWorkbook#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#openWorkbook#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="e#2604#2650#0" expanded="true" />
-            <element signature="method#writeSomeDateStrings2Cells#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#writeSomeDateStrings2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#writeSomeWeatherData2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#writeOneLoadData2Cells#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#writeSomeLoadData2Cells#1;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#forceCalcAllFormulas#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#readSomeDateStrings#0;class#XlLpModelAccessor#0" expanded="true" />
-            <element signature="method#readSimilarDateStrings#0;class#XlLpModelAccessor#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#XlLpModelAccessor#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#XlLpModelAccessor#1;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#writeAndClose#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#setWorkbook#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#openWorkbook#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="e#2604#2650#0" expanded="false" />
+            <element signature="method#writeSomeDateStrings2Cells#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#writeSomeDateStrings2Cells#1;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#writeSomeWeatherData2Cells#1;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#writeOneLoadData2Cells#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#writeSomeLoadData2Cells#1;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#forceCalcAllFormulas#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#readSomeDateStrings#0;class#XlLpModelAccessor#0" expanded="false" />
+            <element signature="method#readSimilarDateStrings#0;class#XlLpModelAccessor#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1716,7 +1543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="442">
           <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1747,9 +1573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="612">
           <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1757,9 +1580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="476">
           <caret line="12" column="43" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1767,12 +1587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1089" max-vertical-offset="1496">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#getRandomGray#0;class#MyColor#0" expanded="false" />
-            <element signature="method#getRandomColor#0;class#MyColor#0" expanded="false" />
-            <element signature="method#getColor#0;class#MyColor#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1780,10 +1594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="method#ColorParserFactory#0;class#ColorParserFactory#0" expanded="false" />
-            <element signature="method#getProperParser#0;class#ColorParserFactory#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1791,7 +1601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.68" vertical-offset="2436" max-vertical-offset="2805">
           <caret line="531" column="0" selection-start-line="531" selection-start-column="0" selection-end-line="531" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1799,7 +1608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="2499">
           <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,10 +1615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1156">
           <caret line="26" column="63" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="63" />
-          <folding>
-            <element signature="method#UiCfg#0;class#UiCfg#0" expanded="true" />
-            <element signature="method#update#0;class#UiCfg#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1818,15 +1622,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="646">
           <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#0#2241#0" expanded="false" />
+            <element signature="docComment;class#IOPaths#0" expanded="false" />
+            <element signature="e#2080#2081#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/ui_cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3116883" vertical-offset="231" max-vertical-offset="561">
+        <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="561">
           <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1835,16 +1643,49 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1666">
           <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
           <folding>
-            <element signature="method#getPredictorType#0;class#ExcellingWorkdayPredictor#0" expanded="true" />
+            <element signature="e#0#8952#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#ExcellingWorkdayPredictor#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#ExcellingWorkdayPredictor#1;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#1791#1806#0" expanded="false" />
+            <element signature="method#getSeason#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#2671#2672#0" expanded="false" />
+            <element signature="e#2733#2734#0" expanded="false" />
+            <element signature="e#2808#2809#0" expanded="false" />
+            <element signature="e#2867#2868#0" expanded="false" />
+            <element signature="method#setDayQuery4PredictionDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#setDayQuery4HistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#doGetPredictionDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#doGetHistoryDays#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#5413#5414#0" expanded="false" />
+            <element signature="e#5484#5485#0" expanded="false" />
+            <element signature="e#5548#5549#0" expanded="false" />
+            <element signature="e#5572#5573#0" expanded="false" />
+            <element signature="method#doGetHistoryDaysNbrs#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#doGetHistoryDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#6053#6054#0" expanded="false" />
+            <element signature="e#6110#6111#0" expanded="false" />
+            <element signature="e#6192#6193#0" expanded="false" />
+            <element signature="e#6249#6250#0" expanded="false" />
+            <element signature="method#doGetHistoryWeatherExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#accept#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#doGetSimilarDaysExcelPositions#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="method#doGetSimilarLoadsExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#7163#7164#0" expanded="false" />
+            <element signature="e#7222#7223#0" expanded="false" />
+            <element signature="method#getHistoryLoadTuplesExcelPosition#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
+            <element signature="e#7499#7500#0" expanded="false" />
+            <element signature="e#7526#7527#0" expanded="false" />
+            <element signature="method#doAfterInjectWeathers#0;class#ExcellingWorkdayPredictor#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/Java/jdk1.8.0_11/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.68" vertical-offset="1136" max-vertical-offset="1530">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1136" max-vertical-offset="1530">
           <caret line="1521" column="0" selection-start-line="1521" selection-start-column="0" selection-end-line="1521" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1852,17 +1693,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="379" max-vertical-offset="1003">
           <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
-          <folding>
-            <element signature="e#4355#4362#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="5542">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/PowerSystemDateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1874,18 +1719,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/action/PredictionActionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="5542">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="442">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/PowerSystemDateUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/SimilarDateRelation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19162641" vertical-offset="0" max-vertical-offset="621">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="510">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="476">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/domain/RawWeatherData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1632">
+          <caret line="34" column="30" selection-start-line="32" selection-start-column="12" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/access/AccessDAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="714">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="method#AccessDAOFactory#0;class#AccessDAOFactory#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAOFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="952">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#2697#2698#0" expanded="true" />
+            <element signature="e#2742#2743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/dataAccess/DAORawWeatherData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="1122">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="method#query#0;class#DAORawWeatherData#0" expanded="true" />
+            <element signature="method#delete#0;class#DAORawWeatherData#0" expanded="true" />
+            <element signature="method#unnamed#0;class#DAORawWeatherData#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/utils/weather/WeatherCalcAndSyncUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1577" max-vertical-offset="2091">
+          <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
+          <folding>
+            <element signature="method#calcWeatherData#0;class#WeatherCalcAndSyncUtil#0" expanded="true" />
+            <element signature="method#calcWeatherDataFromRawWeatherDataInDbThenWriteDb#0;class#WeatherCalcAndSyncUtil#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="969">
+          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/spring-jobs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.384615" vertical-offset="81" max-vertical-offset="765">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-jobs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="765">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loadPrediction/core/predictor/PredictorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="986">
+          <caret line="57" column="11" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6267281" vertical-offset="0" max-vertical-offset="434">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
           <folding />
         </state>
       </provider>
