@@ -6,6 +6,7 @@
     <class name="loadPrediction.domain.RawWeatherData" table="WEATHER_DATA_RAW">
         <composite-id>
             <key-property name="dateString" column="DATE_STRING"/>
+            <key-property name="baseString" column="BASE_DATE_STRING"/>
             <key-property name="cityId" column="CITY_ID"/>
             <key-property name="maxTemperature" column="MAX_TEMP"/>
             <key-property name="minTemperature" column="MIN_TEMP"/>
