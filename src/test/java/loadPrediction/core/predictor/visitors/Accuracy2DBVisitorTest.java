@@ -5,7 +5,7 @@ import loadPrediction.dataAccess.DAOAccuracy;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
 import loadPrediction.domain.Accuracy;
-import loadPrediction.domain.visitors.WorkdayPredictorTestDataRepo;
+import loadPrediction.WorkdayPredictorTestDataRepo;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
