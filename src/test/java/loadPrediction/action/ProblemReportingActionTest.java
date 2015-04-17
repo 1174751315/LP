@@ -18,8 +18,8 @@ public class ProblemReportingActionTest {
     }
 
     public void testSendEMail() throws Exception {
-//        ProblemReportingAction action= new ProblemReportingAction();
-//        action.setDetails("当我进行2014-04-21预测时，程序崩溃了。");
-//        action.sendEMail();
+        ProblemReportingAction action= new ProblemReportingAction();
+        action.setDetails("当我进行2014-04-21预测时，程序崩溃了。");
+        action.sendEMail();
     }
 }
