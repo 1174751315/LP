@@ -133,11 +133,11 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetInputWorkbookPath() {
-//        if (season==null){
-//            getSeason(dateString);
-//        }
-//        if (season.equals(Season.SUMMER))
-//            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
+        if (season==null){
+            getSeason(dateString);
+        }
+        if (season.equals(Season.SUMMER))
+            return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
         return IOPaths.WEB_CONTENT_WORKDAY_WINTER_TEMPLATE_PATH;
     }
     @Override
