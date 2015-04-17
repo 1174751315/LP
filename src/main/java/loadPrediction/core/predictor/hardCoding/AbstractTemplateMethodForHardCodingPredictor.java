@@ -59,7 +59,11 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
     private ElementPrintableLinkedList<Accuracy> accuracy;
 
     public PrintableLinkedList<Double> getAccuracy() {
-        return null;
+        PrintableLinkedList<Double> acc=new PrintableLinkedList<Double>("精度");
+        for (int i = 0; i < accuracy.size(); i++) {
+            acc.add(accuracy.get(i).getAccuracy());
+        }
+        return acc;
     }
 
     private Double accuracyOfFirstPredictionDay;

@@ -24,7 +24,7 @@ public class DAOLoadBase extends AbstractDAO {
     }
 
     public LoadBase query(Integer year, Integer month) throws DAE {
-        Session defaultSession = SuperDAO.getInstanceOf(eDbType.ORACLE).getSessionFactory().openSession();
+        Session defaultSession = SuperDAO.getInstanceOf(eDbType.ACCESS).getSessionFactory().openSession();
 
         Transaction t = defaultSession.beginTransaction();
 

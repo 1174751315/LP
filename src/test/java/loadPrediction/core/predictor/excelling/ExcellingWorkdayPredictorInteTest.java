@@ -35,17 +35,19 @@ public class ExcellingWorkdayPredictorInteTest {
 
     @After
     public void tearDown() throws Exception {
-
+        File xl=new File(xlPath);
+        xl.deleteOnExit();
+        xl.delete();
     }
 
-
+    private String xlPath;
     @Test
     public void testPredict() throws Exception {
 
         ExcellingWorkdayPredictor predictor =new ExcellingWorkdayPredictor();
 
         predictor.setDateString("2014-04-21");
-        String xlPath=(String)predictor.predict();
+        xlPath=(String)predictor.predict();
 
         /*确认预测器已输出报表*/
         assertTrue(new File(xlPath).exists());
@@ -57,6 +59,7 @@ public class ExcellingWorkdayPredictorInteTest {
 
         Double delta=0.001;
         /*确认预测精度值符合预期*/
+        assertEquals(accuracies.size(),7);
         assertEquals(accuracies.get(0),0.9609,delta);
         assertEquals(accuracies.get(1),0.9543,delta);
         assertEquals(accuracies.get(2),0.9670,delta);
