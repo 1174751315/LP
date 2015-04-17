@@ -44,6 +44,8 @@ public class PredictorFactoryTest {
         IPredictor predictor= PredictorFactory.getInstance().getProperPredictor(date);
         predictor.predict();
         assertNotNull(predictor);
+            assertTrue(predictor.getPredictorType().indexOf("工作日")!=-1);
+//            assertEquals(predictor.getClass().getSimpleName(),"ExcellingWorkdayPredictor");
 //        assertEquals(predictor.getClass().getSimpleName(),"ExcellingWorkdayPredictor");
     }
 }
