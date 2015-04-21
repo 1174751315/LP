@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 <!--<bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>-->
 
-<bean id="excellingWorkdayPredictor" class="loadPrediction.core.predictor.excelling.ExcellingWorkdayPredictor"/>
-<bean id="excellingWeekendPredictor" class="loadPrediction.core.predictor.excelling.ExcellingWeekendPredictor"/>
+<bean id="excellingWorkdayPredictor" class="prediction.core.predictor.excelling.ExcellingWorkdayPredictor"/>
+<bean id="excellingWeekendPredictor" class="prediction.core.predictor.excelling.ExcellingWeekendPredictor"/>
 <!--<bean id="hardCodingWorkdayPredictor" class="loadPrediction.core.predictor.hardCoding.HardCodingWorkdayPredictor"/>-->
 <!--<bean id="hardCodingWeekendPredictor" class="loadPrediction.core.predictor.hardCoding.HardCodingWeekendPredictor"/>-->
 

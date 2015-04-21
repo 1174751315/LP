@@ -6,7 +6,7 @@
 
 package jfreechart;
 
-import loadPrediction.utils.FileContentUtils;
+import prediction.utils.FileContentUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;

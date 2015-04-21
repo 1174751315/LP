@@ -68,21 +68,21 @@
     </package>
 
     <package name="ajax" extends="json-default" namespace="/ajax_use_json">
-        <action name="showAccuracies" class="loadPrediction.action.ShowAccuraciesAction" method="getAccuracyStatics">
+        <action name="showAccuracies" class="prediction.action.ShowAccuraciesAction" method="getAccuracyStatics">
             <result type="json"/>
         </action>
-        <action name="IntelliPrediction" class="loadPrediction.action.PredictionAction" method="intelli">
+        <action name="IntelliPrediction" class="prediction.action.PredictionAction" method="intelli">
             <result type="json"/>
         </action>
-        <action name="getDateType" class="loadPrediction.action.GetDateTypeAction" method="execute">
+        <action name="getDateType" class="prediction.action.GetDateTypeAction" method="execute">
             <result type="json"/>
         </action>
-        <action name="getOneAccuracy" class="loadPrediction.action.ShowOneAccuracyAction" method="getOneAccuracy">
+        <action name="getOneAccuracy" class="prediction.action.ShowOneAccuracyAction" method="getOneAccuracy">
             <result type="json"/>
         </action>
     </package>
     <package name="general" extends="struts-default" namespace="/general">
-        <action name="downloadOutputExcel" class="loadPrediction.action.DownloadAction">
+        <action name="downloadOutputExcel" class="prediction.action.DownloadAction">
             <param name="inputPath">output.xls</param>
             <result name="success" type="stream">
                 <param name="contentType">application/vnd.ms-excel</param>
@@ -90,7 +90,7 @@
                 <param name="bufferSize">4096</param>
             </result>
         </action>
-        <action name="sendEMailToDeveloper" class="loadPrediction.action.ProblemReportingAction" method="sendEMail">
+        <action name="sendEMailToDeveloper" class="prediction.action.ProblemReportingAction" method="sendEMail">
             <result name="success">/success.jsp</result>
             <result name="error">/error.jsp</result>
         </action>

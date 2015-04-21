@@ -41,7 +41,7 @@
             </props>
         </property>
     </bean>
-    <bean id="abstractDao" class="main.java.loadPrediction.dataAccess.SuperDAO">
+    <bean id="abstractDao" class="main.java.prediction.dataAccess.SuperDAO">
 
     </bean>
 </beans>

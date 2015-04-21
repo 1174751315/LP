@@ -20,9 +20,9 @@
     <context:annotation-config/>
     <context:component-scan base-package="loadPrediction"/>
 
-    <bean id="fetch-and-calc-new-weather" class="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>
-    <bean id="auto-predict" class="loadPrediction.timerTask.TimerTask4LoadPrediction"/>
-    <bean id="auto-mailing" class="loadPrediction.timerTask.TimerTask4LogMailing"/>
+    <bean id="fetch-and-calc-new-weather" class="prediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>
+    <bean id="auto-predict" class="prediction.timerTask.TimerTask4LoadPrediction"/>
+    <bean id="auto-mailing" class="prediction.timerTask.TimerTask4LogMailing"/>
 
     <task:scheduled-tasks scheduler="defaultScheduler">
         <!--自动邮件，每日22：00发送-->

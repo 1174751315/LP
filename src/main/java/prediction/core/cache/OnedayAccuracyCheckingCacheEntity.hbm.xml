@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="prediction.core.cache.OnedayAccuracyCheckingCacheEntity" table="ACCURACY_CACHES">
+        <id name="dateString" column="DATE_STRING">
+            <generator class="assigned"/>
+        </id>
+        <property name="accuracy" column="ACC"/>
+        <property name="outputImagePath" column="IMG_PATH"/>
+    </class>
+</hibernate-mapping>

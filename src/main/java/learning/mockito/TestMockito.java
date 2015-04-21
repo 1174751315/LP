@@ -1,7 +1,7 @@
 package learning.mockito;
 
-import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.exception.LPE;
+import prediction.core.predictor.IPredictor;
+import prediction.exception.LPE;
 import org.junit.Test;
 
 import static org.mockito.Mockito.mock;
