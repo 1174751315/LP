@@ -6,7 +6,7 @@
 
 package loadPrediction.domain;
 
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.domain.visitors.IDomainVisitor;
 
 /**
  * 李倍存 创建于 2015-03-02 19:08。电邮 1174751315@qq.com。
@@ -14,6 +14,7 @@ import  loadPrediction.domain.visitors.IDomainVisitor;
 public class WeatherCoes4Weekend extends WeatherCoes implements IDomain {
     public WeatherCoes4Weekend() {
     }
+
     @Override
     public Object accept(IDomainVisitor visitor) {
         return null;

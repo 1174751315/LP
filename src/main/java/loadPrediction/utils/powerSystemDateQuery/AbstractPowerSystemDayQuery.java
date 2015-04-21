@@ -6,10 +6,10 @@
 
 package loadPrediction.utils.powerSystemDateQuery;
 
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOSimpleDate;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOSimpleDate;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.sql.Date;
 import java.util.LinkedList;
@@ -25,7 +25,7 @@ public abstract class AbstractPowerSystemDayQuery {
     protected static final Integer CODE_WEEKEND = 1;
     protected static final Integer CODE_FESTIVAL = 2;
     protected static final Integer CODE_SPRING_FESTIVAL = 3;
-    protected static final Integer CODE_QINGMING=4;
+    protected static final Integer CODE_QINGMING = 4;
 
     public AbstractPowerSystemDayQuery(Date date) throws Exception {
         this.setDate(date);

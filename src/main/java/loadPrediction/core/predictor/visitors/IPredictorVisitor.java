@@ -6,9 +6,9 @@
 
 package loadPrediction.core.predictor.visitors;
 
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.core.predictor.IQingmingPredictor;
+import loadPrediction.core.predictor.IWeekendPredictor;
+import loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.exception.LPE;
 
 /**
@@ -17,6 +17,7 @@ import loadPrediction.exception.LPE;
 public interface IPredictorVisitor {
     /**
      * 访问者模式接口；用于为特定的IWorkdayPredictor扩展功能。
+     *
      * @param predictor 预测器实例
      * @return 包含特定信息的对象；包含何种信息由实现者决定。
      */

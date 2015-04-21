@@ -6,7 +6,7 @@
 
 package loadPrediction.domain.visitors;
 
-import  loadPrediction.domain.LoadData;
+import loadPrediction.domain.LoadData;
 
 /**
  * 李倍存 创建于 2015-03-05 20:08。电邮 1174751315@qq.com。

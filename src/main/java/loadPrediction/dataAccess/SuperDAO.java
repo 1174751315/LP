@@ -7,7 +7,7 @@
 
 package loadPrediction.dataAccess;
 
-import  db.eDbType;
+import db.eDbType;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -49,12 +49,12 @@ public class SuperDAO {
             dao = instances.get("access");
             return dao;
         }
-        if (db==eDbType.BACKUP){
-            SuperDAO dao=instances.get("bkp");
-            if (dao==null){
-                dao=instances.put("bkp",new SuperDAO(new Configuration().configure("hibernate.cfg.bkp.xml").buildSessionFactory()));
+        if (db == eDbType.BACKUP) {
+            SuperDAO dao = instances.get("bkp");
+            if (dao == null) {
+                dao = instances.put("bkp", new SuperDAO(new Configuration().configure("hibernate.cfg.bkp.xml").buildSessionFactory()));
             }
-            dao=instances.get("bkp");
+            dao = instances.get("bkp");
             return dao;
         }
         return null;

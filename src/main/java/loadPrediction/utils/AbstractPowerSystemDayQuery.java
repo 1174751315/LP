@@ -6,9 +6,9 @@
 
 package loadPrediction.utils;
 
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOSimpleDate;
-import  loadPrediction.domain.SimpleDate;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOSimpleDate;
+import loadPrediction.domain.SimpleDate;
 
 import java.sql.Date;
 import java.util.LinkedList;

@@ -6,7 +6,7 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.core.test.WeekendTestRecord;
+import loadPrediction.core.test.WeekendTestRecord;
 
 import java.sql.Date;
 

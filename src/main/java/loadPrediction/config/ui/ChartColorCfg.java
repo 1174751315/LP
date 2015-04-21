@@ -54,7 +54,7 @@ public class ChartColorCfg {
         this.series = series;
     }
 
-    public ChartColorCfg clone(){
-        return new ChartColorCfg(this.backGround,this.foreGround,this.grid,this.series);
+    public ChartColorCfg clone() {
+        return new ChartColorCfg(this.backGround, this.foreGround, this.grid, this.series);
     }
 }

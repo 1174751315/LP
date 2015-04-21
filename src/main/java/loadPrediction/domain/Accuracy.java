@@ -6,8 +6,8 @@
 
 package loadPrediction.domain;
 
-import  common.IPrintable;
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import common.IPrintable;
+import loadPrediction.domain.visitors.IDomainVisitor;
 
 import java.io.PrintStream;
 

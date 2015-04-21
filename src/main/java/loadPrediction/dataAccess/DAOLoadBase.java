@@ -6,9 +6,9 @@
 
 package loadPrediction.dataAccess;
 
-import  db.eDbType;
-import  loadPrediction.domain.LoadBase;
-import  loadPrediction.exception.DAE;
+import db.eDbType;
+import loadPrediction.domain.LoadBase;
+import loadPrediction.exception.DAE;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -36,8 +36,9 @@ public class DAOLoadBase extends AbstractDAO {
 //        session.close();
 
         LoadBase o = (LoadBase) sq.uniqueResult();
-        if (o == null)
+        if (o == null) {
             throw new DAE(DAE.eType.NOT_FOUND);
+        }
         return o;
 
     }

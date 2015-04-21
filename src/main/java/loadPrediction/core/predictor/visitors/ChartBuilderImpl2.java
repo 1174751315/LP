@@ -16,8 +16,8 @@ import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 import org.jfree.data.xy.CategoryTableXYDataset;
 
 import java.awt.*;
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by LBC on 2015-04-08.
@@ -26,21 +26,23 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
 
 
     public ChartBuilderImpl2(Color foreColor, Color backColor, Color gridColor) {
-        super(foreColor,backColor,gridColor);
+        super(foreColor, backColor, gridColor);
     }
-    public ChartBuilderImpl2(){
-        this(MyColor.white,MyColor.c4,MyColor.lightGray);
+
+    public ChartBuilderImpl2() {
+        this(MyColor.white, MyColor.c4, MyColor.lightGray);
     }
+
     @Override
     public JFreeChart build(IPredictor predictor) throws LPE {
         CategoryTableXYDataset ds = new CategoryTableXYDataset();
 
         LoadData actual = predictor.getActual96PointLoads().get(0);
         LoadData prediction = predictor.getPrediction96PointLoads().get(0);
-        LoadData lwr=prediction.multiple(0.943396226415094);
-        LoadData upr=prediction.multiple(1.06382978723404);
+        LoadData lwr = prediction.multiple(0.943396226415094);
+        LoadData upr = prediction.multiple(1.06382978723404);
 
-        List<LoadData> list=new LinkedList<LoadData>();
+        List<LoadData> list = new LinkedList<LoadData>();
         list.add(prediction);
         list.add(lwr);
         list.add(upr);
@@ -54,15 +56,15 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
         }
         Double acc = 0.;
         if (actual != null) {
-            acc =new AccuracyCalculator().calc(actual, prediction);
+            acc = new AccuracyCalculator().calc(actual, prediction);
         }
-        JFreeChart chart = ChartFactory.createXYLineChart(predictor.getDateString(),"时刻","功率/MW",ds, PlotOrientation.VERTICAL,true,true,true);// new JFreeChartFacade().createLineChart(predictor.getDateString(),"时刻","功率/MW",ds);
+        JFreeChart chart = ChartFactory.createXYLineChart(predictor.getDateString(), "时刻", "功率/MW", ds, PlotOrientation.VERTICAL, true, true, true);// new JFreeChartFacade().createLineChart(predictor.getDateString(),"时刻","功率/MW",ds);
 
-        XYPlot xyPlot=chart.getXYPlot();
+        XYPlot xyPlot = chart.getXYPlot();
 //        XYItemRenderer renderer=xyPlot.getRenderer();
-        XYLineAndShapeRenderer renderer=new XYLineAndShapeRenderer();
+        XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer();
 
-        BasicStroke dotLine=new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[] {3.F, 3.F}, 1.0F);
+        BasicStroke dotLine = new BasicStroke(1, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 1.0F, new float[]{3.F, 3.F}, 1.0F);
         renderer.setSeriesStroke(0, new BasicStroke(2));
         renderer.setSeriesPaint(0, Color.yellow);
         renderer.setSeriesStroke(1, dotLine);
@@ -72,8 +74,8 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
         renderer.setBasePaint(Color.BLACK);
         renderer.setSeriesShape(1, new Rectangle());
         renderer.setSeriesShape(2, new Rectangle());
-        renderer.setSeriesShapesVisible(1,true);
-        renderer.setSeriesShapesVisible(2,true);
+        renderer.setSeriesShapesVisible(1, true);
+        renderer.setSeriesShapesVisible(2, true);
 
         if (actual != null) {
             renderer.setSeriesStroke(3, new BasicStroke(2));
@@ -90,7 +92,6 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
         chart.setBackgroundPaint(backColor);
 
 
-
         chart.setBorderPaint(Color.BLACK);
 
         xyPlot.setRangeGridlineStroke(new BasicStroke(1));
@@ -100,22 +101,22 @@ public class ChartBuilderImpl2 extends AbstractChartBuilder {
         xyPlot.setDomainGridlinePaint(Color.white);
 
 
-        ValueAxis valueAxis=xyPlot.getRangeAxis();
+        ValueAxis valueAxis = xyPlot.getRangeAxis();
         valueAxis.setTickLabelPaint(Color.white);
         valueAxis.setTickLabelFont(new Font("Arial", Font.BOLD, 16));
         valueAxis.setLabelFont(new Font("微软雅黑", Font.BOLD, 20));
         valueAxis.setLabelPaint(Color.white);
-        ValueAxis domainAxis=xyPlot.getDomainAxis();
-        domainAxis.setTickLabelFont(new Font("Arial",Font.BOLD,16));
+        ValueAxis domainAxis = xyPlot.getDomainAxis();
+        domainAxis.setTickLabelFont(new Font("Arial", Font.BOLD, 16));
         domainAxis.setTickLabelPaint(Color.white);
-        domainAxis.setLabelFont(new Font("微软雅黑",Font.BOLD,20));
+        domainAxis.setLabelFont(new Font("微软雅黑", Font.BOLD, 20));
         domainAxis.setLabelPaint(Color.white);
 
-        chart.getTitle().setFont(new Font("Arial",Font.BOLD,20));
+        chart.getTitle().setFont(new Font("Arial", Font.BOLD, 20));
         chart.getTitle().setPaint(Color.white);
-        MaxAveMinTuple<Double> t=PredictionLoad24LinePictureVisitor_1.unnamed(list);
+        MaxAveMinTuple<Double> t = PredictionLoad24LinePictureVisitor_1.unnamed(list);
 
-        valueAxis.setLowerBound(t.min*0.99);
+        valueAxis.setLowerBound(t.min * 0.99);
         valueAxis.setUpperBound(t.max * 1.01);
         return chart;
     }

@@ -3,24 +3,22 @@
        xmlns:task="http://www.springframework.org/schema/task"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
-
-       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
-       <!--<aop:aspectj-autoproxy/>-->
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> <!-- bean definitions here -->
+    <!--<aop:aspectj-autoproxy/>-->
 
     <!--<bean id="get-new-weather-data" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
-        <!--<property name="targetObject">-->
-            <!--<bean class="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>-->
-        <!--</property>-->
-        <!--<property name="targetMethod" value="run" />-->
-        <!--<property name="concurrent" value="false" />&lt;!&ndash; 作业不并发调度 &ndash;&gt;-->
+    <!--<property name="targetObject">-->
+    <!--<bean class="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>-->
+    <!--</property>-->
+    <!--<property name="targetMethod" value="run" />-->
+    <!--<property name="concurrent" value="false" />&lt;!&ndash; 作业不并发调度 &ndash;&gt;-->
     <!--</bean>-->
-    <task:annotation-driven /> <!-- 定时器开关 -->
-    <context:annotation-config />
-    <context:component-scan base-package="loadPrediction" />
+    <task:annotation-driven/>
+    <!-- 定时器开关 -->
+    <context:annotation-config/>
+    <context:component-scan base-package="loadPrediction"/>
 
     <bean id="fetch-and-calc-new-weather" class="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>
     <bean id="auto-predict" class="loadPrediction.timerTask.TimerTask4LoadPrediction"/>

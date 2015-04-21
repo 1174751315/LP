@@ -6,17 +6,16 @@
 
 package loadPrediction.core.predictor.excelling;
 
-import  common.ElementPrintableLinkedList;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.util.CommonUtils;
-import  loadPrediction.core.predictor.util.WeekendUtils;
-import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.DAE;
-import  loadPrediction.exception.LPE;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.DateUtil;
+import common.ElementPrintableLinkedList;
+import loadPrediction.core.predictor.IWeekendPredictor;
+import loadPrediction.core.predictor.util.WeekendUtils;
+import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.DAE;
+import loadPrediction.exception.LPE;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.ListUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -131,8 +130,8 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor) throws LPE{
-         return visitor.visitWeekendPredictor(this);
+    public Object accept(IPredictorVisitor visitor) throws LPE {
+        return visitor.visitWeekendPredictor(this);
     }
 
     @Override

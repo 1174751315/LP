@@ -7,8 +7,8 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.SimpleDate;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.SimpleDate;
 
 /**
  * 李倍存 创建于 2015/3/12 23:11。电邮 1174751315@qq.com。

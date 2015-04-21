@@ -7,13 +7,13 @@
 
 package loadPrediction.domain;
 
-import  common.IListable;
-import  common.IMaxAveMinable;
-import  common.IPrintable;
-import  common.MaxAveMinTuple;
-import  loadPrediction.domain.visitors.IDomainVisitor;
-import  loadPrediction.domain.visitors.LoadDataVisitor;
-import  loadPrediction.resouce.TimeLabels;
+import common.IListable;
+import common.IMaxAveMinable;
+import common.IPrintable;
+import common.MaxAveMinTuple;
+import loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.domain.visitors.LoadDataVisitor;
+import loadPrediction.resouce.TimeLabels;
 
 import java.io.PrintStream;
 import java.util.LinkedList;
@@ -39,32 +39,37 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
     }
 
     public void setNext(LoadData next) {
-        if (next == this)
+        if (next == this) {
             return;
+        }
         this.next = next;
     }
 
     private boolean maxed = false, mined = false, aveed = false;
     private Double max, min, ave;
-    private Integer maxIndex=0,minIndex=0;
-    public String getMaxLabel(){
+    private Integer maxIndex = 0, minIndex = 0;
+
+    public String getMaxLabel() {
         getMax();
         return TimeLabels.labels[maxIndex];
     }
-    public String getMinLabel(){
+
+    public String getMinLabel() {
         getMin();
         return TimeLabels.labels[minIndex];
     }
+
     public Double getMax() {
-        if (maxed == true)
+        if (maxed == true) {
             return max;
+        }
         this.update();
         maxed = true;
         max = lst.get(0);
         for (int i = 0; i < 96; i++) {
-            if (max < lst.get(i)){
+            if (max < lst.get(i)) {
                 max = lst.get(i);
-                maxIndex=i;
+                maxIndex = i;
             }
 
         }
@@ -72,15 +77,16 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
     }
 
     public Double getMin() {
-        if (mined == true)
+        if (mined == true) {
             return min;
+        }
         this.update();
         mined = true;
         min = lst.get(0);
         for (int i = 0; i < 96; i++) {
-            if (min > lst.get(i)){
+            if (min > lst.get(i)) {
                 min = lst.get(i);
-                minIndex=i;
+                minIndex = i;
             }
 
         }
@@ -88,8 +94,9 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
     }
 
     public Double getAve() {
-        if (aveed == true)
+        if (aveed == true) {
             return ave;
+        }
         this.update();
         aveed = true;
         Double sum = Double.valueOf(0);
@@ -124,8 +131,9 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
     private String dateString;
 
     public void setData(List<Double> data) {
-        if (data.size() != 96)
+        if (data.size() != 96) {
             return;
+        }
         setData00(data.get(0));
         setData01(data.get(1));
         setData02(data.get(2));
@@ -1094,111 +1102,114 @@ public class LoadData implements IDomain, IListable<Double>, IMaxAveMinable<Doub
     private List<Double> lst = new LinkedList<Double>();
     private boolean updated = false;
 
-    public void unList(List<Double > list){
-        if (list.size()!=96)
-            return;;
-        updated=false;
-        data00=list.get(0);
-        data01=list.get(1);
-        data02=list.get(2);
-        data03=list.get(3);
-        data04=list.get(4);
-        data05=list.get(5);
-        data06=list.get(6);
-        data07=list.get(7);
-        data08=list.get(8);
-        data09=list.get(9);
-        data10=list.get(10);
-        data11=list.get(11);
-        data12=list.get(12);
-        data13=list.get(13);
-        data14=list.get(14);
-        data15=list.get(15);
-        data16=list.get(16);
-        data17=list.get(17);
-        data18=list.get(18);
-        data19=list.get(19);
-        data20=list.get(20);
-        data21=list.get(21);
-        data22=list.get(22);
-        data23=list.get(23);
-        data24=list.get(24);
-        data25=list.get(25);
-        data26=list.get(26);
-        data27=list.get(27);
-        data28=list.get(28);
-        data29=list.get(29);
-        data30=list.get(30);
-        data31=list.get(31);
-        data32=list.get(32);
-        data33=list.get(33);
-        data34=list.get(34);
-        data35=list.get(35);
-        data36=list.get(36);
-        data37=list.get(37);
-        data38=list.get(38);
-        data39=list.get(39);
-        data40=list.get(40);
-        data41=list.get(41);
-        data42=list.get(42);
-        data43=list.get(43);
-        data44=list.get(44);
-        data45=list.get(45);
-        data46=list.get(46);
-        data47=list.get(47);
-        data48=list.get(48);
-        data49=list.get(49);
-        data50=list.get(50);
-        data51=list.get(51);
-        data52=list.get(52);
-        data53=list.get(53);
-        data54=list.get(54);
-        data55=list.get(55);
-        data56=list.get(56);
-        data57=list.get(57);
-        data58=list.get(58);
-        data59=list.get(59);
-        data60=list.get(60);
-        data61=list.get(61);
-        data62=list.get(62);
-        data63=list.get(63);
-        data64=list.get(64);
-        data65=list.get(65);
-        data66=list.get(66);
-        data67=list.get(67);
-        data68=list.get(68);
-        data69=list.get(69);
-        data70=list.get(70);
-        data71=list.get(71);
-        data72=list.get(72);
-        data73=list.get(73);
-        data74=list.get(74);
-        data75=list.get(75);
-        data76=list.get(76);
-        data77=list.get(77);
-        data78=list.get(78);
-        data79=list.get(79);
-        data80=list.get(80);
-        data81=list.get(81);
-        data82=list.get(82);
-        data83=list.get(83);
-        data84=list.get(84);
-        data85=list.get(85);
-        data86=list.get(86);
-        data87=list.get(87);
-        data88=list.get(88);
-        data89=list.get(89);
-        data90=list.get(90);
-        data91=list.get(91);
-        data92=list.get(92);
-        data93=list.get(93);
-        data94=list.get(94);
-        data95=list.get(95);
+    public void unList(List<Double> list) {
+        if (list.size() != 96) {
+            return;
+        }
+        updated = false;
+        data00 = list.get(0);
+        data01 = list.get(1);
+        data02 = list.get(2);
+        data03 = list.get(3);
+        data04 = list.get(4);
+        data05 = list.get(5);
+        data06 = list.get(6);
+        data07 = list.get(7);
+        data08 = list.get(8);
+        data09 = list.get(9);
+        data10 = list.get(10);
+        data11 = list.get(11);
+        data12 = list.get(12);
+        data13 = list.get(13);
+        data14 = list.get(14);
+        data15 = list.get(15);
+        data16 = list.get(16);
+        data17 = list.get(17);
+        data18 = list.get(18);
+        data19 = list.get(19);
+        data20 = list.get(20);
+        data21 = list.get(21);
+        data22 = list.get(22);
+        data23 = list.get(23);
+        data24 = list.get(24);
+        data25 = list.get(25);
+        data26 = list.get(26);
+        data27 = list.get(27);
+        data28 = list.get(28);
+        data29 = list.get(29);
+        data30 = list.get(30);
+        data31 = list.get(31);
+        data32 = list.get(32);
+        data33 = list.get(33);
+        data34 = list.get(34);
+        data35 = list.get(35);
+        data36 = list.get(36);
+        data37 = list.get(37);
+        data38 = list.get(38);
+        data39 = list.get(39);
+        data40 = list.get(40);
+        data41 = list.get(41);
+        data42 = list.get(42);
+        data43 = list.get(43);
+        data44 = list.get(44);
+        data45 = list.get(45);
+        data46 = list.get(46);
+        data47 = list.get(47);
+        data48 = list.get(48);
+        data49 = list.get(49);
+        data50 = list.get(50);
+        data51 = list.get(51);
+        data52 = list.get(52);
+        data53 = list.get(53);
+        data54 = list.get(54);
+        data55 = list.get(55);
+        data56 = list.get(56);
+        data57 = list.get(57);
+        data58 = list.get(58);
+        data59 = list.get(59);
+        data60 = list.get(60);
+        data61 = list.get(61);
+        data62 = list.get(62);
+        data63 = list.get(63);
+        data64 = list.get(64);
+        data65 = list.get(65);
+        data66 = list.get(66);
+        data67 = list.get(67);
+        data68 = list.get(68);
+        data69 = list.get(69);
+        data70 = list.get(70);
+        data71 = list.get(71);
+        data72 = list.get(72);
+        data73 = list.get(73);
+        data74 = list.get(74);
+        data75 = list.get(75);
+        data76 = list.get(76);
+        data77 = list.get(77);
+        data78 = list.get(78);
+        data79 = list.get(79);
+        data80 = list.get(80);
+        data81 = list.get(81);
+        data82 = list.get(82);
+        data83 = list.get(83);
+        data84 = list.get(84);
+        data85 = list.get(85);
+        data86 = list.get(86);
+        data87 = list.get(87);
+        data88 = list.get(88);
+        data89 = list.get(89);
+        data90 = list.get(90);
+        data91 = list.get(91);
+        data92 = list.get(92);
+        data93 = list.get(93);
+        data94 = list.get(94);
+        data95 = list.get(95);
 
     }
+
     private void update() {
-        if (updated == true)
+        if (updated == true) {
             return;
+        }
         updated = true;
         for (int i = 0; i < 96; i++) {
             lst.add(0.);

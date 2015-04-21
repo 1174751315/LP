@@ -7,12 +7,12 @@
 
 package loadPrediction.domain;
 
-import  common.IMapable;
-import  common.IMaxAveMinable;
-import  common.IPrintable;
-import  common.MaxAveMinTuple;
-import  loadPrediction.domain.visitors.IDomainVisitor;
-import  loadPrediction.resouce.WeatherDataMappingKeys;
+import common.IMapable;
+import common.IMaxAveMinable;
+import common.IPrintable;
+import common.MaxAveMinTuple;
+import loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.resouce.WeatherDataMappingKeys;
 
 import java.io.PrintStream;
 import java.util.HashMap;

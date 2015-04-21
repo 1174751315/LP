@@ -7,7 +7,7 @@
 package loadPrediction.timerTask;
 
 import loadPrediction.aop.Logging;
-import  loadPrediction.resouce.IOPaths;
+import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.weather.WeatherCalcAndSyncUtil;
 import org.apache.log4j.Logger;
 
@@ -26,19 +26,18 @@ public class TimerTask4FetchingAndCalcingWeatherData extends TimerTask {
 
     @Override
     public void run() {
-        Logger log=Logging.instance().createLogger("每日定时任务");
+        Logger log = Logging.instance().createLogger("每日定时任务");
         try {
             /*定时同步负荷数据*/
-            Date now=new Date();
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
-            String t=simpleDateFormat.format(now);
+            Date now = new Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String t = simpleDateFormat.format(now);
 //            new ActualLoadDataMove().copy();
             log.info("开始同步负荷数据  " + t);
             log.info("完成");
 
 
-
-            log.info("开始同步并计算综合气象数据  "+t);
+            log.info("开始同步并计算综合气象数据  " + t);
             /*首先检查气象预报数据库是否有遗留数据，若有则处理之。*/
             WeatherCalcAndSyncUtil.calcWeatherDataFromRawWeatherDataInDbThenWriteDb().print(System.err);
 
@@ -58,9 +57,9 @@ public class TimerTask4FetchingAndCalcingWeatherData extends TimerTask {
             log.info("完成");
         } catch (Exception e) {
             e.printStackTrace();
-            String t="同步每日数据时出现问题。";
+            String t = "同步每日数据时出现问题。";
             log.info(t);
-            log.error(t+e.getMessage());
+            log.error(t + e.getMessage());
         }
 
     }

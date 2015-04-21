@@ -6,20 +6,21 @@
 
 package loadPrediction.timerTask;
 
-import  loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.dataAccess.DAOLoadData;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.LoadData;
+import loadPrediction.exception.DAE;
 
 /**
  * 李倍存 创建于 2015-03-02 22:44。电邮 1174751315@qq.com。
  */
-public class LoadDataCopy implements IDataCopy  {
+public class LoadDataCopy implements IDataCopy {
     private DAOLoadData from, to;
 
     public LoadDataCopy(DAOFactory from, DAOFactory to) {
-        this(from.createDaoLoadData(),to.createDaoLoadData());
+        this(from.createDaoLoadData(), to.createDaoLoadData());
     }
+
     public LoadDataCopy(DAOLoadData from, DAOLoadData to) {
         this.from = from;
         this.to = to;
@@ -30,11 +31,10 @@ public class LoadDataCopy implements IDataCopy  {
     }
 
 
-
     @Override
-    public Object copy(Object dateString) throws DAE{
+    public Object copy(Object dateString) throws DAE {
         LoadData loadData = null;
-        loadData=from.query((String) dateString);
+        loadData = from.query((String) dateString);
         to.insertOrUpdate(loadData);
         return loadData;
     }

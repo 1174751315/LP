@@ -1,7 +1,6 @@
 package loadPrediction.timerTask;
 
 import junit.framework.TestCase;
-import loadPrediction.timerTask.TimerTask4LogMailing;
 
 public class TimerTask4LogMailingTest extends TestCase {
 

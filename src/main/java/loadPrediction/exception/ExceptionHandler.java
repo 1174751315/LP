@@ -3,7 +3,7 @@ package loadPrediction.exception;
 /**
  * 李倍存 创建于 2015-04-05 21:19。电邮 1174751315@qq.com。
  */
-public   class ExceptionHandler {
+public class ExceptionHandler {
 
 //    public void handleWithoutMailing(Exception ex,Logger logger,String prefix){
 //        logger.info(prefix);
@@ -22,15 +22,12 @@ public   class ExceptionHandler {
 //
 
 
-    public ExceptionHandler(){
+    public ExceptionHandler() {
     }
-    public  void handle(Throwable exception){
+
+    public void handle(Throwable exception) {
         //DO NOTHING
     }
-
-
-
-
 
 
 }

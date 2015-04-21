@@ -6,11 +6,11 @@
 
 package loadPrediction.core.predictor.util;
 
-import  common.ConvertUtils;
-import  common.ElementPrintableLinkedList;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.LPE;
-import  loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
+import common.ConvertUtils;
+import common.ElementPrintableLinkedList;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.LPE;
+import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
 
 import java.sql.Date;
 import java.util.List;

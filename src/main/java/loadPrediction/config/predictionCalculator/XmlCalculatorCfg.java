@@ -6,8 +6,8 @@
 
 package loadPrediction.config.predictionCalculator;
 
-import  common.IPrintable;
-import  loadPrediction.exception.LPE;
+import common.IPrintable;
+import loadPrediction.exception.LPE;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;

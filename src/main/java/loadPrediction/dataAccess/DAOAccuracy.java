@@ -6,9 +6,9 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.exception.DAE;
-import  loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.exception.DAE;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.sql.Date;
 import java.util.List;
@@ -23,8 +23,9 @@ public class DAOAccuracy extends AbstractDAO {
 
     public Accuracy query(Date key) throws DAE {
         Accuracy o = (Accuracy) superDAO.query(Accuracy.class, Date2StringAdapter.toString(key));
-        if (o == null)
+        if (o == null) {
             throw new DAE(DAE.eType.NOT_FOUND);
+        }
         return o;
     }
 

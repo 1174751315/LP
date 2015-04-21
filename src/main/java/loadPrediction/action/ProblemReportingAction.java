@@ -1,8 +1,8 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import loadPrediction.exception.LPE;
 import loadPrediction.aop.Logging;
+import loadPrediction.exception.LPE;
 import loadPrediction.utils.LogMailingUtils;
 import org.apache.log4j.Logger;
 import org.apache.struts2.ServletActionContext;
@@ -21,6 +21,7 @@ import java.util.Date;
 public class ProblemReportingAction extends ActionSupport {
     public ProblemReportingAction() {
     }
+
     private String details;
 
     public String getDetails() {
@@ -33,13 +34,13 @@ public class ProblemReportingAction extends ActionSupport {
 
     public String sendEMail() throws Exception {
         try {
-            JavaMailSenderImpl sender= LogMailingUtils.getDefaultSender();
-            MimeMessage message=LogMailingUtils.createMimeMessage(sender);
-            String text="用户报告了一个问题。\n【描述】\n"+details+"\n";
-            text+="【时间】"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"\n";
+            JavaMailSenderImpl sender = LogMailingUtils.getDefaultSender();
+            MimeMessage message = LogMailingUtils.createMimeMessage(sender);
+            String text = "用户报告了一个问题。\n【描述】\n" + details + "\n";
+            text += "【时间】" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()) + "\n";
 
-            HttpServletRequest request= ServletActionContext.getRequest();
-            text+="【用户信息】"+request.getRemoteAddr()+"\n";
+            HttpServletRequest request = ServletActionContext.getRequest();
+            text += "【用户信息】" + request.getRemoteAddr() + "\n";
 
             message.setText(text);
             sender.send(message);
@@ -56,9 +57,10 @@ public class ProblemReportingAction extends ActionSupport {
 
         return SUCCESS;
     }
-    private String failed(String msg){
-        Logger log=Logging.instance().createLogger("问题报告");
-        String inf="用户在发送问题报告时出现问题。\n";
+
+    private String failed(String msg) {
+        Logger log = Logging.instance().createLogger("问题报告");
+        String inf = "用户在发送问题报告时出现问题。\n";
         log.error(inf + msg);
         log.info(inf);
         return ERROR;

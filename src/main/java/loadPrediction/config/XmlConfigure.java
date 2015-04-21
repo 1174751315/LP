@@ -7,9 +7,9 @@
 package loadPrediction.config;
 
 
-import  common.ElementPrintableLinkedList;
-import  loadPrediction.adm.user.User;
-import  loadPrediction.resouce.IOPaths;
+import common.ElementPrintableLinkedList;
+import loadPrediction.adm.user.User;
+import loadPrediction.resouce.IOPaths;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

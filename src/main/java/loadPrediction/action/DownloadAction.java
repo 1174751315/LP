@@ -7,7 +7,7 @@
 package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import  loadPrediction.resouce.IOPaths;
+import loadPrediction.resouce.IOPaths;
 
 import java.io.File;
 import java.io.FileInputStream;

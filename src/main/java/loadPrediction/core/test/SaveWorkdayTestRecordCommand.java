@@ -6,9 +6,9 @@
 
 package loadPrediction.core.test;
 
-import  common.IEnhancedCommand;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOWorkdayTestRecord;
+import common.IEnhancedCommand;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOWorkdayTestRecord;
 
 /**
  * 李倍存 创建于 2015-02-22 22:10。电邮 1174751315@qq.com。

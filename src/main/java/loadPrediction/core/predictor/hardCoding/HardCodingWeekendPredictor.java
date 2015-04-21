@@ -7,26 +7,25 @@
 
 package loadPrediction.core.predictor.hardCoding;
 
-import  common.*;
-import  loadPrediction.config.ConfigureFactory;
-import  loadPrediction.config.WeekendPredictorCfg;
+import common.*;
+import loadPrediction.config.ConfigureFactory;
+import loadPrediction.config.WeekendPredictorCfg;
 import loadPrediction.core.EnhancedSimilarCoeCalculator;
 import loadPrediction.core.noneWorkday.SimilarDayFinder;
+import loadPrediction.core.predictor.IWeekendPredictor;
+import loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherCoesPackage;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.LPE;
+import loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.utils.DateUtil;
 import loadPrediction.utils.Season;
 import loadPrediction.utils.SeasonIdentifier;
-
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.LPE;
-import  loadPrediction.utils.Date2StringAdapter;
-import  loadPrediction.utils.DateUtil;
-import  loadPrediction.utils.powerSystemDateQuery.PowerSystemWeekendQuery;
-import  loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
+import loadPrediction.utils.powerSystemDateQuery.PowerSystemWeekendQuery;
+import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
 
 import java.sql.Date;
 import java.util.LinkedList;
@@ -45,8 +44,8 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor) throws LPE{
-            return visitor.visitWeekendPredictor(this);
+    public Object accept(IPredictorVisitor visitor) throws LPE {
+        return visitor.visitWeekendPredictor(this);
 
     }
 
@@ -58,8 +57,9 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> doGetHistoryDays(Date date, List<Integer> numbers) throws LPE {
 
-        if (numbers.size() != 2)
+        if (numbers.size() != 2) {
             return null;
+        }
 
         ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("historyDays of " + date.toLocalDate().toString());
         try {
@@ -73,7 +73,6 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
             ElementPrintableLinkedList<SimpleDate> weekends = ConvertUtils.toElementPrintableLinkedList(wq2.list(numbers.get(1) + 1, numbers.get(1)), "weekends");
             historyDays.add(weekends);
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
         return historyDays;
@@ -87,7 +86,6 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
             return ConvertUtils.toElementPrintableLinkedList(wq.list(1, 2), "predictionDays of " + date.toLocalDate().toString());
 
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -297,7 +295,6 @@ public class HardCodingWeekendPredictor extends AbstractTemplateMethodForHardCod
 
             return similarDays;
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }

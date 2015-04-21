@@ -6,7 +6,7 @@
 
 package loadPrediction.timerTask;
 
-import  loadPrediction.exception.DAE;
+import loadPrediction.exception.DAE;
 
 /**
  * 李倍存 创建于 2015-03-06 14:54。电邮 1174751315@qq.com。

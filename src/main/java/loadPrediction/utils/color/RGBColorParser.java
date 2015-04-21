@@ -10,15 +10,15 @@ import java.awt.*;
 public class RGBColorParser implements IColorParser {
     @Override
     public Color parse(String s) {
-        if (s.indexOf("RGB:")==-1) {
+        if (s.indexOf("RGB:") == -1) {
             return null;
         }
-        String code=s.substring(4);
-        String[] rgb=code.split(",");
-        String r=rgb[0];
-        String g=rgb[1];
-        String b=rgb[2];
+        String code = s.substring(4);
+        String[] rgb = code.split(",");
+        String r = rgb[0];
+        String g = rgb[1];
+        String b = rgb[2];
 
-        return MyColor.getColor(r,g,b,10);
+        return MyColor.getColor(r, g, b, 10);
     }
 }

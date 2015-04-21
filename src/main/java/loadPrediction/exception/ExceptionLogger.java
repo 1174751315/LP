@@ -8,28 +8,31 @@ import org.apache.log4j.Logger;
 public class ExceptionLogger extends ExceptionHandlerDecorator {
     private Logger logger;
     private String msgPrefix;
-    public ExceptionLogger(ExceptionHandler handler,Logger logger,String msgPrefix){
+
+    public ExceptionLogger(ExceptionHandler handler, Logger logger, String msgPrefix) {
         super(handler);
-        this.logger=logger;
-        this.msgPrefix=msgPrefix;
+        this.logger = logger;
+        this.msgPrefix = msgPrefix;
     }
-    public ExceptionLogger(ExceptionHandler handler,String msgPrefix){
-        this(handler, loadPrediction.aop.Logging.instance().createLogger(),msgPrefix);
+
+    public ExceptionLogger(ExceptionHandler handler, String msgPrefix) {
+        this(handler, loadPrediction.aop.Logging.instance().createLogger(), msgPrefix);
     }
-    public ExceptionLogger(ExceptionHandler handler){
-        this(handler, loadPrediction.aop.Logging.instance().createLogger(),"【未指定异常提示】]");
+
+    public ExceptionLogger(ExceptionHandler handler) {
+        this(handler, loadPrediction.aop.Logging.instance().createLogger(), "【未指定异常提示】]");
     }
 
     @Override
     public void handle(Throwable exception) {
-        String info="";
-        info+=msgPrefix+"\n"+exception.getMessage()+"\n";
-        StackTraceElement[] traceElements=exception.getStackTrace();
-        for (int i = 0; i <traceElements.length; i++) {
-            info+=traceElements[i].toString()+"\n";
+        String info = "";
+        info += msgPrefix + "\n" + exception.getMessage() + "\n";
+        StackTraceElement[] traceElements = exception.getStackTrace();
+        for (int i = 0; i < traceElements.length; i++) {
+            info += traceElements[i].toString() + "\n";
         }
         logger.error(info);
-        logger.info(msgPrefix+"\n");
+        logger.info(msgPrefix + "\n");
         super.handle(exception);
     }
 }

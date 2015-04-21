@@ -6,7 +6,7 @@
 
 package loadPrediction.aop;
 
-import  loadPrediction.resouce.IOPaths;
+import loadPrediction.resouce.IOPaths;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -16,8 +16,8 @@ import java.net.URL;
  * 李倍存 创建于 2015-03-25 11:41。电邮 1174751315@qq.com。
  */
 public class Logging {
-    private  String res = IOPaths.WEB_CONTENT_LOG4J_PROPERTIES_PATH;
-    private  URL cfgFileRes = Logging.class.getResource(res);
+    private String res = IOPaths.WEB_CONTENT_LOG4J_PROPERTIES_PATH;
+    private URL cfgFileRes = Logging.class.getResource(res);
 
     private Logging() {
         PropertyConfigurator.configure(res);

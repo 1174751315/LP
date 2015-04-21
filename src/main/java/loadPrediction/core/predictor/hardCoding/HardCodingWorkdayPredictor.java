@@ -6,26 +6,26 @@
 
 package loadPrediction.core.predictor.hardCoding;
 
-import  common.ConvertUtils;
-import  common.ElementPrintableLinkedList;
-import  common.EnhancedLinkedList;
-import  common.MaxAveMinTuple;
-import  loadPrediction.config.ConfigureFactory;
-import  loadPrediction.config.WorkdayPredictorCfg;
-import  loadPrediction.config.predictionCalculator.XmlCalculatorCfg;
+import common.ConvertUtils;
+import common.ElementPrintableLinkedList;
+import common.EnhancedLinkedList;
+import common.MaxAveMinTuple;
+import loadPrediction.config.ConfigureFactory;
+import loadPrediction.config.WorkdayPredictorCfg;
+import loadPrediction.config.predictionCalculator.XmlCalculatorCfg;
 import loadPrediction.core.EnhancedSimilarCoeCalculator;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
-import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import  loadPrediction.core.workday.IPredictionLoadTupleCalculator;
-import  loadPrediction.core.workday.PredictionLoadTupleCalculatorWithPerUnit;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOLoadBase;
+import loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import loadPrediction.core.workday.IPredictionLoadTupleCalculator;
+import loadPrediction.core.workday.PredictionLoadTupleCalculatorWithPerUnit;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOLoadBase;
 import loadPrediction.domain.*;
-import  loadPrediction.exception.LPE;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.Date2StringAdapter;
-import  loadPrediction.utils.PowerSystemDateUtil;
-import  loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
+import loadPrediction.exception.LPE;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.utils.PowerSystemDateUtil;
+import loadPrediction.utils.powerSystemDateQuery.PowerSystemWorkdayQuery;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -49,8 +49,8 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor)throws LPE{
-            return visitor.visitWorkdayPredictor(this);
+    public Object accept(IPredictorVisitor visitor) throws LPE {
+        return visitor.visitWorkdayPredictor(this);
 
     }
 
@@ -106,7 +106,6 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             list.removeLast();
             history.add(list);
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
 
@@ -122,11 +121,11 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
     doGetPredictionDays(Date date, Integer number) throws LPE {
         try {
             List<SimpleDate> list = new PowerSystemWorkdayQuery(date).list(1, number);
-            if (list.size() != number)
+            if (list.size() != number) {
                 throw new LPE("");
+            }
             return ConvertUtils.toElementPrintableLinkedList(list, "prediction Days");
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -149,7 +148,7 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             listAllWeatherData.add(predictionWeather.get(i));
         }
 
-        EnhancedSimilarCoeCalculator similarCoeCalculator=new EnhancedSimilarCoeCalculator(new WeatherCoesPackage(DAOFactory.getDefault().createDaoWeatherCoes4Workday()));
+        EnhancedSimilarCoeCalculator similarCoeCalculator = new EnhancedSimilarCoeCalculator(new WeatherCoesPackage(DAOFactory.getDefault().createDaoWeatherCoes4Workday()));
 
         for (int i = 0; i < predictionDays; i++) {
             WeatherData wdNow, wdBefore;
@@ -249,7 +248,6 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
         try {
             calculator = new XmlCalculatorCfg(IOPaths.WORKDAY_PREDICTION_CALCULATOR_CONFIGURATION).getConfiguration();
         } catch (LPE e) {
-            e.printStackTrace();
         }
 
     }
@@ -400,7 +398,6 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             LocalDate localDate1 = predictionDays.get(0).getDate().toLocalDate();
             loadBase1 = daoLoadBase.query(localDate1.getYear(), localDate1.getMonthValue());
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
         ElementPrintableLinkedList<MaxAveMinTuple<Double>> tuples = new ElementPrintableLinkedList<MaxAveMinTuple<Double>>("tuples");
@@ -411,7 +408,6 @@ public class HardCodingWorkdayPredictor extends AbstractTemplateMethodForHardCod
             try {
                 historyLoad.add(DAOFactory.getDefault().createDaoLoadData().query(historyDays.get(0).get(i).getDateString()));
             } catch (Exception e) {
-                e.printStackTrace();
             }
         }
 

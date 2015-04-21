@@ -13,7 +13,6 @@ import jxl.write.Number;
 import loadPrediction.core.predictor.IQingmingPredictor;
 import loadPrediction.core.predictor.IWeekendPredictor;
 import loadPrediction.core.predictor.IWorkdayPredictor;
-import loadPrediction.domain.Accuracy;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
 import loadPrediction.exception.LPE;
@@ -355,7 +354,7 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
         } catch (IOException e) {
             failed();
         } catch (WriteException e) {
-           failed();
+            failed();
         } catch (BiffException e) {
             failed();
         }
@@ -363,10 +362,11 @@ public class AllInformation2ExcelVisitor implements IPredictorVisitor {
     }
 
 
-    private void failed(String message)throws LPE{
+    private void failed(String message) throws LPE {
         throw new LPE(message);
     }
-    private void failed()throws LPE{
+
+    private void failed() throws LPE {
         failed("在输出报表时发生异常");
     }
 }

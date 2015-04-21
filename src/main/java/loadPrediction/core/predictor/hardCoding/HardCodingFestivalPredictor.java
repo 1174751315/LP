@@ -6,13 +6,13 @@
 
 package loadPrediction.core.predictor.hardCoding;
 
-import  common.ElementPrintableLinkedList;
-import  common.EnhancedLinkedList;
-import  common.MaxAveMinTuple;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.LPE;
+import common.ElementPrintableLinkedList;
+import common.EnhancedLinkedList;
+import common.MaxAveMinTuple;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.LPE;
 
 import java.sql.Date;
 import java.util.List;

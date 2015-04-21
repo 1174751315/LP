@@ -17,14 +17,14 @@ import loadPrediction.exception.DAE;
 /**
  * 李倍存 创建于 2015-03-02 22:44。电邮 1174751315@qq.com。
  */
-public class ActualLoadDataMove implements IDataCopy  {
+public class ActualLoadDataMove implements IDataCopy {
     @Override
-    public Object copy(Object dateString) throws DAE{
-        DAOLoadData daoLoadData=DAOFactory.getDefault().createDaoLoadData();
-        DAOLoadData_1 daoLoadData_1=DAOFactory.get4ActualLoad().createDAOLoadData_1();
+    public Object copy(Object dateString) throws DAE {
+        DAOLoadData daoLoadData = DAOFactory.getDefault().createDaoLoadData();
+        DAOLoadData_1 daoLoadData_1 = DAOFactory.get4ActualLoad().createDAOLoadData_1();
 
-        LoadData_1 loadData_1=daoLoadData_1.query((String)dateString);
-        LoadData loadData=new LoadData();
+        LoadData_1 loadData_1 = daoLoadData_1.query((String) dateString);
+        LoadData loadData = new LoadData();
         daoLoadData.insertOrUpdate((LoadData) loadData.accept(new AlterObj2LoadDataVisitor(loadData_1)));
         return loadData;
     }

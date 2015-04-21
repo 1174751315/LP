@@ -7,9 +7,7 @@
 package loadPrediction.dataAccess;
 
 import loadPrediction.domain.WeatherCoes;
-import  loadPrediction.domain.WeatherCoes4Weekend;
-
-import java.util.List;
+import loadPrediction.domain.WeatherCoes4Weekend;
 
 /**
  * 李倍存 创建于 2015-03-02 19:12。电邮 1174751315@qq.com。

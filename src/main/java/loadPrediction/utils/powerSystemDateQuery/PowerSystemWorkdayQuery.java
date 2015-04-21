@@ -7,8 +7,8 @@
 
 package loadPrediction.utils.powerSystemDateQuery;
 
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.sql.Date;
 

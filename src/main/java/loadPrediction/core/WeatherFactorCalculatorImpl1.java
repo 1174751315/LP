@@ -8,9 +8,8 @@
 package loadPrediction.core;
 
 import loadPrediction.domain.WeatherCoes;
-import  loadPrediction.domain.WeatherCoes4Workday;
-import  loadPrediction.domain.WeatherCoesPackage;
-import  loadPrediction.domain.WeatherData;
+import loadPrediction.domain.WeatherCoesPackage;
+import loadPrediction.domain.WeatherData;
 
 import java.util.Map;
 
@@ -27,10 +26,10 @@ public class WeatherFactorCalculatorImpl1 extends AbstractCalculatorUseWeatherCo
      */
     public WeatherData calcWeatherFactor(WeatherData weatherData) {
         WeatherData weatherDataFactor = new WeatherData();
-        WeatherCoesPackage weatherCoesPackage=super.getWeatherCoes();
+        WeatherCoesPackage weatherCoesPackage = super.getWeatherCoes();
         Map<String, Double> mapWeatherData = weatherData.toMap();
         Map<String, WeatherCoes> mapCoes = weatherCoesPackage.toMap();
-        String[] keys= AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
+        String[] keys = AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
         weatherDataFactor.setDateString(weatherData.getDateString());
         for (int j = 0; j < keys.length; j++) {
             String s = keys[j];

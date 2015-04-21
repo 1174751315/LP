@@ -19,7 +19,7 @@ public class LPE extends Exception {
     private eScope scope = eScope.UNDEFINED;
     private String message;
 
-    public LPE(String message, eScope scope,Object context) {
+    public LPE(String message, eScope scope, Object context) {
         super();
         String prefix;
         switch (scope) {
@@ -37,37 +37,34 @@ public class LPE extends Exception {
         }
         this.message = prefix + message;
         this.scope = scope;
-        this.context=context;
+        this.context = context;
     }
 
     private Object context;
+
     public LPE() {
-        this(MSG.USER__DEFAULT, eScope.UNDEFINED,null);
+        this(MSG.USER__DEFAULT, eScope.UNDEFINED, null);
     }
-    public LPE(Object context){
-        this(MSG.USER__DEFAULT,eScope.UNDEFINED,context);
+
+    public LPE(Object context) {
+        this(MSG.USER__DEFAULT, eScope.UNDEFINED, context);
     }
+
     public LPE(String message) {
-        this(message, eScope.UNDEFINED,null);
+        this(message, eScope.UNDEFINED, null);
     }
-    public LPE(String message,eScope scope){this(message,scope,null);}
-    public LPE(String message,Object context){this(message,eScope.UNDEFINED,context);}
-    public Object getContext(){return this.context;}
 
+    public LPE(String message, eScope scope) {
+        this(message, scope, null);
+    }
 
+    public LPE(String message, Object context) {
+        this(message, eScope.UNDEFINED, context);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    public Object getContext() {
+        return this.context;
+    }
 
 
     public void printStackTrace() {
@@ -92,7 +89,6 @@ public class LPE extends Exception {
         public static final String DEV__CHECK_DATABASE_CONNECTION = DEV__ROOT + "请检查数据库连接是否正常。" + END;
         public static final String DEV__DATA_ACCESS = DEV__ROOT + "数据访问异常。" + END;
     }
-
 
 
 }

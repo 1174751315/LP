@@ -6,9 +6,9 @@
 
 package loadPrediction.utils.powerSystemDateQuery;
 
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.DAE;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.DAE;
 
 import java.sql.Date;
 

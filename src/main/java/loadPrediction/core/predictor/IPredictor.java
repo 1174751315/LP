@@ -6,14 +6,13 @@
 
 package loadPrediction.core.predictor;
 
-import  common.ElementPrintableLinkedList;
+import common.ElementPrintableLinkedList;
 import common.PrintableLinkedList;
-import  loadPrediction.core.predictor.visitors.IPredictorVisitor;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
+import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.LPE;
+import loadPrediction.exception.LPE;
 
 import java.sql.Date;
 import java.util.List;
@@ -33,6 +32,7 @@ public interface IPredictor {
 
     /**
      * 执行该函数之前必须调用predict函数。
+     *
      * @return 精度链表。
      */
     PrintableLinkedList<Double> getAccuracy();
@@ -88,14 +88,13 @@ public interface IPredictor {
     ElementPrintableLinkedList<WeatherData> getPredictionWeathers();
 
 
-
-
     /**
      * 访问者模式接口，用于接受一个访问者对象。
+     *
      * @param visitor 访问者对象。
      * @return 包含特定信息的对象；包含何种信息由 IPredictorVisitor 接口的实现者指定。
      */
-    Object accept(IPredictorVisitor visitor)throws LPE;
+    Object accept(IPredictorVisitor visitor) throws LPE;
 
     /**
      * @return 表明预测器类型的说明字符串。

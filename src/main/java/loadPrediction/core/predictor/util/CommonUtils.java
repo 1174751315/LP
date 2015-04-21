@@ -6,12 +6,12 @@
 
 package loadPrediction.core.predictor.util;
 
-import  common.ElementPrintableLinkedList;
-import  common.PrintableLinkedList;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.LPE;
+import common.ElementPrintableLinkedList;
+import common.PrintableLinkedList;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.LPE;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -40,32 +40,35 @@ public class CommonUtils {
     }
 
     /*辅助计算函数.*/
-    public  ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>
+    public ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>
     getHistoryWeather(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> weather = new ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>>("");
         Integer iSize = historyDays.size();
-            for (int i = 0; i < iSize; i++) {
-                List<SimpleDate> subdates = historyDays.get(i);
-                weather.add(weatherObtainer.tryGetSomeWeathers(simpleDate2DateString(subdates)));
-            }
-            return weather;
-       }
-    public  ElementPrintableLinkedList<WeatherData>
+        for (int i = 0; i < iSize; i++) {
+            List<SimpleDate> subdates = historyDays.get(i);
+            weather.add(weatherObtainer.tryGetSomeWeathers(simpleDate2DateString(subdates)));
+        }
+        return weather;
+    }
+
+    public ElementPrintableLinkedList<WeatherData>
     getPredictionWeather(ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         return weatherObtainer.tryGetSomeWeathers(simpleDate2DateString(predictionDays));
     }
-    public  ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
+
+    public ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
     getSimilarDaysLoad(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> similarDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> loads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("loads");
         for (int i = 0; i < similarDays.size(); i++) {
             List<String> date = simpleDate2DateString(similarDays.get(i));
-            ElementPrintableLinkedList<LoadData> load =loadsObtainer.tryGetSomeLoads(date);
+            ElementPrintableLinkedList<LoadData> load = loadsObtainer.tryGetSomeLoads(date);
             loads.add(load);
         }
         return loads;
 
     }
-    public  ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
+
+    public ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>
     getSimilarDaysLoad_1(ElementPrintableLinkedList<PrintableLinkedList<String>> similarDays) throws LPE {
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> loads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("loads");
         for (int i = 0; i < similarDays.size(); i++) {
@@ -75,21 +78,20 @@ public class CommonUtils {
         }
         return loads;
     }
-    public  ElementPrintableLinkedList<LoadData>
+
+    public ElementPrintableLinkedList<LoadData>
     getActualLoad(ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         return loadsObtainer.tryGetSomeLoads(simpleDate2DateString(predictionDays));
     }
 
 
-    public  List<String> simpleDate2DateString(List<SimpleDate> simpleDates){
-        List<String> dates=new LinkedList<String>();
-        for (int i = 0; i <simpleDates.size() ; i++) {
+    public List<String> simpleDate2DateString(List<SimpleDate> simpleDates) {
+        List<String> dates = new LinkedList<String>();
+        for (int i = 0; i < simpleDates.size(); i++) {
             dates.add(simpleDates.get(i).getDateString());
         }
         return dates;
     }
-
-
 
 
 }

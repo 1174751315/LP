@@ -11,15 +11,15 @@ import org.apache.poi.ss.usermodel.Sheet;
  */
 public class XlLpAccuracyAccessor extends AbstractXLAccessor {
 
-    public PrintableLinkedList<Double> readSomeAccuracies(CellPosition position,Integer nbr){
+    public PrintableLinkedList<Double> readSomeAccuracies(CellPosition position, Integer nbr) {
 
         forceCalcAllFormulas();
 
         CellPosition ofAcc = position;
         Sheet sh = workbook.getSheet(ofAcc.getSheetName());
-        PrintableLinkedList<Double> accuracies=new PrintableLinkedList<Double>("acc");
-        Integer row=ofAcc.getRow();
-        Short col=ofAcc.getCol();
+        PrintableLinkedList<Double> accuracies = new PrintableLinkedList<Double>("acc");
+        Integer row = ofAcc.getRow();
+        Short col = ofAcc.getCol();
         for (int i = 0; i < nbr; i++) {
             Cell cell = null;
             CellValue cv = null;

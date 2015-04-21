@@ -6,7 +6,7 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.adm.user.User;
+import loadPrediction.adm.user.User;
 
 /**
  * 创建：2015/2/19 9:43

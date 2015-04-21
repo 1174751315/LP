@@ -6,8 +6,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.PredictionLoadData;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.PredictionLoadData;
+import loadPrediction.exception.DAE;
 
 /**
  * 李倍存 创建于 2015-03-02 21:45。电邮 1174751315@qq.com。
@@ -20,8 +20,9 @@ public class DAOPredictionLoadData extends AbstractDAO {
 
     public PredictionLoadData query(String key) throws DAE {
         PredictionLoadData o = (PredictionLoadData) superDAO.query(PredictionLoadData.class, (key));
-        if (o == null)
+        if (o == null) {
             throw new DAE(PredictionLoadData.class.getSimpleName());
+        }
         return o;
     }
 

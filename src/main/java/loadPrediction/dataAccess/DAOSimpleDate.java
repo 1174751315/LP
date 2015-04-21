@@ -7,8 +7,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.DAE;
 
 /**
  * 创建：2015/1/24 9:21
@@ -26,8 +26,9 @@ public class DAOSimpleDate extends AbstractDAO {
 
     public SimpleDate query(String key) throws DAE {
         SimpleDate o = (SimpleDate) superDAO.query(SimpleDate.class, (key));
-        if (o == null)
+        if (o == null) {
             throw new DAE(SimpleDate.class.getSimpleName());
+        }
         return o;
     }
 

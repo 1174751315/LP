@@ -10,14 +10,12 @@ import common.ConvertUtils;
 import common.ElementPrintableLinkedList;
 import common.MaxAveMinTuple;
 import loadPrediction.core.predictor.IWorkdayPredictor;
-import loadPrediction.core.predictor.util.CommonUtils;
 import loadPrediction.core.predictor.visitors.IPredictorVisitor;
 import loadPrediction.dataAccess.DAOFactory;
 import loadPrediction.domain.LoadData;
 import loadPrediction.domain.SimpleDate;
 import loadPrediction.domain.WeatherData;
 import loadPrediction.exception.DAE;
-import loadPrediction.exception.ExceptionHandlerFactory;
 import loadPrediction.exception.LPE;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.Season;
@@ -39,15 +37,15 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private Integer predictionDaysNbr = 7;
     private Integer historyDaysNbr = 14;
 
-    private static final Integer WINTER=0,SUMMER=1;
-    private  Season season=Season.SUMMER;
+    private static final Integer WINTER = 0, SUMMER = 1;
+    private Season season = Season.SUMMER;
 
     public ExcellingWorkdayPredictor() {
 //        this(null,null);
     }
 
-    public ExcellingWorkdayPredictor(Date date,DAOFactory defaultDaoFactory){
-        super(date,defaultDaoFactory);
+    public ExcellingWorkdayPredictor(Date date, DAOFactory defaultDaoFactory) {
+        super(date, defaultDaoFactory);
 
 //        try {
 //            dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
@@ -57,22 +55,23 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 //            ExceptionHandlerFactory.INSTANCE.getLowerHandler().handle(e, "查询历史日或预测日时发生异常");
 //        }
 
-        String dateString=date.toLocalDate().toString();
+        String dateString = date.toLocalDate().toString();
         getSeason(dateString);
     }
 
-    private void getSeason(String ds){
+    private void getSeason(String ds) {
         try {
-            WeatherData weatherData= defaultDaoFactory.createDaoWeatherData().query(ds);
-            season= SeasonIdentifier.getSeasonByWeather(weatherData);
+            WeatherData weatherData = defaultDaoFactory.createDaoWeatherData().query(ds);
+            season = SeasonIdentifier.getSeasonByWeather(weatherData);
             return;
         } catch (DAE dae) {
             dae.printStackTrace();
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-        season= Season.SUMMER;
+        season = Season.SUMMER;
     }
+
     @Override
     protected CellPosition doGetPredictionLoadsExcelPosition() {
         return new CellPosition("B115", "工作日96节点负荷预测");
@@ -85,8 +84,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     public String getPredictorType() {
-        String modelName=season.equals(Season.SUMMER)?"夏季":"冬季";
-        return "EXCELLING 工作日 "+(modelName+"模型");
+        String modelName = season.equals(Season.SUMMER) ? "夏季" : "冬季";
+        return "EXCELLING 工作日 " + (modelName + "模型");
     }
 
 
@@ -98,13 +97,14 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
         this.dayQuery4HistoryDays = dayQuery4HistoryDays;
     }
 
-    private AbstractPowerSystemDayQuery dayQuery4PredictionDays,dayQuery4HistoryDays;
+    private AbstractPowerSystemDayQuery dayQuery4PredictionDays, dayQuery4HistoryDays;
+
     @Override
     protected ElementPrintableLinkedList<SimpleDate> doGetPredictionDays() throws LPE {
         Integer number = predictionDaysNbr;
         try {
-            if (dayQuery4PredictionDays==null)
-                dayQuery4PredictionDays=new PowerSystemWorkdayQuery(date);
+            if (dayQuery4PredictionDays == null)
+                dayQuery4PredictionDays = new PowerSystemWorkdayQuery(date);
             List<SimpleDate> list = dayQuery4PredictionDays.list(1, number);
             if (list.size() != number)
                 throw new LPE("获取预测日时发生异常：数据不完整", LPE.eScope.USER);
@@ -117,11 +117,11 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> doGetHistoryDays() throws LPE {
-               ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("unnamed");
+        ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("unnamed");
         try {
             history = new ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>>("historyDays");
-            if (dayQuery4HistoryDays==null)
-                dayQuery4HistoryDays=new PowerSystemWorkdayQuery(date);
+            if (dayQuery4HistoryDays == null)
+                dayQuery4HistoryDays = new PowerSystemWorkdayQuery(date);
             ElementPrintableLinkedList<SimpleDate> list = ConvertUtils.toElementPrintableLinkedList(dayQuery4HistoryDays.list(historyDaysNbr + 1, historyDaysNbr + 1), "workday");
             list.removeLast();
             history.add(list);
@@ -133,13 +133,14 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
 
     @Override
     protected String doGetInputWorkbookPath() {
-        if (season==null){
+        if (season == null) {
             getSeason(dateString);
         }
         if (season.equals(Season.SUMMER))
             return IOPaths.WEB_CONTENT_WORKDAY_SUMMER_TEMPLATE_PATH;
         return IOPaths.WEB_CONTENT_WORKDAY_WINTER_TEMPLATE_PATH;
     }
+
     @Override
     protected String doGetOutputWorkbookPath() {
         return IOPaths.WEB_CONTENT_TEMP + dateString + "WD.xls";
@@ -182,8 +183,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    public Object accept(IPredictorVisitor visitor)throws LPE{
-            return visitor.visitWorkdayPredictor(this);
+    public Object accept(IPredictorVisitor visitor) throws LPE {
+        return visitor.visitWorkdayPredictor(this);
     }
 
     @Override
@@ -220,7 +221,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     protected void doAfterInjectWeathers(Workbook activeWorkbook, ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays, ElementPrintableLinkedList<SimpleDate> predictionDays) throws LPE {
         /*获取历史负荷*/
         ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> historyLoads = new ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>>("历史负荷");
-        historyLoads= commonUtils.getSimilarDaysLoad(historyDays);
+        historyLoads = commonUtils.getSimilarDaysLoad(historyDays);
         historyLoads.print(System.err);
 
         /*填充历史负荷三值*/

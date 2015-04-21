@@ -8,16 +8,16 @@ package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import jfreechart.BarChartRendererWithThreshold;
-import  jfreechart.JFreeChartFacade;
-import  loadPrediction.dataAccess.DAOAccuracy;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.domain.LoadData;
+import jfreechart.JFreeChartFacade;
+import loadPrediction.dataAccess.DAOAccuracy;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.domain.LoadData;
 import loadPrediction.exception.DAE;
 import loadPrediction.exception.ExceptionHandlerFactory;
-import  loadPrediction.resouce.IOPaths;
+import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.AccuracyCalculator;
-import  loadPrediction.utils.LoadData2ChartUtils;
+import loadPrediction.utils.LoadData2ChartUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;
@@ -89,7 +89,7 @@ public class AccuracyUtilsAction extends ActionSupport {
                 Integer i = filename.indexOf("TEMP");
                 filename = filename.substring(i + 5);
 
-                accuracy =new  AccuracyCalculator().calc(actual, prediction);
+                accuracy = new AccuracyCalculator().calc(actual, prediction);
             } else if (actual != null && prediction == null) {
                 warning = "您并未执行针对此日期的负荷预测，因此无法查看准确度。";
             }
@@ -172,7 +172,7 @@ public class AccuracyUtilsAction extends ActionSupport {
             Integer i = filename.indexOf("TEMP");
             filename = filename.substring(i + 5);
         } catch (DAE dae) {
-            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(dae,"执行准确度统计时发生异常。");
+            ExceptionHandlerFactory.INSTANCE.getUpperHandler().handle(dae, "执行准确度统计时发生异常。");
         }
 
 

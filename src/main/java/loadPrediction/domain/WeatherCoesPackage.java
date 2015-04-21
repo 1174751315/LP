@@ -8,14 +8,12 @@
 package loadPrediction.domain;
 
 
-import  common.IMapable;
-import  common.IPrintable;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOWeatherCoes4Weekend;
+import common.IMapable;
+import common.IPrintable;
 import loadPrediction.dataAccess.IDAOWeatherCoes;
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.domain.visitors.IDomainVisitor;
 import loadPrediction.exception.LPE;
-import  loadPrediction.resouce.WeatherDataMappingKeys;
+import loadPrediction.resouce.WeatherDataMappingKeys;
 
 import java.io.PrintStream;
 import java.util.HashMap;
@@ -40,7 +38,7 @@ public class WeatherCoesPackage implements IDomain, IMapable<String, WeatherCoes
 //        }
 //    }
 
-    private void update()throws Exception{
+    private void update() throws Exception {
         ofMaxTemp = daoWeatherCoes.query("最大温度");
         ofAveTemp = daoWeatherCoes.query("平均温度");
         ofMinTemp = daoWeatherCoes.query("最低温度");
@@ -63,12 +61,11 @@ public class WeatherCoesPackage implements IDomain, IMapable<String, WeatherCoes
         ofMinCHI = daoWeatherCoes.query("最低寒湿指数");
     }
 
-    public WeatherCoesPackage(IDAOWeatherCoes daoWeatherCoes) throws LPE{
+    public WeatherCoesPackage(IDAOWeatherCoes daoWeatherCoes) throws LPE {
         this.daoWeatherCoes = daoWeatherCoes;
         try {
             update();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             throw new LPE("获取气象指标时发生数据访问异常。");
         }
     }
@@ -175,10 +172,12 @@ public class WeatherCoesPackage implements IDomain, IMapable<String, WeatherCoes
     private WeatherCoes ofMinCHI;
     private WeatherCoes ofAveCHI;
     private Map<String, WeatherCoes> map;
+
     @Override
     public Map<String, WeatherCoes> toMap() {
-        if (map != null)
+        if (map != null) {
             return map;
+        }
         map = new HashMap<String, WeatherCoes>();
         map.put("max_temp", ofMaxTemp);
         map.put("ave_temp", ofAveTemp);

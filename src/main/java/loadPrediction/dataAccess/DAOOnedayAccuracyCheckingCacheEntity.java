@@ -6,8 +6,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.core.cache.OnedayAccuracyCheckingCacheEntity;
-import  loadPrediction.exception.DAE;
+import loadPrediction.core.cache.OnedayAccuracyCheckingCacheEntity;
+import loadPrediction.exception.DAE;
 
 import java.util.List;
 
@@ -33,8 +33,9 @@ public class DAOOnedayAccuracyCheckingCacheEntity extends AbstractDAO {
 
     public OnedayAccuracyCheckingCacheEntity query(String dateString) throws DAE {
         OnedayAccuracyCheckingCacheEntity o = (OnedayAccuracyCheckingCacheEntity) superDAO.query(OnedayAccuracyCheckingCacheEntity.class, dateString);
-        if (o == null)
+        if (o == null) {
             throw new DAE(OnedayAccuracyCheckingCacheEntity.class.getSimpleName());
+        }
         return o;
     }
 

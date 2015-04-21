@@ -7,8 +7,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.DAE;
 
 /**
  * Created by LBC on 2015/2/4.
@@ -20,8 +20,9 @@ public class DAOWeatherData extends AbstractDAO {
 
     public WeatherData query(String key) throws DAE {
         WeatherData o = (WeatherData) superDAO.query(WeatherData.class, (key));
-        if (o == null)
+        if (o == null) {
             throw new DAE(WeatherData.class.getSimpleName());
+        }
         return o;
     }
 

@@ -7,9 +7,10 @@
 
 package loadPrediction.domain;
 
-import  common.IPrintable;
-import  loadPrediction.domain.visitors.IDomainVisitor;
-import  loadPrediction.utils.Date2StringAdapter;
+import com.sun.istack.internal.NotNull;
+import common.IPrintable;
+import loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.io.PrintStream;
 import java.io.Serializable;
@@ -126,8 +127,17 @@ public class SimpleDate implements IDomain, Serializable, IPrintable, Comparable
     }
 
     @Override
-    public int compareTo(SimpleDate anotherSimpleDate) {
+    public int compareTo(@NotNull SimpleDate anotherSimpleDate) {
+        if (this.getDate().getTime() > anotherSimpleDate.getDate().getTime())
+            return 1;
+        if (this.getDate().getTime() < anotherSimpleDate.getDate().getTime())
+            return -1;
         return 0;
+    }
+
+    @Override
+    public boolean equals(@NotNull Object obj) {
+        return this.compareTo((SimpleDate) obj) == 0;
     }
 
     @Override

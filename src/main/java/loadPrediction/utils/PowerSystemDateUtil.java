@@ -7,7 +7,7 @@
 
 package loadPrediction.utils;
 
-import  loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOFactory;
 
 import java.sql.Date;
 
@@ -17,7 +17,7 @@ import java.sql.Date;
  * 电邮：1174751315@qq.com
  */
 public class PowerSystemDateUtil {
-    public  boolean isPowerSystemWorkday(Date date) {
+    public boolean isPowerSystemWorkday(Date date) {
         try {
             return DAOFactory.getDefault().createDaoSimpleDate().query(Date2StringAdapter.toString(date)).getDateType().getCode() == 0;
         } catch (Exception e) {
@@ -25,13 +25,16 @@ public class PowerSystemDateUtil {
         }
         return false;
     }
-    public  boolean isPowerSystemNoneWorkday(Date date) {
+
+    public boolean isPowerSystemNoneWorkday(Date date) {
         return !isPowerSystemWorkday(date);
     }
-    public  boolean isPowerSystemWorkday(String dateString){
+
+    public boolean isPowerSystemWorkday(String dateString) {
         return isPowerSystemWorkday(Date.valueOf(dateString));
     }
-    public  boolean isPowerSystemNoneWorkday(String dateString){
+
+    public boolean isPowerSystemNoneWorkday(String dateString) {
         return isPowerSystemNoneWorkday(Date.valueOf(dateString));
     }
 

@@ -6,12 +6,11 @@
 
 package loadPrediction.core.predictor.visitors;
 
-import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.domain.LoadData;
+import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.domain.LoadData;
 import loadPrediction.exception.LPE;
-import  loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.util.List;
 
@@ -19,7 +18,7 @@ import java.util.List;
  * 李倍存 创建于 2015-03-05 20:37。电邮 1174751315@qq.com。
  */
 public class Accuracy2DBVisitor extends AbstractPredictionAccessDBVisitor {
-     private Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
+    private Double calcOneAccuracy(LoadData actualLoadData, LoadData predictionLoadData) {
         List<Double> actual = actualLoadData.toList();
         List<Double> prediction = predictionLoadData.toList();
         Double acc = 0.0;

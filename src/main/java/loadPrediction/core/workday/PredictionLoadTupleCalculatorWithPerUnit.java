@@ -6,10 +6,10 @@
 
 package loadPrediction.core.workday;
 
-import  common.MaxAveMinTuple;
-import  loadPrediction.domain.LoadBase;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.WeatherData;
+import common.MaxAveMinTuple;
+import loadPrediction.domain.LoadBase;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.WeatherData;
 
 /**
  * 李倍存 创建于 2015-03-08 22:26。电邮 1174751315@qq.com。

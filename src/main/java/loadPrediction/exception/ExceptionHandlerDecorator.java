@@ -6,8 +6,9 @@ package loadPrediction.exception;
 public class ExceptionHandlerDecorator extends ExceptionHandler {
 
     private ExceptionHandler handler;
-    public ExceptionHandlerDecorator(ExceptionHandler handler){
-        this.handler=handler;
+
+    public ExceptionHandlerDecorator(ExceptionHandler handler) {
+        this.handler = handler;
     }
 
     @Override

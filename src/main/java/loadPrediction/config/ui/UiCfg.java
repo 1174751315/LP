@@ -3,7 +3,6 @@ package loadPrediction.config.ui;
 import loadPrediction.resouce.IOPaths;
 import loadPrediction.utils.color.HTMLColorParser;
 import loadPrediction.utils.color.IColorParser;
-import loadPrediction.utils.color.MyColor;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;
@@ -22,9 +21,9 @@ public class UiCfg {
         return outputChartImageCfg;
     }
 
-    private ChartColorCfg outputChartImageCfg=new ChartColorCfg();
+    private ChartColorCfg outputChartImageCfg = new ChartColorCfg();
 
-    private String cfgFilePath= IOPaths.WEB_CONTENT_UI_CFG_PATH;
+    private String cfgFilePath = IOPaths.WEB_CONTENT_UI_CFG_PATH;
 
     public String getCfgFilePath() {
         return cfgFilePath;
@@ -34,15 +33,16 @@ public class UiCfg {
         this.cfgFilePath = cfgFilePath;
     }
 
-    private UiCfg(){
+    private UiCfg() {
     }
 
-    public static UiCfg INSTANCE=new UiCfg();
-    public void update(){
-        Document document=null;
+    public static UiCfg INSTANCE = new UiCfg();
+
+    public void update() {
+        Document document = null;
         try {
-            if (saxReader==null){
-                saxReader=new SAXReader();
+            if (saxReader == null) {
+                saxReader = new SAXReader();
             }
             document = saxReader.read(new File(cfgFilePath));
         } catch (DocumentException e) {
@@ -51,19 +51,19 @@ public class UiCfg {
 
         //获取根节点 <user-interface-configuration>
         Element root = document.getRootElement();
-        Element colors=root.element("colors");
-        Element chart_colors=colors.element("chart-colors");
+        Element colors = root.element("colors");
+        Element chart_colors = colors.element("chart-colors");
 
-        String text=chart_colors.element("background-color").getText();
+        String text = chart_colors.element("background-color").getText();
         outputChartImageCfg.setBackGround(colorParser.parse(text));
-        text=chart_colors.element("fore-color").getText();
+        text = chart_colors.element("fore-color").getText();
         outputChartImageCfg.setForeGround(colorParser.parse(text));
-        text=chart_colors.element("grid-color").getText();
+        text = chart_colors.element("grid-color").getText();
         outputChartImageCfg.setGrid(colorParser.parse(text));
 
-        Element seriesColors=chart_colors.element("series-colors");
-        List series=seriesColors.elements();
-        List<Color> colorList=new LinkedList<Color>();
+        Element seriesColors = chart_colors.element("series-colors");
+        List series = seriesColors.elements();
+        List<Color> colorList = new LinkedList<Color>();
         for (int i = 0; i < series.size(); i++) {
             colorList.add(colorParser.parse(((Element) series.get(i)).getText()));
         }
@@ -79,7 +79,8 @@ public class UiCfg {
     }
 
     private SAXReader saxReader;
-    private IColorParser colorParser=new HTMLColorParser();
+    private IColorParser colorParser = new HTMLColorParser();
+
     public SAXReader getSaxReader() {
         return saxReader;
     }

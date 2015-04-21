@@ -31,9 +31,9 @@ public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutpu
 
     private AbstractChartBuilder chartBuilder;
 
-    public PredictionLoad24LinePictureVisitor_1 (String dir,String ds,AbstractChartBuilder builder){
-        super(dir,ds);
-        this.chartBuilder=builder;
+    public PredictionLoad24LinePictureVisitor_1(String dir, String ds, AbstractChartBuilder builder) {
+        super(dir, ds);
+        this.chartBuilder = builder;
     }
 
 
@@ -42,15 +42,15 @@ public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutpu
         return chartBuilder.build(predictor);
     }
 
-    public PredictionLoad24LinePictureVisitor_1(String dir,String ds) {
-        super(dir,ds);
-        ChartBuilderImpl1 defaultBuilder=new ChartBuilderImpl1();
+    public PredictionLoad24LinePictureVisitor_1(String dir, String ds) {
+        super(dir, ds);
+        ChartBuilderImpl1 defaultBuilder = new ChartBuilderImpl1();
         defaultBuilder.setGridColor(imageColorCfg.getGrid());
         defaultBuilder.setSeries(imageColorCfg.getSeries());
         defaultBuilder.setForeColor(imageColorCfg.getForeGround());
         defaultBuilder.setBackColor(imageColorCfg.getBackGround());
 
-        chartBuilder=defaultBuilder;
+        chartBuilder = defaultBuilder;
     }
 
     @Override
@@ -58,18 +58,18 @@ public class PredictionLoad24LinePictureVisitor_1 extends UnifiedChartImageOutpu
         return "-4LINE_EXT";
     }
 
-    public static MaxAveMinTuple<Double> unnamed(List<LoadData> list ){
-        List<MaxAveMinTuple<Double>> list1=new LinkedList<MaxAveMinTuple<Double>>();
-        for (int i = 0; i <list.size() ; i++) {
+    public static MaxAveMinTuple<Double> unnamed(List<LoadData> list) {
+        List<MaxAveMinTuple<Double>> list1 = new LinkedList<MaxAveMinTuple<Double>>();
+        for (int i = 0; i < list.size(); i++) {
             list1.add(list.get(i).toMaxAveMin());
         }
-        MaxAveMinTuple<Double> t=new MaxAveMinTuple<Double>(0.,0.,100000.);
+        MaxAveMinTuple<Double> t = new MaxAveMinTuple<Double>(0., 0., 100000.);
 
-        for (int i = 0; i <list1.size() ; i++) {
-            if (t.max<list1.get(i).getMax())
-                t.max=list1.get(i).getMax();
-            if (t.min>list1.get(i).getMin())
-                t.min=list1.get(i).getMin();
+        for (int i = 0; i < list1.size(); i++) {
+            if (t.max < list1.get(i).getMax())
+                t.max = list1.get(i).getMax();
+            if (t.min > list1.get(i).getMin())
+                t.min = list1.get(i).getMin();
         }
         return t;
     }

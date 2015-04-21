@@ -6,9 +6,9 @@
 
 package loadPrediction.domain;
 
-import  common.IPrintable;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.resouce.CityNames;
+import common.IPrintable;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.resouce.CityNames;
 
 import java.io.PrintStream;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class CityPackage implements IPrintable {
 
-    public CityPackage() throws Exception{
+    public CityPackage() throws Exception {
         if (f == false) {
             for (int i = 0; i < CityNames.ids.length; i++) {
 

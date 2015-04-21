@@ -6,7 +6,7 @@
 
 package loadPrediction.config;
 
-import  common.IEnhancedCommandWithUndo;
+import common.IEnhancedCommandWithUndo;
 
 import java.util.LinkedList;
 import java.util.List;

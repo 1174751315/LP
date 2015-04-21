@@ -6,8 +6,8 @@
 
 package loadPrediction.adm.user;
 
-import  common.IPrintable;
-import  loadPrediction.config.eAccess;
+import common.IPrintable;
+import loadPrediction.config.eAccess;
 
 import java.io.PrintStream;
 

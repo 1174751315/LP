@@ -6,7 +6,7 @@
 
 package loadPrediction.domain.visitors;
 
-import  loadPrediction.domain.LoadData;
+import loadPrediction.domain.LoadData;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 /**

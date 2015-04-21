@@ -6,8 +6,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.core.test.WorkdayTestRecord;
-import  loadPrediction.utils.Date2StringAdapter;
+import loadPrediction.core.test.WorkdayTestRecord;
+import loadPrediction.utils.Date2StringAdapter;
 
 import java.sql.Date;
 

@@ -6,8 +6,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.City;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.City;
+import loadPrediction.exception.DAE;
 
 /**
  * 李倍存 创建于 2015/3/11 20:57。电邮 1174751315@qq.com。
@@ -19,8 +19,9 @@ public class DAOCity extends AbstractDAO {
 
     public City query(Integer id) throws DAE {
         City o = (City) superDAO.query(City.class, id);
-        if (o == null)
+        if (o == null) {
             throw new DAE(DAE.eType.NOT_FOUND);
+        }
         return o;
     }
 }

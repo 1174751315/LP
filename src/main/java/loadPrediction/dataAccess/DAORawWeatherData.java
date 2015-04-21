@@ -6,9 +6,9 @@
 
 package loadPrediction.dataAccess;
 
-import  db.eDbType;
-import  loadPrediction.domain.RawWeatherData;
-import  loadPrediction.exception.DAE;
+import db.eDbType;
+import loadPrediction.domain.RawWeatherData;
+import loadPrediction.exception.DAE;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -30,7 +30,7 @@ public class DAORawWeatherData extends AbstractDAO {
         Transaction t = defaultSession.beginTransaction();
         String ql = "from RawWeatherData";
         Query sq = defaultSession.createQuery(ql);
-          List l = sq.list();
+        List l = sq.list();
         t.commit();
         for (int i = 0; i < l.size(); i++) {
             list.add((RawWeatherData) l.get(i));
@@ -48,8 +48,9 @@ public class DAORawWeatherData extends AbstractDAO {
         sq.setParameter(1, cityId);
         t.commit();
         RawWeatherData o = (RawWeatherData) sq.uniqueResult();
-        if (o == null)
+        if (o == null) {
             throw new DAE(RawWeatherData.class.getSimpleName());
+        }
         return o;
     }
 

@@ -11,5 +11,5 @@ package db;
  * Created by LBC on 2015/1/22.
  */
 public enum eDbType {
-    ORACLE, EXCEL, SQL_SERVER, MY_SQL, ACCESS,BACKUP,ACTUAL_LOAD
+    ORACLE, EXCEL, SQL_SERVER, MY_SQL, ACCESS, BACKUP, ACTUAL_LOAD
 }

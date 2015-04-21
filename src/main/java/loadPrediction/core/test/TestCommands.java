@@ -6,8 +6,8 @@
 
 package loadPrediction.core.test;
 
-import  common.ICommandMacro;
-import  common.IEnhancedCommand;
+import common.ICommandMacro;
+import common.IEnhancedCommand;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -54,10 +54,10 @@ public class TestCommands implements ICommandMacro {
     @Override
     public void execute() {
         Integer size = commandsToExecute.size();
-        String err=null;
+        String err = null;
         for (int i = 0; i < size; i++) {
             try {
-                 err = (String) commandsToExecute.get(0).execute();
+                err = (String) commandsToExecute.get(0).execute();
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -6,8 +6,8 @@
 
 package loadPrediction.adm.user;
 
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOUser;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOUser;
 
 /**
  * 李倍存 创建于 2015-02-24 16:08。电邮 1174751315@qq.com。

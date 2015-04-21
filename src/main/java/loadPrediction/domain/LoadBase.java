@@ -7,10 +7,10 @@
 
 package loadPrediction.domain;
 
-import  common.IMaxAveMinable;
-import  common.IPrintable;
-import  common.MaxAveMinTuple;
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import common.IMaxAveMinable;
+import common.IPrintable;
+import common.MaxAveMinTuple;
+import loadPrediction.domain.visitors.IDomainVisitor;
 
 import java.io.PrintStream;
 

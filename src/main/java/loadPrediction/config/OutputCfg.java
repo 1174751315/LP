@@ -6,7 +6,7 @@
 
 package loadPrediction.config;
 
-import  common.IPrintable;
+import common.IPrintable;
 
 import java.io.PrintStream;
 

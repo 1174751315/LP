@@ -9,17 +9,17 @@ import java.awt.*;
  * 李倍存 创建于 2015-04-14 21:40。电邮 1174751315@qq.com。
  */
 public class HTMLColorParser implements IColorParser {
-    public  Color parse(String s) {
-        if (s.indexOf("HTML:")==-1) {
+    public Color parse(String s) {
+        if (s.indexOf("HTML:") == -1) {
             return null;
         }
 
-        String c=s.substring(5);
-        String r=c.substring(0,2);
-        String g=c.substring(2,4);
-        String b=c.substring(4,6);
+        String c = s.substring(5);
+        String r = c.substring(0, 2);
+        String g = c.substring(2, 4);
+        String b = c.substring(4, 6);
 
-        return MyColor.getColor(r,g,b,16);
+        return MyColor.getColor(r, g, b, 16);
 
     }
 

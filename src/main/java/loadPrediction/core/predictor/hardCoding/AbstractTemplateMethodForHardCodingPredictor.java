@@ -6,19 +6,19 @@
 
 package loadPrediction.core.predictor.hardCoding;
 
-import  common.ElementPrintableLinkedList;
-import  common.EnhancedLinkedList;
-import  common.MaxAveMinTuple;
+import common.ElementPrintableLinkedList;
+import common.EnhancedLinkedList;
+import common.MaxAveMinTuple;
 import common.PrintableLinkedList;
-import  loadPrediction.config.ConfigureFactory;
-import  loadPrediction.config.OutputCfg;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.dataAccess.DAOWeatherData;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.exception.LPE;
+import loadPrediction.config.ConfigureFactory;
+import loadPrediction.config.OutputCfg;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.dataAccess.DAOWeatherData;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.domain.LoadData;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.exception.LPE;
 import loadPrediction.utils.AccuracyCalculator;
 
 import java.sql.Date;
@@ -32,9 +32,10 @@ import java.util.Map;
  * 电邮：1174751315@qq.com
  */
 public abstract class AbstractTemplateMethodForHardCodingPredictor {
-    public void setDate(Date date){
-        this.date=date;
+    public void setDate(Date date) {
+        this.date = date;
     }
+
     public String getDateString() {
         return date.toLocalDate().toString();
     }
@@ -59,7 +60,7 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
     private ElementPrintableLinkedList<Accuracy> accuracy;
 
     public PrintableLinkedList<Double> getAccuracy() {
-        PrintableLinkedList<Double> acc=new PrintableLinkedList<Double>("精度");
+        PrintableLinkedList<Double> acc = new PrintableLinkedList<Double>("精度");
         for (int i = 0; i < accuracy.size(); i++) {
             acc.add(accuracy.get(i).getAccuracy());
         }
@@ -154,8 +155,9 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         this.doBeforeWholePrediction(this.date);
 
         /*验证参数是否合法。*/
-        if (!this.doValidate(this.date))
+        if (!this.doValidate(this.date)) {
             throw new LPE("预测算法未能启动，请检查参数或配置。");
+        }
 
         /*获取历史日数量链表。*/
         historyDaysNumbers = this.doGetHistoryDaysNumbers();
@@ -167,8 +169,9 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         /*获取历史日期链表。*/
         historyDays = this.doGetHistoryDays(this.date, historyDaysNumbers);
         for (int i = 0; i < historyDays.size(); i++) {
-            if (historyDays.get(i).hasNull())
+            if (historyDays.get(i).hasNull()) {
                 throw new LPE("历史日链表包含空值。");
+            }
         }
         /*子类可扩展插入点。*/
         this.doAfterGetHistoryDays(historyDays);
@@ -177,8 +180,9 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
 
         /*获取预测日期链表。*/
         predictionDays = this.doGetPredictionDays(this.date, predictionDaysNumber);
-        if (predictionDays.hasNull())
+        if (predictionDays.hasNull()) {
             throw new LPE("预测日链表包含空值。");
+        }
         /*子类可扩展插入点。*/
         this.doAfterGetPredictionDays(predictionDays);
 
@@ -186,8 +190,9 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
 
         /*获取历史气象数据链表。*/
         historyWeathers = this.getHistoryWeather();
-        if (historyWeathers.hasNull())
+        if (historyWeathers.hasNull()) {
             throw new LPE("历史气象数据链表包含空值。");
+        }
         /*子类可扩展插入点。*/
         this.doAfterGetHistoryWeathers(historyWeathers);
 
@@ -195,8 +200,9 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
 
         /*获取预测气象数据链表。*/
         predictionWeathers = this.getPredictionWeather();
-        if (predictionWeathers.hasNull())
+        if (predictionWeathers.hasNull()) {
             throw new LPE("预测气象数据链表包含空值。");
+        }
         /*子类可扩展插入点。*/
         this.doAfterGetPredictionWeathers(predictionWeathers);
 
@@ -220,13 +226,16 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
 
         /*最大、平均、最小负荷预测。*/
 
-            predictionLoadTuple = this.doCalcPredictionLoadTuple1(predictionWeathers, historyWeathers, predictionDays, historyDays);
-        if (predictionLoadTuple == null)
+        predictionLoadTuple = this.doCalcPredictionLoadTuple1(predictionWeathers, historyWeathers, predictionDays, historyDays);
+        if (predictionLoadTuple == null) {
             predictionLoadTuple = this.doCalcPredictionLoadTuple2(predictionDays, similarCoes, similarLoad);
-        if (predictionLoadTuple == null)
+        }
+        if (predictionLoadTuple == null) {
             predictionLoadTuple = this.doCalcPredictionLoadTuple3();
-        if (predictionLoadTuple == null)
+        }
+        if (predictionLoadTuple == null) {
             throw new LPE();
+        }
         /*子类可扩展插入点。*/
         this.doAfterCalcPredictionLoadTuples(predictionLoadTuple);
 
@@ -276,28 +285,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         this.doAfterCalcAccuracy(accuracy);
 
 
-
-
-
-
-
-
-
-
-
-
-/*
-        getWeatherData();//检索   所有历史日期的气象数据和待预测日的预报气象数据                所有历史日期的气象数据和待预测日的预报气象数据
-        calcSimilarCoes();//计算             待预测日与所有候选相似日的相似度                            待预测日与所有候选相似日的相似度以及各最小值
-        calcSimilarDays();//计算             所有待预测日的相似日                                      所有待预测日的工作日相似日和周末相似日
-        getSimilarDaysLoad();//检索          所有相似日的负荷数据                                      所有相似日的负荷数据
-        calcMaxAveMinPrediction();//计算     待预测日的最大、平均和最小预测值                            待预测日的最大、平均和最小预测值
-        calcCorrectCoes();//计算             各待预测日的修正系数                                      各待预测日的修正系数
-        calcLoadPrediction();//计算          各待预测日的预测负荷                                      各待预测日的预测负荷
-        getActualLoad();//检索               各待预测日的实际负荷                                      各待预测日的实际负荷
-        calcAccuracy();//计算                准确度                                                  准确度
-        toExcelWorkbook("");
-*/
         return null;
     }
 
@@ -329,7 +316,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
             }
             return weather;
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -348,7 +334,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
                 weather.add(weatherData);
             }
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return weather;
     }
@@ -367,7 +352,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
             }
             return loads;
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -386,7 +370,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
             }
             return actualLoad;
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -417,11 +400,10 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
             Double acc = 0.;
             if (ld != null) {
                 this.actual96PointLoadOfFirstPredictionDay = ld;
-                acc =new AccuracyCalculator().calc(ld, prediction96PointLoads.get(0));
+                acc = new AccuracyCalculator().calc(ld, prediction96PointLoads.get(0));
             }
             this.accuracyOfFirstPredictionDay = acc;
         } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 
@@ -556,64 +538,76 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
     /*子类可选扩展点。*/
 
     protected void doAfterGetHistoryDays(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays) {
-        if (debug)
+        if (debug) {
             historyDays.print(System.err);
+        }
     }
 
     protected void doAfterGetPredictionDays(ElementPrintableLinkedList<SimpleDate> predictionDays) {
-        if (debug)
+        if (debug) {
             predictionDays.print(System.out);
+        }
     }
 
     protected void doAfterGetHistoryWeathers(ElementPrintableLinkedList<ElementPrintableLinkedList<WeatherData>> historyWeathers) {
-        if (debug)
+        if (debug) {
             historyWeathers.print(System.out);
+        }
     }
 
     protected void doAfterGetPredictionWeathers(ElementPrintableLinkedList<WeatherData> predictionWeather) {
-        if (debug)
+        if (debug) {
             predictionWeather.print(System.out);
+        }
     }
 
     protected void doAfterCalcSimilarCoes(ElementPrintableLinkedList<ElementPrintableLinkedList<EnhancedLinkedList<Double>>> similarCoes) {
 
-        if (debug)
+        if (debug) {
             similarCoes.print(System.err);
+        }
     }
 
     protected void doAfterCalcSimilarDays(ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> similarDays) {
-        if (debug)
+        if (debug) {
             similarDays.print(System.err);
+        }
     }
 
     protected void doAfterGetSimilarDaysLoad(ElementPrintableLinkedList<ElementPrintableLinkedList<LoadData>> similarDaysLoad) {
-        if (debug)
+        if (debug) {
             similarDaysLoad.print(System.out);
+        }
     }
 
     protected void doAfterCalcPredictionLoadTuples(ElementPrintableLinkedList<MaxAveMinTuple<Double>> predictionLoadTuples) {
-        if (debug)
+        if (debug) {
             predictionLoadTuples.print(System.err);
+        }
     }
 
     protected void doAfterCalcCorrectCoes(ElementPrintableLinkedList<MaxAveMinTuple<Double>> correctCoes) {
-        if (debug)
+        if (debug) {
             correctCoes.print(System.out);
+        }
     }
 
     protected void doAfterCalcPredictionLoad(ElementPrintableLinkedList<LoadData> prediction96PointLoads) {
-        if (debug)
+        if (debug) {
             prediction96PointLoads.print(System.err);
+        }
     }
 
     protected void doAfterGetActualLoad(ElementPrintableLinkedList<LoadData> loadDatas) {
-        if (debug)
+        if (debug) {
             loadDatas.print(System.out);
+        }
     }
 
     protected void doAfterCalcAccuracy(ElementPrintableLinkedList<Accuracy> accuracy) {
-        if (debug)
+        if (debug) {
             accuracy.print(System.out);
+        }
     }
 
 
@@ -626,7 +620,6 @@ public abstract class AbstractTemplateMethodForHardCodingPredictor {
         try {
             return DAOFactory.getDefault().createDaoLoadData().query(this.predictionDays.get(0).getDateString()) != null;
         } catch (Exception e) {
-            e.printStackTrace();
         }
         return false;
     }

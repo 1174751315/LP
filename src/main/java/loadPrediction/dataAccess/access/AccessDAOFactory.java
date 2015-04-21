@@ -6,9 +6,9 @@
 
 package loadPrediction.dataAccess.access;
 
-import  db.eDbType;
-import  loadPrediction.dataAccess.*;
-import  loadPrediction.resouce.DomainNames;
+import db.eDbType;
+import loadPrediction.dataAccess.*;
+import loadPrediction.resouce.DomainNames;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +18,7 @@ import java.util.Map;
  */
 public class AccessDAOFactory extends DAOFactory {
     private static Map<String, Object> pool;
+
     public AccessDAOFactory() {
         if (pool == null) {
             pool = new HashMap<String, Object>();

@@ -6,7 +6,7 @@
 
 package jfreechart;
 
-import  loadPrediction.utils.FileContentUtils;
+import loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -49,8 +49,7 @@ public class JFreeChartFacade {
     }
 
 
-
-    public String saveAs(JFreeChart chart,String path,Integer width,Integer height){
+    public String saveAs(JFreeChart chart, String path, Integer width, Integer height) {
         FileOutputStream out = null;
         try {
 
@@ -93,8 +92,9 @@ public class JFreeChartFacade {
         }
         return path;
     }
+
     public String saveAs(JFreeChart chart, String path) {
-       return saveAs(chart,path,1600,1200);
+        return saveAs(chart, path, 1600, 1200);
     }
 
     public String saveAs(JFreeChart chart, String dir, String filenamePrefix) {

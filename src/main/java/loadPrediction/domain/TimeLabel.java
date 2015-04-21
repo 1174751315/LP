@@ -6,7 +6,7 @@
 
 package loadPrediction.domain;
 
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.domain.visitors.IDomainVisitor;
 
 /**
  * Created by LBC on 2015/2/3.

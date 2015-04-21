@@ -6,13 +6,8 @@
 
 package loadPrediction.core.predictor.visitors;
 
-import  jfreechart.JFreeChartFacade;
 import loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
 import loadPrediction.exception.LPE;
-import  loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
 
 /**
@@ -26,10 +21,10 @@ public class PredictionLoad23LinePictureVisitor extends UnifiedChartImageOutputV
 
     @Override
     protected JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE {
-       return  (JFreeChart) predictor.accept(new PredictionLoad2DefaultChartVisitor());
+        return (JFreeChart) predictor.accept(new PredictionLoad2DefaultChartVisitor());
     }
 
-    public PredictionLoad23LinePictureVisitor(String dir,String ds) {
-        super(dir,ds);
+    public PredictionLoad23LinePictureVisitor(String dir, String ds) {
+        super(dir, ds);
     }
 }

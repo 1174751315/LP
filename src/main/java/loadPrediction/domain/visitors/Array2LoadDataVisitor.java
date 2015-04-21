@@ -8,13 +8,11 @@ package loadPrediction.domain.visitors;
 
 import loadPrediction.domain.LoadData;
 
-import java.util.List;
-
 /**
  * 李倍存 创建于 2015-03-22 20:57。电邮 1174751315@qq.com。
  */
 public class Array2LoadDataVisitor implements LoadDataVisitor {
-    private  Double[] values;
+    private Double[] values;
 
     public Array2LoadDataVisitor(Double[] nine6PointValues) {
         this.values = nine6PointValues;

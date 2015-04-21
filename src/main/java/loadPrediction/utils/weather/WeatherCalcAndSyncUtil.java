@@ -6,12 +6,12 @@
 
 package loadPrediction.utils.weather;
 
-import  common.ElementPrintableLinkedList;
-import  loadPrediction.dataAccess.DAOFactory;
-import  loadPrediction.domain.CityPackage;
-import  loadPrediction.domain.RawWeatherData;
-import  loadPrediction.domain.WeatherData;
-import  loadPrediction.resouce.IOPaths;
+import common.ElementPrintableLinkedList;
+import loadPrediction.dataAccess.DAOFactory;
+import loadPrediction.domain.CityPackage;
+import loadPrediction.domain.RawWeatherData;
+import loadPrediction.domain.WeatherData;
+import loadPrediction.resouce.IOPaths;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -81,6 +81,7 @@ public class WeatherCalcAndSyncUtil {
 
     /**
      * 从数据库获取所有可用的原始气象数据，并对每一个日期（包含14市的数据）分别计算综合气象数据；随后删除所有原始气象数据，保存所有综合气象数据。
+     *
      * @return 所有的综合气象数据
      * @throws Exception 当某日原始气象数据不完整或数据访问异常
      */
@@ -110,6 +111,7 @@ public class WeatherCalcAndSyncUtil {
 
     /**
      * 从原始气象数据库取出dateString所指日期的14市原始气象数据，并计算当天的综合气象数据；计算完成后，从数据库删除当天14市原始气象数据，将综合气象数据存入数据库。
+     *
      * @param dateString 日期字符串
      * @return 当天的综合气象数据
      * @throws Exception 当原始数据不完整或数据访问异常

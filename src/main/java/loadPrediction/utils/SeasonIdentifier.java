@@ -32,8 +32,8 @@ public class SeasonIdentifier {
         return Season.WINTER;
     }
 
-    public static Season getSeasonByWeather(WeatherData weatherData){
-        if (weatherData.getMaxTemperature()>25.)
+    public static Season getSeasonByWeather(WeatherData weatherData) {
+        if (weatherData.getMaxTemperature() > 25.)
             return Season.SUMMER;
         else
             return Season.WINTER;

@@ -6,8 +6,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.core.cache.PredictionCacheEntity;
-import  loadPrediction.exception.DAE;
+import loadPrediction.core.cache.PredictionCacheEntity;
+import loadPrediction.exception.DAE;
 
 import java.util.List;
 
@@ -32,8 +32,9 @@ public class DAOPredictionCacheEntity extends AbstractDAO {
 
     public PredictionCacheEntity query(String dateString) throws DAE {
         PredictionCacheEntity o = (PredictionCacheEntity) superDAO.query(PredictionCacheEntity.class, dateString);
-        if (o == null)
+        if (o == null) {
             throw new DAE(PredictionCacheEntity.class.getSimpleName());
+        }
         return o;
     }
 

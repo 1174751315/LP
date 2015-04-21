@@ -9,14 +9,15 @@ package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import loadPrediction.core.cache.CachesManager;
-import  loadPrediction.core.cache.PredictionCacheEntity;
-import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.PredictorFactory;
-import  loadPrediction.core.predictor.visitors.*;
-import loadPrediction.exception.*;
-import  loadPrediction.aop.Logging;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.FileContentUtils;
+import loadPrediction.core.cache.PredictionCacheEntity;
+import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.core.predictor.PredictorFactory;
+import loadPrediction.core.predictor.visitors.FirstPredictionLoadData2DBVisitor;
+import loadPrediction.core.predictor.visitors.PredictionLoad24LinePictureVisitor_1;
+import loadPrediction.core.predictor.visitors.PredictionLoad2ReportPictureVisitor;
+import loadPrediction.exception.LPE;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.JFreeChart;
 
 import java.io.File;
@@ -31,35 +32,44 @@ import java.text.SimpleDateFormat;
  */
 public class PredictionAction extends ActionSupport {
     private JFreeChart chart;
+
     public JFreeChart getChart() {
         return chart;
     }
+
     public String getRoot() {
-        root="TEMP/";
+        root = "TEMP/";
         return root;
     }
+
     public void setRoot(String root) {
         this.root = root;
     }
+
     private String imgFileName;
     private String rptImgName;
+
     public String getRptImgName() {
         return rptImgName;
     }
+
     private String xlFileName;
     private String root = "";
+
     public String getXlFileName() {
         return xlFileName;
     }
+
     public String getImgFileName() {
         return imgFileName;
     }
+
     public void setImgFileName(String imgFileName) {
         this.imgFileName = imgFileName;
     }
 
 
-    private String predictorType="未知预测器类型";
+    private String predictorType = "未知预测器类型";
 
     public String getPredictorType() {
         return predictorType;
@@ -93,24 +103,23 @@ public class PredictionAction extends ActionSupport {
                 try {
                     PredictionCacheEntity cache = CachesManager.INSTANCE.getPredictionEntity(dateString);
                     warning = "OK";
-                    String imgPath=cache.getOutputImagePath();
-                    String xlPath=cache.getOutputExcelPath();
-                    String rptImgPath=cache.getOutputRptImagePath();
-                    File fxl=new File(xlPath);
-                    File fimg=new File(imgPath);
-                    File frptImg=new File(rptImgPath);
-                    if (fxl.exists()&&fimg.exists()&&frptImg.exists()) {//若缓存文件均未丢失，直接返回文件路径
+                    String imgPath = cache.getOutputImagePath();
+                    String xlPath = cache.getOutputExcelPath();
+                    String rptImgPath = cache.getOutputRptImagePath();
+                    File fxl = new File(xlPath);
+                    File fimg = new File(imgPath);
+                    File frptImg = new File(rptImgPath);
+                    if (fxl.exists() && fimg.exists() && frptImg.exists()) {//若缓存文件均未丢失，直接返回文件路径
                         imgFileName = FileContentUtils.getFileNameFromPath(imgPath);
                         xlFileName = FileContentUtils.getFileNameFromPath(xlPath);
-                        rptImgName=FileContentUtils.getFileNameFromPath(rptImgPath);
+                        rptImgName = FileContentUtils.getFileNameFromPath(rptImgPath);
                         root = "";
                         return SUCCESS;
-                    }
-                    else {//否则进行一次无缓存常规预测
+                    } else {//否则进行一次无缓存常规预测
                         return predict(dateString);
                     }
                 } catch (Exception e) {
-                    warning =failed(dateString,e);
+                    warning = failed(dateString, e);
                 }
 
             } else {/*否则执行计算，返回计算结果并添加至缓存。*/
@@ -118,17 +127,18 @@ public class PredictionAction extends ActionSupport {
             }
 
             return SUCCESS;
-        } catch (Throwable e) {
-            Exception ex=new Exception(e);
-            warning=failed(dateString,ex);
+        } catch (Exception ex) {
+            warning = failed(dateString, ex);
             return SUCCESS;
         }
     }
-    private String failed(String dateString,Exception e){
-    return dateString+"预测失败";
+
+    private String failed(String dateString, Exception e) {
+        return dateString + "预测失败";
 
 
-}
+    }
+
     private Boolean useCaches = false;
 
     public void setUseCaches(Boolean useCaches) {
@@ -136,49 +146,50 @@ public class PredictionAction extends ActionSupport {
     }
 
 
-    private void doPredict(String dateString)throws LPE,IllegalArgumentException,Exception{
-        if (dateString == null){
-            java.util.Date date=new java.util.Date();
-            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
-            dateString=simpleDateFormat.format(date);
+    private void doPredict(String dateString) throws LPE, IllegalArgumentException, Exception {
+        if (dateString == null) {
+            java.util.Date date = new java.util.Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            dateString = simpleDateFormat.format(date);
         }
         String path = IOPaths.WEB_CONTENT_TEMP;
         IPredictor predictor = PredictorFactory.getInstance().getProperPredictor(Date.valueOf(dateString));
         warning = "OK";
-        String temp=(String) predictor.predict();
+        String temp = (String) predictor.predict();
         predictor.accept(new FirstPredictionLoadData2DBVisitor());
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad23LinePictureVisitor(path)));
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad21LinePictureVisitor(path)));
 //        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor(path)));
-        imgFileName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad24LinePictureVisitor_1(path,dateString)));
+        imgFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, dateString)));
 //        xlFileName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new AllInformation2ExcelVisitor(path)));
-        xlFileName=FileContentUtils.getFileNameFromPath(temp);
+        xlFileName = FileContentUtils.getFileNameFromPath(temp);
 
 //        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl1())));
 //        imgFileName=FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad24LinePictureVisitor_1(path, predictor.getDateString(), new ChartBuilderImpl2())));
-        rptImgName=FileContentUtils.getFileNameFromPath((String)predictor.accept(new PredictionLoad2ReportPictureVisitor(path,dateString)));
+        rptImgName = FileContentUtils.getFileNameFromPath((String) predictor.accept(new PredictionLoad2ReportPictureVisitor(path, dateString)));
         root = "";//FileContentUtils.toWebContentFilePath(IOPaths.WEB_TEMP);
                 /*构造缓存数据结构。*/
 //        String t = predictor.getPredictionDays().get(0).getDateType().getName();
-        predictorType=predictor.getPredictorType();
-        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, predictorType, path + xlFileName, path + imgFileName, path+rptImgName,warning);
+        predictorType = predictor.getPredictorType();
+        PredictionCacheEntity entity = new PredictionCacheEntity(dateString, predictorType, path + xlFileName, path + imgFileName, path + rptImgName, warning);
                 /*添加至缓存管理器。*/
         CachesManager.INSTANCE.addPredictionEntity(entity);
         ;
     }
-    private String predict(String dateString){
+
+    private String predict(String dateString) {
         try {
             doPredict(dateString);
             return SUCCESS;
         } catch (LPE e) {
-            warning= failed(dateString,e);
+            warning = failed(dateString, e);
             e.printStackTrace();
         } catch (IllegalArgumentException e) {
 
-            warning =  failed(dateString,e);
+            warning = failed(dateString, e);
             e.printStackTrace();
-        } catch (Exception e){
-            warning=failed(dateString,e);
+        } catch (Exception e) {
+            warning = failed(dateString, e);
             e.printStackTrace();
         }
         return SUCCESS;

@@ -7,9 +7,9 @@
 
 package loadPrediction.dataAccess.oracle;
 
-import  db.eDbType;
-import  loadPrediction.dataAccess.*;
-import  loadPrediction.resouce.DomainNames;
+import db.eDbType;
+import loadPrediction.dataAccess.*;
+import loadPrediction.resouce.DomainNames;
 
 import java.util.HashMap;
 import java.util.Map;

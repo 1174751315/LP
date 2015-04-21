@@ -6,8 +6,8 @@
 
 package loadPrediction.adm.user;
 
-import  common.ElementPrintableLinkedList;
-import  loadPrediction.config.ConfigureFactory;
+import common.ElementPrintableLinkedList;
+import loadPrediction.config.ConfigureFactory;
 
 /**
  * 李倍存 创建于 2015-02-24 15:43。电邮 1174751315@qq.com。

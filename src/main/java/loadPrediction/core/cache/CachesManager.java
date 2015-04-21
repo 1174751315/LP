@@ -31,9 +31,11 @@ public class CachesManager {
             accuracyCaches.put(entity.getDateString(), entity);
         }
     }
+
     private CachesManager() {
         this.loadCaches();
     }
+
     private void storeCaches(Map<String, PredictionCacheEntity> caches) {
 
     }
@@ -101,5 +103,5 @@ public class CachesManager {
     }
 
 
-    public static CachesManager INSTANCE=new CachesManager();
+    public static CachesManager INSTANCE = new CachesManager();
 }

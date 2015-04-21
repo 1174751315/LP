@@ -6,7 +6,7 @@
 
 package loadPrediction.utils;
 
-import  loadPrediction.domain.LoadData;
+import loadPrediction.domain.LoadData;
 
 import java.util.List;
 

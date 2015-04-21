@@ -6,8 +6,8 @@
 
 package loadPrediction.core.test;
 
-import  common.ICommand;
-import  loadPrediction.core.predictor.hardCoding.HardCodingWorkdayPredictor;
+import common.ICommand;
+import loadPrediction.core.predictor.hardCoding.HardCodingWorkdayPredictor;
 
 /**
  * 李倍存 创建于 2015-02-22 21:25。电邮 1174751315@qq.com。

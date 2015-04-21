@@ -13,16 +13,17 @@ import org.apache.poi.ss.util.CellReference;
  */
 public class CellPosition {
     /**
-     * @param cellRef 符合MS EXCEL相关规范的形如“A1”的单元格坐标。
+     * @param cellRef   符合MS EXCEL相关规范的形如“A1”的单元格坐标。
      * @param sheetName EXCEL工作簿的工作表名字。
      */
     public CellPosition(String cellRef, String sheetName) {
         cellReference = new CellReference(cellRef);
         this.sheetName = sheetName;
     }
-    public CellPosition(Integer col,Integer row,String sheetName){
-        cellReference=new CellReference(row,col);
-        this.sheetName=sheetName;
+
+    public CellPosition(Integer col, Integer row, String sheetName) {
+        cellReference = new CellReference(row, col);
+        this.sheetName = sheetName;
     }
 
     private String sheetName;
@@ -49,15 +50,16 @@ public class CellPosition {
     }
 
 
-    public CellPosition ofColAfter(Integer offset){
-        return this.ofAfter(offset,0);
-    }
-    public CellPosition ofRowAfter(Integer offset){
-        return this.ofAfter(0,offset);
+    public CellPosition ofColAfter(Integer offset) {
+        return this.ofAfter(offset, 0);
     }
 
-    public CellPosition ofAfter(Integer colOffset,Integer rowOffset){
-        return  new CellPosition(Integer.valueOf(this.cellReference.getCol()+colOffset),this.cellReference.getRow()+rowOffset,this.getSheetName());
+    public CellPosition ofRowAfter(Integer offset) {
+        return this.ofAfter(0, offset);
+    }
+
+    public CellPosition ofAfter(Integer colOffset, Integer rowOffset) {
+        return new CellPosition(Integer.valueOf(this.cellReference.getCol() + colOffset), this.cellReference.getRow() + rowOffset, this.getSheetName());
 
     }
 }

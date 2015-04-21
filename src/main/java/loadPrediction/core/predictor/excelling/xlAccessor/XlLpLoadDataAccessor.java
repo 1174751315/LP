@@ -15,10 +15,10 @@ import java.util.List;
  * 李倍存 创建于 2015-04-16 15:54。电邮 1174751315@qq.com。
  */
 public class XlLpLoadDataAccessor extends AbstractXLAccessor {
-    private LoadData readOneLoadDataFromFormulas(String sheetName,Integer col,Integer row) {
+    private LoadData readOneLoadDataFromFormulas(String sheetName, Integer col, Integer row) {
         forceCalcAllFormulas();
         List<Double> loadData = new LinkedList<Double>();
-        Sheet sheet=workbook.getSheet(sheetName);
+        Sheet sheet = workbook.getSheet(sheetName);
         for (int k = 0; k < 96; k++) {
             Cell cell = sheet.getRow(row + k).getCell(col);
             CellValue cv = evaluator.evaluate(cell);
@@ -30,8 +30,9 @@ public class XlLpLoadDataAccessor extends AbstractXLAccessor {
 
         return l;
     }
-    public ElementPrintableLinkedList<LoadData> readSomeLoadDataFromFormulas(CellPosition position,Integer nbr){
-        ElementPrintableLinkedList<LoadData> loadDatas=new ElementPrintableLinkedList<LoadData>("ld");
+
+    public ElementPrintableLinkedList<LoadData> readSomeLoadDataFromFormulas(CellPosition position, Integer nbr) {
+        ElementPrintableLinkedList<LoadData> loadDatas = new ElementPrintableLinkedList<LoadData>("ld");
         CellPosition ofPredictionLoads = position;
         for (int i = 0; i < nbr; i++) {
             LoadData ld = this.readOneLoadDataFromFormulas(ofPredictionLoads.getSheetName(), ofPredictionLoads.getCol() + i, ofPredictionLoads.getRow());
@@ -39,12 +40,13 @@ public class XlLpLoadDataAccessor extends AbstractXLAccessor {
         }
         return loadDatas;
     }
+
     public void writeOneLoadData2Cells(CellPosition position,
                                        LoadData data) {
-        String sheetName=position.getSheetName();
-        Short col=position.getCol();
-        Integer row=position.getRow();
-        Sheet sheet=workbook.getSheet(sheetName);
+        String sheetName = position.getSheetName();
+        Short col = position.getCol();
+        Integer row = position.getRow();
+        Sheet sheet = workbook.getSheet(sheetName);
         List<Double> loadData = data.toList();
 
         for (int k = 0; k < 96; k++) {
@@ -53,12 +55,14 @@ public class XlLpLoadDataAccessor extends AbstractXLAccessor {
         }
         forceCalcAllFormulas();
     }
+
     public void writeSomeLoadData2Cells(CellPosition positions,
                                         List<LoadData> datas) {
         for (int j = 0; j < datas.size(); j++) {
             this.writeOneLoadData2Cells(positions.ofColAfter(j), datas.get(j));
         }
     }
+
     public void writeSomeLoadData2Cells(List<CellPosition> positions,
                                         List<ElementPrintableLinkedList<LoadData>> datas) {
         for (int i = 0; i < positions.size(); i++) {

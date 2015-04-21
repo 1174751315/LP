@@ -6,10 +6,9 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.dataAccess.access.AccessDAOFactory;
-import  loadPrediction.dataAccess.access.AccessDAOFactory_Backup;
-import loadPrediction.dataAccess.etc.ActualLoadDAOFacory;
-import  loadPrediction.resouce.DomainNames;
+import loadPrediction.dataAccess.access.AccessDAOFactory;
+import loadPrediction.dataAccess.access.AccessDAOFactory_Backup;
+import loadPrediction.resouce.DomainNames;
 
 /**
  * 李倍存 创建于 2015-02-25 17:05。电邮 1174751315@qq.com。
@@ -74,15 +73,23 @@ public abstract class DAOFactory {
     public DAOPredictionCacheEntity createDAOPredictionCacheEntity() {
         return (DAOPredictionCacheEntity) doGetDAO("prediction_cache");
     }
-    public DAOLoadData_1 createDAOLoadData_1(){
-        return (DAOLoadData_1)doGetDAO("load-data-1");
+
+    public DAOLoadData_1 createDAOLoadData_1() {
+        return (DAOLoadData_1) doGetDAO("load-data-1");
     }
+
     public static DAOFactory getDefault() {
         return new AccessDAOFactory();
     }
-    public static DAOFactory getAlter(){return new AccessDAOFactory_Backup();}
 
-    public static DAOFactory get4ActualLoad(){return new AccessDAOFactory();}
+    public static DAOFactory getAlter() {
+        return new AccessDAOFactory_Backup();
+    }
+
+    public static DAOFactory get4ActualLoad() {
+        return new AccessDAOFactory();
+    }
+
     protected abstract Object doGetDAO(String name);
 
 

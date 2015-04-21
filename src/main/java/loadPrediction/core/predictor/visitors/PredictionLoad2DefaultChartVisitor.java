@@ -6,11 +6,11 @@
 
 package loadPrediction.core.predictor.visitors;
 
-import  loadPrediction.core.predictor.IPredictor;
-import  loadPrediction.core.predictor.IQingmingPredictor;
-import  loadPrediction.core.predictor.IWeekendPredictor;
-import  loadPrediction.core.predictor.IWorkdayPredictor;
-import  loadPrediction.domain.LoadData;
+import loadPrediction.core.predictor.IPredictor;
+import loadPrediction.core.predictor.IQingmingPredictor;
+import loadPrediction.core.predictor.IWeekendPredictor;
+import loadPrediction.core.predictor.IWorkdayPredictor;
+import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import loadPrediction.exception.LPE;
 import org.jfree.chart.ChartFactory;

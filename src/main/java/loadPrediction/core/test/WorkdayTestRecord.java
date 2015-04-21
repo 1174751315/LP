@@ -6,8 +6,8 @@
 
 package loadPrediction.core.test;
 
-import  common.IPrintable;
-import  loadPrediction.domain.SimpleDate;
+import common.IPrintable;
+import loadPrediction.domain.SimpleDate;
 
 import java.io.PrintStream;
 import java.util.List;

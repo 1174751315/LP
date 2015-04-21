@@ -10,14 +10,15 @@ import org.jfree.chart.JFreeChart;
  */
 public abstract class UnifiedChartImageOutputVisitor extends UnifiedImageOutputVisitor {
     public UnifiedChartImageOutputVisitor(String dir, String ds) {
-        super(dir,ds);
+        super(dir, ds);
     }
 
     @Override
     protected Object doVisitAndOutput(IPredictor predictor, String fileAbsPath) throws LPE {
-        JFreeChart chart=doVisitAndGenerateChart(predictor);
-        new JFreeChartFacade().saveAs(chart,fileAbsPath);
+        JFreeChart chart = doVisitAndGenerateChart(predictor);
+        new JFreeChartFacade().saveAs(chart, fileAbsPath);
         return fileAbsPath;
     }
+
     protected abstract JFreeChart doVisitAndGenerateChart(IPredictor predictor) throws LPE;
 }

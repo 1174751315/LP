@@ -7,8 +7,8 @@
 
 package loadPrediction.dataAccess;
 
-import  loadPrediction.domain.LoadData;
-import  loadPrediction.exception.DAE;
+import loadPrediction.domain.LoadData;
+import loadPrediction.exception.DAE;
 
 /**
  * 创建：2015/2/3 9:21
@@ -23,8 +23,9 @@ public class DAOLoadData extends AbstractDAO {
 
     public LoadData query(String key) throws DAE {
         LoadData o = (LoadData) superDAO.query(LoadData.class, (key));
-        if (o == null)
+        if (o == null) {
             throw new DAE("未找到相应的负荷数据");
+        }
         return o;
     }
 

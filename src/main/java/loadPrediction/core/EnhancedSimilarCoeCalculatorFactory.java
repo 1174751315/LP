@@ -6,13 +6,6 @@
 
 package loadPrediction.core;
 
-import loadPrediction.dataAccess.DAOFactory;
-import loadPrediction.domain.WeatherCoesPackage;
-import loadPrediction.exception.LPE;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * 创建：2015/2/19 15:16
  * 作者：李倍存

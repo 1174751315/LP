@@ -12,12 +12,14 @@ public abstract class AbstractCalculatorUseWeatherCoes {
         this.weatherCoesPackage = weatherCoesPackage;
     }
 
-    public    void  setWeatherCoes(WeatherCoesPackage coes){
-       this.weatherCoesPackage=coes;
-   }
-   public  WeatherCoesPackage getWeatherCoes(){
-       return weatherCoesPackage;
-   }
+    public void setWeatherCoes(WeatherCoesPackage coes) {
+        this.weatherCoesPackage = coes;
+    }
+
+    public WeatherCoesPackage getWeatherCoes() {
+        return weatherCoesPackage;
+    }
+
     public static String[] MAPPING_KEYS = WeatherDataMappingKeys.keys;
     private WeatherCoesPackage weatherCoesPackage;
 }

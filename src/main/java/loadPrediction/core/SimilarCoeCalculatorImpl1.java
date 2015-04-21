@@ -7,8 +7,8 @@
 
 package loadPrediction.core;
 
-import  loadPrediction.domain.WeatherCoesPackage;
-import  loadPrediction.domain.WeatherData;
+import loadPrediction.domain.WeatherCoesPackage;
+import loadPrediction.domain.WeatherData;
 
 import java.util.Map;
 
@@ -23,11 +23,11 @@ public class SimilarCoeCalculatorImpl1 extends AbstractCalculatorUseWeatherCoes 
 
     @Override
     public Double calcSimilarCoe(WeatherData weatherDataFactor1, WeatherData weatherDataFactor2) {
-        Double coe=0.;
+        Double coe = 0.;
         Map<String, Double> map1 = weatherDataFactor1.toMap(), map2 = weatherDataFactor2.toMap();
         Double weight, d1, d2;
-        String[] keys= AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
-        WeatherCoesPackage weatherCoesPackage=super.getWeatherCoes();
+        String[] keys = AbstractCalculatorUseWeatherCoes.MAPPING_KEYS;
+        WeatherCoesPackage weatherCoesPackage = super.getWeatherCoes();
         for (int i = 0; i < keys.length; i++) {
             String s = keys[i];
             weight = weatherCoesPackage.toMap().get(s).getWeight();

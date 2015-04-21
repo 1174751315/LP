@@ -6,7 +6,7 @@
 
 package loadPrediction.timerTask;
 
-import  common.IEnhancedCommand;
+import common.IEnhancedCommand;
 
 /**
  * 李倍存 创建于 2015-03-06 15:02。电邮 1174751315@qq.com。

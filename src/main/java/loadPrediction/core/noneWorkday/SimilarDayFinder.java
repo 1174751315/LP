@@ -7,10 +7,10 @@
 
 package loadPrediction.core.noneWorkday;
 
-import  common.ElementPrintableLinkedList;
-import  common.PrintableLinkedList;
-import  loadPrediction.domain.SimpleDate;
-import  loadPrediction.exception.LPE;
+import common.ElementPrintableLinkedList;
+import common.PrintableLinkedList;
+import loadPrediction.domain.SimpleDate;
+import loadPrediction.exception.LPE;
 
 /**
  * Created by LBC on 2015/2/14.

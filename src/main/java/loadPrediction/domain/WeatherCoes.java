@@ -3,7 +3,7 @@ package loadPrediction.domain;
 /**
  * 李倍存 创建于 2015-04-13 21:14。电邮 1174751315@qq.com。
  */
-public class WeatherCoes  {
+public class WeatherCoes {
     private String type;
     private Double maxBase;
     private Double minBase;

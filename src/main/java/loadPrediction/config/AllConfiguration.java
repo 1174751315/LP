@@ -7,9 +7,9 @@
 package loadPrediction.config;
 
 
-import  common.ElementPrintableLinkedList;
-import  common.IPrintable;
-import  loadPrediction.adm.user.User;
+import common.ElementPrintableLinkedList;
+import common.IPrintable;
+import loadPrediction.adm.user.User;
 
 import java.io.PrintStream;
 

@@ -8,12 +8,12 @@ package loadPrediction.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import jfreechart.BarChartRendererWithThreshold;
-import  jfreechart.JFreeChartFacade;
-import  loadPrediction.dataAccess.DAOAccuracy;
-import  loadPrediction.dataAccess.oracle.OracleDAOFactory;
-import  loadPrediction.domain.Accuracy;
-import  loadPrediction.resouce.IOPaths;
-import  loadPrediction.utils.FileContentUtils;
+import jfreechart.JFreeChartFacade;
+import loadPrediction.dataAccess.DAOAccuracy;
+import loadPrediction.dataAccess.oracle.OracleDAOFactory;
+import loadPrediction.domain.Accuracy;
+import loadPrediction.resouce.IOPaths;
+import loadPrediction.utils.FileContentUtils;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.CategoryPlot;

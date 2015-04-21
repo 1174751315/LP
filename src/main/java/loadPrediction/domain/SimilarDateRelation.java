@@ -7,7 +7,7 @@
 
 package loadPrediction.domain;
 
-import  loadPrediction.domain.visitors.IDomainVisitor;
+import loadPrediction.domain.visitors.IDomainVisitor;
 import org.hibernate.type.DateType;
 
 import java.io.Serializable;

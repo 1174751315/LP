@@ -6,8 +6,8 @@
 
 package loadPrediction.timerTask;
 
-import  common.ICommandMacro;
-import  common.IEnhancedCommand;
+import common.ICommandMacro;
+import common.IEnhancedCommand;
 
 import java.util.LinkedList;
 import java.util.List;

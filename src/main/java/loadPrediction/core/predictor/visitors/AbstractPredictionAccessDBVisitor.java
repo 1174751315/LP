@@ -27,7 +27,8 @@ public abstract class AbstractPredictionAccessDBVisitor implements IPredictorVis
         this.daoFactory = daoFactory;
     }
 
-    protected DAOFactory daoFactory=DAOFactory.getDefault();
+    protected DAOFactory daoFactory = DAOFactory.getDefault();
+
     @Override
     public Object visitWorkdayPredictor(IWorkdayPredictor predictor) throws LPE {
         return this.doAccessDB(predictor);
@@ -43,5 +44,5 @@ public abstract class AbstractPredictionAccessDBVisitor implements IPredictorVis
         return this.doAccessDB(predictor);
     }
 
-    abstract protected Object doAccessDB(IPredictor predictor)throws LPE;
+    abstract protected Object doAccessDB(IPredictor predictor) throws LPE;
 }

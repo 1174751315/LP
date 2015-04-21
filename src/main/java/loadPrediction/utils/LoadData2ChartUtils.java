@@ -6,8 +6,8 @@
 
 package loadPrediction.utils;
 
-import  jfreechart.JFreeChartFacade;
-import  loadPrediction.domain.LoadData;
+import jfreechart.JFreeChartFacade;
+import loadPrediction.domain.LoadData;
 import loadPrediction.domain.visitors.AppendCategoryDatasetVisitor;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
