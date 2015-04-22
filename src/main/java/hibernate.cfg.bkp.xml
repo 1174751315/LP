@@ -17,8 +17,7 @@
         <property name="connection.driver_class">net.ucanaccess.jdbc.UcanaccessDriver</property>
         <!--<property name="connection.url">jdbc:hsqldb:hsql://localhost/TestDB</property> &ndash;&gt;-->
         <!--<property name="connection.driver_class">net.ucanaccess.jdbc.UcanaccessDriver</property>-->
-        <property name="connection.url">jdbc:ucanaccess:///D:\Apache Software Foundation\Tomcat
-            7.0\webapps\LPU\DATA\load_bkp.mdb
+        <property name="connection.url">jdbc:ucanaccess:///D:\Apache Software Foundation\Tomcat 7.0\webapps\LPU\DATA\load_bkp.mdb
         </property>
         <property name="connection.username"></property>
         <property name="connection.password"></property>
@@ -38,9 +37,9 @@
         <!--<property name="cache.region.factory_class">org.hibernate.cache.EhCacheRegionFactory</property>-->
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">false</property>
-        <mapping resource="loadPrediction/domain/LoadData.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/WeatherData.hbm.xml"/>
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
+        <mapping resource="prediction/domain/LoadData.hbm.xml"/>
+        <mapping resource="prediction/domain/WeatherData.hbm.xml"/>
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
     </session-factory>
 </hibernate-configuration>

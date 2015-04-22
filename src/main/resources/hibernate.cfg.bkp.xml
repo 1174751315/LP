@@ -37,9 +37,9 @@
         <!--<property name="cache.region.factory_class">org.hibernate.cache.EhCacheRegionFactory</property>-->
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">false</property>
-        <mapping resource="loadPrediction/domain/LoadData.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/WeatherData.hbm.xml"/>
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
+        <mapping resource="prediction/domain/LoadData.hbm.xml"/>
+        <mapping resource="prediction/domain/WeatherData.hbm.xml"/>
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
     </session-factory>
 </hibernate-configuration>

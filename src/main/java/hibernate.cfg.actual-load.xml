@@ -40,6 +40,6 @@
         <!--<property name="cache.region.factory_class">org.hibernate.cache.EhCacheRegionFactory</property>-->
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">false</property>
-        <mapping resource="loadPrediction/domain/LoadData_1.hbm.xml"/>
+        <mapping resource="prediction/domain/LoadData_1.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
