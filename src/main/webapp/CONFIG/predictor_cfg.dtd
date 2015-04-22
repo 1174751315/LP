@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!--
+  ~ 版权所有 (c) 2015 。 李倍存 （iPso）。
+  ~ 所有者对该文件所包含的代码的正确性、执行效率等任何方面不作任何保证。
+  ~ 所有个人和组织均可不受约束地将该文件所包含的代码用于非商业用途。若需要将其用于商业软件的开发，请首先联系所有者以取得许可。
+  -->
+        <!ELEMENT predictor-configuration (predictor)>
+
+
+        <!ELEMENT predictor (history-days-nbrs,prediction-days-nbr,history-days-positions,
+                prediction-days-position,
+                history-weathers-positions,
+                prediction-weathers-position,
+                similar-days-positions,
+                similar-load-positions,
+                prediction-load-position,
+                actual-load-position,
+                accuracies-position
+                ) >
+        <!ATTLIST predictor
+                type(weekend|workday|others) #REQUIRED
+                type-string (#PCDATA) #REQUIRED
+                >
+
+        <!ELEMENT history-days-positions (positions)>
+        <!ELEMENT prediction-days-position (position)>
+        <!ELEMENT prediction-weathers-position (position)>
+        <!ELEMENT history-weathers-positions (positions)>
+        <!ELEMENT similar-days-positions (positions)>
+        <!ELEMENT similar-load-positions (positions)>
+        <!ELEMENT actual-load-position (position)>
+        <!ELEMENT prediction-load-position (position)>
+        <!ELEMENT accuracies-position (position)>
+
+        <!ELEMENT prediction-days-nbr (nbr)>
+        <!ELEMENT history-days-nbrs (nbr+)>
+        <!ELEMENT nbr ()>
+        <!ATTLIST nbr
+                value (#PCDATA)
+                >
+
+
+        <!ELEMENT positions (position+)>
+        <!ELEMENT position ()>
+        <!ATTLIST posotion
+                sheet (#PCDATA) #REQUIRED
+                cell (#PCDATA) #REQUIRED
+                >
+
+

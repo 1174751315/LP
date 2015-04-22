@@ -28,6 +28,7 @@ public class IOPaths {
     public static final String WEB_CONTENT_WORKDAY_OUTPUT_TEMPLATE_XL_PATH = WEB_CONTENT_CONFIG + "template.xls";
     public static final String WEB_CONTENT_WEEKEND_OUTPUT_TEMPLATE_XL_PATH = WEB_CONTENT_WORKDAY_OUTPUT_TEMPLATE_XL_PATH;
     public static final String WEB_CONTENT_UI_CFG_PATH = WEB_CONTENT_CONFIG + "ui_cfg.xml";
+    public static final String WEB_CONTENT_WORKDAY_PREDICTOR_CFG_PATH =WEB_CONTENT_CONFIG+"weekend_predictor_cfg.xml";
 
     public static final String WEB_CONTENT_LOG_ROOT = WEB_CONTENT_ROOT + "LOG\\";
 

@@ -8,6 +8,8 @@ package prediction.config;
 
 
 import common.ElementPrintableLinkedList;
+import dom4j.Dom4jFacade;
+import org.dom4j.Document;
 import prediction.adm.user.User;
 import prediction.resouce.IOPaths;
 import org.dom4j.DocumentException;
@@ -55,15 +57,8 @@ public class XmlConfigure implements IConfigure {
     public AllConfiguration getAllConfiguration() {
         if (!needsUpdate)
             return configuration;
-        SAXReader saxReader = new SAXReader();
-        org.dom4j.Document document;
-        try {
-            document = saxReader.read(new File(cfgFilePath));
-        } catch (DocumentException e) {
-            e.printStackTrace();
-            return null;
-        }
 
+        Document document= Dom4jFacade.readDocument(cfgFilePath);
         Element root = document.getRootElement();
         getPredictorsCfg(configuration, root.element("predictors"));
         getUsersCfg(configuration, root.element("users"));
