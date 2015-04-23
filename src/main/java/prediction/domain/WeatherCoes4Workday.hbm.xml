@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="prediction.domain.WeatherCoes4Workday" table="WEATHER_COES_WORKDAY">
+        <id name="type" column="TYPE">
+            <generator class="assigned"/>
+        </id>
+        <property name="relationCoe" column="REL_COE"/>
+        <property name="maxBase" column="MAX_BASE"/>
+        <property name="minBase" column="MIN_BASE"/>
+        <property name="weight" column="WEIGHT"/>
+    </class>
+</hibernate-mapping>

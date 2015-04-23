@@ -1,7 +1,6 @@
 package common.ArgMatcher4IPredictor;
 
-import loadPrediction.core.predictor.IPredictor;
-import loadPrediction.core.predictor.visitors.IPredictorVisitor;
+import prediction.core.predictor.IPredictor;
 import org.mockito.ArgumentMatcher;
 
 /**

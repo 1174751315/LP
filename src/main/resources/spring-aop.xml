@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
+       <!--<aop:aspectj-autoproxy/>-->
+    <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator"/>
+    <!--<bean id="defaultLogger" class="org.apache.log4j.Logger">-->
+        <!--<constructor-arg value="默认记录仪"/>-->
+    <!--</bean>-->
+
+
+    <bean id="aopLogging" class="prediction.aop.AopTraceMethodsAndThrows"/>
+    <bean id="aopFunctionLogging" class="prediction.aop.AopTraceFunctional"/>
+    <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice" ref="aopLogging"/>
+        <property name="patterns" >
+            <list>
+                <value>.*</value>
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice" ref="aopFunctionLogging"/>
+        <property name="patterns" >
+            <list>
+                <value>prediction.core.predictor.excelling.*.predict*</value>
+                <value>prediction.action.*.*</value>
+            </list>
+        </property>
+    </bean>
+    <!--<bean class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
+        <!--<property name="advice" ref="aopLogging"/>-->
+        <!--<property name="patterns">-->
+            <!--<list>-->
+                <!--<value>.*</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+<!--<aop:config proxy-target-class="true">-->
+<!--</aop:config>-->
+</beans>

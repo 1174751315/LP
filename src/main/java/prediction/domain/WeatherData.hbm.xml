@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="prediction.domain.WeatherData" table="WEATHER_DATA">
+        <id name="dateString" column="DATE_STRING">
+            <generator class="assigned"/>
+        </id>
+        <property name="maxHumid" column="MAX_HUMID"/>
+        <property name="aveHumid" column="AVE_HUMID"/>
+        <property name="minHumid" column="MIN_HUMID"/>
+        <property name="windSpeed" column="WIND_SPEED"/>
+        <property name="rainFall" column="RAIN_FALL"/>
+        <property name="maxTHI" column="MAX_THI"/>
+        <property name="aveTHI" column="AVE_THI"/>
+        <property name="minTHI" column="MIN_THI"/>
+        <property name="maxRTT" column="MAX_RTT"/>
+        <property name="aveRTT" column="AVE_RTT"/>
+        <property name="minRTT" column="MIN_RTT"/>
+        <property name="maxCI" column="MAX_CI"/>
+        <property name="aveCI" column="AVE_CI"/>
+        <property name="minCI" column="MIN_CI"/>
+        <property name="maxCHI" column="MAX_CHI"/>
+        <property name="aveCHI" column="AVE_CHI"/>
+        <property name="minCHI" column="MIN_CHI"/>
+
+        <property name="maxLT" column="MAX_LT"/>
+        <property name="aveVI" column="MAX_VI"/>
+        <property name="minSLP" column="MAX_SLP"/>
+
+        <property name="maxTemperature" column="MAX_TEMP"/>
+        <property name="aveTemperature" column="AVE_TEMP"/>
+        <property name="minTemperature" column="MIN_TEMP"/>
+    </class>
+</hibernate-mapping>

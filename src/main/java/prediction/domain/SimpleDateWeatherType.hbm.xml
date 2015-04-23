@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="prediction.domain.SimpleDateWeatherType" table="SIMPLE_WEATHER_TYPE">
+        <id name="code" column="CODE">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="TYPE"/>
+    </class>
+</hibernate-mapping>

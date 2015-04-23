@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"> <!-- bean definitions here -->
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!--<bean id="get-new-weather-data" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+    <!--<property name="targetObject">-->
+    <!--<bean class="loadPrediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>-->
+    <!--</property>-->
+    <!--<property name="targetMethod" value="run" />-->
+    <!--<property name="concurrent" value="false" />&lt;!&ndash; 作业不并发调度 &ndash;&gt;-->
+    <!--</bean>-->
+    <task:annotation-driven/>
+    <!-- 定时器开关 -->
+    <context:annotation-config/>
+    <context:component-scan base-package="loadPrediction"/>
+
+    <bean id="fetch-and-calc-new-weather" class="prediction.timerTask.TimerTask4FetchingAndCalcingWeatherData"/>
+    <bean id="auto-predict" class="prediction.timerTask.TimerTask4LoadPrediction"/>
+    <bean id="auto-mailing" class="prediction.timerTask.TimerTask4LogMailing"/>
+
+    <task:scheduled-tasks scheduler="defaultScheduler">
+        <!--自动邮件，每日22：00发送-->
+        <task:scheduled ref="auto-mailing" method="run" cron="0 0 0/6 * * ?"/>
+        <!--同步实际负荷和计算综合气象数据，每隔12小时-->
+        <task:scheduled ref="fetch-and-calc-new-weather" method="run" cron="0 0 0/6 * * ?"/>
+        <!--执行自动预测并缓存，每日08:00-->
+        <task:scheduled ref="auto-predict" method="run" cron="0 0 0/6 * * ?"/>
+    </task:scheduled-tasks>
+
+    <task:scheduler id="defaultScheduler" pool-size="10"/>
+    <!-- 自动扫描的包名 -->
+</beans>

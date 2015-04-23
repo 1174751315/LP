@@ -38,26 +38,26 @@
         <!--<property name="cache.region.factory_class">org.hibernate.cache.EhCacheRegionFactory</property>-->
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">false</property>
-        <mapping resource="loadPrediction/domain/SimpleDate.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/SimpleDateWeatherType.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/SimpleDateType.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/LoadData.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/PredictionLoadData.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/LoadBase.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/WeatherData.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/WeatherCoes4Weekend.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/WeatherCoes4Workday.hbm.xml"/>
-        <!--<mapping resource="loadPrediction/core/test/WeekendTestRecord.hbm.xml"/>-->
-        <!--<mapping resource="loadPrediction/core/test/WorkdayTestRecord.hbm.xml"/>-->
-        <mapping resource="loadPrediction/adm/user/User.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/Accuracy.hbm.xml"/>
+        <mapping resource="prediction/domain/SimpleDate.hbm.xml"/>
+        <mapping resource="prediction/domain/SimpleDateWeatherType.hbm.xml"/>
+        <mapping resource="prediction/domain/SimpleDateType.hbm.xml"/>
+        <mapping resource="prediction/domain/LoadData.hbm.xml"/>
+        <mapping resource="prediction/domain/PredictionLoadData.hbm.xml"/>
+        <mapping resource="prediction/domain/LoadBase.hbm.xml"/>
+        <mapping resource="prediction/domain/WeatherData.hbm.xml"/>
+        <mapping resource="prediction/domain/WeatherCoes4Weekend.hbm.xml"/>
+        <mapping resource="prediction/domain/WeatherCoes4Workday.hbm.xml"/>
+        <!--<mapping resource="prediction/core/test/WeekendTestRecord.hbm.xml"/>-->
+        <!--<mapping resource="prediction/core/test/WorkdayTestRecord.hbm.xml"/>-->
+        <mapping resource="prediction/adm/user/User.hbm.xml"/>
+        <mapping resource="prediction/domain/Accuracy.hbm.xml"/>
 
-        <mapping resource="loadPrediction/domain/City.hbm.xml"/>
-        <mapping resource="loadPrediction/domain/RawWeatherData.hbm.xml"/>
+        <mapping resource="prediction/domain/City.hbm.xml"/>
+        <mapping resource="prediction/domain/RawWeatherData.hbm.xml"/>
 
-        <mapping resource="loadPrediction/core/cache/PredictionCacheEntity.hbm.xml"/>
-        <mapping resource="loadPrediction/core/cache/OnedayAccuracyCheckingCacheEntity.hbm.xml"/>
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
-        <!--<mapping resource="main.java.loadPrediction/adm/user/User.hbm.xml"/>-->
+        <mapping resource="prediction/core/cache/PredictionCacheEntity.hbm.xml"/>
+        <mapping resource="prediction/core/cache/OnedayAccuracyCheckingCacheEntity.hbm.xml"/>
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
+        <!--<mapping resource="main.java.prediction/adm/user/User.hbm.xml"/>-->
     </session-factory>
 </hibernate-configuration>
