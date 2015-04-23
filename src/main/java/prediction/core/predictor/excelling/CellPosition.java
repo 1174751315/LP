@@ -19,6 +19,7 @@ public class CellPosition {
     public CellPosition(String cellRef, String sheetName) {
         cellReference = new CellReference(cellRef);
         this.sheetName = sheetName;
+        ref=cellRef;
     }
 
     public CellPosition(Integer col, Integer row, String sheetName) {
@@ -28,6 +29,12 @@ public class CellPosition {
 
     private String sheetName;
     private CellReference cellReference;
+
+
+    private String ref;
+    public String getRef(){
+        return ref;
+    }
 
     public String getSheetName() {
         return this.sheetName;

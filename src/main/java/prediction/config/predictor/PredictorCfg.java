@@ -12,6 +12,7 @@ import prediction.exception.LPE;
 import prediction.utils.ListUtils;
 
 import java.sql.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -23,20 +24,36 @@ public class PredictorCfg {
         Element root=document.getRootElement();
 
         Element predictor=root.element("predictor");
+
         System.out.println(root.getText());
 
 
+        List<Integer> nbrs=new LinkedList<Integer>();
+        Integer nbr=null;
+
+        nbr=Integer.valueOf(predictor.element("prediction-days-nbr").element("nbr").attribute("value").getValue());
+
+        predictionDaysNbr=nbr;
+
+        List elements=predictor.element("history-days-nbrs").elements();
+        for (int i = 0; i < elements.size(); i++) {
+            nbrs.add(Integer.valueOf(((Element) elements.get(i)).attribute("value").getValue()));
+        }
+        historyDaysNbrs=nbrs;
 
 
     }
 
     Integer predictionDaysNbr;
+    List<Integer> historyDaysNbrs=new LinkedList<Integer>();
+
+
     public Integer doGetPredictionDaysNbr() {
-        return 2;
+        return predictionDaysNbr;
     }
 
     public List<Integer> doGetHistoryDaysNbrs() {
-        return ListUtils.unnamed(12,20);
+        return historyDaysNbrs;
     }
 
 
