@@ -5,7 +5,18 @@
     <option name="ANALYSIS_IN_BACKGROUND" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="" />
+    <list default="true" id="56eac533-5f78-4b76-8251-8076ab462001" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/prediction/config/predictor/WorkdayPredictorCfgTest.java" />
+      <change type="DELETED" beforePath="E:\IdeaProjects\LP\src\test\java\prediction\config\predictor\PredictorCfgTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingQingmingPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingQingmingPredictor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/resouce/IOPaths.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/resouce/IOPaths.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/prediction/config/predictor/PredictorCfg.java" afterPath="$PROJECT_DIR$/src/main/java/prediction/config/predictor/PredictorCfg.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/CONFIG/workday_predictor_cfg.xml" afterPath="$PROJECT_DIR$/src/main/webapp/CONFIG/workday_predictor_cfg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LP.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,7 +59,7 @@
           <file leaf-file-name="ExcellingWeekendPredictor.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1152">
+                <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1184">
                   <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
                   <folding>
                     <element signature="method#accept#0;class#ExcellingWeekendPredictor#0" expanded="true" />
@@ -60,14 +71,9 @@
           <file leaf-file-name="IOPaths.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/prediction/resouce/IOPaths.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="496" max-vertical-offset="640">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
                   <caret line="39" column="85" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="85" />
-                  <folding>
-                    <element signature="e#0#2486#0" expanded="false" />
-                    <element signature="docComment;class#IOPaths#0" expanded="false" />
-                    <element signature="e#2325#2326#0" expanded="false" />
-                    <element signature="e#2374#2375#0" expanded="false" />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -79,6 +85,7 @@
                   <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#2192#2201#0" expanded="true" />
                     <element signature="e#2632#2633#0" expanded="true" />
                     <element signature="e#2681#2682#0" expanded="true" />
                     <element signature="e#2789#2790#0" expanded="true" />
@@ -91,9 +98,11 @@
                     <element signature="e#3595#3596#0" expanded="true" />
                     <element signature="method#parseOnePosition#0;class#PredictorCfg#0" expanded="true" />
                     <element signature="method#parseSomePosition#0;class#PredictorCfg#0" expanded="true" />
+                    <element signature="e#4076#4090#0" expanded="true" />
                     <element signature="e#4308#4309#0" expanded="true" />
                     <element signature="e#4385#4386#0" expanded="true" />
                     <element signature="method#parseSomeNbr#0;class#PredictorCfg#0" expanded="true" />
+                    <element signature="e#4483#4492#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -109,8 +118,31 @@
                     <element signature="method#tearDown#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
                     <element signature="method#testAccPosition#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
                     <element signature="method#testDaysNbrs#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#858#859#0" expanded="true" />
+                    <element signature="e#1110#1111#0" expanded="true" />
+                    <element signature="e#1206#1215#0" expanded="true" />
+                    <element signature="e#1276#1280#0" expanded="true" />
+                    <element signature="e#1423#1428#0" expanded="true" />
+                    <element signature="e#1490#1499#0" expanded="true" />
+                    <element signature="e#1612#1613#0" expanded="true" />
+                    <element signature="e#1665#1670#0" expanded="true" />
+                    <element signature="e#1731#1742#0" expanded="true" />
                     <element signature="method#testWeatherPositions#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#1979#1980#0" expanded="true" />
+                    <element signature="e#2035#2039#0" expanded="true" />
+                    <element signature="e#2103#2112#0" expanded="true" />
+                    <element signature="e#2276#2281#0" expanded="true" />
+                    <element signature="e#2340#2349#0" expanded="true" />
                     <element signature="method#testOtherPositions#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#2567#2568#0" expanded="true" />
+                    <element signature="e#2611#2624#0" expanded="true" />
+                    <element signature="e#2682#2687#0" expanded="true" />
+                    <element signature="e#2819#2825#0" expanded="true" />
+                    <element signature="e#2873#2886#0" expanded="true" />
+                    <element signature="e#3075#3087#0" expanded="true" />
+                    <element signature="e#3137#3149#0" expanded="true" />
+                    <element signature="e#3192#3196#0" expanded="true" />
+                    <element signature="e#3240#3244#0" expanded="true" />
                     <element signature="method#init#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
                   </folding>
                 </state>
@@ -120,15 +152,46 @@
           <file leaf-file-name="WeekendPredictorCfgTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/prediction/config/predictor/WeekendPredictorCfgTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1808">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1808">
                   <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding>
                     <element signature="method#setUp#0;class#WeekendPredictorCfgTest#0" expanded="true" />
                     <element signature="method#testAccPosition#0;class#WeekendPredictorCfgTest#0" expanded="true" />
                     <element signature="method#testDaysNbrs#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#869#870#0" expanded="true" />
                     <element signature="method#testDaysPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#1176#1177#0" expanded="true" />
+                    <element signature="e#1272#1280#0" expanded="true" />
+                    <element signature="e#1341#1345#0" expanded="true" />
+                    <element signature="e#1412#1420#0" expanded="true" />
+                    <element signature="e#1481#1486#0" expanded="true" />
+                    <element signature="e#1629#1634#0" expanded="true" />
+                    <element signature="e#1696#1704#0" expanded="true" />
+                    <element signature="e#1817#1818#0" expanded="true" />
+                    <element signature="e#1870#1875#0" expanded="true" />
+                    <element signature="e#1936#1951#0" expanded="true" />
+                    <element signature="e#2018#2023#0" expanded="true" />
+                    <element signature="e#2084#2098#0" expanded="true" />
                     <element signature="method#testWeatherPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#2335#2336#0" expanded="true" />
+                    <element signature="e#2391#2395#0" expanded="true" />
+                    <element signature="e#2459#2467#0" expanded="true" />
+                    <element signature="e#2537#2542#0" expanded="true" />
+                    <element signature="e#2606#2614#0" expanded="true" />
+                    <element signature="e#2778#2783#0" expanded="true" />
+                    <element signature="e#2842#2850#0" expanded="true" />
                     <element signature="method#testOtherPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+                    <element signature="e#3068#3069#0" expanded="true" />
+                    <element signature="e#3112#3124#0" expanded="true" />
+                    <element signature="e#3182#3187#0" expanded="true" />
+                    <element signature="e#3239#3251#0" expanded="true" />
+                    <element signature="e#3309#3314#0" expanded="true" />
+                    <element signature="e#3446#3452#0" expanded="true" />
+                    <element signature="e#3500#3513#0" expanded="true" />
+                    <element signature="e#3702#3715#0" expanded="true" />
+                    <element signature="e#3765#3778#0" expanded="true" />
+                    <element signature="e#3821#3825#0" expanded="true" />
+                    <element signature="e#3869#3873#0" expanded="true" />
                     <element signature="method#init#0;class#WeekendPredictorCfgTest#0" expanded="true" />
                   </folding>
                 </state>
@@ -149,15 +212,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExcellingWeekendPredictorInteTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ExcellingWeekendPredictorInteTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.72386897" vertical-offset="0" max-vertical-offset="641">
-                  <caret line="44" column="45" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="45" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="640">
+                  <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
                   <folding>
-                    <element signature="e#1293#1294#0" expanded="true" />
                     <element signature="e#1336#1342#0" expanded="true" />
-                    <element signature="e#1390#1396#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -176,13 +237,15 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExcellingWorkdayPredictorInteTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ExcellingWorkdayPredictorInteTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictorInteTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="752">
-                  <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.33333334" vertical-offset="95" max-vertical-offset="752">
+                  <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
                   <folding>
                     <element signature="method#testPredict#0;class#ExcellingWorkdayPredictorInteTest#0" expanded="true" />
+                    <element signature="e#1270#1274#0" expanded="true" />
+                    <element signature="e#1275#1287#0" expanded="true" />
                     <element signature="e#1419#1420#0" expanded="true" />
                     <element signature="e#1462#1468#0" expanded="true" />
                     <element signature="e#1516#1522#0" expanded="true" />
@@ -217,10 +280,14 @@
           <file leaf-file-name="ExcellingWeekendPredictor.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.49453977" vertical-offset="179" max-vertical-offset="912">
-                  <caret line="62" column="27" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.5761773" vertical-offset="560" max-vertical-offset="1216">
+                  <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
                   <folding>
+                    <element signature="e#1567#1568#0" expanded="true" />
+                    <element signature="e#1636#1637#0" expanded="true" />
+                    <element signature="method#doGetPredictionDays#0;class#ExcellingWeekendPredictor#0" expanded="true" />
                     <element signature="method#accept#0;class#ExcellingWeekendPredictor#0" expanded="true" />
+                    <element signature="method#doAfterInjectSimilarLoads#0;class#ExcellingWeekendPredictor#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -229,7 +296,7 @@
           <file leaf-file-name="weekend_predictor_cfg.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/weekend_predictor_cfg.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="976">
+                <state vertical-scroll-proportion="-16.64" vertical-offset="400" max-vertical-offset="976">
                   <caret line="51" column="46" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="46" />
                   <folding />
                 </state>
@@ -615,8 +682,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -646,24 +711,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LPU-BETA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -907,8 +954,138 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="predictor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="prediction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="predictor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="excelling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -936,7 +1113,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="ExWeek&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java&#10;EWoIn&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictorInteTest.java&#10;EWe&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java&#10;ExcelWee&#9;RUN_CONFIGURATION&#9;ExcellingWeekendPredictorInteTest&#10;IP&#9;PSI&#9;JAVA://prediction.core.predictor.IPredictor&#10;EWo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.ExcellingWorkdayPredictor&#10;CePo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.CellPosition&#10;IOPa&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/prediction/resouce/IOPaths.java&#10;ExWo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.ExcellingWorkdayPredictor&#10;XmlC&#9;PSI&#9;JAVA://prediction.config.XmlConfigure&#10;AllC&#9;PSI&#9;JAVA://prediction.config.AllConfiguration&#10;EWP&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java&#10;EH4LE&#9;PSI&#9;JAVA://loadPrediction.exception.ExceptionHandler4LowerException&#10;PF&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactory&#10;WCP&#9;PSI&#9;JAVA://loadPrediction.domain.WeatherCoesPackage&#10;LD&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/domain/LoadData.java&#10;DAOPLD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOPredictionLoadData&#10;DAORWD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAORawWeatherData&#10;DAOSD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOSimpleDate&#10;DAOWD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOWeatherData&#10;DAOAcc&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOAccuracy&#10;DAOCi&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOCity&#10;DLB&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/dataAccess/DAOLoadBase.java&#10;DAOLD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOLoadData&#10;DAOLD1&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOLoadData_1&#10;DAOOneD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOOnedayAccuracyCheckingCacheEntity&#10;DAOPE&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOPredictionCacheEntity&#10;HWee&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.java&#10;HW&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java&#10;AbsHard&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;IDom&#9;PSI&#9;JAVA://loadPrediction.domain.IDomain&#10;SD&#9;PSI&#9;JAVA://loadPrediction.domain.SimpleDate&#10;Abs&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;TTF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java&#10;PAT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/action/PredictionActionTest.java&#10;AbsEx&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;AP&#9;PSI&#9;JAVA://loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery&#10;Cell&#9;PSI&#9;JAVA://org.apache.poi.ss.usermodel.Cell&#10;EPL&#9;PSI&#9;JAVA://common.ElementPrintableLinkedList&#10;AbsE&#9;PSI&#9;JAVA://loadPrediction.core.predictor.excelling.AbstractTemplateMethodExcellingPredictor&#10;Aop&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/aop/AopTraceLogging.java&#10;A&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;PRPV&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java&#10;Ab&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;Tra&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/log/AopTraceLogging.java&#10;PFT&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactoryTest&#10;Advi&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/ThrowsAdvice.class&#10;AfterA&#9;PSI&#9;JAVA://org.springframework.aop.AfterAdvice&#10;ThrA&#9;PSI&#9;JAVA://org.springframework.aop.ThrowsAdvice&#10;AspectThr&#9;PSI&#9;JAVA://org.springframework.aop.aspectj.AspectJAfterThrowingAdvice" />
+    <property name="SearchEverywhereHistoryKey" value="EWoIn&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictorInteTest.java&#10;EWe&#9;FILE&#9;file://E:/IdeaProjects/LP/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java&#10;ExcelWee&#9;RUN_CONFIGURATION&#9;ExcellingWeekendPredictorInteTest&#10;IP&#9;PSI&#9;JAVA://prediction.core.predictor.IPredictor&#10;EWo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.ExcellingWorkdayPredictor&#10;CePo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.CellPosition&#10;IOPa&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/prediction/resouce/IOPaths.java&#10;ExWo&#9;PSI&#9;JAVA://prediction.core.predictor.excelling.ExcellingWorkdayPredictor&#10;XmlC&#9;PSI&#9;JAVA://prediction.config.XmlConfigure&#10;AllC&#9;PSI&#9;JAVA://prediction.config.AllConfiguration&#10;EWP&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java&#10;EH4LE&#9;PSI&#9;JAVA://loadPrediction.exception.ExceptionHandler4LowerException&#10;PF&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactory&#10;WCP&#9;PSI&#9;JAVA://loadPrediction.domain.WeatherCoesPackage&#10;LD&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/domain/LoadData.java&#10;DAOPLD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOPredictionLoadData&#10;DAORWD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAORawWeatherData&#10;DAOSD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOSimpleDate&#10;DAOWD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOWeatherData&#10;DAOAcc&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOAccuracy&#10;DAOCi&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOCity&#10;DLB&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/dataAccess/DAOLoadBase.java&#10;DAOLD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOLoadData&#10;DAOLD1&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOLoadData_1&#10;DAOOneD&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOOnedayAccuracyCheckingCacheEntity&#10;DAOPE&#9;PSI&#9;JAVA://loadPrediction.dataAccess.DAOPredictionCacheEntity&#10;HWee&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWeekendPredictor.java&#10;HW&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/HardCodingWorkdayPredictor.java&#10;AbsHard&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;IDom&#9;PSI&#9;JAVA://loadPrediction.domain.IDomain&#10;SD&#9;PSI&#9;JAVA://loadPrediction.domain.SimpleDate&#10;Abs&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/hardCoding/AbstractTemplateMethodForHardCodingPredictor.java&#10;TTF&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/timerTask/TimerTask4FetchingAndCalcingWeatherData.java&#10;PAT&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/action/PredictionActionTest.java&#10;AbsEx&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;AP&#9;PSI&#9;JAVA://loadPrediction.utils.powerSystemDateQuery.AbstractPowerSystemDayQuery&#10;Cell&#9;PSI&#9;JAVA://org.apache.poi.ss.usermodel.Cell&#10;EPL&#9;PSI&#9;JAVA://common.ElementPrintableLinkedList&#10;AbsE&#9;PSI&#9;JAVA://loadPrediction.core.predictor.excelling.AbstractTemplateMethodExcellingPredictor&#10;Aop&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/aop/AopTraceLogging.java&#10;A&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;PRPV&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/visitors/PredictionLoad2ReportPictureVisitor.java&#10;Ab&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/core/predictor/excelling/AbstractTemplateMethodExcellingPredictor.java&#10;Tra&#9;FILE&#9;file://E:/IdeaProjects/LP/src/main/java/loadPrediction/log/AopTraceLogging.java&#10;PFT&#9;PSI&#9;JAVA://loadPrediction.core.predictor.PredictorFactoryTest&#10;Advi&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/spring-aop-3.1.1.RELEASE.jar!/org/springframework/aop/ThrowsAdvice.class&#10;AfterA&#9;PSI&#9;JAVA://org.springframework.aop.AfterAdvice&#10;ThrA&#9;PSI&#9;JAVA://org.springframework.aop.ThrowsAdvice&#10;AspectThr&#9;PSI&#9;JAVA://org.springframework.aop.aspectj.AspectJAfterThrowingAdvice&#10;AfterThrowing&#9;FILE&#9;jar://E:/IdeaProjects/LP/target/LPU-BETA/WEB-INF/lib/aspectjrt-1.8.5.jar!/org/aspectj/lang/annotation/AfterThrowing.class" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
@@ -986,7 +1163,7 @@
       <recent name="loadPrediction.core.predictor.visitors" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.maven-build">
+  <component name="RunManager" selected="JUnit.ExcellingWorkdayPredictorInteTest">
     <configuration default="false" name="WeekendPredictorCfgTest.testWeatherPositions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1703,43 +1880,43 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3001328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2868526" sideWeight="0.50064266" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09163347" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17095116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17802057" sideWeight="0.499336" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32802126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1686587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42895088" sideWeight="0.49871466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17095116" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17802057" sideWeight="0.499336" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47675964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23771581" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="DSM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49164525" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="92" width="1416" height="686" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1686587" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12084994" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17802057" sideWeight="0.500664" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5815832" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40903056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1897,6 +2074,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="8672" max-vertical-offset="10784">
           <caret line="1214" column="24" selection-start-line="1214" selection-start-column="24" selection-end-line="1214" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1940,6 +2118,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="325" max-vertical-offset="816">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2026,6 +2207,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="896">
           <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#6515#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#XmlConfigure#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="docComment;method#setXmlFilePath#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="method#setXmlFilePath#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="docComment;method#getAllConfiguration#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="method#getPredictorsCfg#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="method#getUsersCfg#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="method#getOutputsCfg#0;class#XmlConfigure#0" expanded="false" />
+            <element signature="method#getCachesCfg#0;class#XmlConfigure#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2033,6 +2228,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
           <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="docComment;class#Dom4jFacade#0" expanded="false" />
+            <element signature="method#Dom4jFacade#0;class#Dom4jFacade#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2048,6 +2247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="400">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2055,6 +2255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="582" max-vertical-offset="1056">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2062,6 +2263,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.16" vertical-offset="0" max-vertical-offset="400">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="method#run#0;class#ReflectiveCallable#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2088,6 +2292,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="1648">
           <caret line="37" column="72" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2139,12 +2344,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="640">
           <caret line="39" column="85" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="85" />
-          <folding>
-            <element signature="e#0#2486#0" expanded="false" />
-            <element signature="docComment;class#IOPaths#0" expanded="false" />
-            <element signature="e#2325#2326#0" expanded="false" />
-            <element signature="e#2374#2375#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2154,6 +2354,7 @@
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2192#2201#0" expanded="true" />
             <element signature="e#2632#2633#0" expanded="true" />
             <element signature="e#2681#2682#0" expanded="true" />
             <element signature="e#2789#2790#0" expanded="true" />
@@ -2166,16 +2367,18 @@
             <element signature="e#3595#3596#0" expanded="true" />
             <element signature="method#parseOnePosition#0;class#PredictorCfg#0" expanded="true" />
             <element signature="method#parseSomePosition#0;class#PredictorCfg#0" expanded="true" />
+            <element signature="e#4076#4090#0" expanded="true" />
             <element signature="e#4308#4309#0" expanded="true" />
             <element signature="e#4385#4386#0" expanded="true" />
             <element signature="method#parseSomeNbr#0;class#PredictorCfg#0" expanded="true" />
+            <element signature="e#4483#4492#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/CONFIG/weekend_predictor_cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="976">
+        <state vertical-scroll-proportion="-16.64" vertical-offset="400" max-vertical-offset="976">
           <caret line="51" column="46" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="46" />
           <folding />
         </state>
@@ -2189,10 +2392,51 @@
             <element signature="method#setUp#0;class#WeekendPredictorCfgTest#0" expanded="true" />
             <element signature="method#testAccPosition#0;class#WeekendPredictorCfgTest#0" expanded="true" />
             <element signature="method#testDaysNbrs#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
             <element signature="method#testDaysPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="e#1272#1280#0" expanded="true" />
+            <element signature="e#1341#1345#0" expanded="true" />
+            <element signature="e#1412#1420#0" expanded="true" />
+            <element signature="e#1481#1486#0" expanded="true" />
+            <element signature="e#1629#1634#0" expanded="true" />
+            <element signature="e#1696#1704#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1870#1875#0" expanded="true" />
+            <element signature="e#1936#1951#0" expanded="true" />
+            <element signature="e#2018#2023#0" expanded="true" />
+            <element signature="e#2084#2098#0" expanded="true" />
             <element signature="method#testWeatherPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+            <element signature="e#2335#2336#0" expanded="true" />
+            <element signature="e#2391#2395#0" expanded="true" />
+            <element signature="e#2459#2467#0" expanded="true" />
+            <element signature="e#2537#2542#0" expanded="true" />
+            <element signature="e#2606#2614#0" expanded="true" />
+            <element signature="e#2778#2783#0" expanded="true" />
+            <element signature="e#2842#2850#0" expanded="true" />
             <element signature="method#testOtherPositions#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+            <element signature="e#3068#3069#0" expanded="true" />
+            <element signature="e#3112#3124#0" expanded="true" />
+            <element signature="e#3182#3187#0" expanded="true" />
+            <element signature="e#3239#3251#0" expanded="true" />
+            <element signature="e#3309#3314#0" expanded="true" />
+            <element signature="e#3446#3452#0" expanded="true" />
+            <element signature="e#3500#3513#0" expanded="true" />
+            <element signature="e#3702#3715#0" expanded="true" />
+            <element signature="e#3765#3778#0" expanded="true" />
+            <element signature="e#3821#3825#0" expanded="true" />
+            <element signature="e#3869#3873#0" expanded="true" />
             <element signature="method#init#0;class#WeekendPredictorCfgTest#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1184">
+          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+          <folding>
+            <element signature="method#accept#0;class#ExcellingWeekendPredictor#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2206,8 +2450,31 @@
             <element signature="method#tearDown#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
             <element signature="method#testAccPosition#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
             <element signature="method#testDaysNbrs#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+            <element signature="e#858#859#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1206#1215#0" expanded="true" />
+            <element signature="e#1276#1280#0" expanded="true" />
+            <element signature="e#1423#1428#0" expanded="true" />
+            <element signature="e#1490#1499#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1665#1670#0" expanded="true" />
+            <element signature="e#1731#1742#0" expanded="true" />
             <element signature="method#testWeatherPositions#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2035#2039#0" expanded="true" />
+            <element signature="e#2103#2112#0" expanded="true" />
+            <element signature="e#2276#2281#0" expanded="true" />
+            <element signature="e#2340#2349#0" expanded="true" />
             <element signature="method#testOtherPositions#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
+            <element signature="e#2567#2568#0" expanded="true" />
+            <element signature="e#2611#2624#0" expanded="true" />
+            <element signature="e#2682#2687#0" expanded="true" />
+            <element signature="e#2819#2825#0" expanded="true" />
+            <element signature="e#2873#2886#0" expanded="true" />
+            <element signature="e#3075#3087#0" expanded="true" />
+            <element signature="e#3137#3149#0" expanded="true" />
+            <element signature="e#3192#3196#0" expanded="true" />
+            <element signature="e#3240#3244#0" expanded="true" />
             <element signature="method#init#0;class#WorkdayPredictorCfgTest#0" expanded="true" />
           </folding>
         </state>
@@ -2237,6 +2504,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="640">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding>
+            <element signature="e#1336#1342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="960">
@@ -2248,22 +2525,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/prediction/core/predictor/excelling/ExcellingWeekendPredictor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="474" max-vertical-offset="1184">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="method#accept#0;class#ExcellingWeekendPredictor#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWorkdayPredictorInteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="752">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="95" max-vertical-offset="752">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="method#testPredict#0;class#ExcellingWorkdayPredictorInteTest#0" expanded="true" />
+            <element signature="e#1270#1274#0" expanded="true" />
+            <element signature="e#1275#1287#0" expanded="true" />
             <element signature="e#1419#1420#0" expanded="true" />
             <element signature="e#1462#1468#0" expanded="true" />
             <element signature="e#1516#1522#0" expanded="true" />
@@ -2272,18 +2541,6 @@
             <element signature="e#1678#1684#0" expanded="true" />
             <element signature="e#1732#1738#0" expanded="true" />
             <element signature="e#1786#1792#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/prediction/core/predictor/excelling/ExcellingWeekendPredictorInteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72386897" vertical-offset="0" max-vertical-offset="641">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="45" />
-          <folding>
-            <element signature="e#1293#1294#0" expanded="true" />
-            <element signature="e#1336#1342#0" expanded="true" />
-            <element signature="e#1390#1396#0" expanded="true" />
           </folding>
         </state>
       </provider>
