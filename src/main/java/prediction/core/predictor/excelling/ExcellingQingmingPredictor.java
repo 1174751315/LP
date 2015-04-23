@@ -47,6 +47,11 @@ public class ExcellingQingmingPredictor extends AbstractTemplateMethodExcellingP
     }
 
     @Override
+    protected String doGetXmlConfigFilePath() {
+        return null;
+    }
+
+    @Override
     protected Integer doGetPredictionDaysNbr() {
         return 3;
     }

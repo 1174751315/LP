@@ -54,14 +54,10 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    protected Integer doGetPredictionDaysNbr() {
-        return pre;
+    protected String doGetXmlConfigFilePath() {
+        return IOPaths.WEB_CONTENT_WEEKEND_PREDICTOR_CFG_PATH;
     }
 
-    @Override
-    protected List<Integer> doGetHistoryDaysNbrs() {
-        return his;
-    }
 
     @Override
     protected ElementPrintableLinkedList<SimpleDate> doGetPredictionDays() throws LPE {
@@ -80,54 +76,10 @@ public class ExcellingWeekendPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    protected List<CellPosition> doGetHistoryDaysExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("B2", "周末气象数据"), new CellPosition("B28", "周末气象数据"));
-    }
-
-    @Override
-    protected CellPosition doGetPredictionDaysExcelPosition() {
-        return new CellPosition("B22", "周末气象数据");
-    }
-
-    @Override
-    protected CellPosition doGetPredictionWeatherExcelPosition() {
-        return new CellPosition("D22", "周末气象数据");
-    }
-
-    @Override
-    protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("D2", "周末气象数据"), new CellPosition("D28", "周末气象数据"));
-    }
-
-    @Override
-    protected List<CellPosition> doGetSimilarDaysExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("C29", "相似日查找-相似日为工作日"), new CellPosition("C21", "相似日查找-相似日为周末"));
-    }
-
-    @Override
-    protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
-        return ListUtils.unnamed(new CellPosition("B20", "周末96节点负荷预测"), new CellPosition("F20", "周末96节点负荷预测"));
-    }
-
-    @Override
-    protected CellPosition doGetActualLoadsExcelPosition() {
-        return new CellPosition("B8", "待预测周末实际负荷数据");
-    }
-
-    @Override
     protected Boolean doValidate(Date date) {
         return true;
     }
 
-    @Override
-    protected CellPosition doGetPredictionLoadsExcelPosition() {
-        return new CellPosition("F106", "待预测周末实际负荷数据");
-    }
-
-    @Override
-    protected CellPosition doGetAccuraciesExcelPosition() {
-        return new CellPosition("B6", "待预测周末实际负荷数据");
-    }
 
     @Override
     public Object accept(IPredictorVisitor visitor) throws LPE {

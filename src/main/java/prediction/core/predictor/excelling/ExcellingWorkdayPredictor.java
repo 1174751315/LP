@@ -9,6 +9,7 @@ package prediction.core.predictor.excelling;
 import common.ConvertUtils;
 import common.ElementPrintableLinkedList;
 import common.MaxAveMinTuple;
+import prediction.config.predictor.PredictorCfg;
 import prediction.core.predictor.IWorkdayPredictor;
 import prediction.core.predictor.visitors.IPredictorVisitor;
 import prediction.dataAccess.DAOFactory;
@@ -37,6 +38,8 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     private Integer predictionDaysNbr = 7;
     private Integer historyDaysNbr = 14;
 
+
+    private static PredictorCfg cfg=new PredictorCfg(IOPaths.WEB_CONTENT_WORKDAY_PREDICTOR_CFG_PATH);
     private static final Integer WINTER = 0, SUMMER = 1;
     private Season season = Season.SUMMER;
 
@@ -72,15 +75,7 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
         season = Season.SUMMER;
     }
 
-    @Override
-    protected CellPosition doGetPredictionLoadsExcelPosition() {
-        return new CellPosition("B115", "工作日96节点负荷预测");
-    }
 
-    @Override
-    protected CellPosition doGetAccuraciesExcelPosition() {
-        return new CellPosition("B7", "待预测日实际负荷数据");
-    }
 
     @Override
     public String getPredictorType() {
@@ -147,64 +142,16 @@ public class ExcellingWorkdayPredictor extends AbstractTemplateMethodExcellingPr
     }
 
     @Override
-    protected Integer doGetPredictionDaysNbr() {
-        return 7;
+    protected String doGetXmlConfigFilePath() {
+        return IOPaths.WEB_CONTENT_WORKDAY_PREDICTOR_CFG_PATH;
     }
 
-    @Override
-    protected List<Integer> doGetHistoryDaysNbrs() {
-        List<Integer> list = new LinkedList<Integer>();
-        list.add(14);
-        return list;
-    }
-
-    @Override
-    protected List<CellPosition> doGetHistoryDaysExcelPositions() {
-        List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("B2", "工作日气象数据"));
-        return list;
-    }
-
-    @Override
-    protected CellPosition doGetPredictionDaysExcelPosition() {
-        return new CellPosition("B16", "工作日气象数据");
-    }
-
-    @Override
-    protected CellPosition doGetPredictionWeatherExcelPosition() {
-        return new CellPosition("N16", "工作日气象数据");
-    }
-
-    @Override
-    protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
-        List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("N2", "工作日气象数据"));
-        return list;
-    }
 
     @Override
     public Object accept(IPredictorVisitor visitor) throws LPE {
         return visitor.visitWorkdayPredictor(this);
     }
 
-    @Override
-    protected List<CellPosition> doGetSimilarDaysExcelPositions() {
-        List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("D28", "相似日查找-工作日"));
-        return list;
-    }
-
-    @Override
-    protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
-        List<CellPosition> list = new LinkedList<CellPosition>();
-        list.add(new CellPosition("B17", "工作日96节点负荷预测"));
-        return list;
-    }
-
-    @Override
-    protected CellPosition doGetActualLoadsExcelPosition() {
-        return new CellPosition("B9", "待预测日实际负荷数据");
-    }
 
     private List<CellPosition> getHistoryLoadTuplesExcelPosition() {
         List<CellPosition> list = new LinkedList<CellPosition>();
