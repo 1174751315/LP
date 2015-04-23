@@ -20,82 +20,115 @@ import java.util.List;
  */
 public class PredictorCfg {
     public PredictorCfg(String configFilePath) {
+
         Document document= Dom4jFacade.readDocument(configFilePath);
         Element root=document.getRootElement();
 
         Element predictor=root.element("predictor");
 
-        System.out.println(root.getText());
+        predictionDaysNbr=parseOneNbr(predictor.element("prediction-days-nbr").element("nbr"));
+        historyDaysNbrs=parseSomeNbr(predictor.element("history-days-nbrs").elements());
 
+        historyDaysCellPositions = parseSomePosition(predictor.element("history-days-positions").element("positions").elements());
+        predictionDaysCellPosition=parseOnePosition(predictor.element("prediction-days-position").element("position"));
+        similarDaysCellPositions=parseSomePosition(predictor.element("similar-days-positions").element("positions").elements());
+        historyWeatherCellPositions=parseSomePosition(predictor.element("history-weathers-positions").element("positions").elements());
+        predictionWeatherCellPosition=parseOnePosition(predictor.element("prediction-weathers-position").element("position"));
+        similarLoadsPositions=parseSomePosition(predictor.element("similar-load-positions").element("positions").elements());
+        predictionLoadsPosition=parseOnePosition(predictor.element("prediction-load-position").element("position"));
 
-        List<Integer> nbrs=new LinkedList<Integer>();
-        Integer nbr=null;
-
-        nbr=Integer.valueOf(predictor.element("prediction-days-nbr").element("nbr").attribute("value").getValue());
-
-        predictionDaysNbr=nbr;
-
-        List elements=predictor.element("history-days-nbrs").elements();
-        for (int i = 0; i < elements.size(); i++) {
-            nbrs.add(Integer.valueOf(((Element) elements.get(i)).attribute("value").getValue()));
-        }
-        historyDaysNbrs=nbrs;
-
-
+        actualLoadPosition=parseOnePosition(predictor.element("actual-load-position").element("position"));
+        accuraciesPosition=parseOnePosition(predictor.element("accuracies-position").element("position"));
     }
 
     Integer predictionDaysNbr;
     List<Integer> historyDaysNbrs=new LinkedList<Integer>();
 
 
-    public Integer doGetPredictionDaysNbr() {
+    public Integer getPredictionDaysNbr() {
         return predictionDaysNbr;
     }
 
-    public List<Integer> doGetHistoryDaysNbrs() {
+    public List<Integer> getHistoryDaysNbrs() {
         return historyDaysNbrs;
     }
 
 
-    public List<CellPosition> doGetHistoryDaysExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("B2", "周末气象数据"), new CellPosition("B28", "周末气象数据"));
+    List<CellPosition> historyDaysCellPositions;
+    public List<CellPosition> getHistoryDaysPositions() {
+        return historyDaysCellPositions;
     }
 
-    public CellPosition doGetPredictionDaysExcelPosition() {
-        return new CellPosition("B22", "周末气象数据");
+    CellPosition predictionDaysCellPosition;
+    public CellPosition getPredictionDaysPosition() {
+        return predictionDaysCellPosition;
     }
 
-    public CellPosition doGetPredictionWeatherExcelPosition() {
-        return new CellPosition("D22", "周末气象数据");
+
+    CellPosition predictionWeatherCellPosition;
+    public CellPosition getPredictionWeathersPosition() {
+        return predictionWeatherCellPosition;
     }
 
-    public List<CellPosition> doGetHistoryWeatherExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("D2", "周末气象数据"), new CellPosition("D28", "周末气象数据"));
+
+    private List<CellPosition> historyWeatherCellPositions;
+    public List<CellPosition> getHistoryWeathersPositions() {
+        return historyWeatherCellPositions;
+    }
+    List<CellPosition> similarDaysCellPositions;
+    public List<CellPosition> getSimilarDaysPositions() {
+        return similarDaysCellPositions;
     }
 
-    public List<CellPosition> doGetSimilarDaysExcelPositions() {
-        return ListUtils.unnamed(new CellPosition("C29", "相似日查找-相似日为工作日"), new CellPosition("C21", "相似日查找-相似日为周末"));
+
+    List<CellPosition> similarLoadsPositions;
+    public List<CellPosition> getSimilarLoadsPosition() {
+        return similarLoadsPositions ;
     }
 
-    public List<CellPosition> doGetSimilarLoadsExcelPosition() {
-        return ListUtils.unnamed(new CellPosition("B20", "周末96节点负荷预测"), new CellPosition("F20", "周末96节点负荷预测"));
+    CellPosition actualLoadPosition;
+    public CellPosition getActualLoadsPosition() {
+        return actualLoadPosition;
     }
 
-    public CellPosition doGetActualLoadsExcelPosition() {
-        return new CellPosition("B8", "待预测周末实际负荷数据");
+
+    CellPosition predictionLoadsPosition;
+    public CellPosition getPredictionLoadsPosition() {
+        return predictionLoadsPosition;
     }
 
-    public Boolean doValidate(Date date) {
-        return true;
+    CellPosition accuraciesPosition;
+    public CellPosition getAccuraciesPosition() {
+        return accuraciesPosition;
     }
 
-    public CellPosition doGetPredictionLoadsExcelPosition() {
-        return new CellPosition("F106", "待预测周末实际负荷数据");
-    }
 
-    public CellPosition doGetAccuraciesExcelPosition() {
-        return new CellPosition("B6", "待预测周末实际负荷数据");
-    }
 
+
+
+
+
+    private CellPosition parseOnePosition(Element element){
+        String ref=element.attribute("cell").getValue();
+        String sheet=element.attribute("sheet").getValue();
+        return new CellPosition(ref,sheet);
+    }
+    private List<CellPosition> parseSomePosition(List elements){
+        List<CellPosition> positions=new LinkedList<CellPosition>();
+        for (int i = 0; i < elements.size(); i++) {
+            positions.add(parseOnePosition((Element) elements.get(i)));
+        }
+        return positions;
+    }
+    private Integer parseOneNbr(Element element){
+        return Integer.valueOf(element.attribute("value").getValue());
+    }
+    private List<Integer> parseSomeNbr(List elements){
+        List<Integer> list=new LinkedList<Integer>();
+        for (int i = 0; i < elements.size(); i++) {
+            list.add(parseOneNbr((Element)elements.get(i)));
+        }
+        return list;
+    }
 
 }

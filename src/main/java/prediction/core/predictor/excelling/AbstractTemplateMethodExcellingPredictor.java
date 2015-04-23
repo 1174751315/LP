@@ -7,6 +7,7 @@ package prediction.core.predictor.excelling;
 
 import common.ElementPrintableLinkedList;
 import common.PrintableLinkedList;
+import prediction.config.predictor.PredictorCfg;
 import prediction.core.predictor.excelling.xlAccessor.*;
 import prediction.core.predictor.util.CommonUtils;
 import prediction.core.predictor.util.LoadsObtainer;
@@ -31,6 +32,7 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected String dateString;
     protected CommonUtils commonUtils;
     protected DAOFactory defaultDaoFactory;
+    private PredictorCfg cfg;
 
     public void setAccuracyAccessor(XlLpAccuracyAccessor accuracyAccessor) {
         this.accuracyAccessor = accuracyAccessor;
@@ -126,6 +128,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
 
         String inPath = doGetInputWorkbookPath();
         String outPath = doGetOutputWorkbookPath();
+        String cfgPath=doGetXmlConfigFilePath();
+
+        cfg=new PredictorCfg(cfgPath);
 
         /*打开模板*/
         AbstractXLAccessor.openWorkbook(inPath);
@@ -270,10 +275,9 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected abstract String doGetInputWorkbookPath();
 
     protected abstract String doGetOutputWorkbookPath();
+    protected abstract String doGetXmlConfigFilePath();
 
-    protected abstract Integer doGetPredictionDaysNbr();
 
-    protected abstract List<Integer> doGetHistoryDaysNbrs();
 
     protected abstract ElementPrintableLinkedList<SimpleDate> doGetPredictionDays()
             throws LPE;
@@ -281,44 +285,50 @@ public abstract class AbstractTemplateMethodExcellingPredictor {
     protected abstract ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> doGetHistoryDays()
             throws LPE;
 
-    protected abstract List<CellPosition> doGetHistoryDaysExcelPositions();
 
-    protected abstract CellPosition doGetPredictionDaysExcelPosition();
+    protected List<CellPosition> doGetSimilarDaysExcelPositions() {
+        return cfg.getSimilarDaysPositions();
+    }
+    protected List<CellPosition> doGetSimilarLoadsExcelPosition() {
+        return cfg.getSimilarLoadsPosition();
+    }
+    protected CellPosition doGetActualLoadsExcelPosition() {
+        return cfg.getActualLoadsPosition();
+    }
+    protected List<CellPosition> doGetHistoryDaysExcelPositions() {
+        return cfg.getHistoryDaysPositions();
+    }
+    protected CellPosition doGetPredictionDaysExcelPosition() {
+        return cfg.getPredictionDaysPosition();
+    }
+    protected CellPosition doGetPredictionWeatherExcelPosition() {
+        return cfg.getPredictionWeathersPosition();
+    }
+    protected List<CellPosition> doGetHistoryWeatherExcelPositions() {
+        return cfg.getHistoryWeathersPositions();
+    }
+    protected CellPosition doGetPredictionLoadsExcelPosition() {
+        return cfg.getPredictionLoadsPosition();
+    }
+    protected  CellPosition doGetAccuraciesExcelPosition(){return cfg.getAccuraciesPosition();}
+    protected Integer doGetPredictionDaysNbr() {
+        return cfg.getPredictionDaysNbr();
+    }
+    protected List<Integer> doGetHistoryDaysNbrs() {
+        return cfg.getHistoryDaysNbrs();
+    }
 
-    protected abstract CellPosition doGetPredictionWeatherExcelPosition();
-
-    protected abstract List<CellPosition> doGetHistoryWeatherExcelPositions();
-
-    protected abstract List<CellPosition> doGetSimilarDaysExcelPositions();
-
-    protected abstract List<CellPosition> doGetSimilarLoadsExcelPosition();
-
-    protected abstract CellPosition doGetActualLoadsExcelPosition();
-
-    protected abstract CellPosition doGetPredictionLoadsExcelPosition();
-
-    protected abstract CellPosition doGetAccuraciesExcelPosition();
 
     protected void doAfterInjectSimilarLoads(Workbook activeWorkbook)
             throws LPE {
         //DO NOTHING
     }
-
     protected void doAfterInjectWeathers(Workbook activeWorkbook,
                                          ElementPrintableLinkedList<ElementPrintableLinkedList<SimpleDate>> historyDays,
                                          ElementPrintableLinkedList<SimpleDate> predictionDays)
             throws LPE {
         //DO NOTHING
     }
-
-
-    private void writeSomeDateStrings2Cells(Sheet sheet, Integer col, Integer row, List<SimpleDate> dates) {
-        for (int j = 0; j < dates.size(); j++) {
-            String ds = dates.get(j).getDateString();
-            sheet.getRow(row + j).getCell(col).setCellValue(Date.valueOf(ds));
-        }
-    }
-
 
     public ElementPrintableLinkedList<WeatherData> getPredictionWeathers() {
         return predictionWeathers;
